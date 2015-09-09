@@ -1,5 +1,3 @@
-import os
-
 #Example of directory: /lustre/home/ciencias/fisica/pregrado/mc.remolina197/data/CLARA_RotationOutflowsData/tau10E5/vrot0/vout100
 
 ppns = [6, 12, 24]
