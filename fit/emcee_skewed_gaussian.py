@@ -4,7 +4,7 @@ from scipy.special import erf
 import emcee
 import os
 import corner
-import matplotlib.pyplot as plt
+
 #FUNCTIONS
 
 #Bifurcation index
@@ -55,15 +55,35 @@ def sum_2_skewed_gaussian(x, amplitude_neg, center_neg, sigma_neg, gamma_neg, am
     return g_neg+g_pos
 
 
+def lnprior(param):
 
-def lnprob(param, x_d, y_d):
     amplitude_neg, center_neg, sigma_neg, gamma_neg, amplitude_pos, center_pos, sigma_pos, gamma_pos = param
 
-    if (0.0<amplitude_neg<500.0) and (-50<center_neg<30) and (0<sigma_neg<50) and (-10<gamma_neg<10) and (0.0<amplitude_pos<500.0) and (-30<center_pos<50) and (0<sigma_pos<50) and (-10<gamma_pos<10):
-        y_m = sum_2_skewed_gaussian(x_d, amplitude_neg, center_neg, sigma_neg, gamma_neg, amplitude_neg, center_neg, sigma_neg, gamma_neg)
-        chi_squared = (1.0/2.0)*sum((y_d-y_m)**2)
-        return -chi_squared
+    if (0.0<amplitude_neg<200.0) and (-10<center_neg<0) and (0<sigma_neg<30) and (-15<gamma_neg<0) and (0.0<amplitude_pos<200.0) and (0<center_pos<10) and (0<sigma_pos<30) and (0<gamma_pos<15):
+        return 0.0
+
     return -inf
+
+
+def lnlike(param, x_d, y_d):
+
+    amplitude_neg, center_neg, sigma_neg, gamma_neg, amplitude_pos, center_pos, sigma_pos, gamma_pos = param
+
+    y_m = sum_2_skewed_gaussian(x_d, amplitude_neg, center_neg, sigma_neg, gamma_neg, amplitude_neg, center_neg, sigma_neg, gamma_neg)
+
+    chi_squared = (1.0/2.0)*sum((y_d-y_m)**2)
+
+    return -chi_squared
+
+
+def lnprob(param, x_d, y_d):
+
+    lp = lnprior(param)
+
+    if not isfinite(lp):
+        return -inf
+
+    return lp + lnlike(param, x_d, y_d)
 
 
 #emcee
@@ -84,22 +104,22 @@ def emcee_skewed_gaussian(x_d, y_d):
     half = len(y_d)/2
 
     #First guess
-    amplitude_neg_0 = 12*max(y_d[0:half+1])
-    center_neg_0 = mean(x_d[0:half+1])
-    sigma_neg_0 = std(x_d[0:half+1])
-    gamma_neg_0 = -2
-    amplitude_pos_0 = 12*max(y_d[half:-1])
-    center_pos_0 = mean(x_d[half:-1])
-    sigma_pos_0 = std(x_d[half:-1])
-    gamma_pos_0 = 2
+    amplitude_neg_0 = 65
+    center_neg_0 = -4
+    sigma_neg_0 = 9
+    gamma_neg_0 = -4
+    amplitude_pos_0 = 38
+    center_pos_0 = 2
+    sigma_pos_0 = 8
+    gamma_pos_0 = 10
 
     first_guess = [amplitude_neg_0, center_neg_0, sigma_neg_0, gamma_neg_0, amplitude_pos_0, center_pos_0, sigma_pos_0, gamma_pos_0]
 
 
     #Running emcee
     ndim = 8
-    nwalkers = 240
-    nsteps = 500
+    nwalkers = 24
+    nsteps = 5000
 
     pos = [first_guess+ 1e-3*random.randn(ndim) for i in range(nwalkers)]
 
@@ -118,7 +138,6 @@ def emcee_skewed_gaussian(x_d, y_d):
     #Discard the initial 50 steps
     samples = sampler.chain[:, 50:, :].reshape((-1, ndim))
 
-    samples[:, 2] = exp(samples[:, 2])
     amplitude_neg_mcmc, center_neg_mcmc, sigma_neg_mcmc, gamma_neg_mcmc, amplitude_pos_mcmc, center_pos_mcmc, sigma_pos_mcmc, gamma_pos_mcmc = map(lambda v: (v[1], v[2]-v[1], v[1]-v[0]), zip(*percentile(samples, [16, 50, 84], axis=0)))
 
     print 'amplitude_neg = ', amplitude_neg_mcmc
@@ -130,10 +149,8 @@ def emcee_skewed_gaussian(x_d, y_d):
     print 'sigma_pos = ', sigma_pos_mcmc
     print 'gamma_pos = ', gamma_pos_mcmc
 
-    
 
-    #fig = corner.corner(samples, labels=["$a_n$", "$c_n$", "$s_n$, $g_n$", "$a_p$", "$c_p$", "$s_p$, $g_p$"])
-    #fig = corner.corner(samples)
-    #fig.savefig("triangle.png")
+    fig = corner.corner(samples, labels=["$a_n$", "$c_n$", "$s_n$", "$g_n$", "$a_p$", "$c_p$", "$s_p$", "$g_p$"])
+    fig.savefig("triangle.png")
 
     return amplitude_neg_mcmc[0], center_neg_mcmc[0], sigma_neg_mcmc[0], gamma_neg_mcmc[0], amplitude_pos_mcmc[0], center_pos_mcmc[0], sigma_pos_mcmc[0], gamma_pos_mcmc[0]
