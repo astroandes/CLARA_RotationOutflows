@@ -1,6 +1,5 @@
 %Document Class
-\documentclass{latex/emulateapj}
-\usepackage{multirow,color,wrapfig,ulem}
+\documentclass[twocolappendix]{latex/emulateapj}
 
 %Packages and Commands
 \include{latex/packages_commands}
@@ -85,14 +84,6 @@ In this model, the LAE has a bulk velocity which is the superposition of the rot
 	\label{eq:vz}
 \end{equation}
 
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=0.3\textwidth]{./figures/model}
-	\end{center}
-	\caption{\textbf{Model:} Spherical LAE with tangential and radial velocity due to rotation and outflows.
-		\label{fig:model}}
-\end{figure}
-
 These 3 parameters, \vrot, \vout and \tauh, leave the idea of a model of LAE, that although simple, considers the main galaxy's dynamics. All of them have been previously proposed and used by different authors, but never combined together (\cite{Adams72}, \cite{Harrington73}, \cite{Neufeld90}, \cite{Dijkstra06}, \cite{Verhamme06}, \cite{Forero12}, \cite{Martin2015}, \cite{Garavito14}, \cite{Neufeld91}, \cite{Laursen09}, \cite{Barnes11}, \cite{Verhamme12}, \cite{Yajima12}).\\
 
 \subsection{A \lya Photon's Path in CLARA}
@@ -130,14 +121,14 @@ The individual scattering of all the photons is tracked through the complete 3D 
 The process that takes place from the moment the first photon is emitted to the moment the last photon escapes the sphere, is called a simulation. Each simulation runs in the scientific computational cluster of Universidad de los Andes due to the computing resources it requires. Depending on \tauh, I need a different number of processors in order to minimize the time demands. For \tauh $=10^5, 10^6, 10^7$ I use 6, 12, 24 processors, respectively. The running times go from 7 hours to 1 week approximately, depending on the case. \\
 
 \subsection{Galaxy's Viewing Angle}
-An observer located far away, only receives photons emitted along its line of sight. That means, only photons escaping in the direction of the observer must be counted in the spectrum. In the simulation I approximate this by taking into account only the photons with escaping direction angle $\theta$ respect to the rotation axis within the range $[\theta_{min}-\theta_{max}]$. I illustrate this in Fig. \ref{fig:viewing_angle_sketch}. \\
+An observer located far away, only receives photons emitted along its line of sight. That means, only photons escaping in the direction of the observer must be counted in the spectrum. In the simulation I approximate this by taking into account only the photons with escaping direction angle $\theta$ respect to the rotation axis within the range $[\theta_{min}-\theta_{max}]$. I illustrate this in Fig. \ref{fig:model}. \\
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=0.5\textwidth]{./figures/viewing_angle_sketch}
+		\includegraphics[width=0.48\textwidth]{./figures/model}
 	\end{center}
-	\caption{\textbf{Viewing Angle Sketch:} The galaxy cut is in the $y-z$ plane perspective and the observer is located at an specific viewing angle of the sphere. Only photons with a direction that enters in this range of vision are taken into account to build the observed spectrum.
-		\label{fig:viewing_angle_sketch}}
+	\caption{\textbf{Model:} Spherical LAE with tangential and radial velocities due to rotation and outflows, respectively. The galaxy cut is in the $y-z$ plane perspective. The observer is located at an specific viewing angle of the sphere. Only photons with a direction that enters in this range of vision are taken into account to build the observed spectrum.
+		\label{fig:model}}
 \end{figure}
 
 Therefore, in principle the spectra depend on two new parameters, the azimuthal and the polar angle. However, the galaxy's motion is symmetrical respect to its rotation axis. This implies that the resulting spectrum is independent from the azimuthal angle. Taking into account this symmetry, I only select photons on their polar angle, regardless of their azimuthal angle. Regarding the polar angle, I build the spectra for observers located on 3 different positions, with $\theta$ intervals uniformly distributed in $\cos(\theta)$. \\ 
@@ -165,39 +156,7 @@ In order to define the ranges of \tauh, \vrot and \vout, it is necessary to refe
 	\label{tab:values}
 \end{table}
 
-The resulting sets of spectra are in Figs. \ref{fig:3_tau10E5_phi83-90}, \ref{fig:3_tau10E7_phi83-90} and \ref{fig:3_tau10E6_phi83-90} for $\theta \simeq 90^\circ$. I do not include the spectra for \vout = 50, 75 \kms because they are similar to \vout = 25 \kms. For this reason, I limit in all the plots \vout to a maximum value of 25 \kms. Nevertheless, the figures for \vout = 50, 75 \kms are in the Appendix \ref{first_plots} in Figs. \ref{fig:2_tau10E5_phi83-90}, \ref{fig:2_tau10E6_phi83-90} and \ref{fig:2_tau10E7_phi83-90}.\\
-
-\newpage
-
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=0.5\textwidth]{./figures/3_tau10E5_phi83-90}
-	\end{center}
-	\caption{\textbf{\lya profile for \tauh$=10^5$:} With \vrot ranging $50,100$ \kms and \vout ranging $5,10,15,20,25$ \kms. The intensity is in arbitrary units. The viewing angle $\theta \simeq 90^\circ$. The dashed vertical line indicates the \lya line's natural frequency. 
-		\label{fig:3_tau10E5_phi83-90}}
-\end{figure}
-
-\newpage
-
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=0.5\textwidth]{./figures/3_tau10E6_phi83-90}
-	\end{center}
-	\caption{\textbf{\lya profile for \tauh$=10^6$:}  Same as Fig. \ref{fig:3_tau10E5_phi83-90} but for \tauh$=10^6$.
-		\label{fig:3_tau10E6_phi83-90}}
-\end{figure}
-
-\newpage
-
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=0.5\textwidth]{./figures/3_tau10E7_phi83-90}
-	\end{center}
-	\caption{\textbf{\lya profile for \tauh$=10^7$:} Same as Fig. \ref{fig:3_tau10E5_phi83-90} but for \tauh$=10^7$.
-		\label{fig:3_tau10E7_phi83-90}}
-\end{figure}
-
-\newpage
+The resulting sets of spectra are in Figs. \ref{fig:3_tau10E5_phi83-90}, \ref{fig:3_tau10E7_phi83-90} and \ref{fig:3_tau10E6_phi83-90} for $\theta \simeq 90^\circ$ available in the Appendix \ref{ap:results_figures}. I do not include the spectra for \vout = 50, 75 \kms because they are similar to \vout = 25 \kms. For this reason, I limit in all the plots \vout to a maximum value of 25 \kms. Nevertheless, the figures for \vout = 50, 75 \kms are in the Appendix \ref{ap:additional_figures} in Figs. \ref{fig:2_tau10E5_phi83-90}, \ref{fig:2_tau10E6_phi83-90} and \ref{fig:2_tau10E7_phi83-90}.\\
 
 These last 3 plots show a clear creation of two asymmetric peaks around $V=0$ \kms with the tallest peak is always redshifted, with a strong dependence on the outflow velocity.\\
 
@@ -290,9 +249,6 @@ To summarize the influence of the 3 parameters on the \lya morphology is the fol
 	\item \vrot broadens the line and decreases the maximum intensity. Higher \vrot implies a flatter spectrum. This effect has not been deeply studied in literature. Only Garavito et al. \cite{Garavito14} has simulated its effect. Our results are consistent with their conclusions. 
 \end{itemize}
 
-
-
-
 \section{Comparison against observations}
 \label{sec:comparisonobservations}
 
@@ -338,7 +294,7 @@ The conclusions obtained from this work are: \\
 
 Due to the long time CLARA takes to run, it was not possible to fit an observational LAE and predict its parameters. However, the next step is to use tools as MCMC (Monte Carlo Markov Chain) to obtain the galaxy's \tauh, \vrot and \vout that would agree with my model. \\
 
-All of this work is available online and free to use to anyone. The data, source code and instructions to replicate my monograph's results are in the GitHub repository:  \texttt{https://github.com/astroandes/CLARA\_RotationOutflows}. \\
+All of this work is available online and free to use to anyone. The data, source code and instructions to replicate my monograph's results are in the GitHub repository:  \texttt{https://github.com/astroandes/CLARA\_RotationOut flows}. \\
 
 
 \section*{Acknowledgments}
@@ -351,38 +307,65 @@ All of this work is available online and free to use to anyone. The data, source
 \bibliographystyle{latex/apj}
 \bibliography{references}
 
-\newpage
-
 %------------------------APPENDIX----------------------------
 
 \appendix
-\section{Additional Figures}
 
-Additional figures of spectra with \vrot $= 50,100$ \kms and \vout $= 50,75$ \kms, for all the different \tauh. 
-
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=1\textwidth]{./figures/appendix/2_tau10E5_phi83-90}
-	\end{center}
-	\caption{\textbf{\lya profile for \tauh$=10^5$:} With \vrot ranging $50,100$ \kms and \vout ranging $50,75$ \kms.
-		\label{fig:2_tau10E5_phi83-90}}
+\begin{figure}[!htbp]
+	\centering
+	\begin{minipage}[b]{0.45\textwidth}
+		\section{Results' Figures}
+		\label{ap:results_figures}
+		
+		\includegraphics[width=\textwidth]{./figures/3_tau10E5_phi83-90}
+		\caption{\textbf{\lya profile for \tauh$=10^5$:} With \vrot ranging $50,100$ \kms and \vout ranging $5,10,15,20,25$ \kms. The intensity is in arbitrary units. The viewing angle $\theta \simeq 90^\circ$. The dashed vertical line indicates the \lya line's natural frequency. 
+			\label{fig:3_tau10E5_phi83-90}}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{./figures/3_tau10E6_phi83-90}
+		\caption{\textbf{\lya profile for \tauh$=10^6$:}  Same as Fig. \ref{fig:3_tau10E5_phi83-90} but for \tauh$=10^6$. 
+			\label{fig:3_tau10E6_phi83-90}}
+		\vspace{1.5mm}
+	\end{minipage}
 \end{figure}
 
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=1\textwidth]{./figures/appendix/2_tau10E6_phi83-90}
-	\end{center}
-	\caption{\textbf{\lya profile for \tauh$=10^6$:} With \vrot ranging $50,100$ \kms and \vout ranging $50,75$ \kms.
-		\label{fig:2_tau10E6_phi83-90}}
+\begin{figure}[!htbp]
+	\centering
+	\begin{minipage}[b]{0.45\textwidth}
+		\vspace{3mm}
+		\includegraphics[width=\textwidth]{./figures/3_tau10E7_phi83-90}
+		\caption{\textbf{\lya profile for \tauh$=10^7$:} Same as Fig. \ref{fig:3_tau10E5_phi83-90} but for \tauh$=10^7$.
+			\label{fig:3_tau10E7_phi83-90}}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{0.45\textwidth}
+		\section{Additional Figures}
+		\label{ap:additional_figures}
+		
+		Additional figures of spectra with \vrot $= 50,100$ \kms and \vout $= 50,75$ \kms, for all the different \tauh. 
+		
+		\vspace{2.7cm}
+		
+		\includegraphics[width=\textwidth]{./figures/appendix/2_tau10E5_phi83-90}
+		\caption{\textbf{\lya profile for \tauh$=10^5$:} With \vrot ranging $50,100$ \kms and \vout ranging $50,75$ \kms.
+			\label{fig:2_tau10E5_phi83-90}}
+	\end{minipage}
 \end{figure}
 
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=1\textwidth]{./figures/appendix/2_tau10E7_phi83-90}
-	\end{center}
-	\caption{\textbf{\lya profile for \tauh$=10^7$:} With \vrot ranging $50,100$ \kms and \vout ranging $50,75$ \kms.
-		\label{fig:2_tau10E7_phi83-90}}
+\begin{figure}[!htbp]
+	\centering
+	\begin{minipage}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{./figures/appendix/2_tau10E6_phi83-90}
+		\caption{\textbf{\lya profile for \tauh$=10^6$:} With \vrot ranging $50,100$ \kms and \vout ranging $50,75$ \kms.
+			\label{fig:2_tau10E6_phi83-90}}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{./figures/appendix/2_tau10E7_phi83-90}
+		\caption{\textbf{\lya profile for \tauh$=10^7$:} With \vrot ranging $50,100$ \kms and \vout ranging $50,75$ \kms.
+			\label{fig:2_tau10E7_phi83-90}}
+	\end{minipage}
 \end{figure}
-
 
 \end{document}
