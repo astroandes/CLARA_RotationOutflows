@@ -153,4 +153,15 @@ def mcmc_skewed_gaussian(x_d, y_d):
     sigma_pos = sigma_pos_walk[-1]
     gamma_pos = gamma_pos_walk[-1]
 
-    return amplitude_neg, center_neg, sigma_neg, gamma_neg, amplitude_pos, center_pos, sigma_pos, gamma_pos
+    #Standard Deviations (discarding first 50 steps)
+
+    amplitude_neg_std = std(amplitude_neg_walk[50:])
+    center_neg_std = std(center_neg_walk[50:])
+    sigma_neg_std = std(sigma_neg_walk[50:])
+    gamma_neg_std = std(gamma_neg_walk[50:])
+    amplitude_pos_std = std(amplitude_pos_walk[50:])
+    center_pos_std = std(center_pos_walk[50:])
+    sigma_pos_std = std(sigma_pos_walk[50:])
+    gamma_pos_std = std(gamma_pos_walk[50:])
+
+    return amplitude_neg, center_neg, sigma_neg, gamma_neg, amplitude_pos, center_pos, sigma_pos, gamma_pos, amplitude_neg_std, center_neg_std, sigma_neg_std, gamma_neg_std, amplitude_pos_std, center_pos_std, sigma_pos_std, gamma_pos_std

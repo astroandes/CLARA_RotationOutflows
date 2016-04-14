@@ -1,2 +1,2 @@
-amplitude_neg	sigma_neg	center_neg	gamma_neg	amplitude_pos	sigma_pos	center_pos	gamma_pos
-61.0259513344	8.33890750594	-4.29314516767	-2.71909547422	32.7086936465	7.37764041634	3.51210446303	4.07716929319
+amplitude_neg	sigma_neg	center_neg	gamma_neg	amplitude_pos	sigma_pos	center_pos	gamma_pos	amplitude_neg_std	sigma_neg_std	center_neg_std	gamma_neg_std	amplitude_pos_std	sigma_pos_std	center_pos_std	gamma_pos_std
+59.7035488259	7.57038748714	-4.86222668262	-2.71284802889	32.8098605286	6.77210674514	3.61022360708	2.80084953206	1.82412479292	0.567426514297	0.371778559399	0.658337365149	2.08931892491	0.753153550687	0.405996323046	1.17797886117
