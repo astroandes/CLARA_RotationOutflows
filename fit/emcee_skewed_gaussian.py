@@ -96,7 +96,7 @@ def emcee_skewed_gaussian(x_d, y_d):
     #Running emcee
     ndim = 8
     nwalkers = 16
-    nsteps = 10000
+    nsteps = 5000
 
     pos = [first_guess+ 1e-3*np.random.randn(ndim) for i in range(nwalkers)]
 
@@ -106,6 +106,7 @@ def emcee_skewed_gaussian(x_d, y_d):
 
     # Saving results
     samples_fc = sampler.flatchain
+    logprob_fc = sampler.flatlnprobability
 
     np.savetxt('sampler_flatchain.dat', samples_fc, delimiter=',')
 
@@ -113,7 +114,8 @@ def emcee_skewed_gaussian(x_d, y_d):
     print("Mean acceptance fraction: {0:.3f} (Should be between 0.25 and 0.5 approximately)".format(np.mean(sampler.acceptance_fraction)))
 
     #Discard the initial 50 steps
-    samples = sampler.chain[:, 50:, :].reshape((-1, ndim))
+    samples = samples_fc[50:]
+    logprob = logprob_fc[50:]
 
     # Unpack the walk for each parameter
     amplitude_neg_walk, center_neg_walk, sigma_neg_walk, gamma_neg_walk, amplitude_pos_walk, center_pos_walk, sigma_pos_walk, gamma_pos_walk = np.transpose(samples)
@@ -128,6 +130,16 @@ def emcee_skewed_gaussian(x_d, y_d):
     sigma_pos_mcmc      = np.percentile(sigma_pos_walk, [16, 50, 84])
     gamma_pos_mcmc      = np.percentile(gamma_pos_walk, [16, 50, 84])
 
+    # Takes the best parameters as the 50 percentile
+    amplitude_neg_best = amplitude_neg_walk[1]
+    center_neg_best    = center_neg_walk[1]
+    sigma_neg_best     = sigma_neg_walk[1]
+    gamma_neg_best     = gamma_neg_walk[1]
+    amplitude_pos_best = amplitude_pos_walk[1]
+    center_pos_best    = center_pos_walk[1]
+    sigma_pos_best     = sigma_pos_walk[1]
+    gamma_pos_best     = gamma_pos_walk[1]
+
     # Prints them
     print('Parameter = [16 50 84]')
     print('amplitude_neg = ', amplitude_neg_mcmc)
@@ -139,7 +151,9 @@ def emcee_skewed_gaussian(x_d, y_d):
     print('sigma_pos = ', sigma_pos_mcmc)
     print('gamma_pos = ', gamma_pos_mcmc)
 
-    fig = corner.corner(samples, labels=["$a_n$", "$c_n$", "$s_n$", "$g_n$", "$a_p$", "$c_p$", "$s_p$", "$g_p$"])
-    fig.savefig("triangle.png",dpi=500)
+    fig = corner.corner(samples,
+                        labels = ["$a_n$", "$c_n$", "$s_n$", "$g_n$", "$a_p$", "$c_p$", "$s_p$", "$g_p$"],
+                        quantiles = [0.16, 0.5,0.84])
+    fig.savefig("triangle.png",dpi=200)
 
-    return amplitude_neg_mcmc[1], center_neg_mcmc[1], sigma_neg_mcmc[1], gamma_neg_mcmc[1], amplitude_pos_mcmc[1], center_pos_mcmc[1], sigma_pos_mcmc[1], gamma_pos_mcmc[1]
+    return amplitude_neg_best, center_neg_best, sigma_neg_best, gamma_neg_best, amplitude_pos_best, center_pos_best, sigma_pos_best, gamma_pos_best
