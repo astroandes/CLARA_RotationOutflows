@@ -1,0 +1,7 @@
+paper/paper.bbl
+*.aux
+paper/paper.blg
+*.log
+paper/paper.out
+*.gz
+paper/paperNotes.bib
