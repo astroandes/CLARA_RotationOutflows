@@ -55,11 +55,11 @@ Our main goal with this work is to measure the effect of the model's physical pa
 \section{A new LAE model}
 \label{sec:newmodel}
 
-Galaxies are ellipsoidal. However, for simplicity we model them as a sphere. This shape facilitates the interpretation of the results in our numerical experiments. Furthermore, this approximation is commonly used in the literature, as it explains a wide variety of observational features (\cite{Ahn03}, \cite{Verhamme06}, \cite{Dijkstra06}). \\
+We model spherical galaxy to facilitate the interpretation of the results, by deleting what would be another degree of freedom regarding a different geometry. Furthermore, this approximation is commonly used in the literature, as it explains a wide variety of observational features (\cite{Ahn03}, \cite{Verhamme06}, \cite{Dijkstra06}). \\
 
 There are 3 parameters in this model that define a LAE: the rotational velocity (\vrot), the outflow velocity (\vout) and the optical depth (\tauh). \vout is due to material ejected from the galaxy, by supernovas(\cite{Verhamme06}, \cite{Orsi12}, \cite{Hashimoto2015}, \cite{Gronke2015}). \tauh roughly corresponds to number of H atoms found by a \lya photon if one traces a line from the center of the galaxy to its edge, and it resembles the mass of the LAE.\\
 
-In this model, the LAE has a bulk velocity which is the superposition of the rotation and the outflow, as shown in Fig. \ref{fig:model}. The velocity components are written in Eqs. (\ref{eq:vx}) (\ref{eq:vy}) (\ref{eq:vz}). In these equations, $R$ is the radius of the sphere; $x$, $y$ and $z$ are the coordinates in a cartesian frame; and the $\mp$ signs in $v_x$ and $v_y$ indicate the direction of rotation, respectively. This rotation is a solid body rotation and its direction goes according to the right hand rule applied to the $\hat{k}$ unit vector. The outflow velocity is dependent on the position relative to the center of the galaxy, being it zero at the center and maximum at the edge of the sphere.\\
+In this model, the LAE has a bulk velocity corresponding to the superposition of rotation and outflows, as shown in Fig. \ref{fig:model}. The velocity components are written in Eqs. (\ref{eq:vx}) (\ref{eq:vy}) (\ref{eq:vz}). In these equations, $R$ is the radius of the sphere; $x$, $y$ and $z$ are the coordinates in a cartesian frame; and the $\mp$ signs in $v_x$ and $v_y$ indicate the direction of rotation, respectively. This rotation is a solid body rotation and its direction goes according to the right hand rule applied to the $\hat{k}$ unit vector. The outflow velocity is dependent on the position relative to the center of the galaxy, being it zero at the center and maximum at the edge of the sphere.\\
 
 \begin{equation}
 	v_{x}=\frac{x}{R}v_{\rm out}-\frac{y}{R}v_{\rm rot} 
@@ -97,7 +97,7 @@ where $\nu$ is the photon's frequency and $\nu_{\rm \alpha} = 2.46\times 10^{15}
 
 where $\Delta\nu_{\rm D}$ is known as the Doppler broadening of the \lya line. It depends on the neutral gas temperature $T$ or equivalently the thermal velocity $v_{\rm th}$ of the atoms. In the model the temperature is kept constant at $T=10^4$K and the thermal velocity is $v_{\rm th}=12.8$\kms. \\
 
-If $x < 0$, the final frequency $\nu < \nu_{\rm \alpha}$. This translates to the final wavelength being larger than the \lya natural one. The phenomenon is called a redshift in frequency. If, on the contrary, $x > 0$, the photon suffers a blueshift in frequency. \\
+If $x < 0$, the final frequency $\nu < \nu_{\rm \alpha}$. This translates to the final wavelength being larger than the \lya natural one, casing a redshift in frequency. If, on the contrary, $x > 0$, the photon suffers a blueshift in frequency. \\
 
 However, in the plots shown in this paper we use instead velocity, $V$, units. This eases the comparison against observational data. The velocity units are defined by
 
@@ -108,11 +108,11 @@ However, in the plots shown in this paper we use instead velocity, $V$, units. T
 
 The units of $V$ are usually \kms. In this case, the photon is redshifted in frequency when the velocity is greater than 0, and blueshifted in the opposite case. \\
 
-The initial emission of photons is taken at the center of the sphere for practicality due to the fact that both, center and off-center emissions, give analogous results. From here, $100000$ photons are emitted with the natural \lya wavelength. Then, they start to behave as described in sub-section \ref{subsec:photons_path_clara} (See Fig. \ref{fig:radiative_transfer}). When each photon is re-emitted, its new wavelength depends on the H atom's velocity (both thermal and bulk) and direction (both initial and final). However the photon's new direction of propagation is random in the rest frame of the atom. \\ 
+The initial emission of photons is taken at the center of the sphere for practicality due to the fact that both, center and off-center emissions, give analogous results. From here, $100000$ photons are emitted with the natural \lya wavelength starting to behave as described in sub-section \ref{subsec:photons_path_clara} (See Fig. \ref{fig:radiative_transfer}). When each photon is re-emitted, its new wavelength depends on the H atom's velocity (both thermal and bulk) and direction (both initial and final). However the photon's new direction of propagation is random in the rest frame of the atom. \\ 
 
 The individual scattering of all the photons is tracked through the complete 3D Hydrogen distribution. Once each photon escapes the galaxy, its final values are stored: position $\vec{r}$, direction of propagation $\hat{k}$, dimensionless frequency $x$, and number of scatterings $N$. To build the observed spectrum we make a histogram of the escape frequencies $x$. The number of scatterings $N$ tells how many steps the random walk requires to reach a distance to the center that is $\geq R$. In order to avoid situations in which the photon has not escaped after a long computational time, CLARA defines a number $N_{max}$ so the code stops. However, according to statistics, this last situation has low probabilities, so the photon is always most likely to exit the sphere. \\
 
-The process that takes place from the moment the first photon is emitted to the moment the last photon escapes the sphere, is called a simulation. Each simulation runs in the scientific computational cluster of Universidad de los Andes due to the computing resources it requires. Depending on \tauh, we need a different number of processors in order to minimize the time demands. For \tauh $=10^5, 10^6, 10^7$ we use 6, 12, 24 processors, respectively. The running times go from 7 hours to 1 week approximately, depending on the case. \\
+%The process that takes place from the moment the first photon is emitted to the moment the last photon escapes the sphere, is called a simulation. Each simulation runs in the scientific computational cluster of Universidad de los Andes due to the computing resources it requires. Depending on \tauh, we need a different number of processors in order to minimize the time demands. For \tauh $=10^5, 10^6, 10^7$ we use 6, 12, 24 processors, respectively. The running times go from 7 hours to 1 week approximately, depending on the case. \\
 
 \subsection{Galaxy's Viewing Angle}
 An observer located far away, only receives photons emitted along its line of sight. That means, only photons escaping in the direction of the observer must be counted in the spectrum. In the simulation we approximate this by taking into account only the photons with escaping direction angle $\theta$ respect to the rotation axis within the range $[\theta_{min}-\theta_{max}]$. We illustrate this in Fig. \ref{fig:model}. \\
@@ -134,8 +134,7 @@ To summarize, the parameters influencing the spectra are \vrot, \vout, \tauh and
 \label{sec:results}
 
 \subsection{Parameters' Initial Values}
-
-In order to define the ranges of \tauh, \vrot and \vout, it is necessary to refer to observational constraints. The common values for typical LAEs are in Tab. \ref{tab:values}. We run CLARA for all the permutations of these 3 parameters. \\
+In order to define the ranges of \tauh, \vrot and \vout, it is necessary to refer to observational constraints. The common values for typical LAEs are in Tab. \ref{tab:values}. We run CLARA's modified version for all the permutations of these 3 parameters. \\
 
 \begin{table}[htbp]
 	\centering
@@ -150,7 +149,7 @@ In order to define the ranges of \tauh, \vrot and \vout, it is necessary to refe
 	\label{tab:values}
 \end{table}
 
-The resulting sets of spectra are in Figs. \ref{fig:3_tau10E5_phi83-90}, \ref{fig:3_tau10E7_phi83-90} and \ref{fig:3_tau10E6_phi83-90} for $\theta \simeq 90^\circ$ available in the Appendix \ref{ap:results_figures}. We do not include the spectra for \vout = 50, 75 \kms because they are similar to \vout = 25 \kms. For this reason, we limit in all the plots \vout to a maximum value of 25 \kms. Nevertheless, the figures for \vout = 50, 75 \kms are in the Appendix \ref{ap:additional_figures} in Figs. \ref{fig:2_tau10E5_phi83-90}, \ref{fig:2_tau10E6_phi83-90} and \ref{fig:2_tau10E7_phi83-90}.\\
+The resulting sets of spectra are in the Appendix \ref{ap:results_figures} in Figs. \ref{fig:3_tau10E5_phi83-90}, \ref{fig:3_tau10E7_phi83-90} and \ref{fig:3_tau10E6_phi83-90} for $\theta \simeq 90^\circ$. We do not include the spectra for \vout = 50, 75 \kms because they are similar to \vout = 25 \kms. For this reason, we limit \vout to a maximum value of 25 \kms in all the plots. Nevertheless, the figures for \vout = 50, 75 \kms are in the Appendix \ref{ap:additional_figures} in Figs. \ref{fig:2_tau10E5_phi83-90}, \ref{fig:2_tau10E6_phi83-90} and \ref{fig:2_tau10E7_phi83-90}.\\
 
 These last 3 plots show a clear creation of two asymmetric peaks around $V=0$ \kms with the tallest peak is always redshifted, with a strong dependence on the outflow velocity.\\
 
@@ -183,7 +182,7 @@ We take now into account the viewing angle of the galaxy to build the observed s
 
 From Figs. \ref{fig:influence_viewing_angle_5}, \ref{fig:influence_viewing_angle_6} and \ref{fig:influence_viewing_angle_7} is clear that the intensity of the valley between the two peaks increases along with $\theta$. This causes an intensity decrease in the rest of the frequencies, thus a broadening of the line. The asymmetry also changes with the viewing angle.\\
 
-In the next subsection, we show only the results of the angle at which an observer sees the galaxy's angular momentum vector perpendicular to the line of sight. The purpose of this is only to decrease the number of plots in the document, as there is an analogous behavior for all viewing angles. \\
+In the next subsection, we show only the results of the angle at which an observer sees the galaxy's angular momentum vector perpendicular to the line of sight. The purpose of this is only to decrease the number of plots as there is an analogous behavior for all viewing angles. \\
 
 \subsection{Morphology of \lya line}
 To quantify the morphology of the \lya profile, we use an asymmetric gaussian fit to the curve as seen in Fig. \ref{fig:asymmetric_gaussian_fit}. Each of the two peaks, the red one and the blue one, is fitted with a curve parametrized by: an amplitude $A_{\pm}$, a standard deviation $\sigma_{\pm}$, a center $c_{\pm}$ and a skewness factor $\gamma_{\pm}$.\\
