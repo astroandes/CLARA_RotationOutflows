@@ -20,6 +20,8 @@
 
 \begin{abstract}
 \noindent Young galaxies in the Universe have a strong \lya emission caused by the ionized Hydrogen atoms in their interstellar medium. When the spectrum of a galaxy has an intense peak around the \lya natural frequency ($2.46\times 10^{15}$ Hz) it is called a Lyman Alpha Emitter (LAE). Typical LAEs are very distant ($z \gtrsim 2$). This makes that all the data astronomers can obtain from them is their spectra, and from there all the physical information of the galaxy must be derived. Trying to solve this task requires the creation of a simplified and solid model. In this paper we propose to consider LAEs as a spherical distribution of Hydrogen atoms that undergoes a solid body rotation and a radial expansion due to outflows. We use radiative transfer Monte Carlo simulations to interpret the Lyman-$\alpha$ line morphology. The main conclusion is that this new model reproduces LAEs observed features in a clear way and with consistent physical parameters. We also show results of adjusting observational data for some selected objects to models with and without bulk rotation. We finalize by discussing the possible implications for these results in terms of the energetics required for supernova feedback and outflows in high redshift galaxies. \\
+
+TERMINAR...\\
 \end{abstract}
 
 \section{Introduction}
@@ -29,25 +31,9 @@ Galaxies are key to understand our Universe. However, distant ones are very chal
 
 In the early Universe the most abundant elements were Hydrogen(H) and Helium(He), causing young galaxies to be rich in H atoms. Due to stellar activity in a galaxy, the surrounding gas is ionized, so H atoms excite and emit radiation at definite frequencies. The most basic of these frequencies corresponds to the \lya line equal to $2.47 \times 10^{15}\;Hz$ \cite{PartridgePeebles}. This is equivalent to a wavelength of 1215.67 $\AA$ cause by the transition of the H atom electron from levels $2\rightarrow1$ dubbed Lyman Alpha ( \lya) transition, discovered by Theodore Lyman in 1906. \cite{LymanBio} \\
 
-Due to the amount of H atoms inside a galaxy, the whole body becomes a strong \lya radiator. If the galaxy spectra shows a strong \lya line, it classifies as a Lyman Alpha Emitter (LAE). (\cite{DjorgovskiThompson}, \cite{Rhoads00}, \cite{Gawiser2007}, \cite{Koehler2007}, \cite{Ouchi08}, \cite{Yamada2012}, \cite{Schenker2012}, \cite{Kulas12}, \cite{Yamada2012}, \cite{Chonis2013}, \cite{Finkelstein2013}, \cite{Ostlin14}, \cite{Hayes2014}, \cite{Faisst2014}, \cite{Fumagalli2015}). However, when a \lya photon is emitted inside the galaxy, it travels through its interstellar medium (ISM). During the photon's path it can be absorbed and re-emitted by other H atoms. The new frequency of the photon is different that the initial one, in an observer frame of reference due to the atom's velocity. In LAEs, the state of the ISM gas, before and after a photon's re-emission is pretty much the same. This allows a random walk approximation and lets us consider photon-atom encounters as scatterings. A photon's scattering can happen several times, as seen in Fig. \ref{fig:radiative_transfer}. This stops only until the photon is able to escape the galaxy. \\
+Due to the amount of H atoms inside a galaxy, the whole body becomes a strong \lya radiator. If the galaxy spectra shows a strong \lya line, it classifies as a Lyman Alpha Emitter (LAE). (\cite{DjorgovskiThompson}, \cite{Rhoads00}, \cite{Gawiser2007}, \cite{Koehler2007}, \cite{Ouchi08}, \cite{Yamada2012}, \cite{Schenker2012}, \cite{Kulas12}, \cite{Yamada2012}, \cite{Chonis2013}, \cite{Finkelstein2013}, \cite{Ostlin14}, \cite{Hayes2014}, \cite{Faisst2014}, \cite{Fumagalli2015}). However, when a \lya photon is emitted inside the galaxy, it travels through its interstellar medium (ISM). During the photon's path it can be absorbed and re-emitted by other H atoms. The new frequency of the photon is different that the initial one, in an observer frame of reference due to the atom's velocity. In LAEs, the state of the ISM gas, before and after a photon's re-emission is pretty much the same. This allows a random walk approximation and lets us consider photon-atom encounters as scatterings. A photon's scattering can happen several times and stops only until the photon is able to escape the galaxy. \\
 
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=0.45\textwidth]{./figures/radiative_transfer}
-	\end{center}
-	\caption{\textbf{Radiative Transfer Sketch:} A \lya photon being absorbed and re-emitted by Hydrogen atoms. 
-		\label{fig:radiative_transfer}}
-\end{figure}
-
-In a static galaxy, this random walk process produces a spectrum with two equal and symmetric peaks around the natural \lya wavelength. This can be seen in Figure A3 of Forero-Romero et al. paper \cite{CLARA} (Fig. \ref{fig:static}). If now the gas has a bulk velocity, the shape of the \lya profile changes. We explore these effects in this paper by proposing a new model for a LAE. The model consists of a spherical distribution of H atoms undergoing a solid body rotation and radial expansion (outflows). \\
-
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=0.35\textwidth]{./figures/static}
-	\end{center}
-	\caption{\textbf{Figure A3 of Forero-Romero et al. paper:} CLARA's view on the escape fraction of Lyman-$\alpha$ photons in high redshift galaxies \cite{CLARA}. Reproduced with the permission of the author.
-		\label{fig:static}}
-\end{figure}
+In a static galaxy, this random walk process produces a spectrum with two equal and symmetric peaks around the natural \lya wavelength and zero intensity at the center (Fig. A3 from \cite{CLARA}). If now the gas has a bulk velocity, the shape of the \lya profile changes. We explore these effects in this paper by proposing a new model for a LAE. The model consists of a spherical distribution of H atoms undergoing a solid body rotation and radial expansion (outflows). \\
 
 Our main goal with this work is to measure the effect of the model's physical parameters on the outgoing \lya line. In this case, due to the resonant\footnote{Resonant is a common term used in radiative transfer. It means that the photons that create the line are absorbed and re-emitted several times before escaping the cloud of gas.} nature of the \lya line, analytical solutions can not be derived. Because of this, it becomes necessary to run simulations that explore and test the model. In this paper we use the radiative transfer code \textbf{CLARA} (Code for Lyman Alpha Radiation Analysis) written by Forero-Romero et al. \cite{CLARA}. CLARA can simulate the \lya line of a spherical rotating LAE depending on its mass and velocity, so we modify it to include outflows and then we explore the resulting consequences on the \lya line. \\
 
@@ -78,37 +64,11 @@ In this model, the LAE has a bulk velocity corresponding to the superposition of
 
 These 3 parameters, \vrot, \vout and \tauh, leave the idea of a model of LAE, that although simple, considers the main galaxy's dynamics. All of them have been previously proposed and used by different authors, but never combined together (\cite{Adams72}, \cite{Harrington73}, \cite{Neufeld90}, \cite{Dijkstra06}, \cite{Verhamme06}, \cite{Forero12}, \cite{Martin2015}, \cite{Garavito14}, \cite{Neufeld91}, \cite{Laursen09}, \cite{Barnes11}, \cite{Verhamme12}, \cite{Yajima12}).\\
 
-\subsection{A \lya Photon's Path in CLARA}
-\label{subsec:photons_path_clara}
-
-In the \lya radiative transfer problem, a commonly used dimensionless variable $x$ is used to describe a photon's frequency and is defined as:\\
-
-\begin{equation}
-	\label{eq:x_freq}
-	x \equiv \frac{\nu -\nu_{\rm \alpha}}{\Delta\nu_{\rm D}},
-\end{equation} 
-
-where $\nu$ is the photon's frequency and $\nu_{\rm \alpha} = 2.46\times 10^{15}$ Hz is the \lya natural frequency. The denominator $\Delta\nu_{\rm D}$ is defined in Eq. \ref{eq:delta_nuD}.
-
-\begin{equation}
-	\label{eq:delta_nuD}
-	\Delta\nu_{\rm D} \equiv \nu_{\rm \alpha}\sqrt{\frac{2kT}{m_pc^2}} \equiv \nu_{\rm \alpha} \frac{v_{\rm th}}{c},
-\end{equation} 
-
-where $\Delta\nu_{\rm D}$ is known as the Doppler broadening of the \lya line. It depends on the neutral gas temperature $T$ or equivalently the thermal velocity $v_{\rm th}$ of the atoms. In the model the temperature is kept constant at $T=10^4$K and the thermal velocity is $v_{\rm th}=12.8$\kms. \\
-
-If $x < 0$, the final frequency $\nu < \nu_{\rm \alpha}$. This translates to the final wavelength being larger than the \lya natural one, casing a redshift in frequency. If, on the contrary, $x > 0$, the photon suffers a blueshift in frequency. \\
-
+%mirar donde pongo esto
 However, in the plots shown in this paper we use instead velocity, $V$, units. This eases the comparison against observational data. The velocity units are defined by
-
-\begin{equation}
-	\label{eq:V}
-	V = xv_{\rm th} = \frac{\nu -\nu_{\rm \alpha}}{\nu_{\rm \alpha}}c.
-\end{equation}
-
 The units of $V$ are usually \kms. In this case, the photon is redshifted in frequency when the velocity is greater than 0, and blueshifted in the opposite case. \\
 
-The initial emission of photons is taken at the center of the sphere for practicality due to the fact that both, center and off-center emissions, give analogous results. From here, $100000$ photons are emitted with the natural \lya wavelength starting to behave as described in sub-section \ref{subsec:photons_path_clara} (See Fig. \ref{fig:radiative_transfer}). When each photon is re-emitted, its new wavelength depends on the H atom's velocity (both thermal and bulk) and direction (both initial and final). However the photon's new direction of propagation is random in the rest frame of the atom. \\ 
+The initial emission of photons is taken at the center of the sphere for practicality due to the fact that both, center and off-center emissions, give analogous results. From here, $100000$ photons are emitted with the natural \lya wavelength and start to scatter. When each photon is re-emitted, its new wavelength depends on the H atom's velocity (both thermal and bulk) and direction (both initial and final). However the photon's new direction of propagation is random in the rest frame of the atom. \\ 
 
 The individual scattering of all the photons is tracked through the complete 3D Hydrogen distribution. Once each photon escapes the galaxy, its final values are stored: position $\vec{r}$, direction of propagation $\hat{k}$, dimensionless frequency $x$, and number of scatterings $N$. To build the observed spectrum we make a histogram of the escape frequencies $x$. The number of scatterings $N$ tells how many steps the random walk requires to reach a distance to the center that is $\geq R$. In order to avoid situations in which the photon has not escaped after a long computational time, CLARA defines a number $N_{max}$ so the code stops. However, according to statistics, this last situation has low probabilities, so the photon is always most likely to exit the sphere. \\
 
@@ -149,9 +109,15 @@ In order to define the ranges of \tauh, \vrot and \vout, it is necessary to refe
 	\label{tab:values}
 \end{table}
 
-The resulting sets of spectra are in the Appendix \ref{ap:results_figures} in Figs. \ref{fig:3_tau10E5_phi83-90}, \ref{fig:3_tau10E7_phi83-90} and \ref{fig:3_tau10E6_phi83-90} for $\theta \simeq 90^\circ$. We do not include the spectra for \vout = 50, 75 \kms because they are similar to \vout = 25 \kms. For this reason, we limit \vout to a maximum value of 25 \kms in all the plots. Nevertheless, the figures for \vout = 50, 75 \kms are in the Appendix \ref{ap:additional_figures} in Figs. \ref{fig:2_tau10E5_phi83-90}, \ref{fig:2_tau10E6_phi83-90} and \ref{fig:2_tau10E7_phi83-90}.\\
+The behavior of the resulting sets of spectra can be summarized by Fig. \ref{fig:summary}. We concluded from the simulations a clear creation of two asymmetric peaks around $V=0$ \kms with the tallest peak always redshifted. We detected a strong dependence on the outflow velocity that induces the peak asymmetry. We also detected that the rotation velocity broadens the line horizontally. Both these effects have been previously reported separately in the literature, so these results can valid their superposition to some extend. \\
 
-These last 3 plots show a clear creation of two asymmetric peaks around $V=0$ \kms with the tallest peak is always redshifted, with a strong dependence on the outflow velocity.\\
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{./figures/summary}
+	\end{center}
+	\caption{\textbf{4 different \lya profiles:} With \tauh$=10^5$ and $\theta \simeq 90^\circ$. The rotational velocity \vrot increases to the right and the outflows velocity \vout increases downwards. The intensity is in arbitrary units.
+		\label{fig:summary}}
+\end{figure}
 
 \subsection{Influence of the viewing angle $\theta$}
 We take now into account the viewing angle of the galaxy to build the observed spectra. For all of the physical parameters' combinations, the effect of $\theta$ in the \lya line is always the same.\\
@@ -182,25 +148,21 @@ We take now into account the viewing angle of the galaxy to build the observed s
 
 From Figs. \ref{fig:influence_viewing_angle_5}, \ref{fig:influence_viewing_angle_6} and \ref{fig:influence_viewing_angle_7} is clear that the intensity of the valley between the two peaks increases along with $\theta$. This causes an intensity decrease in the rest of the frequencies, thus a broadening of the line. The asymmetry also changes with the viewing angle.\\
 
-In the next subsection, we show only the results of the angle at which an observer sees the galaxy's angular momentum vector perpendicular to the line of sight. The purpose of this is only to decrease the number of plots as there is an analogous behavior for all viewing angles. \\
 
 \subsection{Morphology of \lya line}
-To quantify the morphology of the \lya profile, we use an asymmetric gaussian fit to the curve as seen in Fig. \ref{fig:asymmetric_gaussian_fit}. Each of the two peaks, the red one and the blue one, is fitted with a curve parametrized by: an amplitude $A_{\pm}$, a standard deviation $\sigma_{\pm}$, a center $c_{\pm}$ and a skewness factor $\gamma_{\pm}$.\\
 
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=0.3\textwidth]{./figures/asymmetric_gaussian_fit}
-	\end{center}
-	\caption{\textbf{Asymmetric gaussian fit for a \lya profile:} With \tauh$=10^5$, \vrot$=50$ \kms, \vout$=20$ \kms and $\theta \approx 0^\circ$.The intensity is in arbitrary units.
-		\label{fig:asymmetric_gaussian_fit}}
-\end{figure}
+To summarize, the influence of the 4 parameters on the \lya morphology is the following: 
 
-TERMINAR...\\
+\begin{itemize}
+	\item \tauh induces a redshift. Increasing the optical depth separates the line of the zero velocity line. \\
+	\item \vout decreases the right peak's intensity. Higher \vout makes the left peak smaller until it merges with the right one. \\
+	\item \vrot broadens the line and decreases the maximum intensity. Higher \vrot implies a flatter spectrum. This effect has not been deeply studied in literature. Only Garavito et al. \cite{Garavito14} has simulated its effect. Our results are consistent with their conclusions.
+	\item $\theta$ increases the central valley of the line. Higher $\theta$ makes more emission at \lya natural frequency. \\ 
+\end{itemize}
 
+\subsection{Doppler shift in frequency}
 
-\subsection{Influences of the free parameters}
-
-TERMINAR...\\
+Rotations induces a Doppler shift of the only-outflow spectra.\\
 
 \begin{figure}[h!]
 	\begin{center}
@@ -210,49 +172,25 @@ TERMINAR...\\
 		\label{fig:rotation_doppler_outflow}}
 \end{figure}
 
-To summarize the influence of the 3 parameters on the \lya morphology is the following: 
+TERMINAR...\\
+PONER GRAFICA REAL...\\
 
-\begin{itemize}
-	\item \tauh induces a redshift. Increasing the optical depth separates the line of the zero velocity line. \\
-	\item \vout decreases the right peak's intensity. Higher \vout make the left peak smaller until it merges with the right one. \\
-	\item \vrot broadens the line and decreases the maximum intensity. Higher \vrot implies a flatter spectrum. This effect has not been deeply studied in literature. Only Garavito et al. \cite{Garavito14} has simulated its effect. Our results are consistent with their conclusions. 
-\end{itemize}
+\section{Observational Implications}
+\label{sec:observationalimplications}
 
-\section{Observational Comparison}
-\label{sec:comparisonobservations}
+** Rotational effects should be clearly detected and characterized by MUSE.\\
 
-There are several observations of LAEs in the literature. Kulas et al. \cite{Kulas12} observed distant LAEs ($z\sim2-3$) with high resolution. In the Figure 3 of their paper (Fig. \ref{fig:kulas}) they show 18 \lya profiles. \\
+** The V=0 emission is not necessary because of radiation escaping without scattering, but that the viewing angle can control that. \\
 
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=0.5\textwidth]{./figures/figure3_kulas}
-	\end{center}
-	\caption{\textbf{Figure 3 of Kulas et al. paper:} The Kinematics of Multiple-peaked \lya Emission in Star-forming Galaxies at $z\sim2-3$ \cite{Kulas12}. This plot is reproduced with the authors permission.
-		\label{fig:kulas}}
-\end{figure}
-%http://arohatgi.info/WebPlotDigitizer/app/
-
-The observed spectra in Fig. \ref{fig:kulas} are modified by the redshift $z$ of the galaxies, which causes a broadening of the line. Taking into account this effect, we notice similitudes between them and the simulated spectra. The \lya profiles are mostly 2 peaks with an asymmetry between them, just as in the simulation. Also, the small peak (if existing) is always smaller than the tall one.\\
-
-In this section we will focus in one particular observation from Fig. \ref{fig:kulas}: \textit{Westphal-BX154}, seen in more detail in Fig. \ref{fig:kulas_w}. We quantify the morphology of this observation by applying the asymmetric gaussian fit described previously. We take the obtaining values and select the simulations that fall in it within a reasonable range. This in order to filter all the spectra combinations.\\
-
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=0.3\textwidth]{./figures/kulas_w}
-	\end{center}
-	\caption{\textbf{Westphal-BX154:} The Kinematics of Multiple-peaked \lya Emission in Star-forming Galaxies at $z\sim2-3$ \cite{Kulas12}. This spectra is at $z=2.5954$.This plot is reproduced with the authors permission.
-		\label{fig:kulas_w}}
-\end{figure}
+** This new LAE model is roughly consistent with observations.\\
 
 TERMINAR...\\
-
-In this model, the combination of rotation and outflows velocities not only makes a lot of sense but seems to be able to fit observations. This new model proposed could replicate \lya profiles with typical LAE's values. The main result of this paper is that we presented a new LAE model roughly consistent with observations.\\
 
 
 \section{Conclusions}
 \label{sec:conclusions}
 
-In this paper, the objective was to analyze and measure the influence of galaxy rotation and outflows on the \lya line. The motivation for this is to be able to obtain physical information of a LAE by just looking at its \lya profile. In order to accomplish this objective, we propose a new model of a LAE consisting of a sphere of Hydrogen atoms that expands radially and rotates as a solid body. The program CLARA \cite{CLARA} is used to set the conditions and emulate the transfer code. \\
+In this paper, the objective was to analyze and measure the influence of galaxy rotation and outflows on the \lya line. The motivation for this is to be able to obtain physical information of a LAE by just looking at its \lya profile. In order to accomplish this objective, we propose a new model of a LAE consisting of a sphere of Hydrogen atoms that expands radially and rotates as a solid body. A modified version of the program CLARA \cite{CLARA} is used to set the conditions and emulate the radiative transfer process inside the galaxy. \\
 
 The conclusions obtained from this work are: \\
 
@@ -263,15 +201,15 @@ The conclusions obtained from this work are: \\
 	
 	\item The final spectra obtained are roughly consistent with LAEs observations.  \\
 	
+	\item Rotations induces a Doppler shift of the only-outflow spectra.\\
+	
+	\item TERMINAR...\\
 \end{itemize}
 
 \subsection{Future work}
 
-% Rotational effects should be clearly detected and characterized by MUSE.
-%Possible rotational velocity constraints using the Lyman-alpha line.
-
-
-Due to the long time CLARA takes to run, it was not possible to fit an observational LAE and predict its parameters. However, the next step is to use tools as MCMC (Monte Carlo Markov Chain) to obtain the galaxy's \tauh, \vrot and \vout that would agree with this model. \\
+** Differential rotation instead of solid body. \\
+** Fit and observation's parameters with MCMC. \\
 
 TERMINAR...\\
 
@@ -280,75 +218,14 @@ All of this work is available online and free to use to anyone. The data, source
 
 \section*{Acknowledgments}
 
-...\\
+** Cluster Uniandes? 
+
+TERMINAR...\\
 
 
 %------------------------REFERENCES----------------------------
 
 \bibliographystyle{latex/apj}
 \bibliography{references}
-
-%------------------------APPENDIX----------------------------
-
-\newpage
-
-\appendix
-
-\begin{figure}[!htbp]
-	\centering
-	\begin{minipage}[b]{0.45\textwidth}
-		\section{Results' Figures}
-		\label{ap:results_figures}
-		
-		\includegraphics[width=\textwidth]{./figures/3_tau10E5_phi83-90}
-		\caption{\textbf{\lya profile for \tauh$=10^5$:} With \vrot ranging $50,100$ \kms and \vout ranging $5,10,15,20,25$ \kms. The intensity is in arbitrary units. The viewing angle $\theta \simeq 90^\circ$. The dashed vertical line indicates the \lya line's natural frequency. 
-			\label{fig:3_tau10E5_phi83-90}}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[b]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{./figures/3_tau10E6_phi83-90}
-		\caption{\textbf{\lya profile for \tauh$=10^6$:}  Same as Fig. \ref{fig:3_tau10E5_phi83-90} but for \tauh$=10^6$. 
-			\label{fig:3_tau10E6_phi83-90}}
-		\vspace{1.5mm}
-	\end{minipage}
-\end{figure}
-
-\begin{figure}[!htbp]
-	\centering
-	\begin{minipage}[b]{0.45\textwidth}
-		\vspace{3mm}
-		\includegraphics[width=\textwidth]{./figures/3_tau10E7_phi83-90}
-		\caption{\textbf{\lya profile for \tauh$=10^7$:} Same as Fig. \ref{fig:3_tau10E5_phi83-90} but for \tauh$=10^7$.
-			\label{fig:3_tau10E7_phi83-90}}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[b]{0.45\textwidth}
-		\section{Additional Figures}
-		\label{ap:additional_figures}
-		
-		Additional figures of spectra with \vrot $= 50,100$ \kms and \vout $= 50,75$ \kms, for all the different \tauh. 
-		
-		\vspace{2.7cm}
-		
-		\includegraphics[width=\textwidth]{./figures/appendix/2_tau10E5_phi83-90}
-		\caption{\textbf{\lya profile for \tauh$=10^5$:} With \vrot ranging $50,100$ \kms and \vout ranging $50,75$ \kms.
-			\label{fig:2_tau10E5_phi83-90}}
-	\end{minipage}
-\end{figure}
-
-\begin{figure}[!htbp]
-	\centering
-	\begin{minipage}[b]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{./figures/appendix/2_tau10E6_phi83-90}
-		\caption{\textbf{\lya profile for \tauh$=10^6$:} With \vrot ranging $50,100$ \kms and \vout ranging $50,75$ \kms.
-			\label{fig:2_tau10E6_phi83-90}}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[b]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{./figures/appendix/2_tau10E7_phi83-90}
-		\caption{\textbf{\lya profile for \tauh$=10^7$:} With \vrot ranging $50,100$ \kms and \vout ranging $50,75$ \kms.
-			\label{fig:2_tau10E7_phi83-90}}
-	\end{minipage}
-\end{figure}
 
 \end{document}
