@@ -21,7 +21,7 @@
 \begin{abstract}
 \noindent Young galaxies in the Universe have a strong \lya emission caused by the ionized Hydrogen atoms in their interstellar medium. When the spectrum of a galaxy has an intense peak around the \lya natural frequency ($2.46\times 10^{15}$ Hz) it is called a Lyman Alpha Emitter (LAE). Typical LAEs are very distant ($z \gtrsim 2$). This makes that all the data astronomers can obtain from them is their spectra, and from there all the physical information of the galaxy must be derived. Trying to solve this task requires the creation of a simplified and solid model. In this paper we propose to consider LAEs as a spherical distribution of Hydrogen atoms that undergoes a solid body rotation and a radial expansion due to outflows. We use radiative transfer Monte Carlo simulations to interpret the Lyman-$\alpha$ line morphology. The main conclusion is that this new model reproduces LAEs observed features in a clear way and with consistent physical parameters. We also show results of adjusting observational data for some selected objects to models with and without bulk rotation. We finalize by discussing the possible implications for these results in terms of the energetics required for supernova feedback and outflows in high redshift galaxies. \\
 
-TERMINAR...\\
+REVISAR AL FINAL...\\
 \end{abstract}
 
 \section{Introduction}
@@ -93,8 +93,8 @@ To summarize, the parameters influencing the spectra are \vrot, \vout, \tauh and
 \section{Results}
 \label{sec:results}
 
-\subsection{Parameters' Initial Values}
-In order to define the ranges of \tauh, \vrot and \vout, it is necessary to refer to observational constraints. The common values for typical LAEs are in Tab. \ref{tab:values}. We run CLARA's modified version for all the permutations of these 3 parameters. \\
+\subsection{Resulting simulated spectra}
+In order to define the ranges of \tauh, \vrot and \vout, it is necessary to refer to observational constraints. The common values for typical LAEs that were set as parameters are in Tab. \ref{tab:values}. We run CLARA's modified version for all the permutations of these 3 parameters. \\
 
 \begin{table}[htbp]
 	\centering
@@ -113,7 +113,7 @@ The behavior of the resulting sets of spectra can be summarized by Fig. \ref{fig
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=0.5\textwidth]{./figures/summary}
+		\includegraphics[width=0.48\textwidth]{./figures/summary}
 	\end{center}
 	\caption{\textbf{4 different \lya profiles:} With \tauh$=10^5$ and $\theta \simeq 90^\circ$. The rotational velocity \vrot increases to the right and the outflows velocity \vout increases downwards. The intensity is in arbitrary units.
 		\label{fig:summary}}
@@ -124,29 +124,13 @@ We take now into account the viewing angle of the galaxy to build the observed s
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=0.5\textwidth]{./figures/influence_viewing_angle_5}
+		\includegraphics[width=0.5\textwidth]{./figures/angles}
 	\end{center}
-	\caption{\textbf{\lya profile for different $\theta$:} With \tauh$=10^5$, \vrot$=50$ \kms and \vout$=20$ \kms.The intensity is in arbitrary units.
-		\label{fig:influence_viewing_angle_5}}
+	\caption{\textbf{\lya profile for different $\theta$.} For \tauh$=10^5$, \vrot$=50$ \kms and \vout$=20$ \kms. For \tauh$=10^6$, \vrot$=100$ \kms and \vout$=5$ \kms. For \tauh$=10^7$, \vrot$=100$ \kms and \vout$=15$ \kms. The intensity is in arbitrary units.
+		\label{fig:angles}}
 \end{figure}
 
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=0.5\textwidth]{./figures/influence_viewing_angle_6}
-	\end{center}
-	\caption{\textbf{\lya profile for different $\theta$:} With \tauh$=10^6$, \vrot$=100$ \kms and \vout$=5$ \kms.The intensity is in arbitrary units.
-		\label{fig:influence_viewing_angle_6}}
-\end{figure}
-
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=0.5\textwidth]{./figures/influence_viewing_angle_7}
-	\end{center}
-	\caption{\textbf{\lya profile for different $\theta$:} With \tauh$=10^7$, \vrot$=100$ \kms and \vout$=15$ \kms.The intensity is in arbitrary units.
-		\label{fig:influence_viewing_angle_7}}
-\end{figure}
-
-From Figs. \ref{fig:influence_viewing_angle_5}, \ref{fig:influence_viewing_angle_6} and \ref{fig:influence_viewing_angle_7} is clear that the intensity of the valley between the two peaks increases along with $\theta$. This causes an intensity decrease in the rest of the frequencies, thus a broadening of the line. The asymmetry also changes with the viewing angle.\\
+From Fig. \ref{fig:angles} it is clear that the intensity of the valley between the two peaks increases along with $\theta$. This causes an intensity decrease in the rest of the frequencies, thus a broadening of the line. The asymmetry also changes with the viewing angle.\\
 
 
 \subsection{Morphology of \lya line}
