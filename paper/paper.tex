@@ -6,20 +6,41 @@
 
 \begin{document}
 
-\title{Influence of galaxy rotation and outflows in the Lyman Alpha spectral line}
-\shorttitle{Influence of galaxy rotation and outflows in the Lyman Alpha spectral line}
+\title{Influence of galaxy rotation and outflows in the Lyman-$\alpha$
+  spectral line}
+\shorttitle{Rotation and outflows in the Lyman-$\alpha$ lines} 
 
-\shortauthors{Remolina-Gutierrez et al.}
+\shortauthors{Remolina-Gutierrez and Forero-Romero.}
 
 \author{Maria Camila Remolina-Gutierrez, Jaime E. Forero-Romero} 
-\affil{Departamento de F\'{i}sica, Universidad de los Andes, Cra. 1 No. 18A-10, Edificio Ip, Bogot\'a, Colombia}
+\affil{Departamento de F\'{i}sica, Universidad de los Andes, Cra. 1
+  No. 18A-10, Edificio Ip, Bogot\'a, Colombia} 
 \email{mc.remolina197@uniandes.edu.co}
 \email{je.forero@uniandes.edu.co}
 
-\keywords{Galaxies: high-redshift, Lyman Alpha Emission, Galaxy Rotation, Galaxy Outflows, Radiative Transfer}  
+\keywords{Galaxies: high-redshift, Lyman Alpha Emission, Galaxy
+  Rotation, Galaxy Outflows, Radiative Transfer}   
 
 \begin{abstract}
-\noindent Young galaxies in the Universe have a strong \lya emission caused by the ionized Hydrogen atoms in their interstellar medium. When the spectrum of a galaxy has an intense peak around the \lya natural frequency ($2.46\times 10^{15}$ Hz) it is called a Lyman Alpha Emitter (LAE). Typical LAEs are very distant ($z \gtrsim 2$). This makes that all the data astronomers can obtain from them is their spectra, and from there all the physical information of the galaxy must be derived. Trying to solve this task requires the creation of a simplified and solid model. In this paper we propose to consider LAEs as a spherical distribution of Hydrogen atoms that undergoes a solid body rotation and a radial expansion due to outflows. We use radiative transfer Monte Carlo simulations to interpret the Lyman-$\alpha$ line morphology. The main conclusion is that this new model reproduces LAEs observed features in a clear way and with consistent physical parameters. We also show results of adjusting observational data for some selected objects to models with and without bulk rotation. We finalize by discussing the possible implications for these results in terms of the energetics required for supernova feedback and outflows in high redshift galaxies. \\
+\noindent Young galaxies in the Universe have a strong \lya emission
+caused by the ionized Hydrogen atoms in their interstellar
+medium. When the spectrum of a galaxy has an intense peak around the
+\lya natural frequency ($2.46\times 10^{15}$ Hz) it is called a Lyman
+Alpha Emitter (LAE). Typical LAEs are very distant ($z \gtrsim
+2$). This makes that all the data astronomers can obtain from them is
+their spectra, and from there all the physical information of the
+galaxy must be derived. Trying to solve this task requires the
+creation of a simplified and solid model. In this paper we propose to
+consider LAEs as a spherical distribution of Hydrogen atoms that
+undergoes a solid body rotation and a radial expansion due to
+outflows. We use radiative transfer Monte Carlo simulations to
+interpret the Lyman-$\alpha$ line morphology. The main conclusion is
+that this new model reproduces LAEs observed features in a clear way
+and with consistent physical parameters. We also show results of
+adjusting observational data for some selected objects to models with
+and without bulk rotation. We finalize by discussing the possible
+implications for these results in terms of the energetics required for
+supernova feedback and outflows in high redshift galaxies. \\ 
 
 REVISAR AL FINAL...\\
 \end{abstract}
@@ -27,16 +48,68 @@ REVISAR AL FINAL...\\
 \section{Introduction}
 \label{sec:intro}
 
-Galaxies are key to understand our Universe. However, distant ones are very challenging to detect. It is then an open challenge to obtain as much information as possible from them, as they represent the younger stages of galaxy evolution. Astronomers noted that a that relevant fraction of these galaxies emitted a really strong line at $1215.67\;\AA$ in their spectra at  and named them Lyman Alpha Emitters (LAEs). The purpose of this paper is to use this spectral line to model and simulate LAEs in order to narrow computationally their physical and kinematic properties. \\
+Distant galaxies are key to understand early evolutionary stages of
+our Universe.
+However, those galaxies are challenging to detect.
+Physical conditions in those galaxies allows the emergence of
+Lyman-$\alpha$ line emission at $1216$ \AA \cite{PartrigePeebles}.
+Galaxies detected through its Lyman-$\alpha$ emission receive the name of
+spectra at  and named Lyman Alpha Emitters (LAEs).
 
-In the early Universe the most abundant elements were Hydrogen(H) and Helium(He), causing young galaxies to be rich in H atoms. Due to stellar activity in a galaxy, the surrounding gas is ionized, so H atoms excite and emit radiation at definite frequencies. The most basic of these frequencies corresponds to the \lya line equal to $2.47 \times 10^{15}\;Hz$ \cite{PartridgePeebles}. This is equivalent to a wavelength of 1215.67 $\AA$ cause by the transition of the H atom electron from levels $2\rightarrow1$ dubbed Lyman Alpha ( \lya) transition, discovered by Theodore Lyman in 1906. \cite{LymanBio} \\
 
-Due to the amount of H atoms inside a galaxy, the whole body becomes a strong \lya radiator. If the galaxy spectra shows a strong \lya line, it classifies as a Lyman Alpha Emitter (LAE). (\cite{DjorgovskiThompson}, \cite{Rhoads00}, \cite{Gawiser2007}, \cite{Koehler2007}, \cite{Ouchi08}, \cite{Yamada2012}, \cite{Schenker2012}, \cite{Kulas12}, \cite{Yamada2012}, \cite{Chonis2013}, \cite{Finkelstein2013}, \cite{Ostlin14}, \cite{Hayes2014}, \cite{Faisst2014}, \cite{Fumagalli2015}). However, when a \lya photon is emitted inside the galaxy, it travels through its interstellar medium (ISM). During the photon's path it can be absorbed and re-emitted by other H atoms. The new frequency of the photon is different that the initial one, in an observer frame of reference due to the atom's velocity. In LAEs, the state of the ISM gas, before and after a photon's re-emission is pretty much the same. This allows a random walk approximation and lets us consider photon-atom encounters as scatterings. A photon's scattering can happen several times and stops only until the photon is able to escape the galaxy. \\
+In the early Universe the most abundant elements were Hydrogen(H) and
+Helium(He), causing young galaxies to be rich in H atoms. Due to
+stellar activity in a galaxy, the surrounding gas is ionized, so H
+atoms excite and emit radiation at definite frequencies. The most
+basic of these frequencies corresponds to the \lya line equal to $2.47
+\times 10^{15}\;Hz$ \cite{PartridgePeebles}. This is equivalent to a
+wavelength of 1215.67 $\AA$ cause by the transition of the H atom
+electron from levels $2\rightarrow1$ dubbed Lyman Alpha ( \lya)
+transition, discovered by Theodore Lyman in 1906. \cite{LymanBio} \\ 
 
-In a static galaxy, this random walk process produces a spectrum with two equal and symmetric peaks around the natural \lya wavelength and zero intensity at the center (Fig. A3 from \cite{CLARA}). If now the gas has a bulk velocity, the shape of the \lya profile changes. We explore these effects in this paper by proposing a new model for a LAE. The model consists of a spherical distribution of H atoms undergoing a solid body rotation and radial expansion (outflows). \\
+Due to the amount of H atoms inside a galaxy, the whole body becomes a
+strong \lya radiator. If the galaxy spectra shows a strong \lya line,
+it classifies as a Lyman Alpha Emitter
+(LAE). (\cite{DjorgovskiThompson}, \cite{Rhoads00},
+\cite{Gawiser2007}, \cite{Koehler2007}, \cite{Ouchi08},
+\cite{Yamada2012}, \cite{Schenker2012}, \cite{Kulas12},
+\cite{Yamada2012}, \cite{Chonis2013}, \cite{Finkelstein2013},
+\cite{Ostlin14}, \cite{Hayes2014}, \cite{Faisst2014},
+\cite{Fumagalli2015}). However, when a \lya photon is emitted inside
+the galaxy, it travels through its interstellar medium (ISM). During
+the photon's path it can be absorbed and re-emitted by other H
+atoms. The new frequency of the photon is different that the initial
+one, in an observer frame of reference due to the atom's velocity. In
+LAEs, the state of the ISM gas, before and after a photon's
+re-emission is pretty much the same. This allows a random walk
+approximation and lets us consider photon-atom encounters as
+scatterings. A photon's scattering can happen several times and stops
+only until the photon is able to escape the galaxy. \\ 
 
-Our main goal with this work is to measure the effect of the model's physical parameters on the outgoing \lya line. In this case, due to the resonant\footnote{Resonant is a common term used in radiative transfer. It means that the photons that create the line are absorbed and re-emitted several times before escaping the cloud of gas.} nature of the \lya line, analytical solutions can not be derived. Because of this, it becomes necessary to run simulations that explore and test the model. In this paper we use the radiative transfer code \textbf{CLARA} (Code for Lyman Alpha Radiation Analysis) written by Forero-Romero et al. \cite{CLARA}. CLARA can simulate the \lya line of a spherical rotating LAE depending on its mass and velocity, so we modify it to include outflows and then we explore the resulting consequences on the \lya line. \\
+In a static galaxy, this random walk process produces a spectrum with
+two equal and symmetric peaks around the natural \lya wavelength and
+zero intensity at the center (Fig. A3 from \cite{CLARA}). If now the
+gas has a bulk velocity, the shape of the \lya profile changes. We
+explore these effects in this paper by proposing a new model for a
+LAE. The model consists of a spherical distribution of H atoms
+undergoing a solid body rotation and radial expansion (outflows). \\ 
 
+Our main goal with this work is to measure the effect of the model's
+physical parameters on the outgoing \lya line. In this case, due to
+the resonant\footnote{Resonant is a common term used in radiative
+  transfer. It means that the photons that create the line are
+  absorbed and re-emitted several times before escaping the cloud of
+  gas.} nature of the \lya line, analytical solutions can not be
+derived. Because of this, it becomes necessary to run simulations that
+explore and test the model. In this paper we use the radiative
+transfer code \textbf{CLARA} (Code for Lyman Alpha Radiation Analysis)
+written by Forero-Romero et al. \cite{CLARA}. CLARA can simulate the
+\lya line of a spherical rotating LAE depending on its mass and
+velocity, so we modify it to include outflows and then we explore the
+resulting consequences on the \lya line. \\
+
+
+ 
 
 \section{A new LAE model}
 \label{sec:newmodel}
