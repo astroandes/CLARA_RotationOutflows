@@ -1,49 +1,113 @@
-%Document Class
-\documentclass[twocolappendix]{latex/emulateapj}
+\documentclass[a4,useAMS,usenatbib,usegraphicx]{mn2e} 
+%=========================================================================
+\usepackage{amsmath} 
+\usepackage{amssymb} 
+\usepackage {graphicx}
+\usepackage[dvips]{epsfig}
+\usepackage{epsfig}  
+\usepackage{color}
+\usepackage[normalem]{ulem}
+\usepackage{hyperref}
+\usepackage{caption}
+%Non reposionated tables
+\usepackage{float}
+\restylefloat{table}
+%Multiple columns support for tables
+\usepackage{array}
+\usepackage{booktabs}
+\setlength{\heavyrulewidth}{1.5pt}
+\setlength{\abovetopsep}{4pt}
 
-%Packages and Commands
-\include{latex/packages_commands}
+
+%=========================================================================
+%		INTERNAL MACROS
+%=========================================================================
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\ba{\begin{eqnarray}}
+\def\ea{\end{eqnarray}}
+
+% To highlight comments 
+\definecolor{red}{rgb}{1,0.0,0.0}
+\newcommand{\red}{\color{red}}
+\definecolor{darkgreen}{rgb}{0.0,0.5,0.0}
+\newcommand{\SRK}[1]{\textcolor{darkgreen}{\bf SRK: \textit{#1}}}
+\newcommand{\SRKED}[1]{\textcolor{darkgreen}{\bf #1}}
+\newcommand{\before}[1]{\textcolor{red}{ #1}}
+\newcommand{\after}[1]{\textcolor{darkgreen}{ #1}}
+\newcommand{\tol}{Tololo 1214-277}
+\newcommand{\lya}{Ly$\alpha$}
+\newcommand{\hb}{H$\beta$}
+\newcommand{\ha}{H$\alpha$}
+\newcommand{\oiii}{[OIII]}
+\newcommand{\oii}{[OII]}
+\newcommand{\nii}{[NII]}
+\newcommand{\esca}{erg cm$^{-2}$ s$^{-1}$ \AA$^{-1}$}
+\newcommand{\esc}{erg cm$^{-2}$ s$^{-1}$}
+\newcommand{\es}{erg s$^{-1}$}
+\newcommand{\esa}{erg s$^{-1}$}
+\newcommand{\kms}{km s$^{-1}$}
+\newcommand{\apj}{ApJ}  
+\newcommand{\jcap}{JCAP}  
+\newcommand{\apjs}{ApJS}  
+\newcommand{\pasa}{PASA}  
+\newcommand{\apjl}{ApJL}  
+\newcommand{\aj}{AJ}  
+\newcommand{\mnras}{MNRAS}  
+\newcommand{\mnrassub}{MNRAS accepted}  
+\newcommand{\aap}{A\&A}  
+\newcommand{\aaps}{A\&AS}  
+\newcommand{\araa}{ARA\&A}  
+\newcommand{\nat}{Nature}  
+\newcommand{\physrep}{PhR}
+\newcommand{\pasp}{PASP}    
+\newcommand{\pasj}{PASJ}    
+\newcommand{\sigmaclump}{$54.3\pm 0.6$ km s$^{-1}$}
+\newcommand{\inftyclump}{$54.3\pm 5.1$ km s$^{-1}$}
+\newcommand{\probaclump}{$0.96\pm 0.01$}
+\def\simgt{\lower.5ex\hbox{\gtsima}}
+\def\simlt{\lower.5ex\hbox{\ltsima}}
 
 \begin{document}
 
-\title{A simple model to describe how outflows and rotation shape the Lyman-$\alpha$
-  emission line in galaxies}
-\shorttitle{Rotation and outflows in the Lyman-$\alpha$ lines} 
-
-\shortauthors{Remolina-Gutierrez and Forero-Romero.}
-
-\author{Maria Camila Remolina-Gutierrez, Jaime E. Forero-Romero} 
-\affil{Departamento de F\'{i}sica, Universidad de los Andes, Cra. 1
-  No. 18A-10, Edificio Ip, Bogot\'a, Colombia} 
-\email{mc.remolina197@uniandes.edu.co}
-\email{je.forero@uniandes.edu.co}
-
-\keywords{Galaxies: high-redshift, Lyman Alpha Emission, Galaxy
-  Rotation, Galaxy Outflows, Radiative Transfer}   
+%=========================================================================
+%		FRONT MATTER
+%=========================================================================
+\title[An atypical \lya\ dwarf galaxy]{
+Modelling the gas kinematics of an atypical Lyman alpha emitting compact dwarf galaxy}
+\author[J.E. Forero-Romero et al.]{
+  Maria Camila Remolina-Guti\'errez$^1$ \&
+  Jaime E. Forero-Romero $^{1}$ \thanks{je.forero@uniandes.edu.co}\\
+  %%
+  $^1$ Departamento de F\'isica, Universidad de los Andes, Cra. 1
+  No. 18A-10 Edificio Ip, CP 111711, Bogot\'a, Colombia \\
+}
+       
+       %\vspace*{6pt}\\
+       
+       %}
+       \maketitle
+       
 
 \begin{abstract}
-\noindent Young galaxies in the Universe have a strong \lya emission
-caused by the ionized Hydrogen atoms in their interstellar
-medium. When the spectrum of a galaxy has an intense peak around the
-\lya natural frequency ($2.46\times 10^{15}$ Hz) it is called a Lyman
-Alpha Emitter (LAE). Typical LAEs are very distant ($z \gtrsim
-2$). This makes that all the data astronomers can obtain from them is
-their spectra, and from there all the physical information of the
-galaxy must be derived. Trying to solve this task requires the
-creation of a simplified and solid model. In this paper we propose to
-consider LAEs as a spherical distribution of Hydrogen atoms that
-undergoes a solid body rotation and a radial expansion due to
-outflows. We use radiative transfer Monte Carlo simulations to
-interpret the Lyman-$\alpha$ line morphology. The main conclusion is
-that this new model reproduces LAEs observed features in a clear way
-and with consistent physical parameters. We also show results of
-adjusting observational data for some selected objects to models with
-and without bulk rotation. We finalize by discussing the possible
-implications for these results in terms of the energetics required for
-supernova feedback and outflows in high redshift galaxies. \\ 
+  Star-forming Compact Dwarf Galaxies (CDGs) resemble the expected
+  pristine conditions of the first galaxies in the Universe and
+  are the best systems to test models on primordial
+galaxy formation and evolution.    
+Here we report on one of such CDGs,
 
-REVISAR AL FINAL...\\
 \end{abstract}
+
+\begin{keywords}
+galaxies: dwarf --- galaxies: individual:\tol\ --- radiative transfer --- Methods: numerical 
+\end{keywords}
+
+
+%=========================================================================
+%		PAPER CONTENT
+%=========================================================================
+
+%*************************************************************************
 
 \section{Introduction}
 \label{sec:intro}
@@ -109,6 +173,12 @@ velocity, so we modify it to include outflows and then we explore the
 resulting consequences on the \lya line. \\
 
 
+
+\bibliographystyle{mn2e}
+\bibliography{references}
+
+\end{document}
+
  
 
 \section{A new LAE model}
@@ -116,7 +186,7 @@ resulting consequences on the \lya line. \\
 
 We model spherical galaxy to facilitate the interpretation of the results, by deleting what would be another degree of freedom regarding a different geometry. Furthermore, this approximation is commonly used in the literature, as it explains a wide variety of observational features (\cite{Ahn03}, \cite{Verhamme06}, \cite{Dijkstra06}). \\
 
-There are 3 parameters in this model that define a LAE: the rotational velocity (\vrot), the outflow velocity (\vout) and the optical depth (\tauh). \vout is due to material ejected from the galaxy, by supernovas(\cite{Verhamme06}, \cite{Orsi12}, \cite{Hashimoto2015}, \cite{Gronke2015}). \tauh roughly corresponds to number of H atoms found by a \lya photon if one traces a line from the center of the galaxy to its edge, and it resembles the mass of the LAE.\\
+There are 3 parameters in this model that define a LAE: the rotational velocity (vrot), the outflow velocity (vout) and the optical depth (tauh). vout is due to material ejected from the galaxy, by supernovas(\cite{Verhamme06}, \cite{Orsi12}, \cite{Hashimoto2015}, \cite{Gronke2015}). tauh roughly corresponds to number of H atoms found by a \lya photon if one traces a line from the center of the galaxy to its edge, and it resembles the mass of the LAE.\\
 
 In this model, the LAE has a bulk velocity corresponding to the superposition of rotation and outflows, as shown in Fig. \ref{fig:model}. The velocity components are written in Eqs. (\ref{eq:vx}) (\ref{eq:vy}) (\ref{eq:vz}). In these equations, $R$ is the radius of the sphere; $x$, $y$ and $z$ are the coordinates in a cartesian frame; and the $\mp$ signs in $v_x$ and $v_y$ indicate the direction of rotation, respectively. This rotation is a solid body rotation and its direction goes according to the right hand rule applied to the $\hat{k}$ unit vector. The outflow velocity is dependent on the position relative to the center of the galaxy, being it zero at the center and maximum at the edge of the sphere.\\
 
@@ -135,7 +205,7 @@ In this model, the LAE has a bulk velocity corresponding to the superposition of
 	\label{eq:vz}
 \end{equation}
 
-These 3 parameters, \vrot, \vout and \tauh, leave the idea of a model of LAE, that although simple, considers the main galaxy's dynamics. All of them have been previously proposed and used by different authors, but never combined together (\cite{Adams72}, \cite{Harrington73}, \cite{Neufeld90}, \cite{Dijkstra06}, \cite{Verhamme06}, \cite{Forero12}, \cite{Martin2015}, \cite{Garavito14}, \cite{Neufeld91}, \cite{Laursen09}, \cite{Barnes11}, \cite{Verhamme12}, \cite{Yajima12}).\\
+These 3 parameters, vrot, vout and tauh, leave the idea of a model of LAE, that although simple, considers the main galaxy's dynamics. All of them have been previously proposed and used by different authors, but never combined together (\cite{Adams72}, \cite{Harrington73}, \cite{Neufeld90}, \cite{Dijkstra06}, \cite{Verhamme06}, \cite{Forero12}, \cite{Martin2015}, \cite{Garavito14}, \cite{Neufeld91}, \cite{Laursen09}, \cite{Barnes11}, \cite{Verhamme12}, \cite{Yajima12}).\\
 
 %mirar donde pongo esto
 However, in the plots shown in this paper we use instead velocity, $V$, units. This eases the comparison against observational data. The velocity units are defined by
@@ -145,7 +215,7 @@ The initial emission of photons is taken at the center of the sphere for practic
 
 The individual scattering of all the photons is tracked through the complete 3D Hydrogen distribution. Once each photon escapes the galaxy, its final values are stored: position $\vec{r}$, direction of propagation $\hat{k}$, dimensionless frequency $x$, and number of scatterings $N$. To build the observed spectrum we make a histogram of the escape frequencies $x$. The number of scatterings $N$ tells how many steps the random walk requires to reach a distance to the center that is $\geq R$. In order to avoid situations in which the photon has not escaped after a long computational time, CLARA defines a number $N_{max}$ so the code stops. However, according to statistics, this last situation has low probabilities, so the photon is always most likely to exit the sphere. \\
 
-%The process that takes place from the moment the first photon is emitted to the moment the last photon escapes the sphere, is called a simulation. Each simulation runs in the scientific computational cluster of Universidad de los Andes due to the computing resources it requires. Depending on \tauh, we need a different number of processors in order to minimize the time demands. For \tauh $=10^5, 10^6, 10^7$ we use 6, 12, 24 processors, respectively. The running times go from 7 hours to 1 week approximately, depending on the case. \\
+%The process that takes place from the moment the first photon is emitted to the moment the last photon escapes the sphere, is called a simulation. Each simulation runs in the scientific computational cluster of Universidad de los Andes due to the computing resources it requires. Depending on tauh, we need a different number of processors in order to minimize the time demands. For tauh $=10^5, 10^6, 10^7$ we use 6, 12, 24 processors, respectively. The running times go from 7 hours to 1 week approximately, depending on the case. \\
 
 \subsection{Galaxy's Viewing Angle}
 An observer located far away, only receives photons emitted along its line of sight. That means, only photons escaping in the direction of the observer must be counted in the spectrum. In the simulation we approximate this by taking into account only the photons with escaping direction angle $\theta$ respect to the rotation axis within the range $[\theta_{min}-\theta_{max}]$. We illustrate this in Fig. \ref{fig:model}. \\
@@ -160,14 +230,14 @@ An observer located far away, only receives photons emitted along its line of si
 
 Therefore, in principle the spectra depend on two new parameters, the azimuthal and the polar angle. However, the galaxy's motion is symmetrical respect to its rotation axis. This implies that the resulting spectrum is independent from the azimuthal angle. Taking into account this symmetry, we only select photons on their polar angle, regardless of their azimuthal angle. Regarding the polar angle, we build the spectra for observers located on 3 different positions, with $\theta$ intervals uniformly distributed in $\cos(\theta)$. \\ 
 
-To summarize, the parameters influencing the spectra are \vrot, \vout, \tauh and $\theta$. In the next section we evaluate the impact each of these has on the resulting profile. \\
+To summarize, the parameters influencing the spectra are vrot, vout, tauh and $\theta$. In the next section we evaluate the impact each of these has on the resulting profile. \\
 
 
 \section{Results}
 \label{sec:results}
 
 \subsection{Resulting simulated spectra}
-In order to define the ranges of \tauh, \vrot and \vout, it is necessary to refer to observational constraints. The common values for typical LAEs that were set as parameters are in Tab. \ref{tab:values}. We run CLARA's modified version for all the permutations of these 3 parameters. \\
+In order to define the ranges of tauh, vrot and vout, it is necessary to refer to observational constraints. The common values for typical LAEs that were set as parameters are in Tab. \ref{tab:values}. We run CLARA's modified version for all the permutations of these 3 parameters. \\
 
 \begin{table}[htbp]
 	\centering
@@ -188,7 +258,7 @@ The behavior of the resulting sets of spectra can be summarized by Fig. \ref{fig
 	\begin{center}
 		\includegraphics[width=0.48\textwidth]{./figures/summary}
 	\end{center}
-	\caption{\textbf{4 different \lya profiles:} With \tauh$=10^5$ and $\theta \simeq 90^\circ$. The rotational velocity \vrot increases to the right and the outflows velocity \vout increases downwards. The intensity is in arbitrary units.
+	\caption{\textbf{4 different \lya profiles:} With tauh$=10^5$ and $\theta \simeq 90^\circ$. The rotational velocity vrot increases to the right and the outflows velocity vout increases downwards. The intensity is in arbitrary units.
 		\label{fig:summary}}
 \end{figure}
 
@@ -199,7 +269,7 @@ We take now into account the viewing angle of the galaxy to build the observed s
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]{./figures/angles}
 	\end{center}
-	\caption{\textbf{\lya profile for different $\theta$.} For \tauh$=10^5$, \vrot$=50$ \kms and \vout$=20$ \kms. For \tauh$=10^6$, \vrot$=100$ \kms and \vout$=5$ \kms. For \tauh$=10^7$, \vrot$=100$ \kms and \vout$=15$ \kms. The intensity is in arbitrary units.
+	\caption{\textbf{\lya profile for different $\theta$.} For tauh$=10^5$, vrot$=50$ \kms and vout$=20$ \kms. For tauh$=10^6$, vrot$=100$ \kms and vout$=5$ \kms. For tauh$=10^7$, vrot$=100$ \kms and vout$=15$ \kms. The intensity is in arbitrary units.
 		\label{fig:angles}}
 \end{figure}
 
@@ -211,15 +281,15 @@ From Fig. \ref{fig:angles} it is clear that the intensity of the valley between 
 To summarize, the influence of the 4 parameters on the \lya morphology is the following: 
 
 \begin{itemize}
-	\item \tauh induces a redshift. Increasing the optical depth separates the line of the zero velocity line. \\
-	\item \vout decreases the right peak's intensity. Higher \vout makes the left peak smaller until it merges with the right one. \\
-	\item \vrot broadens the line and decreases the maximum intensity. Higher \vrot implies a flatter spectrum. This effect has not been deeply studied in literature. Only Garavito et al. \cite{Garavito14} has simulated its effect. Our results are consistent with their conclusions.
+	\item tauh induces a redshift. Increasing the optical depth separates the line of the zero velocity line. \\
+	\item vout decreases the right peak's intensity. Higher vout makes the left peak smaller until it merges with the right one. \\
+	\item vrot broadens the line and decreases the maximum intensity. Higher vrot implies a flatter spectrum. This effect has not been deeply studied in literature. Only Garavito et al. \cite{Garavito14} has simulated its effect. Our results are consistent with their conclusions.
 	\item $\theta$ increases the central valley of the line. Higher $\theta$ makes more emission at \lya natural frequency. \\ 
 \end{itemize}
 
 \subsection{Doppler shift by rotation}
 
-The rotation effect induces a Doppler shift in frequency and displaces the only-outflow spectra. As seen in Fig. \ref{fig:rotation_doppler_outflow} rotation takes the resulting spectrum with \vrot$=0$ and displaces it from its central location. Then it weights the lines and they all merge into the resulting red \lya line.\\
+The rotation effect induces a Doppler shift in frequency and displaces the only-outflow spectra. As seen in Fig. \ref{fig:rotation_doppler_outflow} rotation takes the resulting spectrum with vrot$=0$ and displaces it from its central location. Then it weights the lines and they all merge into the resulting red \lya line.\\
 
 \begin{figure}[h!]
 	\begin{center}
@@ -238,7 +308,7 @@ Among the observational implications that this paper has over observations we se
 
 Second, the central ($V=0$) emission of the spectra seen in the results is a consequence of the viewing angle of the galaxy and can be controlled by it. This means that the reason is not necessary that radiation is escaping without scattering, as several authors have suggested (CITAS...).\\
 
-Finally, all the spectra produced from this new LAE model is roughly consistent with observations. The consideration of adding the new rotation parameter to the standard only-outflow model found in literature is reasonable and very powerful. \vrot and its consequent viewing angle $\theta$ can modify the morphology of the \lya line in new different ways by keeping the model simplified.\\
+Finally, all the spectra produced from this new LAE model is roughly consistent with observations. The consideration of adding the new rotation parameter to the standard only-outflow model found in literature is reasonable and very powerful. vrot and its consequent viewing angle $\theta$ can modify the morphology of the \lya line in new different ways by keeping the model simplified.\\
 
 \section{Conclusions}
 \label{sec:conclusions}
@@ -250,7 +320,7 @@ The conclusions obtained from this work are:
 \begin{itemize}
 	\item The outgoing spectra depend on the angle an external observer is viewing the galaxy from. The closer it is to the equator of the galaxy, the higher the central valley of the frequency distribution. 
 	
-	\item The effects of \vrot, \vout and \tauh are consistent with the different authors that have used them. \vrot broadens the \lya line. \vout increases the peaks asymmetry and \tauh induces a redshift around the zero velocity.
+	\item The effects of vrot, vout and tauh are consistent with the different authors that have used them. vrot broadens the \lya line. vout increases the peaks asymmetry and tauh induces a redshift around the zero velocity.
 	
 	\item Rotations induces a Doppler shift in frequency of the only-outflow spectra.
 	
@@ -274,8 +344,3 @@ We would also like to acknowledge the participants of the meeting \textit{Escape
 
 
 %------------------------REFERENCES----------------------------
-
-\bibliographystyle{latex/apj}
-\bibliography{references}
-
-\end{document}
