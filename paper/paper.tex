@@ -73,20 +73,17 @@
 %=========================================================================
 %		FRONT MATTER
 %=========================================================================
-\title[An atypical \lya\ dwarf galaxy]{
-Modelling the gas kinematics of an atypical Lyman alpha emitting compact dwarf galaxy}
-\author[J.E. Forero-Romero et al.]{
+\title[Outflows and rotation in LAEs]{
+Outflows and rotation in Lyman alpha galaxies}
+\author[M.C. Remolina-Gutierrez \& J.E. Forero-Romero]{
   Maria Camila Remolina-Guti\'errez$^1$ \&
   Jaime E. Forero-Romero $^{1}$ \thanks{je.forero@uniandes.edu.co}\\
   %%
   $^1$ Departamento de F\'isica, Universidad de los Andes, Cra. 1
   No. 18A-10 Edificio Ip, CP 111711, Bogot\'a, Colombia \\
 }
-       
-       %\vspace*{6pt}\\
-       
-       %}
-       \maketitle
+
+\maketitle
        
 
 \begin{abstract}
@@ -148,6 +145,51 @@ effects of galaxy outflows and rotation.
 We study a simplified geometrical configuration corresponding to an
 spherical gas cloud with symmetrical radial outflows and a rotation
 profile corresponding to a solid body.
+We base our modelling on a Monte-Carlo radiative transfer code called
+CLARA (Code for Lyman Alpha Radiation Analysis) presented for the
+first time in \cite{CLARA}.
+Besides modelling the impact of joint rotation and outflows, we also
+want to check to what extent the analytical model presented by
+\cite{Garavito14} to explain the effects of rotation can also be
+applied in our case.
+
+In this paper we introduce first our theoretical tools and assumptions
+in Section \ref{sec:theory}, then we present the numerical results and
+comparisons against the analytical solution in \ref{sec:results}.
+In Section \ref{sec:discussion} we discuss our results and their
+possible implications for observational analysis to finally present
+our conclusions in Section \ref{sec:conclusions}.
+
+
+\section{Theoretical Models}
+\label{sec:theory}
+
+\subsection{Monte-Carlo Radiative Transfer Model}
+
+\subsection{Analytical Model for Bulk Rotation}
+
+\section{Results}
+\label{sec:results}
+
+\subsection{Monte-Carlo Radiative Transfer Model}
+
+\subsection{Analytical Model for Bulk Rotation}
+
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Theoretical Insights}
+
+\subsection{Observational Perspectives}
+
+\section{Conclusions}
+\label{sec:conclusions}
+
+\bibliographystyle{mn2e}
+\bibliography{references}
+
+\end{document}
+
 
 \cite{DjorgovskiThompson}, \cite{Rhoads00},
 \cite{Gawiser2007}, \cite{Koehler2007}, \cite{Ouchi08},
@@ -155,30 +197,6 @@ profile corresponding to a solid body.
 \cite{Yamada2012}, \cite{Chonis2013}, \cite{Finkelstein2013},
 \cite{Ostlin14}, \cite{Hayes2014}, \cite{Faisst2014},
 \cite{Fumagalli2015}.
-
-
-Our main goal with this work is to measure the effect of the model's
-physical parameters on the outgoing \lya line.
-In this case, due to
-the resonant\footnote{Resonant is a common term used in radiative
-  transfer. It means that the photons that create the line are
-  absorbed and re-emitted several times before escaping the cloud of
-  gas.} nature of the \lya line, analytical solutions can not be
-derived. Because of this, it becomes necessary to run simulations that
-explore and test the model. In this paper we use the radiative
-transfer code \textbf{CLARA} (Code for Lyman Alpha Radiation Analysis)
-written by Forero-Romero et al. \cite{CLARA}. CLARA can simulate the
-\lya line of a spherical rotating LAE depending on its mass and
-velocity, so we modify it to include outflows and then we explore the
-resulting consequences on the \lya line. \\
-
-
-
-\bibliographystyle{mn2e}
-\bibliography{references}
-
-\end{document}
-
  
 
 \section{A new LAE model}
