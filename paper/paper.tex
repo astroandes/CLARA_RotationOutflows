@@ -166,6 +166,55 @@ our conclusions in Section \ref{sec:conclusions}.
 
 \subsection{Monte-Carlo Radiative Transfer Model}
 
+CLARA follows the propagation of individual photons through a neutral
+Hydrogen medium characterized by its temperature, velocity field and
+global optical depth.
+The code assumes an homogeneous density throughout the simulated
+volume.
+In the current implementation we neglect the influence of dust.
+Our basic models is an spherical distribution of neutral hydrogen,
+an approximation commonly used in the literature, as it explains a
+wide variety of observational features \citep{Ahn03,Verhamme06,Dijkstra06}.
+
+The central element in this paper is the velocity field that captures
+outflows and rotation.
+Outflows are captured by a Hubble-like radial velocity profile with
+the velocity magnitude increasing linearly with the radial
+coordinate; the outflow model is fully characterized by $V_{\rm out}$, the
+velocity at the sphere's surface.
+Rotation follows a solid body rotation profile, which is fully
+characterized by $V_{\rm rot}$, the linear velocity at the sphere's surface.
+
+The total velocity field corresponds to the superposition of rotation and
+outflows.
+The cartesian components take the form
+
+\begin{equation}
+	v_{x}=\frac{x}{R}V_{\rm out}-\frac{y}{R}V_{\rm rot} ,
+	\label{eq:vx}
+\end{equation}
+
+\begin{equation}
+	v_{y}=\frac{y}{R}V_{\rm out}+\frac{x}{R}V_{\rm rot} ,
+	\label{eq:vy}
+\end{equation}
+
+\begin{equation}
+	v_{z}=\frac{z}{R}V_{\rm out},
+	\label{eq:vz}
+\end{equation}
+%
+where $x$, $y$ and $z$ are the cartesian position coordinates with the
+origin at the sphere's center $R$ is the radius of the sphere and the
+direction of the angular velocity vector corresponds to the $\hat{k}$
+unit vector. 
+
+For each model setup we follow $10^4$ individual photons generated at
+the center of the sphere at the \lya\ line's center as they propagate
+through the spere and finally scape.
+We store the final frequency and propagation direction for each photon
+at its last scattering.  
+
 \subsection{Analytical Model for Bulk Rotation}
 
 \section{Results}
@@ -202,26 +251,9 @@ our conclusions in Section \ref{sec:conclusions}.
 \section{A new LAE model}
 \label{sec:newmodel}
 
-We model spherical galaxy to facilitate the interpretation of the results, by deleting what would be another degree of freedom regarding a different geometry. Furthermore, this approximation is commonly used in the literature, as it explains a wide variety of observational features (\cite{Ahn03}, \cite{Verhamme06}, \cite{Dijkstra06}). \\
 
-There are 3 parameters in this model that define a LAE: the rotational velocity (vrot), the outflow velocity (vout) and the optical depth (tauh). vout is due to material ejected from the galaxy, by supernovas(\cite{Verhamme06}, \cite{Orsi12}, \cite{Hashimoto2015}, \cite{Gronke2015}). tauh roughly corresponds to number of H atoms found by a \lya photon if one traces a line from the center of the galaxy to its edge, and it resembles the mass of the LAE.\\
 
-In this model, the LAE has a bulk velocity corresponding to the superposition of rotation and outflows, as shown in Fig. \ref{fig:model}. The velocity components are written in Eqs. (\ref{eq:vx}) (\ref{eq:vy}) (\ref{eq:vz}). In these equations, $R$ is the radius of the sphere; $x$, $y$ and $z$ are the coordinates in a cartesian frame; and the $\mp$ signs in $v_x$ and $v_y$ indicate the direction of rotation, respectively. This rotation is a solid body rotation and its direction goes according to the right hand rule applied to the $\hat{k}$ unit vector. The outflow velocity is dependent on the position relative to the center of the galaxy, being it zero at the center and maximum at the edge of the sphere.\\
 
-\begin{equation}
-	v_{x}=\frac{x}{R}v_{\rm out}-\frac{y}{R}v_{\rm rot} 
-	\label{eq:vx}
-\end{equation}
-
-\begin{equation}
-	v_{y}=\frac{y}{R}v_{\rm out}+\frac{x}{R}v_{\rm rot} 
-	\label{eq:vy}
-\end{equation}
-
-\begin{equation}
-	v_{z}=\frac{z}{R}v_{\rm out}
-	\label{eq:vz}
-\end{equation}
 
 These 3 parameters, vrot, vout and tauh, leave the idea of a model of LAE, that although simple, considers the main galaxy's dynamics. All of them have been previously proposed and used by different authors, but never combined together (\cite{Adams72}, \cite{Harrington73}, \cite{Neufeld90}, \cite{Dijkstra06}, \cite{Verhamme06}, \cite{Forero12}, \cite{Martin2015}, \cite{Garavito14}, \cite{Neufeld91}, \cite{Laursen09}, \cite{Barnes11}, \cite{Verhamme12}, \cite{Yajima12}).\\
 
@@ -239,9 +271,9 @@ The individual scattering of all the photons is tracked through the complete 3D 
 An observer located far away, only receives photons emitted along its line of sight. That means, only photons escaping in the direction of the observer must be counted in the spectrum. In the simulation we approximate this by taking into account only the photons with escaping direction angle $\theta$ respect to the rotation axis within the range $[\theta_{min}-\theta_{max}]$. We illustrate this in Fig. \ref{fig:model}. \\
 
 \begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=0.48\textwidth]{./figures/model}
-	\end{center}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{./figures/model}
+  \end{center}
 	\caption{\textbf{Model:} Spherical LAE with tangential and radial velocities due to rotation and outflows, respectively. The galaxy cut is in the $y-z$ plane perspective. The observer is located at an specific viewing angle of the sphere. Only photons with a direction that enters in this range of vision are taken into account to build the observed spectrum.
 		\label{fig:model}}
 \end{figure}
