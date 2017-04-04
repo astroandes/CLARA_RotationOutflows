@@ -8,8 +8,6 @@ paper/paperNotes.bib
 
 data/tau*/vrot*/vout*/parameters-usedvalues
 data/tau*/vrot*/vout*/tau*_vrot*_vout*_*.proc.*.ascii
-data/tau*/vrot*/vout*/tau*_vrot*_vout*.input
 data/tau*/vrot*/vout*/tau*_vrot*_vout*.input-usedvalues
-data/tau*/vrot*/vout*/tau*_vrot*_vout*.sh
 
 .ipynb_checkpoints
