@@ -209,11 +209,40 @@ origin at the sphere's center $R$ is the radius of the sphere and the
 direction of the angular velocity vector corresponds to the $\hat{k}$
 unit vector. 
 
-For each model setup we follow $10^4$ individual photons generated at
+For each model setup we follow $10^5$ individual photons generated at
 the center of the sphere at the \lya\ line's center as they propagate
 through the spere and finally scape.
 We store the final frequency and propagation direction for each photon
 at its last scattering.  
+
+In Table \ref{tab:values} we list the combination of $\tau_{\rm{H}}$,
+$v_{rot}$ and $v_{out}$ values used in this paper.
+The range of values have some overlap with the expectations from a dwarf
+galaxy with a total neutral hydrogen mass of $10^8$-$10^9$ $M_{\odot}$.
+We run a total of $21$ different models.
+
+
+\begin{table}[htbp]
+  \begin{center}
+    \begin{tabular}{|c|c|c|}
+      \hline
+      $\tau_{\mathrm{H}}$ & $v_{rot}$ (\kms) & $v_{out}$ (\kms) \\
+      \hline
+      $10^5$  & \{0, 50, 100\} & \{25, 50\} \\
+      $10^6$ & \{0, 50, 100\} & \{25, 50\}\\
+      $10^7$ & \{0, 50\} & \{25, 50\}\\
+      $10^7$ & \{0, 100\} & \{50, 100, 200\}\\
+      \hline    
+    \end{tabular}
+  \end{center}
+  \caption{\textbf{Parameters' Values.} List of values that were used
+    to construct the radiative transfer models. Values in braces
+    for a row indicate that all possible combinations in of
+    $\tau_{\rm{H}}$,
+    $v_{rot}$ and $v_{out}$ are used.}
+  \label{tab:values}
+\end{table}
+
 
 \subsection{Analytical Model for Bulk Rotation}
 
@@ -228,15 +257,17 @@ Second. Line blurring as the rotational velocity increases.
   At a fixed viewing angle, faster rotation induces makes the observed
   line wider and increases the flux around the line's center. 
 
-
   
 \cite{Garavito14} presented in the Appendix an analytical model that
 accounts for these two features.
 The basic assumption of the analytical model is that each
 differential surface element on the sphere Doppler shifts the photons
-that it emmits. 
-
-
+that it emmits.
+In this paper we introduce this ansatz by postprocessing the results
+of the outflow simulations without rotation.
+This allows us to produce new \lya spectra and compare them with the
+full radiative transfer solution including both outflows and
+rotation. 
 
 
 \section{Results}
@@ -348,18 +379,7 @@ To summarize, the parameters influencing the spectra are vrot, vout, tauh and $\
 \subsection{Resulting simulated spectra}
 In order to define the ranges of tauh, vrot and vout, it is necessary to refer to observational constraints. The common values for typical LAEs that were set as parameters are in Tab. \ref{tab:values}. We run CLARA's modified version for all the permutations of these 3 parameters. \\
 
-\begin{table}[htbp]
-	\centering
-	\begin{tabular}{|c|c|c|}
-		\hline
-		$\tau_{\mathrm{H}}$ & $v_{rot}$ (\kms) & $v_{out}$ (\kms) \\
-		\hline
-		$10^5$, $10^6$, $10^7$ & 50, 100 & 5, 10, 15, 20, 25, 50, 75 \\
-		\hline
-	\end{tabular}
-	\caption{\textbf{Parameters' Values:} All consistent with a LAE's typical properties}
-	\label{tab:values}
-\end{table}
+
 
 The behavior of the resulting sets of spectra can be summarized by Fig. \ref{fig:summary}. We concluded from the simulations a clear creation of two asymmetric peaks around $V=0$ \kms with the tallest peak always redshifted. We detected a strong dependence on the outflow velocity that induces the peak asymmetry. We also detected that the rotation velocity broadens the line horizontally. Both these effects have been previously reported separately in the literature, so these results can valid their superposition to some extend. \\
 
