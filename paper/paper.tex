@@ -176,6 +176,7 @@ Our basic models is an spherical distribution of neutral hydrogen,
 an approximation commonly used in the literature, as it explains a
 wide variety of observational features \citep{Ahn03,Verhamme06,Dijkstra06}.
 
+
 The central element in this paper is the velocity field that captures
 outflows and rotation.
 Outflows are captured by a Hubble-like radial velocity profile with
@@ -209,11 +210,44 @@ origin at the sphere's center $R$ is the radius of the sphere and the
 direction of the angular velocity vector corresponds to the $\hat{k}$
 unit vector. 
 
-For each model setup we follow $10^4$ individual photons generated at
+For each model setup we follow $10^5$ individual photons generated at
 the center of the sphere at the \lya\ line's center as they propagate
 through the spere and finally scape.
 We store the final frequency and propagation direction for each photon
 at its last scattering.  
+
+
+
+In Table \ref{tab:values} we list the combination of $\tau_{\rm{H}}$,
+$v_{rot}$ and $v_{out}$ values used in this paper.
+The range of values have some overlap with the expectations from a dwarf
+galaxy with a total neutral hydrogen mass of $10^8$-$10^9$ $M_{\odot}$.
+We run a total of $24$ different models.
+
+
+\begin{table}[htbp]
+  \begin{center}
+    \begin{tabular}{|c|c|c|}
+      \hline
+      $\tau_{\mathrm{H}}$ & $v_{rot}$ (\kms) & $v_{out}$ (\kms) \\
+      \hline
+      $10^5$  & \{0\} & \{5, 25, 50\} \\
+      $10^6$ & \{0\} & \{5, 25, 50\}\\
+      $10^7$ & \{0\} & \{5, 25, 50\}\\
+      $10^5$  & \{50, 100\} & \{25, 50, 75\} \\
+      $10^6$ & \{50, 100\} & \{25, 50,75\}\\
+      $10^7$ & \{50, 100\} & \{25, 50,75\}\\
+      \hline    
+    \end{tabular}
+  \end{center}
+  \caption{\textbf{Parameters' Values.} List of values that were used
+    to construct the radiative transfer models. Values in braces
+    for a row indicate that all possible combinations in of
+    $\tau_{\rm{H}}$,
+    $v_{rot}$ and $v_{out}$ are used.}
+  \label{tab:values}
+\end{table}
+
 
 \subsection{Analytical Model for Bulk Rotation}
 
@@ -228,21 +262,55 @@ Second. Line blurring as the rotational velocity increases.
   At a fixed viewing angle, faster rotation induces makes the observed
   line wider and increases the flux around the line's center. 
 
-
   
 \cite{Garavito14} presented in the Appendix an analytical model that
 accounts for these two features.
 The basic assumption of the analytical model is that each
 differential surface element on the sphere Doppler shifts the photons
-that it emmits. 
-
-
+that it emmits.
+In this paper we introduce this ansatz by postprocessing the results
+of the outflow simulations without rotation.
+This allows us to produce new \lya spectra and compare them with the
+full radiative transfer solution including both outflows and
+rotation. 
 
 
 \section{Results}
 \label{sec:results}
 
 \subsection{Monte-Carlo Radiative Transfer Model}
+
+We evaluate first the effects of increasing rotational
+velocity at fixed values of the optical depth and outflow velocity.
+Figure \ref{fig:varying_rotation} summarizes the information.
+All plots correspond to the same outflow velocity of $v_{out}=50$\kms,
+rows have constant optical depth and columns have constant rotational
+velocity.
+Each panel shows different morphologies corresponding to varying
+line-of-sight viewing angle.
+
+% Esta figura deberia tener 3 x 3 vinetas. vout=50.
+% cada panel tiene una curva para theta=0, 45, 90.
+% |tau=1E5, vrot=0, | tau=1E5, vrot=50, | tau=1E5, vrot=100, 
+% |tau=1E6, vrot=0, | tau=1E6, vrot=50, | tau=1E6, vrot=100, 
+% |tau=1E7, vrot=0, | tau=1E7, vrot=50, | tau=1E7, vrot=100, 
+
+
+We now evaluate the effects of increasing outflow velocity at fixed
+values for the optical depth and rotational velocity.
+Figure \ref{fig:varying_outflow} summarizes the information following
+the same patters as Figure \ref{fig:varying_rotation}, only that this
+time all plots correspond to the same rotation velocity of
+$v_{rot}=50$\kms,
+
+
+% Esta figura deberia tener 3 x 3 vinetas. vrot=50.
+% cada panel tiene una curva para theta=0, 45, 90.
+% |tau=1E5, vout=25, | tau=1E5, vout=50, | tau=1E5, vout=75,
+% |tau=1E6, vout=25, | tau=1E6, vout=50, | tau=1E6, vout=75,
+% |tau=1E7, vout=25, | tau=1E7, vout=50, | tau=1E7, vout=75, 
+
+
 
 \subsection{Analytical Model for Bulk Rotation}
 
@@ -274,57 +342,14 @@ that it emmits.
 \label{sec:newmodel}
 
 
-
-
-
-These 3 parameters, vrot, vout and tauh, leave the idea of a model of
-LAE, that although simple, considers the main galaxy's dynamics. All
-of them have been previously proposed and used by different authors,
-but never combined together (\cite{Adams72}, \cite{Harrington73}, \cit
+(\cite{Adams72}, \cite{Harrington73}, \cit
 e{Neufeld90}, \cite{Dijkstra06}, \cite{Verhamme06}, \cite{Forero12},
 \cite{Martin2015}, \cite{Garavito14}, \cite{Neufeld91},
 \cite{Laursen09}, \cite{Barnes11}, \cite{Verhamme12},
 \cite{Yajima12}).\\ 
 
-%mirar donde pongo esto
-However, in the plots shown in this paper we use instead velocity,
-$V$, units. This eases the comparison against observational data. The
-velocity units are defined by 
-The units of $V$ are usually \kms. In this case, the photon is
-redshifted in frequency when the velocity is greater than 0, and
-blueshifted in the opposite case. \\ 
-
-The initial emission of photons is taken at the center of the sphere
-for practicality due to the fact that both, center and off-center
-emissions, give analogous results. From here, $100000$ photons are
-emitted with the natural \lya wavelength and start to scatter. When
-each photon is re-emitted, its new wavelength depends on the H atom's
-velocity (both thermal and bulk) and direction (both initial and
-final). However the photon's new direction of propagation is random in
-the rest frame of the atom. \\  
-
-The individual scattering of all the photons is tracked through the
-complete 3D Hydrogen distribution. Once each photon escapes the
-galaxy, its final values are stored: position $\vec{r}$, direction of
-propagation $\hat{k}$, dimensionless frequency $x$, and number of
-scatterings $N$. To build the observed spectrum we make a histogram of
-the escape frequencies $x$. The number of scatterings $N$ tells how
-many steps the random walk requires to reach a distance to the center
-that is $\geq R$. In order to avoid situations in which the photon has
-not escaped after a long computational time, CLARA defines a number
-$N_{max}$ so the code stops. However, according to statistics, this
-last situation has low probabilities, so the photon is always most
-likely to exit the sphere. \\ 
-
-%The process that takes place from the moment the first photon is emitted to the moment the last photon escapes the sphere, is called a simulation. Each simulation runs in the scientific computational cluster of Universidad de los Andes due to the computing resources it requires. Depending on tauh, we need a different number of processors in order to minimize the time demands. For tauh $=10^5, 10^6, 10^7$ we use 6, 12, 24 processors, respectively. The running times go from 7 hours to 1 week approximately, depending on the case. \\
 
 \subsection{Galaxy's Viewing Angle}
-An observer located far away, only receives photons emitted along its
-line of sight. That means, only photons escaping in the direction of
-the observer must be counted in the spectrum. In the simulation we
-approximate this by taking into account only the photons with escaping
-direction angle $\theta$ respect to the rotation axis within the range
-$[\theta_{min}-\theta_{max}]$.
 
 We illustrate this in
 Fig. \ref{fig:model}. \\ 
@@ -337,31 +362,27 @@ Fig. \ref{fig:model}. \\
 		\label{fig:model}}
 \end{figure}
 
-Therefore, in principle the spectra depend on two new parameters, the azimuthal and the polar angle. However, the galaxy's motion is symmetrical respect to its rotation axis. This implies that the resulting spectrum is independent from the azimuthal angle. Taking into account this symmetry, we only select photons on their polar angle, regardless of their azimuthal angle. Regarding the polar angle, we build the spectra for observers located on 3 different positions, with $\theta$ intervals uniformly distributed in $\cos(\theta)$. \\ 
-
-To summarize, the parameters influencing the spectra are vrot, vout, tauh and $\theta$. In the next section we evaluate the impact each of these has on the resulting profile. \\
-
 
 \section{Results}
 \label{sec:results}
 
 \subsection{Resulting simulated spectra}
-In order to define the ranges of tauh, vrot and vout, it is necessary to refer to observational constraints. The common values for typical LAEs that were set as parameters are in Tab. \ref{tab:values}. We run CLARA's modified version for all the permutations of these 3 parameters. \\
+In order to define the ranges of tauh, vrot and vout, it is necessary
+to refer to observational constraints. The common values for typical
+LAEs that were set as parameters are in Tab. \ref{tab:values}. We run
+CLARA's modified version for all the permutations of these 3
+parameters. \\ 
 
-\begin{table}[htbp]
-	\centering
-	\begin{tabular}{|c|c|c|}
-		\hline
-		$\tau_{\mathrm{H}}$ & $v_{rot}$ (\kms) & $v_{out}$ (\kms) \\
-		\hline
-		$10^5$, $10^6$, $10^7$ & 50, 100 & 5, 10, 15, 20, 25, 50, 75 \\
-		\hline
-	\end{tabular}
-	\caption{\textbf{Parameters' Values:} All consistent with a LAE's typical properties}
-	\label{tab:values}
-\end{table}
 
-The behavior of the resulting sets of spectra can be summarized by Fig. \ref{fig:summary}. We concluded from the simulations a clear creation of two asymmetric peaks around $V=0$ \kms with the tallest peak always redshifted. We detected a strong dependence on the outflow velocity that induces the peak asymmetry. We also detected that the rotation velocity broadens the line horizontally. Both these effects have been previously reported separately in the literature, so these results can valid their superposition to some extend. \\
+
+The behavior of the resulting sets of spectra can be summarized by
+Fig. \ref{fig:summary}. We concluded from the simulations a clear
+creation of two asymmetric peaks around $V=0$ \kms with the tallest
+peak always redshifted. We detected a strong dependence on the outflow
+velocity that induces the peak asymmetry. We also detected that the
+rotation velocity broadens the line horizontally. Both these effects
+have been previously reported separately in the literature, so these
+results can valid their superposition to some extend. \\ 
 
 \begin{figure}[h!]
 	\begin{center}
