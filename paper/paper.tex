@@ -17,6 +17,7 @@
 \newcommand{\vrot}{\ifmmode\mathrm v_{\mathrm{rot}}\else $v_{\mathrm{rot}}$~\fi}
 \newcommand{\vout}{\ifmmode\mathrm v_{\mathrm{out}}\else $v_{\mathrm{out}}$~\fi}
 \newcommand{\tauh}{$\tau_{\mathrm{H}}$}
+\newcommand{\vth}{\ifmmode\mathrm v_{\mathrm{th}}\else $v_{\mathrm{th}}$~\fi}
 
 \newcommand{\HII}{{\text{H\MakeUppercase{\romannumeral 2}}} }
 \newcommand{\cm}{\ifmmode{{\rm cm}}\else cm\fi}
@@ -271,7 +272,6 @@ line-of-sight viewing angle.
 	\label{fig:varying_rotation}}
 \end{figure}
 
-
 We now evaluate the effects of increasing outflow velocity at fixed
 values for the optical depth and rotational velocity.
 Figure \ref{fig:varying_outflow} summarizes the information following
@@ -294,8 +294,35 @@ $\vrot=50$\kms.
 
 \subsection{Doppler Shifts to Include Rotational Effects}
 
+We know that rotation alone does have an impact on the \lya line morphology
+and we get the same influence in it that previous works. Together with the 
+outflows, we found that the resulting spectra is equivalent to a non-rotating
+galaxy with outflows that undergoes a Doppler Shift in velocity, weighted by 
+amount of photons that if rotating would project their escape in $\hat{k}$'s
+direction. The formulas to calculate this shift are:
 
+\begin{equation}
+V' = V + \vec{v}_{\rm rot}\cdot\hat{k} = V + V_{\rm rot} (x k_{x} - y k_{y})
+\label{eq:shift_x}
+\end{equation}
 
+where $V'$ is the new Doppler shifted velocity, $V$ is the velocity caused by outflows and $\vec{v}_{\rm rot} = V_{\rm rot} (x\hat{i} - y\hat{j})$.
+
+Figure \ref{fig:doppler_shift} displays this Doppler shift for four different configurations with a fixed optical depth \tauh. In each cell of the grid there is a \lya spectrum for a galaxy with only outflows and two \lya spectra for the galaxy with outflows and rotation, one obtained from the radiative transfer and the other by the Doppler shifting of the non-rotating galaxy. 
+
+% Esta figura deberia tener 3 x 2 viñetas. tau=10E5.
+% cada panel tiene una curva para no rotation, rotation (radiative transfer)
+% y rotation (doppler)
+% |vrot=50, vout=5,  | vrot=100, vout=5,  |
+% |vrot=50, vout=25, | vrot=100, vout=25, |
+% |vrot=50, vout=50, | vrot=100, vout=50, |
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.48\textwidth]{./figures/results/doppler_shift}
+	\end{center}
+	\caption{\textbf{Caption:} Caption.
+		\label{fig:doppler_shift}}
+\end{figure}
 
 \section{Discussion}
 \label{sec:discussion}
