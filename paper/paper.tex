@@ -12,16 +12,19 @@
 \usepackage{bm}
 %Non reposionated tables
 \newcommand{\HI}{{\text{H\MakeUppercase{\romannumeral 1}}} }
-\newcommand{\HII}{{\text{H\MakeUppercase{\romannumeral 2}}} }
 \newcommand{\lya}{\ifmmode{{\rm Ly}\alpha}\else Ly$\alpha$\ \fi}
+\newcommand{\kms}{\ifmmode\mathrm{km\ s}^{-1}\else km s$^{-1}$\fi}
+\newcommand{\vrot}{\ifmmode\mathrm v_{\mathrm{rot}}\else $v_{\mathrm{rot}}$~\fi}
+\newcommand{\vout}{\ifmmode\mathrm v_{\mathrm{out}}\else $v_{\mathrm{out}}$~\fi}
+\newcommand{\tauh}{$\tau_{\mathrm{H}}$}
+
+\newcommand{\HII}{{\text{H\MakeUppercase{\romannumeral 2}}} }
 \newcommand{\cm}{\ifmmode{{\rm cm}}\else cm\fi}
 \newcommand{\ccm}{\,\mathrm{cm}^{-3}}
 \newcommand{\ergps}{\,{\rm erg}\,{\rm s}\ifmmode{}^{-1}\else ${}^{-1}$\fi}
 \newcommand{\Mpch}{\,{\rm Mpc}\,\ifmmode h^{-1}\else $h^{-1}$\fi}
-%\newcommand{\kms}{\,\mathrm{km}\,\mathrm{s}^{-1}}
 \newcommand{\dd}{\mathrm{d}}
 \newcommand{\vek}[1]{\bm{#1}}
-%\newcommand{\lya}{Ly$\alpha$}
 \newcommand{\hb}{H$\beta$}
 \newcommand{\ha}{H$\alpha$}
 \newcommand{\oiii}{[OIII]}
@@ -31,24 +34,23 @@
 \newcommand{\esc}{erg cm$^{-2}$ s$^{-1}$}
 \newcommand{\es}{erg s$^{-1}$}
 \newcommand{\esa}{erg s$^{-1}$}
-\newcommand{\kms}{\ifmmode\mathrm{km\ s}^{-1}\else km s$^{-1}$\fi}
 \newcommand{\sigmaclump}{$54.3\pm 0.6$ km s$^{-1}$}
 \newcommand{\inftyclump}{$54.3\pm 5.1$ km s$^{-1}$}
 \newcommand{\probaclump}{$0.96\pm 0.01$}
-
 
 \begin{document}
 
 %=========================================================================
 %		FRONT MATTER
 %=========================================================================
-\title[Outflows and rotation in LAEs]{
-Lyman-alpha spectra from rotating outflows}
+\title[Outflows and rotation in LAEs]{Lyman-alpha spectra from rotating outflows}
 \author[M.C. Remolina-Gutierrez \& J.E. Forero-Romero]{
-  Maria Camila Remolina-Guti\'errez$^1$ \&
-  Jaime E. Forero-Romero $^{1}$ \thanks{je.forero@uniandes.edu.co}\\
+  Maria Camila Remolina-Guti\'errez$^{1}$ 
+  \thanks{mc.remolina197@uniandes.edu.co} \&
+  Jaime E. Forero-Romero $^{1}$ 
+  \thanks{je.forero@uniandes.edu.co}\\
   %%
-  $^1$ Departamento de F\'isica, Universidad de los Andes, Cra. 1
+  $^{1}$ Departamento de F\'isica, Universidad de los Andes, Cra. 1
   No. 18A-10 Edificio Ip, CP 111711, Bogot\'a, Colombia \\
 }
 
@@ -79,18 +81,18 @@ galaxies: dwarf --- radiative transfer --- Methods: numerical
 
 Distant galaxies are key to understand early evolutionary stages of
 our Universe.
-Physical conditions in those galaxies allows the emergence of
-Lyman-$\alpha$ line emission at $1216$ \AA \cite{PartrigePeebles}.
+Physical conditions in those galaxies allow the emergence of a
+Lyman-$\alpha$ line emission at $1216$ \AA \citep{PartridgePeebles}.
 Galaxies detected through its Lyman-$\alpha$ emission receive the name of
-spectra at  and named Lyman Alpha Emitters (LAEs).
+Lyman Alpha Emitters (LAEs).
 
-Currently LAEs are commonly targetted in wide area galaxy surveys.
+Currently LAEs are commonly targeted in wide area galaxy surveys.
 They have been effectively used to study galaxy evolution,
 cosmology and the thermal history of the Universe.
-This has been able through the study of their spatial distribution and
-the shape of the \lya emission line.
+This has been possible through the study of their spatial distribution and
+the shape of their \lya emission line.
 
-Recent imptovements in instrumentation have revolutionized the kind of
+Recent improvements in instrumentation have revolutionized the kind of
 studies that can be performed on LAEs.  
 It is now possible to infer detailed kinematic maps for nearby galaxies.
 The study of these maps would allow us to build data-driven models to
@@ -98,25 +100,25 @@ interpret the \lya spectra of unresolved galaxies, helping us to
 constrain the physical conditions of the interstellar medium (ISM)
 processing the \lya radiation.
 
-On the ISM's features that plays an important role in shaping the \lya
-is HI kinematics. 
-In a static HI medium the \lya line has  two equal and symmetric peaks
+One of the ISM's features that plays an important role in shaping the \lya
+is \HI kinematics. 
+In a static \HI medium the \lya line ha  two equal and symmetric peaks
 around the natural \lya wavelength and zero intensity at the line's
 center.
 For an outflowing ISM, the line becomes
 asymmetrical with a more pronounced read peak.
 If the galaxy rotates, the line shows different amounts of Doppler
-shifts modifying the overall line profile \cite{Garavito14}.
+shifts modifying the overall line profile \citep{Garavito14}.
 
 In this paper we present for the first time a study of the joint
 effects of galaxy outflows and rotation.
-We study a simplified geometrical configuration corresponding to an
+We study a simplified geometrical configuration corresponding to a
 spherical gas cloud with symmetrical radial outflows and a rotation
 profile corresponding to a solid body.
-We base our modelling on a Monte-Carlo radiative transfer code called
+We base our modeling on a Monte-Carlo radiative transfer code called
 CLARA (Code for Lyman Alpha Radiation Analysis) presented for the
-first time in \cite{CLARA}.
-Besides modelling the impact of joint rotation and outflows, we also
+first time by \cite{CLARA}.
+Besides modeling the impact of joint rotation and outflows, we also
 want to check to what extent the analytical model presented by
 \cite{Garavito14} to explain the effects of rotation can also be
 applied in our case.
@@ -156,7 +158,7 @@ characterized by $V_{\rm rot}$, the linear velocity at the sphere's surface.
 
 The total velocity field corresponds to the superposition of rotation and
 outflows.
-The cartesian components take the form
+The cartesian components take the following form:
 
 \begin{equation}
 	v_{x}=\frac{x}{R}V_{\rm out}-\frac{y}{R}V_{\rm rot} ,
@@ -174,45 +176,44 @@ The cartesian components take the form
 \end{equation}
 %
 where $x$, $y$ and $z$ are the cartesian position coordinates with the
-origin at the sphere's center $R$ is the radius of the sphere and the
+origin at the sphere's center, $R$ is the radius of the sphere and the
 direction of the angular velocity vector corresponds to the $\hat{k}$
 unit vector. 
 
 For each model setup we follow $10^5$ individual photons generated at
 the center of the sphere at the \lya\ line's center as they propagate
-through the spere and finally scape.
+through the volume and finally scape.
 We store the final frequency and propagation direction for each photon
 at its last scattering.  
 
 
 
-In Table \ref{tab:values} we list the combination of $\tau_{\rm{H}}$,
-$v_{rot}$ and $v_{out}$ values used in this paper.
+In Table \ref{tab:values} we list the combination of \tauh,
+\vrot and \vrot values used in this paper.
 The range of values have some overlap with the expectations from a dwarf
 galaxy with a total neutral hydrogen mass of $10^8$-$10^9$ $M_{\odot}$.
 We run a total of $24$ different models.
 
 
-\begin{table}[htbp]
+\begin{table}
   \begin{center}
     \begin{tabular}{|c|c|c|}
       \hline
-      $\tau_{\mathrm{H}}$ & $v_{rot}$ (\kms) & $v_{out}$ (\kms) \\
+      \tauh & \vrot (\kms) & \vout (\kms) \\
       \hline
-      $10^5$  & \{0\} & \{5, 25, 50\} \\
+      $10^5$ & \{0\} & \{5, 25, 50\} \\
       $10^6$ & \{0\} & \{5, 25, 50\}\\
       $10^7$ & \{0\} & \{5, 25, 50\}\\
-      $10^5$  & \{50, 100\} & \{25, 50, 75\} \\
-      $10^6$ & \{50, 100\} & \{25, 50,75\}\\
-      $10^7$ & \{50, 100\} & \{25, 50,75\}\\
+      $10^5$ & \{50, 100\} & \{25, 50, 75\} \\
+      $10^6$ & \{50, 100\} & \{25, 50, 75\}\\
+      $10^7$ & \{50, 100\} & \{25, 50, 75\}\\
       \hline    
     \end{tabular}
   \end{center}
   \caption{\textbf{Parameters' Values.} List of values that were used
     to construct the radiative transfer models. Values in braces
     for a row indicate that all possible combinations in of
-    $\tau_{\rm{H}}$,
-    $v_{rot}$ and $v_{out}$ are used.}
+    \tauh, \vrot and \vout are used.}
   \label{tab:values}
 \end{table}
 
@@ -222,21 +223,21 @@ We run a total of $24$ different models.
 
 Rotation induces two main effects on the \lya line morphology.
 First. Break of spherical symmetry due to the 
-  preferential direction introduced by the rotation axis.
-  This symmetry break is reflected in the observed spectra as a
-  dependency on the viewing angle, $\theta$, between the line of sight
-  of a distant observer and the rotaional velocity.    
+preferential direction introduced by the rotation axis.
+This symmetry break is reflected in the observed spectra as a
+dependency on the viewing angle, $\theta$, between the line of sight
+of a distant observer and the rotational velocity.    
 Second. Line blurring as the rotational velocity increases.
-  At a fixed viewing angle, faster rotation induces makes the observed
-  line wider and increases the flux around the line's center. 
+At a fixed viewing angle, faster rotation induces makes the observed
+line wider and increases the flux around the line's center. 
 
   
 \cite{Garavito14} presented in the Appendix an analytical model that
 accounts for these two features.
 The basic assumption of the analytical model is that each
 differential surface element on the sphere Doppler shifts the photons
-that it emmits.
-In this paper we introduce this ansatz by postprocessing the results
+that it emits
+In this paper we introduce this ansatz by post-processing the results
 of the outflow simulations without rotation.
 This allows us to produce new \lya spectra and compare them with the
 full radiative transfer solution including both outflows and
@@ -251,7 +252,7 @@ rotation.
 We evaluate first the effects of increasing rotational
 velocity at fixed values of the optical depth and outflow velocity.
 Figure \ref{fig:varying_rotation} summarizes the information.
-All plots correspond to the same outflow velocity of $v_{out}=50$\kms,
+All plots correspond to the same outflow velocity of $\vout=50$\kms,
 rows have constant optical depth and columns have constant rotational
 velocity.
 Each panel shows different morphologies corresponding to varying
@@ -262,6 +263,13 @@ line-of-sight viewing angle.
 % |tau=1E5, vrot=0, | tau=1E5, vrot=50, | tau=1E5, vrot=100, 
 % |tau=1E6, vrot=0, | tau=1E6, vrot=50, | tau=1E6, vrot=100, 
 % |tau=1E7, vrot=0, | tau=1E7, vrot=50, | tau=1E7, vrot=100, 
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.48\textwidth]{./figures/results/varying_rotation}
+	\end{center}
+	\caption{\textbf{Caption:} Caption.
+	\label{fig:varying_rotation}}
+\end{figure}
 
 
 We now evaluate the effects of increasing outflow velocity at fixed
@@ -269,15 +277,20 @@ values for the optical depth and rotational velocity.
 Figure \ref{fig:varying_outflow} summarizes the information following
 the same patters as Figure \ref{fig:varying_rotation}, only that this
 time all plots correspond to the same rotation velocity of
-$v_{rot}=50$\kms,
-
+$\vrot=50$\kms.
 
 % Esta figura deberia tener 3 x 3 vinetas. vrot=50.
 % cada panel tiene una curva para theta=0, 45, 90.
 % |tau=1E5, vout=25, | tau=1E5, vout=50, | tau=1E5, vout=75,
 % |tau=1E6, vout=25, | tau=1E6, vout=50, | tau=1E6, vout=75,
 % |tau=1E7, vout=25, | tau=1E7, vout=50, | tau=1E7, vout=75, 
-
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.48\textwidth]{./figures/results/varying_outflow}
+	\end{center}
+	\caption{\textbf{Caption:} Caption.
+		\label{fig:varying_outflow}}
+\end{figure}
 
 \subsection{Doppler Shifts to Include Rotational Effects}
 
@@ -295,6 +308,8 @@ $v_{rot}=50$\kms,
 \section{Conclusions}
 \label{sec:conclusions}
 
+
+
 \bibliographystyle{mnras}
 \bibliography{references}
 
@@ -310,8 +325,6 @@ $v_{rot}=50$\kms,
  
 
 \section{A new LAE model}
-\label{sec:newmodel}
-
 
 (\cite{Adams72}, \cite{Harrington73}, \cit
 e{Neufeld90}, \cite{Dijkstra06}, \cite{Verhamme06}, \cite{Forero12},
@@ -335,7 +348,6 @@ Fig. \ref{fig:model}. \\
 
 
 \section{Results}
-\label{sec:results}
 
 \subsection{Resulting simulated spectra}
 In order to define the ranges of tauh, vrot and vout, it is necessary
@@ -343,8 +355,6 @@ to refer to observational constraints. The common values for typical
 LAEs that were set as parameters are in Tab. \ref{tab:values}. We run
 CLARA's modified version for all the permutations of these 3
 parameters. \\ 
-
-
 
 The behavior of the resulting sets of spectra can be summarized by
 Fig. \ref{fig:summary}. We concluded from the simulations a clear
@@ -403,7 +413,6 @@ The rotation effect induces a Doppler shift in frequency and displaces the only-
 PONER GRAFICA REAL...\\
 
 \section{Observational Implications}
-\label{sec:observationalimplications}
 
 Among the observational implications that this paper has over observations we select three principal ones. First, the rotational effects of the galaxy should be clearly detected and characterized by MUSE's high resolution data. The Doppler redshift is already visible in other observations, such as the one seen in Fig. 7 of Prescott et al. \cite{Prescott14}.\\
 
@@ -412,7 +421,6 @@ Second, the central ($V=0$) emission of the spectra seen in the results is a con
 Finally, all the spectra produced from this new LAE model is roughly consistent with observations. The consideration of adding the new rotation parameter to the standard only-outflow model found in literature is reasonable and very powerful. vrot and its consequent viewing angle $\theta$ can modify the morphology of the \lya line in new different ways by keeping the model simplified.\\
 
 \section{Conclusions}
-\label{sec:conclusions}
 
 In this paper, the objective was to analyze and measure the influence of galaxy rotation and outflows on the \lya line. The motivation for this is to be able to obtain physical information of a LAE by just looking at its \lya profile. In order to accomplish this objective, we propose a new model of a LAE consisting of a sphere of Hydrogen atoms that expands radially and rotates as a solid body. A modified version of the program CLARA \cite{CLARA} is used to set the conditions and emulate the radiative transfer process inside the galaxy. \\
 
