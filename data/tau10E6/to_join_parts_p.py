@@ -1,7 +1,7 @@
 import os
 
 logtau = 6
-vrots = [100]
+vrots = [50, 100]
 vouts = [5]
 
 for vrot in vrots:
