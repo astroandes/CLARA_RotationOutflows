@@ -308,9 +308,14 @@ V' = V + \vec{v}_{\rm rot}\cdot\hat{k} = V + V_{\rm rot} (x k_{x} - y k_{y})
 \label{eq:shift_x}
 \end{equation}
 
-where $V'$ is the new Doppler shifted velocity, $V$ is the velocity caused by outflows and $\vec{v}_{\rm rot} = V_{\rm rot} (x\hat{i} - y\hat{j})$.
+where $V'$ is the new Doppler shifted velocity, $V$ is the velocity caused by 
+outflows and $\vec{v}_{\rm rot} = V_{\rm rot} (x\hat{i} - y\hat{j})$.
 
-Figure \ref{fig:doppler_shift} displays this Doppler shift for four different configurations with a fixed optical depth \tauh. In each cell of the grid there is a \lya spectrum for a galaxy with only outflows and two \lya spectra for the galaxy with outflows and rotation, one obtained from the radiative transfer and the other by the Doppler shifting of the non-rotating galaxy. 
+Figure \ref{fig:doppler_shift} displays this Doppler shift for four different 
+configurations with a fixed optical depth \tauh. In each cell of the grid 
+there is a \lya spectrum for a galaxy with only outflows and two \lya spectra 
+for the galaxy with outflows and rotation, one obtained from the radiative 
+transfer and the other by the Doppler shifting of the non-rotating galaxy. 
 
 % Esta figura deberia tener 3 x 2 viñetas. tau=10E6.
 % cada panel tiene una curva para no rotation, rotation (radiative transfer)
@@ -325,6 +330,47 @@ Figure \ref{fig:doppler_shift} displays this Doppler shift for four different co
   \caption{\textbf{Caption:} Caption. Tau 10E6.
     \label{fig:doppler_shift}}
 \end{figure*}
+
+In order to compare the line creative with the radiative transfer process that 
+involves the rotation (RT) and the line with only outflows that is Doppler 
+shifted (DS), we calculate three main characteristics for each spectrum. We 
+measure the line's mean velocity, standard deviation and skewness for both 
+RT and DS approaches. We plot the results for each value in Figures 
+\ref{fig:mean_line}, \ref{fig:standard_deviation} and \ref{fig:skewness}, 
+respectively for the same \tauh as Figure \ref{fig:doppler_shift}.
+
+\begin{figure*}
+	\begin{center}
+		\includegraphics[width=0.90\textwidth]{./figures/results/mean_line_6}
+	\end{center}
+	\caption{\textbf{Caption:} The dots represent the Radiative Transfer and
+		the lines represent the Doppler Shift. Tau 10E6.
+		\label{fig:mean_line}}
+\end{figure*}
+
+\begin{figure*}
+	\begin{center}
+		\includegraphics[width=0.90\textwidth]{./figures/results/standard_deviation_6}
+	\end{center}
+	\caption{\textbf{Caption:} The dots represent the Radiative Transfer and 
+		the lines represent the Doppler Shift. Tau 10E6.
+		\label{fig:standard_deviation}}
+\end{figure*}
+
+\begin{figure*}
+	\begin{center}
+		\includegraphics[width=0.90\textwidth]{./figures/results/skewness_6}
+	\end{center}
+	\caption{\textbf{Caption:} The dots represent the Radiative Transfer and 
+		the lines represent the Doppler Shift. Tau 10E6.
+		\label{fig:skewness}}
+\end{figure*}
+
+This shows that the DS model can reproduce the main characteristics of the 
+RT one. Because of this, we can introduce rotation effects in any spectra 
+without running the radiative transfer simulations, that usually take a 
+significant amount of time and computational resources. 
+
 
 \section{Discussion}
 \label{sec:discussion}
