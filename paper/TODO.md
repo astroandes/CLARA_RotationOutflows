@@ -1,8 +1,5 @@
 # TO DO:
 
-## 3.
-* Grafica: eje x es theta y las diferentes curvas son diferentes taus (algo que muestre los otros efectos) con vout vrot fijo 
-
 ## 4.1.
 * Explicación del porque el doppler funciona. Referenciar a mark 
 * Decir para que taus, angulos y velocidades funciona.
