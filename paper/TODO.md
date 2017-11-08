@@ -1,14 +1,13 @@
 # TO DO:
 
 ## 4.1.
-* Explicación del porque el doppler funciona. Referenciar a mark 
-* Decir para que taus, angulos y velocidades funciona.
-* Hablar de la distribución de fotones a la salida y ver que es mas anisotropica con mayor tau
+* Why Doppler shift works. 
 
 ## 4.2.
-* Hacer un fit, parecido a lo de kulas
-* Hablar de una segunda aplicación (Christian Herenz) como el mapa rotacional de galaxias permite usar esa info para construir el espectro lyman alpha con la info de rotac
-ion
+* Make fit to Kulas.
+
+## Conclusions
+* Complete them.
 
 ## Apendix
 
