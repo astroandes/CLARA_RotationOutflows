@@ -189,7 +189,6 @@ through the volume and finally scape.
 We store the final frequency and propagation direction for each photon
 at its last scattering.  
 
-
 In Table \ref{tab:values} we list the combination of \tauh,
 \vrot and \vrot values used in this paper.
 The range of values have some overlap with the expectations from a dwarf
@@ -341,7 +340,9 @@ shifted (DS), we calculate three main characteristics for each spectrum. We
 measure the line's mean velocity, standard deviation and skewness for both 
 RT's and DS's approaches. We plot the results for each value in Figures 
 \ref{fig:mean_line}, \ref{fig:standard_deviation} and \ref{fig:skewness}, 
-respectively for the same \tauh as Figure \ref{fig:doppler_shift}.
+respectively for $\tauh = 10^7$. We highlight that these 3 plots increase
+their fit tendency with a higher optical depth. The reasons why will be 
+discussed in section \ref{sec:discussion}.
 
 \begin{figure*}
 	\begin{center}
@@ -396,30 +397,69 @@ velocity of $\vout=75$\kms and rotation velocity of $\vrot=50$\kms.
 \label{sec:discussion}
 
 \subsection{Theoretical Insights}
-Talk about radiative transfer... 
+\color{red}
+Why Doppler Shift works. Talk about radiative transfer...
+\color{black}
 
-Regarding de Doppler shift... Then, the quality and accuracy of 
-the spectrum, obtained by a Doppler shift, increases with the optical depth \tauh. 
-This is because the more \tauh, the more anisotropic is the photons' distribution 
-at the galaxy's border. 
+A first approach to an analytical expression that returns the \lya spectrum 
+from a rotating galaxy is presented by \cite{Garavito14}. This derivation is 
+based on the assumption that the distribution of photons' propagation directions
+at the edge of the galaxy is anisotropic and depends of \tauh only. So this 
+approximation becomes more accurate with higher optical depth and it is also the 
+reason why the Doppler Shift technique to induce rotational effects to an outflow
+\lya spectrum works.
 
-The introduction of rotation in the model implies that it will only affect 
-galaxies with its viewing angle...
+On the other hand, regarding the parameters \vrot, \vout, and $\theta$ for
+which this model would work, we have the following. The effect of the outflows 
+velocity is much more sensitive on the spectrum than the rotational one; meaning 
+that for a high \vout, the \vrot value would have to be equal or greater in order 
+to be able to glimpse the shift in frequency that rotation induces. Regarding $\theta$, 
+the introduction of rotation in the model implies that it will only affect galaxies 
+with its viewing angle $\theta \neq 90^\circ$. This can be observed in the cartesian 
+components of the velocity of the atoms (Eq. \ref{eq:vx}, \ref{eq:vy}, \ref{eq:vz})
+where the only velocity factor affecting $v_z$ is the outflows one. 
 
 \subsection{Application to observational data}
 
+We find three different approaches how this model can have observational
+implications. Firstly, as the resolution of astronomical instruments is 
+increasing, new images from LAEs can be spatially resolved in a way that 
+rotation velocities of the galaxy can be determined. New spectrographs like 
+MUSE should help obtain kinematic information from LAEs by using our model.  
+As for now, previous works in the literatures have already found useful data
+to support this idea. Fig 7 of Prescott et al. \cite{Prescott14} shows the
+presence of Doppler shift and \cite{Herenz2016} creates 2D line of sight 
+velocity maps of several LARS (Lyman Alpha Reference Sample) galaxies.
+
+Another application of this new model to the current interpretation of \lya
+spectra, is that the central ($V=0$) emission of the spectra seen in the 
+\lya line, is a consequence of the viewing angle of the galaxy and can be 
+controlled by it. Several authors have suggested that this central emission 
+is caused by radiation that escapes the galaxy without scattering. So we 
+present an alternative that solves this issue. In addition, the effect of
+outflows velocities \vrot in current models can modify the asymmetry of peaks
+present in the \lya line. However the intensity of the valley and the width 
+of the line were not easily reproduced. In this work we provide a tool to
+provide these effects with values of \vout and \vrot that do not exceed the
+typical LAEs' numbers found in the literature. 
+
+\color{red}
 Kulas...
-
-MUSE... 
-
-\cite{Herenz2016}
-
-
+\color{black}
+Finally, we present a reconstruction of a selected \lya spectrum presented
+by \cite{Kulas12} and reproduced with the permission of the author. We create
+a fit of the \lya line and predict its kinematic properties. 
 
 \section{Conclusions}
 \label{sec:conclusions}
 
+In this paper we create, for the first time, a computational model for LAEs 
+that emulate the kinematic effects of galaxy rotation and outflows in the \lya
+spectral line. 
 
+\color{red}
+Complete conclusions...
+\color{black}
 
 \bibliographystyle{mnras}
 \bibliography{references}
@@ -430,7 +470,9 @@ MUSE...
 \section{Additional figures}
 \label{sec:appendix}
 
-In this appendix we show Figures \ref{fig:varying_rotation} and \ref{fig:varying_outflow} with more combinations of \vrot and \vout.
+In this appendix we show more \lya spectra in the Figures 
+\ref{fig:varying_rotation} and \ref{fig:varying_outflow} 
+with more combinations of \vrot and \vout.
 
 % Esta figura deberia tener 3 x 3 vinetas. vout=50.
 % cada panel tiene una curva para theta=0, 45, 90.
