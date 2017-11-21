@@ -6,13 +6,6 @@
 ## 4.2.
 * Make fit to Kulas.
 
-## Conclusions
-* Complete them.
-
-## Apendix
-
-* Write some text.
-
 
 # QUESTIONS:
 

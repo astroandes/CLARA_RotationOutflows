@@ -395,6 +395,15 @@ velocity of $\vout=75$\kms and rotation velocity of $\vrot=50$\kms.
 \color{red}
 Why Doppler Shift works. Talk about radiative transfer...
 \color{black}
+In Fig. \ref{fig:doppler} we present the spectrum pf a LAE taken from to different sides of the galaxy. As the LAE is rotating, one side is being redshifted while the other is blueshifted. We see that the combined spectrum is a weighted line, in black, that combines these past two. This shows that there is in effect a Doppler Shift and justifies our choice to apply it after the outflows spectrum is obtained. 
+
+\begin{figure*}
+	\begin{center}
+		\includegraphics[width=0.55\textwidth]{./figures/discussion/doppler}
+	\end{center}
+	\caption{\textbf{Caption:} $\vout=25$\kms, $\vrot=100$\kms, $\tauh=10^5$.
+		\label{fig:doppler}}
+\end{figure*}
 
 A first approach to an analytical expression that returns the \lya spectrum 
 from a rotating galaxy is presented by \cite{Garavito14}. This derivation is 
@@ -452,9 +461,28 @@ In this paper we create, for the first time, a computational model for LAEs
 that emulate the kinematic effects of galaxy rotation and outflows in the \lya
 spectral line. 
 
-\color{red}
-Complete conclusions...
-\color{black}
+Our main conclusions are:
+
+\begin{itemize}
+	\item The effect of rotation \vrot in a LAE spectrum is to broaden the 
+	\lya line.
+	
+	\item The effect of outflows \vout in a LAE spectrum is to increase the peak 
+	asymmetry of the \lya line.
+	
+	\item The effect of optical depth \tauh in a LAE spectrum is to induces a 
+	redshift around the zero velocity in the \lya line.
+	
+	\item Rotation induces a dependency in viewing angle on the \lya line. The 
+	closer the observer is to the equator of the galaxy, the higher is the central 
+	valley of the frequency distribution. 
+	
+	\item Rotations induces a Doppler Shift in frequency of the only-outflow 
+	spectrum of the LAE.
+	
+	\item The final spectra obtained are roughly consistent with LAEs 
+	observations. 
+\end{itemize}
 
 \bibliographystyle{mnras}
 \bibliography{references}
