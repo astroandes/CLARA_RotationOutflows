@@ -41,7 +41,7 @@
 \begin{abstract}
 Outflows and rotation are two ubiquitous kinematic features in the gas
 distributions of galaxies.
-We perform Monte Carlo radiative transfer simulations of outflowing
+Here we perform Monte Carlo radiative transfer simulations of outflowing
 gas with additional solid body rotation to understand how these two
 features impact the morphology of the Lyman-$\alpha$ emission line.
 One of the most notorious results is that rotation increases the
@@ -52,6 +52,10 @@ viewing angle.
 We present a semi-analytic model that modifies the spectra of
 non-rotational that manages to reproduce the main features of these
 Monte Carlo simulations. 
+As an application example we contraint the rotation parameters to the
+observed Lyman-$\alpha$ profile of a high redshift LAE, providing the
+first a constraint on the rotational velocity of a high redshift
+galaxy based on its integrated \lya emission.
 \end{abstract}
 
 \begin{keywords}
@@ -69,7 +73,8 @@ galaxies: dwarf --- radiative transfer --- Methods: numerical
 \label{sec:intro}
 
 The interpretation of the Lyman-$\alpha$ emission in galaxies is
-key to understand their evolutionary processes \citep{PartridgePeebles}.
+key to understand their evolutionary processes, specially in
+star-forming, low-dust galaxies \citep{PartridgePeebles}.
 Recent improvements in instrumentation have revolutionized the kind of
 studies that can be performed on Lyman-$\alpha$ emitting galaxies
 (LAEs.)
@@ -80,12 +85,12 @@ interpret the \lya spectra of unresolved galaxies, helping us to
 constrain the physical conditions of the interstellar medium (ISM)
 processing the \lya radiation.
 
-These kinematic maps show that lyman alpha emitting galaxies have two 
-overimposed velocity patterns: coherent rotation plus and a random
-motions around the mean value provided by rotation. 
+These kinematic maps show that LAEs have two  overimposed velocity
+patterns: coherent rotation plus and a random motions around the mean
+value provided by rotation.  
 Depending on the system under study, one of the two features can be
-more important, or they can be found in equal measure. 
-These kinematic features play an important role in shaping the \lya.
+more important, or they can be found in equal measure.  
+These kinematic features play an important role in shaping the \lya. 
 
 Models of the \lya have also shown that there is clear signal for
 outflowing gas most probably produced by star formation activity.
@@ -285,20 +290,20 @@ $\vrot=50$\kms.
 
 \subsection{Doppler Shifts to Include Rotational Effects}
 
-We know that rotation alone does have an impact on the \lya line morphology
-and we get the same influence in it that previous works. Together with the 
-outflows, we found that the resulting spectra is equivalent to a non-rotating
-galaxy with outflows that undergoes a Doppler Shift in velocity, weighted by 
-amount of photons that if rotating would project their escape in $\hat{k}$'s
-direction. The formulas to calculate this shift are:
+Rotation alone does have an impact on the \lya line morphology
+and we get the same influence in it that previous works. 
+Together with the  outflows, we found that the resulting spectra is
+equivalent to a non-rotating galaxy with outflows that undergoes a
+Doppler Shift in velocity, weighted by  amount of photons that if
+rotating would project their escape in $\hat{k}$'s direction:
 
 \begin{equation}
-V' = V + \vec{v}_{\rm rot}\cdot\hat{k} = V + V_{\rm rot} (x k_{x} - y k_{y})
+V' = V + \vec{v}_{\rm rot}\cdot\hat{k} 
 \label{eq:shift_x}
 \end{equation}
-
+%
 where $V'$ is the new Doppler shifted velocity, $V$ is the velocity caused by 
-outflows and $\vec{v}_{\rm rot} = V_{\rm rot} (x\hat{i} - y\hat{j})$.
+outflows.
 
 Figure \ref{fig:doppler_shift} displays this Doppler shift for four different 
 configurations with a fixed optical depth \tauh. In each cell of the grid 
