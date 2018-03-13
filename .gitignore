@@ -11,3 +11,5 @@ data/tau*/vrot*/vout*/tau*_vrot*_vout*_*.proc.*.ascii
 data/tau*/vrot*/vout*/tau*_vrot*_vout*.input-usedvalues
 
 .ipynb_checkpoints
+
+__pycache__/
