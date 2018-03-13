@@ -65,37 +65,33 @@ def bins_to_x(bins):
 def get_spectra(data, v_th=12.86, as_hist=True):
     '''Returns the spectrum in velocity units.'''
     velocity = -data['x_frec']*v_th
-    n, b = np.histogram(velocity, normed=True, bins=50)
+    n, b = np.histogram(velocity, bins=50)
+    n = n / n.sum()
     if (as_hist):
         return b, n
     else:
         return bins_to_x(b), n
 
-def plot_spectra(x, y, alpha=1.0, lw=2, label='label'):
+def plot_spectra(x, y, ax, alpha=1.0, lw=2, label='label'):
     '''Basic plot of spectra.'''
-    plt.figure()
-    plt.hist(x, weights=y, histtype='step', fill=False, normed=True,
-             color='black', linewidth=lw, bins=50, alpha=alpha, label=label)
-    plt.show()
-
-def main():
+    ax.hist(x, weights=y, histtype='step', fill=False, 
+            normed=True, color='black', linewidth=lw, bins=50, 
+            alpha=alpha, label=label)
+    
+def main(vrot, vout, logtau, min_theta, max_theta):
     '''Main. Shows an example of its use.'''
     # Input
     vrot0 = 0
-    vrot = 150
-    vout = 5
-    logtau = 6
-    min_theta = np.pi/2.0 - 0.15
-    max_theta = np.pi/2.0
 
     data = read_data(vrot0, vout, logtau)
     doppler = doppler_shift(data, vrot=vrot)
     doppler_theta = filter_by_theta(doppler, min_theta, max_theta)
-    xs, ys = get_spectra(doppler_theta, as_hist=False)
-
-    plot_spectra(xs, ys)
+    x, y = get_spectra(doppler_theta, as_hist=False)
+    
+    return x, y
 
 
 # MAIN
 if __name__ == "__main__":
-    main()
+    main(vrot=150, vout=5, logtau=6, min_theta=np.pi/2.0-0.15, 
+         max_theta=np.pi/2.0)
