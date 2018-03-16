@@ -54,6 +54,26 @@ def filter_by_theta(data, min_theta, max_theta):
     ii = ii & (cos_theta_k_out > np.abs(np.cos(max_theta)))
     return data[ii]
 
+def filter_by_direction(data):
+    '''Returns only the x_frec_escaped between those upper and lower angles (red and blue).'''
+    r_mag = (data['x']**2 + data['y']**2)**0.5
+    r_x = data['x']/r_mag
+    r_y = data['y']/r_mag
+    
+    dot = r_x*data['k_x'] + r_y*data['k_y']
+    proj_x = data['k_x'] - r_x*dot
+    proj_y = data['k_y'] - r_y*dot
+    
+    perp_x = -r_y
+    perp_y = r_x
+    
+    para = proj_x*perp_x + proj_y*perp_y
+    
+    inds = np.where(para >= 0) #parallel (red)
+    inds_c = np.where(para < 0) #antiparallel (blue)
+    
+    return data[inds], data[inds_c]
+
 def bins_to_x(bins):
     '''Convert histogram bins to n-1 dim array of x coordinates.'''
     xs = []
@@ -72,11 +92,11 @@ def get_spectra(data, v_th=12.86, as_hist=True):
     else:
         return bins_to_x(b), n
 
-def plot_spectra(x, y, ax, alpha=1.0, lw=2, label='label'):
+def plot_spectra(x, y, ax, alpha=1.0, lw=2, ls='-', c='k', label='label'):
     '''Basic plot of spectra.'''
     ax.hist(x, weights=y, histtype='step', fill=False, 
-            normed=True, color='black', linewidth=lw, bins=50, 
-            alpha=alpha, label=label)
+            normed=True, color=c, linewidth=lw, bins=50, 
+            alpha=alpha, linestyle=ls, label=label)
     
 def main(vrot, vout, logtau, min_theta, max_theta):
     '''Main. Shows an example of its use.'''
