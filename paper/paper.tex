@@ -99,7 +99,7 @@ linea with a more pronounced read peak.
 
 The effects of either outflows or rotation on the \lya line have been
 already explored.
-Here e present for the first time a study of the joint effects of
+Here we present for the first time a study of the joint effects of
 galaxy outflows and rotation, two of the three major kinematic
 components expected in LAEs. 
 
@@ -141,7 +141,7 @@ global optical depth.
 The code assumes an homogeneous density throughout the simulated
 volume.
 In the current implementation we neglect the influence of dust.
-Our basic models is an spherical distribution of neutral hydrogen,
+Our basic model is an spherical distribution of neutral hydrogen,
 an approximation commonly used in the literature, as it explains a
 wide variety of observational features \citep{Ahn03,Verhamme06,Dijkstra06}.
 
@@ -150,7 +150,7 @@ The central element in this paper is the velocity field that captures
 outflows and rotation.
 Outflows are captured by a Hubble-like radial velocity profile with
 the velocity magnitude increasing linearly with the radial
-coordinate; the outflow model is fully characterized by $V_{\rm out}$, the
+coordinate; the outflows model is fully characterized by $V_{\rm out}$, the
 velocity at the sphere's surface.
 Rotation follows a solid body rotation profile, which is fully
 characterized by $V_{\rm rot}$, the linear velocity at the sphere's surface.
@@ -189,7 +189,7 @@ In Table \ref{tab:values} we list the combination of \tauh,
 \vrot and \vrot values used in this paper.
 The range of values have some overlap with the expectations from a dwarf
 galaxy with a total neutral hydrogen mass of $10^8$-$10^9$ $M_{\odot}$.
-We run a total of $24$ different models.
+We run a total of $27$ different models.
 
 \begin{table}
   \begin{center}
@@ -232,7 +232,7 @@ The basic assumption of the analytical model is that each
 differential surface element on the sphere Doppler shifts the photons
 that it emits
 In this paper we introduce this ansatz by post-processing the results
-of the outflow simulations without rotation.
+of the outflows simulations without rotation.
 This allows us to produce new \lya spectra and compare them with the
 full radiative transfer solution including both outflows and
 rotation. 
@@ -243,11 +243,11 @@ rotation.
 
 \subsection{Monte-Carlo Radiative Transfer Model}
 
-We evaluate first the effects of increasing rotational
-velocity at fixed values of the optical depth and outflow velocity.
+We evaluate the effects of increasing rotational
+velocity at fixed values of the optical depth and outflows velocity.
 Figure \ref{fig:varying_rotation_small} summarizes its behavior 
-(for largest range see Figure \ref{fig:varying_rotation}).
-All plots correspond to the same outflow velocity of $\vout=50$\kms,
+(for a largest range see Figure \ref{fig:varying_rotation}).
+All plots correspond to the same outflows velocity of $\vout=50$\kms,
 rows have constant optical depth and columns have constant rotational
 velocity.
 Each panel shows different morphologies corresponding to varying
@@ -261,18 +261,19 @@ line-of-sight viewing angle.
 	\begin{center}
 		\includegraphics[width=0.90\textwidth]{./figures/results/varying_rotation_small}
 	\end{center}
-	\caption{\textbf{Spectra for fixed outflow velocity:} We fixed $\vout=50$\kms. 
+	\caption{\textbf{Spectra for fixed outflows velocity:} We fixed $\vout=50$\kms. 
 			 We vary \vrot increasing from left to right, \tauh increasing from top to 
 			 bottom, and $\theta$ according to the legend.
 	\label{fig:varying_rotation_small}}
 \end{figure*}
 
-We now evaluate the effects of increasing outflow velocity at fixed
+We evaluate the effects of increasing outflows velocity at fixed
 values for the optical depth and rotational velocity.
 Figure \ref{fig:varying_outflow_small} summarizes its behavior
-(for largest range see Figure \ref{fig:varying_outflow}).
+(for a largest range see Figure \ref{fig:varying_outflow}).
 All plots correspond to the same rotation velocity of
-$\vrot=50$\kms.
+$\vrot=50$\kms, rows have constant optical depth and columns 
+have constant outflows velocity.
 
 % Esta figura deberia tener 2 x 2 vinetas. vrot=50.
 % cada panel tiene una curva para theta=0, 45, 90.
@@ -292,10 +293,10 @@ $\vrot=50$\kms.
 \subsection{Doppler Shifts to Include Rotational Effects}
 
 Rotation alone does have an impact on the \lya line morphology
-and we get the same influence in it that previous works. 
-Together with the  outflows, we found that the resulting spectra is
+and we obtain the same influence as in the literature.
+Together with the outflows, we found that the resulting spectra is
 equivalent to a non-rotating galaxy with outflows that undergoes a
-Doppler Shift in velocity, weighted by  amount of photons that if
+Doppler Shift in velocity, weighted by the amount of photons that if
 rotating would project their escape in $\hat{k}$'s direction:
 
 \begin{equation}
@@ -306,11 +307,12 @@ V' = V + \vec{v}_{\rm rot}\cdot\hat{k}
 where $V'$ is the new Doppler shifted velocity, $V$ is the velocity caused by 
 outflows.
 
-Figure \ref{fig:doppler_shift} displays this Doppler shift for four different 
+Figure \ref{fig:doppler_shift} displays this Doppler shift for six different 
 configurations with a fixed optical depth \tauh. In each cell of the grid 
 there is a \lya spectrum for a galaxy with only outflows and two \lya spectra 
-for the galaxy with outflows and rotation, one obtained from the radiative 
-transfer and the other by the Doppler shifting of the non-rotating galaxy. 
+for the galaxy with outflows and rotation: one obtained from the radiative 
+transfer simulation and the other obtained from the Doppler shifting of the 
+non-rotating galaxy. 
 
 % Esta figura deberia tener 3 x 2 viñetas. tau=10E6.
 % cada panel tiene una curva para no rotation, rotation (radiative transfer)
@@ -322,7 +324,7 @@ transfer and the other by the Doppler shifting of the non-rotating galaxy.
   \begin{center}
     \includegraphics[width=0.90\textwidth]{./figures/results/doppler_shift_6}
   \end{center}
-  \caption{\textbf{Doppler shift effect:} We fixed $\tauh=10^6$ and $\theta=?$. 
+  \caption{\textbf{Doppler shift effect:} We fixed $\tauh=10^6$ and $\theta=90^\circ$. 
   	We vary \vrot increasing from left to right and \vout increasing from top to 
   	bottom. The legend represents the \lya line obtained if there is no rotation 
   	(in thin line), if there is a radiative transfer of rotation and outflows 
@@ -331,8 +333,8 @@ transfer and the other by the Doppler shifting of the non-rotating galaxy.
 	    \label{fig:doppler_shift}}
 \end{figure*}
 
-In order to compare the line created with the radiative transfer process that 
-involves the rotation (RT) and the line with only outflows that is Doppler 
+In order to compare the line created with the radiative transfer (RT) process that 
+involves the rotation and the line with only outflows that is Doppler 
 shifted (DS), we calculate three main characteristics for each spectrum. We 
 measure the line's mean velocity, standard deviation and skewness for both 
 RT's and DS's approaches. We plot the results for each value in Figures 
@@ -411,8 +413,8 @@ Why Doppler Shift works. Talk about radiative transfer...
 In Fig. \ref{fig:doppler} we present the spectrum of a LAE taken from to different 
 sides of the galaxy. As the LAE is rotating, one side is being redshifted while 
 the other is blueshifted. We see that the combined spectrum is a weighted line, 
-in solid black, that combines these past two. This shows that there is in effect a 
-Doppler Shift and justifies our choice to apply it after the outflows spectrum is 
+in solid black, that combines these past two. This shows that there is in fact a 
+Doppler Shift and then it justifies our choice to apply it after the outflows spectrum is 
 obtained. 
 
 \begin{figure}
@@ -463,7 +465,7 @@ outflows velocities \vrot in current models can modify the asymmetry of peaks
 present in the \lya line. However the intensity of the valley and the width 
 of the line were not easily reproduced. In this work we provide a tool to
 provide these effects with values of \vout and \vrot that do not exceed the
-typical LAEs' numbers found in the literature. 
+typical LAEs' values found in the literature. 
 
 \color{red}
 Kulas...
@@ -488,14 +490,14 @@ Our main conclusions are:
 	\item The effect of outflows \vout in a LAE spectrum is to increase the peak 
 	asymmetry of the \lya line.
 	
-	\item The effect of optical depth \tauh in a LAE spectrum is to induces a 
+	\item The effect of optical depth \tauh in a LAE spectrum is to induce a 
 	redshift around the zero velocity in the \lya line.
 	
 	\item Rotation induces a dependency in viewing angle on the \lya line. The 
 	closer the observer is to the equator of the galaxy, the higher is the central 
 	valley of the frequency distribution. 
 	
-	\item Rotations induces a Doppler Shift in frequency of the only-outflow 
+	\item Rotations induces a Doppler Shift in frequency of the only-outflows 
 	spectrum of the LAE.
 	
 	\item The final spectra obtained are roughly consistent with LAEs 
@@ -513,7 +515,7 @@ Our main conclusions are:
 
 In this appendix we show more \lya spectra in the Figures 
 \ref{fig:varying_rotation} and \ref{fig:varying_outflow} 
-with more combinations of \vrot and \vout.
+with the complete range of combinations of \vrot and \vout.
 
 % Esta figura deberia tener 3 x 3 vinetas. vout=50.
 % cada panel tiene una curva para theta=0, 45, 90.
@@ -630,13 +632,13 @@ To summarize, the influence of the 4 parameters on the \lya morphology is the fo
 
 \subsection{Doppler shift by rotation}
 
-The rotation effect induces a Doppler shift in frequency and displaces the only-outflow spectra. As seen in Fig. \ref{fig:rotation_doppler_outflow} rotation takes the resulting spectrum with vrot$=0$ and displaces it from its central location. Then it weights the lines and they all merge into the resulting red \lya line.\\
+The rotation effect induces a Doppler shift in frequency and displaces the only-outflows spectra. As seen in Fig. \ref{fig:rotation_doppler_outflow} rotation takes the resulting spectrum with vrot$=0$ and displaces it from its central location. Then it weights the lines and they all merge into the resulting red \lya line.\\
 
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=0.3\textwidth]{./figures/rotation_doppler_outflow}
 	\end{center}
-	\caption{\textbf{Rotations induces a Doppler shift of the only-outflow spectra:} Each of the black lines is then weighted to obtain the red line.
+	\caption{\textbf{Rotations induces a Doppler shift of the only-outflows spectra:} Each of the black lines is then weighted to obtain the red line.
 		\label{fig:rotation_doppler_outflow}}
 \end{figure}
 
@@ -648,7 +650,7 @@ Among the observational implications that this paper has over observations we se
 
 Second, the central ($V=0$) emission of the spectra seen in the results is a consequence of the viewing angle of the galaxy and can be controlled by it. This means that the reason is not necessary that radiation is escaping without scattering, as several authors have suggested (CITAS...).\\
 
-Finally, all the spectra produced from this new LAE model is roughly consistent with observations. The consideration of adding the new rotation parameter to the standard only-outflow model found in literature is reasonable and very powerful. vrot and its consequent viewing angle $\theta$ can modify the morphology of the \lya line in new different ways by keeping the model simplified.\\
+Finally, all the spectra produced from this new LAE model is roughly consistent with observations. The consideration of adding the new rotation parameter to the standard only-outflows model found in literature is reasonable and very powerful. vrot and its consequent viewing angle $\theta$ can modify the morphology of the \lya line in new different ways by keeping the model simplified.\\
 
 \section{Conclusions}
 
@@ -661,7 +663,7 @@ The conclusions obtained from this work are:
 	
 	\item The effects of vrot, vout and tauh are consistent with the different authors that have used them. vrot broadens the \lya line. vout increases the peaks asymmetry and tauh induces a redshift around the zero velocity.
 	
-	\item Rotations induces a Doppler shift in frequency of the only-outflow spectra.
+	\item Rotations induces a Doppler shift in frequency of the only-outflows spectra.
 	
 	\item The final spectra obtained are roughly consistent with LAEs observations. \\ 
 

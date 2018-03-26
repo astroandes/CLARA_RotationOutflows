@@ -13,3 +13,5 @@ data/tau*/vrot*/vout*/tau*_vrot*_vout*.input-usedvalues
 .ipynb_checkpoints
 
 __pycache__/
+
+muse/*.fits
