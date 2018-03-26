@@ -86,7 +86,8 @@ def get_spectra(data, v_th=12.86, as_hist=True):
     '''Returns the spectrum in velocity units.'''
     velocity = -data['x_frec']*v_th
     n, b = np.histogram(velocity, bins=50)
-    n = n / n.sum()
+    area = np.trapz(n, b[:-1])
+    n = n / area
     if (as_hist):
         return b, n
     else:
