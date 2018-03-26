@@ -49,7 +49,7 @@ detected flux at the line's center in comparison with the
 non-rotational case. 
 Rotation also induces a line broadening and a dependency with the
 viewing angle.
-We present a semi-analytic model that modifies the spectra of
+We also present a semi-analytic model that modifies the spectra of
 non-rotational that manages to reproduce the main features of these
 Monte Carlo simulations. 
 As an application example we contraint the rotation parameters to the
@@ -86,23 +86,20 @@ constrain the physical conditions of the interstellar medium (ISM)
 processing the \lya radiation.
 
 These kinematic maps show that LAEs have two  overimposed velocity
-patterns: coherent rotation plus and a random motions around the mean
-value provided by rotation.  
+patterns: coherent rotation plus and a random motions.
 Depending on the system under study, one of the two features can be
 more important, or they can be found in equal measure.  
 These kinematic features play an important role in shaping the \lya. 
-
 Models of the \lya have also shown that there is clear signal for
 outflowing gas most probably produced by star formation activity.
 The characteristic signal for these outflows is the asymmetrical \lya
 linea with a more pronounced read peak.
-
 The effects of either outflows or rotation on the \lya line have been
 already explored.
+
 Here we present for the first time a study of the joint effects of
 galaxy outflows and rotation, two of the three major kinematic
 components expected in LAEs. 
-
 We study a simplified geometrical configuration corresponding to a
 spherical gas cloud with symmetrical radial outflows and a rotation
 profile corresponding to a solid body.
@@ -114,9 +111,12 @@ Besides modeling the impact of joint rotation and outflows, we also
 check to what extent the analytical model presented by
 \cite{Garavito14} to explain the effects of rotation can also be
 applied in our case.
-We show that solid body rotation effects can be included
+We show how solid body rotation effects can be modelled by
+postprocessing the results of outflow only simulation. 
+
 in the results of other radiative transfer model in the case of large
-optical depths. In this case it is a good approximation to Doppler
+optical depths. 
+In this case it is a good approximation to Doppler
 boost the results of the model without rotation. 
 
 The structure of the paper is the following. 
@@ -241,6 +241,19 @@ rotation.
 \section{Results}
 \label{sec:results}
 
+\begin{figure*}
+  \begin{center}
+    \includegraphics[width=0.90\textwidth]{./figures/results/doppler_shift_6}
+  \end{center}
+  \caption{\textbf{Doppler shift effect:} We fixed $\tauh=10^6$ and $\theta=90^\circ$. 
+  	We vary \vrot increasing from left to right and \vout increasing from top to 
+  	bottom. The legend represents the \lya line obtained if there is no rotation 
+  	(in thin line), if there is a radiative transfer of rotation and outflows 
+  	(thick and clear line), and if there is a radiative transfer of only outflows,
+  	but also a Doppler shift from the rotational velocity (thick and dark line). 
+	    \label{fig:doppler_shift}}
+\end{figure*}
+
 \subsection{Monte-Carlo Radiative Transfer Model}
 
 We evaluate the effects of increasing rotational
@@ -257,15 +270,15 @@ line-of-sight viewing angle.
 % cada panel tiene una curva para theta=0, 45, 90.
 % | tau=1E5, vrot=50, | tau=1E5, vrot=100 |
 % | tau=1E6, vrot=50, | tau=1E6, vrot=100 | 
-\begin{figure*}
-	\begin{center}
-		\includegraphics[width=0.90\textwidth]{./figures/results/varying_rotation_small}
-	\end{center}
-	\caption{\textbf{Spectra for fixed outflows velocity:} We fixed $\vout=50$\kms. 
-			 We vary \vrot increasing from left to right, \tauh increasing from top to 
-			 bottom, and $\theta$ according to the legend.
-	\label{fig:varying_rotation_small}}
-\end{figure*}
+%\begin{figure*}
+%  \begin{center}
+%    \includegraphics[width=0.90\textwidth]{./figures/results/varying_rotation_small}
+%  \end{center}
+%  \caption{\textbf{Spectra for fixed outflows velocity:} We fixed $\vout=50$\kms. 
+%    We vary \vrot increasing from left to right, \tauh increasing from top to 
+%    bottom, and $\theta$ according to the legend.
+%    \label{fig:varying_rotation_small}}
+%\end{figure*}
 
 We evaluate the effects of increasing outflows velocity at fixed
 values for the optical depth and rotational velocity.
@@ -279,15 +292,14 @@ have constant outflows velocity.
 % cada panel tiene una curva para theta=0, 45, 90.
 % | tau=1E5, vout=25, | tau=1E5, vout=75 |
 % | tau=1E6, vout=25, | tau=1E6, vout=75 |
-\begin{figure*}
-	\begin{center}
-		\includegraphics[width=0.90\textwidth]{./figures/results/varying_outflow_small}
-	\end{center}
-	\caption{\textbf{Spectra for fixed rotational velocity:} We fixed $\vrot=50$\kms. 
-			 We vary \vout increasing from left to right, \tauh increasing from top to 
+%\begin{figure*}
+%\begin{center}
+%\includegraphics[width=0.90\textwidth]{./figures/results/varying_outflow_small}
+%\end{center}
+%\caption{\textbf{Spectra for fixed rotational velocity:} We fixed $\vrot=50$\kms.  We vary \vout in%creasing from left to right, \tauh increasing from top to 
 			 bottom, and $\theta$ according to the legend.
-		\label{fig:varying_outflow_small}}
-\end{figure*}
+%\label{fig:varying_outflow_small}}
+%\end{figure*}
 
 
 \subsection{Doppler Shifts to Include Rotational Effects}
@@ -320,18 +332,7 @@ non-rotating galaxy.
 % |vrot=50, vout=5,  | vrot=100, vout=5,  |
 % |vrot=50, vout=25, | vrot=100, vout=25, |
 % |vrot=50, vout=50, | vrot=100, vout=50, |
-\begin{figure*}
-  \begin{center}
-    \includegraphics[width=0.90\textwidth]{./figures/results/doppler_shift_6}
-  \end{center}
-  \caption{\textbf{Doppler shift effect:} We fixed $\tauh=10^6$ and $\theta=90^\circ$. 
-  	We vary \vrot increasing from left to right and \vout increasing from top to 
-  	bottom. The legend represents the \lya line obtained if there is no rotation 
-  	(in thin line), if there is a radiative transfer of rotation and outflows 
-  	(thick and clear line), and if there is a radiative transfer of only outflows,
-  	but also a Doppler shift from the rotational velocity (thick and dark line). 
-	    \label{fig:doppler_shift}}
-\end{figure*}
+
 
 In order to compare the line created with the radiative transfer (RT) process that 
 involves the rotation and the line with only outflows that is Doppler 
@@ -343,38 +344,28 @@ respectively for $\tauh = 10^7$. We highlight that these 3 plots increase
 their fit tendency with a higher optical depth. The reasons why will be 
 discussed in section \ref{sec:discussion}.
 
-\begin{figure}
-	\begin{center}
-		\includegraphics[height=0.1\textheight]{./figures/results/line_characterization_mn_vout5_logtau7}
-		\includegraphics[height=0.1\textheight]{./figures/results/line_characterization_mn_vout25_logtau7}
-		\includegraphics[height=0.1\textheight]{./figures/results/line_characterization_mn_vout50_logtau7}
-	\end{center}
-	\caption{\textbf{Mean line for RT and DS:} The triangles represent the Radiative 
-		Transfer and the lines represent the Doppler Shift. We fixed $\tauh=10^7$.
-		\label{fig:mean_line}}
-\end{figure}
 
-\begin{figure}
-	\begin{center}
-		\includegraphics[height=0.11\textheight]{./figures/results/line_characterization_std_vout5_logtau7}
-		\includegraphics[height=0.11\textheight]{./figures/results/line_characterization_std_vout25_logtau7}
-		\includegraphics[height=0.11\textheight]{./figures/results/line_characterization_std_vout50_logtau7}
-	\end{center}
-	\caption{\textbf{Standard Deviation for RT and DS:} The triangles represent the Radiative 
-		Transfer and the lines represent the Doppler Shift. We fixed $\tauh=10^7$.
-		\label{fig:standard_deviation}}
-\end{figure}
+\begin{figure*}
+\begin{center}
+\includegraphics[height=0.3\textwidth]{./figures/results/line_characterization_std_vout5_logtau7}
+\includegraphics[height=0.3\textwidth]{./figures/results/line_characterization_std_vout25_logtau7}
+\includegraphics[height=0.3\textwidth]{./figures/results/line_characterization_std_vout50_logtau7}
+\end{center}
+\caption{\textbf{Standard Deviation for RT and DS:} The triangles represent the Radiative 
+  Transfer and the lines represent the Doppler Shift. We fixed $\tauh=10^7$.
+  \label{fig:standard_deviation}}
+\end{figure*}
 
-\begin{figure}
-	\begin{center}
-		\includegraphics[height=0.11\textheight]{./figures/results/line_characterization_skw_vout5_logtau7}
-		\includegraphics[height=0.11\textheight]{./figures/results/line_characterization_skw_vout25_logtau7}
-		\includegraphics[height=0.11\textheight]{./figures/results/line_characterization_skw_vout50_logtau7}
-	\end{center}
-	\caption{\textbf{Skewness for RT and DS:} The triangles represent the Radiative 
-		Transfer and the lines represent the Doppler Shift. We fixed $\tauh=10^7$.
-		\label{fig:skewness}}
-\end{figure}
+\begin{figure*}
+\begin{center}
+\includegraphics[height=0.31\textwidth]{./figures/results/line_characterization_skw_vout5_logtau7}
+\includegraphics[height=0.31\textwidth]{./figures/results/line_characterization_skw_vout25_logtau7}
+\includegraphics[height=0.31\textwidth]{./figures/results/line_characterization_skw_vout50_logtau7}
+  \end{center}
+  \caption{\textbf{Skewness for RT and DS:} The triangles represent the Radiative 
+    Transfer and the lines represent the Doppler Shift. We fixed $\tauh=10^7$.
+    \label{fig:skewness}}
+\end{figure*}
 
 This shows that the DS model can reproduce the main characteristics of the 
 RT one. Because of this, we can introduce rotation effects in any spectra 
@@ -389,18 +380,18 @@ velocity of $\vout=5$\kms and rotation velocity of $\vrot=100$\kms.
 
 % Esta figura deberia tener en el eje x theta y en el eje y intensity of valley
 % cada panel tiene una curva para logtau = 5, 6, 7.
-\begin{figure}
-	\begin{center}
-		\includegraphics[height=0.1\textheight]{./figures/results/line_characterization_vi_vout5_vrot100_logtau5}
-		\includegraphics[height=0.1\textheight]{./figures/results/line_characterization_vi_vout5_vrot100_logtau6}
-		\includegraphics[height=0.1\textheight]{./figures/results/line_characterization_vi_vout5_vrot100_logtau7}
-	\end{center}
-	\caption{\textbf{Valley Intensity:} We show for each \tauh the dependency that
+\begin{figure*}
+\begin{center}
+\includegraphics[height=0.29\textwidth]{./figures/results/line_characterization_vi_vout5_vrot100_logtau5}
+\includegraphics[height=0.29\textwidth]{./figures/results/line_characterization_vi_vout5_vrot100_logtau6}
+\includegraphics[height=0.29\textwidth]{./figures/results/line_characterization_vi_vout5_vrot100_logtau7}
+\end{center}
+\caption{\textbf{Valley Intensity:} We show for each \tauh the dependency that
 		the viewing angle $\theta$ has on the line's the valley intensity. The larger 
 		$\cos{\theta}$ the lower is the valley intensity, so the higher $\theta$, the 
 		higher the valley intensity. We fixed $\vout=5$\kms and $\vrot=100$\kms. 
 		\label{fig:valley_intensity}}
-\end{figure}
+\end{figure*}
 
 
 \section{Discussion}
