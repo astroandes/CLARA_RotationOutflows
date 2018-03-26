@@ -95,7 +95,7 @@ def get_spectra(data, v_th=12.86, as_hist=True):
 def plot_spectra(x, y, ax, alpha=1.0, lw=2, ls='-', c='k', label='label'):
     '''Basic plot of spectra.'''
     ax.hist(x, weights=y, histtype='step', fill=False, 
-            normed=True, color=c, linewidth=lw, bins=50, 
+            color=c, linewidth=lw, bins=50, 
             alpha=alpha, linestyle=ls, label=label)
     
 def main(vrot, vout, logtau, min_theta, max_theta):

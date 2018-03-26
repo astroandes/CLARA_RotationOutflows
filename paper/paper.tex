@@ -343,33 +343,33 @@ discussed in section \ref{sec:discussion}.
 
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=0.15\textwidth]{./figures/results/line_characterization_mn_vout5_logtau7}
-		\includegraphics[width=0.15\textwidth]{./figures/results/line_characterization_mn_vout25_logtau7}
-		\includegraphics[width=0.15\textwidth]{./figures/results/line_characterization_mn_vout50_logtau7}
+		\includegraphics[height=0.1\textheight]{./figures/results/line_characterization_mn_vout5_logtau7}
+		\includegraphics[height=0.1\textheight]{./figures/results/line_characterization_mn_vout25_logtau7}
+		\includegraphics[height=0.1\textheight]{./figures/results/line_characterization_mn_vout50_logtau7}
 	\end{center}
-	\caption{\textbf{Mean line for RT and DS:} The dots represent the Radiative 
+	\caption{\textbf{Mean line for RT and DS:} The triangles represent the Radiative 
 		Transfer and the lines represent the Doppler Shift. We fixed $\tauh=10^7$.
 		\label{fig:mean_line}}
 \end{figure}
 
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=0.15\textwidth]{./figures/results/line_characterization_std_vout5_logtau7}
-		\includegraphics[width=0.15\textwidth]{./figures/results/line_characterization_std_vout25_logtau7}
-		\includegraphics[width=0.15\textwidth]{./figures/results/line_characterization_std_vout50_logtau7}
+		\includegraphics[height=0.11\textheight]{./figures/results/line_characterization_std_vout5_logtau7}
+		\includegraphics[height=0.11\textheight]{./figures/results/line_characterization_std_vout25_logtau7}
+		\includegraphics[height=0.11\textheight]{./figures/results/line_characterization_std_vout50_logtau7}
 	\end{center}
-	\caption{\textbf{Standard Deviation for RT and DS:} The dots represent the Radiative 
+	\caption{\textbf{Standard Deviation for RT and DS:} The triangles represent the Radiative 
 		Transfer and the lines represent the Doppler Shift. We fixed $\tauh=10^7$.
 		\label{fig:standard_deviation}}
 \end{figure}
 
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=0.15\textwidth]{./figures/results/line_characterization_skw_vout5_logtau7}
-		\includegraphics[width=0.15\textwidth]{./figures/results/line_characterization_skw_vout25_logtau7}
-		\includegraphics[width=0.15\textwidth]{./figures/results/line_characterization_skw_vout50_logtau7}
+		\includegraphics[height=0.11\textheight]{./figures/results/line_characterization_skw_vout5_logtau7}
+		\includegraphics[height=0.11\textheight]{./figures/results/line_characterization_skw_vout25_logtau7}
+		\includegraphics[height=0.11\textheight]{./figures/results/line_characterization_skw_vout50_logtau7}
 	\end{center}
-	\caption{\textbf{Skewness for RT and DS:} The dots represent the Radiative 
+	\caption{\textbf{Skewness for RT and DS:} The triangles represent the Radiative 
 		Transfer and the lines represent the Doppler Shift. We fixed $\tauh=10^7$.
 		\label{fig:skewness}}
 \end{figure}
@@ -383,17 +383,22 @@ In addition to this, we also evaluate the effects of the viewing angle
 for fixed rotational and outflows velocity. We measure the intensity of the 
 valley between peaks, for each $\theta$ and \tauh. Figure \ref{fig:valley_intensity} 
 summarizes the information with all plots corresponding to the same outflow
-velocity of $\vout=75$\kms and rotation velocity of $\vrot=50$\kms. 
+velocity of $\vout=5$\kms and rotation velocity of $\vrot=100$\kms. 
 
 % Esta figura deberia tener en el eje x theta y en el eje y intensity of valley
 % cada panel tiene una curva para logtau = 5, 6, 7.
-\begin{figure*}
+\begin{figure}
 	\begin{center}
-		\includegraphics[width=0.65\textwidth]{./figures/results/valley_intensity}
+		\includegraphics[height=0.12\textheight]{./figures/results/line_characterization_vi_vout5_vrot100_logtau5}
+		\includegraphics[height=0.12\textheight]{./figures/results/line_characterization_vi_vout5_vrot100_logtau6}
+		\includegraphics[height=0.12\textheight]{./figures/results/line_characterization_vi_vout5_vrot100_logtau7}
 	\end{center}
-	\caption{\textbf{Caption:} We fixed $\vout=75$\kms and $\vrot=50$\kms.
+	\caption{\textbf{Valley Intensity:} We show for each \tauh the dependency that
+		the viewing angle $\theta$ has on the line's the valley intensity. The larger 
+		$\cos{\theta}$ the lower is the valley intensity, so the higher $\theta$, the 
+		higher the valley intensity. We fixed $\vout=5$\kms and $\vrot=100$\kms. 
 		\label{fig:valley_intensity}}
-\end{figure*}
+\end{figure}
 
 
 \section{Discussion}
@@ -403,15 +408,20 @@ velocity of $\vout=75$\kms and rotation velocity of $\vrot=50$\kms.
 \color{red}
 Why Doppler Shift works. Talk about radiative transfer...
 \color{black}
-In Fig. \ref{fig:doppler} we present the spectrum pf a LAE taken from to different sides of the galaxy. As the LAE is rotating, one side is being redshifted while the other is blueshifted. We see that the combined spectrum is a weighted line, in black, that combines these past two. This shows that there is in effect a Doppler Shift and justifies our choice to apply it after the outflows spectrum is obtained. 
+In Fig. \ref{fig:doppler} we present the spectrum of a LAE taken from to different 
+sides of the galaxy. As the LAE is rotating, one side is being redshifted while 
+the other is blueshifted. We see that the combined spectrum is a weighted line, 
+in solid black, that combines these past two. This shows that there is in effect a 
+Doppler Shift and justifies our choice to apply it after the outflows spectrum is 
+obtained. 
 
-\begin{figure*}
+\begin{figure}
 	\begin{center}
-		\includegraphics[width=0.55\textwidth]{./figures/discussion/doppler}
+		\includegraphics[width=0.45\textwidth]{./figures/discussion/doppler}
 	\end{center}
-	\caption{\textbf{Caption:} $\vout=25$\kms, $\vrot=100$\kms, $\tauh=10^5$.
+	\caption{\textbf{Doppler Shift:} We fix $\vout=25$\kms, $\vrot=100$\kms, $\tauh=10^5$.
 		\label{fig:doppler}}
-\end{figure*}
+\end{figure}
 
 A first approach to an analytical expression that returns the \lya spectrum 
 from a rotating galaxy is presented by \cite{Garavito14}. This derivation is 
