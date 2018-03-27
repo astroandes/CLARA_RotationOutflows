@@ -51,8 +51,8 @@ a dependency with the  viewing angle.
 We also develp a semi-analytic model that modifies the spectra of
 pure outflow simulations that manages to reproduce the main features of the
 Monte Carlo simulations.
-As an application we constraint the rotation parameters of a set of observed LAE
-emission spectra.
+As an application to observational data we constraint the rotation
+parameters of a set of observed LAE emission spectra.    
 \end{abstract}
 
 \begin{keywords}
@@ -141,27 +141,26 @@ our conclusions in Section \ref{sec:conclusions}.
 \section{Theoretical Models}
 \label{sec:theory}
 
-\subsection{Monte-Carlo Radiative Transfer Model}
 
-CLARA follows the propagation of individual photons through a neutral
-Hydrogen medium characterized by its temperature, velocity field and
-global optical depth.
+The Monte Carlo code we use (CLARA)  follows the propagation of
+individual photons through a neutral Hydrogen medium characterized by
+its temperature, velocity field and global optical depth.
 The code assumes an homogeneous density throughout the simulated
 volume.
 In the current implementation we neglect the influence of dust.
 Our basic model is an spherical distribution of neutral hydrogen,
 an approximation commonly used in the literature, as it explains a
-wide variety of observational features \citep{Ahn03,Verhamme06,Dijkstra06}.
+wide variety of observational features
+\citep{Ahn03,Verhamme06,Dijkstra06}. 
 
 
-The central element in this paper is the velocity field that captures
-outflows and rotation.
-Outflows are captured by a Hubble-like radial velocity profile with
+The velocity field we use captures both outflows and rotation.
+Outflows are described by a Hubble-like radial velocity profile with
 the velocity magnitude increasing linearly with the radial
-coordinate; the outflows model is fully characterized by $V_{\rm out}$, the
+coordinate; the outflows model is fully characterized by $v_{\rm out}$, the
 velocity at the sphere's surface.
 Rotation follows a solid body rotation profile, which is fully
-characterized by $V_{\rm rot}$, the linear velocity at the sphere's surface.
+characterized by $v_{\rm rot}$, the linear velocity at the sphere's surface.
 
 The total velocity field corresponds to the superposition of rotation and
 outflows.
@@ -222,28 +221,33 @@ We run a total of $27$ different models.
 \end{table}
 
 
-\subsection{Analytical Model for Bulk Rotation}
-
-Rotation induces two main effects on the \lya line morphology.
-First. Break of spherical symmetry due to the
-preferential direction introduced by the rotation axis.
-This symmetry break is reflected in the observed spectra as a
-dependency on the viewing angle, $\theta$, between the line of sight
-of a distant observer and the rotational velocity.
-Second. Line blurring as the rotational velocity increases.
-At a fixed viewing angle, faster rotation induces makes the observed
-line wider and increases the flux around the line's center.
 
 \cite{Garavito14} presented in the Appendix an analytical model that
-accounts for these two features.
-The basic assumption of the analytical model is that each
+accounts for the effects of pure rotation on the
+\lya\ lines 'morphology. 
+The basic assumption of their analytical model is that each
 differential surface element on the sphere Doppler shifts the photons
 that it emits
+
 In this paper we introduce this ansatz by post-processing the results
 of the outflows simulations without rotation.
+We introduce a Doppler shift as follows
+\begin{equation}
+x' = x + \frac{\vec{v}_{\rm rot}\cdot\hat{k}}{v_{\rm th}}
+\label{eq:shift_x}
+\end{equation}
+%
+where $x'$ is the photon's new frequency, $x$ is the photon's
+frequency after being procesed by the outflow, $v_{\rm rot}$ is the 
+rotational velocity at the point of escape of the photon, $\hat{k}$ is
+the photon's direction of propagation and $v_{\rm th}$ is the thermal
+velocity of the sphere.
+
+
 This allows us to produce new \lya spectra and compare them with the
 full radiative transfer solution including both outflows and
 rotation.
+
 
 
 \section{Results}
@@ -296,6 +300,15 @@ All plots correspond to the same rotation velocity of
 $\vrot=50$\kms, rows have constant optical depth and columns
 have constant outflows velocity.
 
+
+Figure \ref{fig:doppler_shift} displays this Doppler shift for six different
+configurations with a fixed optical depth \tauh. In each cell of the grid
+there is a \lya spectrum for a galaxy with only outflows and two \lya spectra
+for the galaxy with outflows and rotation: one obtained from the radiative
+transfer simulation and the other obtained from the Doppler shifting of the
+non-rotating galaxy.
+
+
 % Esta figura deberia tener 2 x 2 vinetas. vrot=50.
 % cada panel tiene una curva para theta=0, 45, 90.
 % | tau=1E5, vout=25, | tau=1E5, vout=75 |
@@ -312,27 +325,6 @@ have constant outflows velocity.
 
 \subsection{Doppler Shifts to Include Rotational Effects}
 
-Rotation alone does have an impact on the \lya line morphology
-and we obtain the same influence as in the literature.
-Together with the outflows, we found that the resulting spectra is
-equivalent to a non-rotating galaxy with outflows that undergoes a
-Doppler Shift in velocity, weighted by the amount of photons that if
-rotating would project their escape in $\hat{k}$'s direction:
-
-\begin{equation}
-V' = V + \vec{v}_{\rm rot}\cdot\hat{k}
-\label{eq:shift_x}
-\end{equation}
-%
-where $V'$ is the new Doppler shifted velocity, $V$ is the velocity caused by
-outflows.
-
-Figure \ref{fig:doppler_shift} displays this Doppler shift for six different
-configurations with a fixed optical depth \tauh. In each cell of the grid
-there is a \lya spectrum for a galaxy with only outflows and two \lya spectra
-for the galaxy with outflows and rotation: one obtained from the radiative
-transfer simulation and the other obtained from the Doppler shifting of the
-non-rotating galaxy.
 
 % Esta figura deberia tener 3 x 2 viñetas. tau=10E6.
 % cada panel tiene una curva para no rotation, rotation (radiative transfer)
@@ -680,7 +672,14 @@ Finally, all the spectra produced from this new LAE model is roughly consistent 
 
 \section{Conclusions}
 
-In this paper, the objective was to analyze and measure the influence of galaxy rotation and outflows on the \lya line. The motivation for this is to be able to obtain physical information of a LAE by just looking at its \lya profile. In order to accomplish this objective, we propose a new model of a LAE consisting of a sphere of Hydrogen atoms that expands radially and rotates as a solid body. A modified version of the program CLARA \cite{CLARA} is used to set the conditions and emulate the radiative transfer process inside the galaxy. \\
+In this paper, the objective was to analyze and measure the influence
+of galaxy rotation and outflows on the \lya line. The motivation for
+this is to be able to obtain physical information of a LAE by just
+looking at its \lya profile. In order to accomplish this objective, we
+propose a new model of a LAE consisting of a sphere of Hydrogen atoms
+that expands radially and rotates as a solid body. A modified version
+of the program CLARA \cite{CLARA} is used to set the conditions and
+emulate the radiative transfer process inside the galaxy. \\ 
 
 The conclusions obtained from this work are:
 
