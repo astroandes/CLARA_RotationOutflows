@@ -14,8 +14,8 @@
 \newcommand{\HI}{{\text{H\MakeUppercase{\romannumeral 1}}} }
 \newcommand{\lya}{\ifmmode{{\rm Ly}\alpha}\else Ly$\alpha$\ \fi}
 \newcommand{\kms}{\ifmmode\mathrm{km\ s}^{-1}\else km s$^{-1}$\fi}
-\newcommand{\vrot}{\ifmmode\mathrm v_{\mathrm{rot}}\else $v_{\mathrm{rot}}$~\fi}
-\newcommand{\vout}{\ifmmode\mathrm v_{\mathrm{out}}\else $v_{\mathrm{out}}$~\fi}
+\newcommand{\vrot}{\ifmmode\mathrm V_{\mathrm{rot}}\else $V_{\mathrm{rot}}$~\fi}
+\newcommand{\vout}{\ifmmode\mathrm V_{\mathrm{out}}\else $V_{\mathrm{out}}$~\fi}
 \newcommand{\tauh}{\ifmmode\mathrm \tau_{\mathrm{H}}\else $\tau_{\mathrm{H}}$~\fi}
 \newcommand{\vth}{\ifmmode\mathrm v_{\mathrm{th}}\else $v_{\mathrm{th}}$~\fi}
 
@@ -24,8 +24,7 @@
 %=========================================================================
 %		FRONT MATTER
 %=========================================================================
-\title[Outflows and rotation in LAEs]{Lyman-alpha spectra from
-  rotating outflows}
+\title[Outflows and rotation in LAEs]{Lyman-$\alpha$ photons through rotating outflows}
 \author[M.C. Remolina-Gutierrez \& J.E. Forero-Romero]{
   Maria Camila Remolina-Guti\'errez$^{1}$
   \thanks{mc.remolina197@uniandes.edu.co} \&
@@ -204,12 +203,7 @@ We run a total of $27$ different models.
       \hline
       \tauh & \vrot (\kms) & \vout (\kms) \\
       \hline
-      $10^5$ & \{0\} & \{5, 25, 50\} \\
-      $10^6$ & \{0\} & \{5, 25, 50\}\\
-      $10^7$ & \{0\} & \{5, 25, 50\}\\
-      $10^5$ & \{50, 100\} & \{25, 50, 75\} \\
-      $10^6$ & \{50, 100\} & \{25, 50, 75\}\\
-      $10^7$ & \{50, 100\} & \{25, 50, 75\}\\
+      \{$10^5$, $10^6$, $10^7$\}  & \{0, 50, 100\} & \{5, 25, 50\} \\
       \hline
     \end{tabular}
   \end{center}
@@ -233,7 +227,7 @@ of the outflows simulations without rotation.
 The frequency of each photon is Doppler shifted as follows
 
 \begin{equation}
-x' = x + \frac{\vec{v}_{\rm rot}\cdot\hat{k}}{v_{\rm th}}
+x' = x + \frac{\vec{V}_{\rm rot}\cdot\hat{k}}{v_{\rm th}}
 \label{eq:shift_x}
 \end{equation}
 %
@@ -251,54 +245,68 @@ rotation.
 \section{Results}
 \label{sec:results}
 
+\subsection{Qualitative Trends}
+\label{sec:qualitative}
 Figure \ref{fig:doppler_shift} summarizes the most important trends of
 our simulations. 
 The six panels correspond to $\tau=10^6$ and a viewing angle of
 $\theta =90^{\deg}$, that is perpendicular to the rotation axis of the
 galaxy. 
-In every panel the thin black line corresponds to the pure outflow 
+In every panel the thin black line corresponds to the pure outflow
+solution (i.e. without rotation). 
 From top to bottom we see the effect of increasing the outflow
-velocity, 
+velocity, which is the expected increasing asymmetry towards the red
+peak. 
+
+The thick black line corresponds to the solution that includes both
+outflows and rotation.
+Comparing the left and right columns (lower versus higher rotational
+velocity) we can see two immediate effects.
+First, the line broadens and second, the intensity at the line's
+center increases.
+
+Finally, the thick gray line correspods to the pure outflow solution
+with the Doppler boost added to model rotation's influence.
+In all cases the Doppler boost does a good job at capturing the broad
+morphological features introduced by rotation: the angle dependence,
+the broadening and the intensity increase at the line's center.
+
+In Figure \ref{fig:angle_influence} we show the same results as in
+Figure \ref{fig:doppler_shift} but for a viewing angle of $\theta =
+90^{\deg}$, that is parallel to the rotation axis. 
+In this case we see that the effect of rotation is very hard to see. 
+As \ref{Garavito14} showed, pure rotation introduces a strong
+dependence with viewing angle, a trend that we find also holds for
+rotation mixed with ouflows.  
 
 
 \begin{figure*}
   \begin{center}
     \includegraphics[width=0.90\textwidth]{./figures/results/doppler_shift_6}
   \end{center}
-  \caption{\textbf{Doppler shift effect:} We fixed $\tauh=10^6$ and $\theta=90^\circ$.
-  	We vary \vrot increasing from left to right and \vout increasing from top to
-  	bottom. The legend represents the \lya line obtained if there is no rotation
-  	(in thin line), if there is a radiative transfer of rotation and outflows
-  	(thick and clear line), and if there is a radiative transfer of only outflows,
-  	but also a Doppler shift from the rotational velocity (thick and dark line).
-	    \label{fig:doppler_shift}}
+  \caption{\textbf{Qualitative trends of changing outflow and
+      rotational velocity}. 
+    Here we fix $\tauh=10^6$ and $\theta=90^\circ$.
+    We vary \vrot increasing from left to right and \vout increasing from top to
+    bottom. 
+    The thin black line corresponds to the \lya line obtained with
+    CLARA without any rotation and the indicated outflow velocity.
+    The thick black line corresponds to the results including both
+    outflows and rotation.
+    The thick gray line shows the results of modifyin the pure outflow
+    solution by the Doppler shift presented in Equation \ref{eq:shift_x}
+    (in thin line), if there is a radiative transfer of rotation and outflows
+    (thick and clear line), and if there is a radiative transfer of only outflows,
+    but also a Doppler shift from the rotational velocity (thick and dark line).
+    \label{fig:doppler_shift}}
 \end{figure*}
 
-\subsection{Monte-Carlo Radiative Transfer Model}
+\subsection{Quantitative trends}
+\label{sec:quantitative}
 
-We evaluate the effects of increasing rotational
-velocity at fixed values of the optical depth and outflows velocity.
-Figure \ref{fig:varying_rotation_small} summarizes its behavior
-(for a largest range see Figure \ref{fig:varying_rotation}).
-All plots correspond to the same outflows velocity of $\vout=50$\kms,
-rows have constant optical depth and columns have constant rotational
-velocity.
-Each panel shows different morphologies corresponding to varying
-line-of-sight viewing angle.
 
-% Esta figura deberia tener 2 x 2 vinetas. vout=50.
-% cada panel tiene una curva para theta=0, 45, 90.
-% | tau=1E5, vrot=50, | tau=1E5, vrot=100 |
-% | tau=1E6, vrot=50, | tau=1E6, vrot=100 |
-%\begin{figure*}
-%  \begin{center}
-%    \includegraphics[width=0.90\textwidth]{./figures/results/varying_rotation_small}
-%  \end{center}
-%  \caption{\textbf{Spectra for fixed outflows velocity:} We fixed $\vout=50$\kms.
-%    We vary \vrot increasing from left to right, \tauh increasing from top to
-%    bottom, and $\theta$ according to the legend.
-%    \label{fig:varying_rotation_small}}
-%\end{figure*}
+After finding the qualitative influence of the different parameters.
+
 
 We evaluate the effects of increasing outflows velocity at fixed
 values for the optical depth and rotational velocity.
