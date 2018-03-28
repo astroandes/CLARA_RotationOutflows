@@ -15,3 +15,4 @@ data/tau*/vrot*/vout*/tau*_vrot*_vout*.input-usedvalues
 __pycache__/
 
 muse/*.fits
+muse/data/
