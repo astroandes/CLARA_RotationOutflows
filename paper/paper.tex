@@ -363,12 +363,37 @@ non-rotating galaxy.
 In order to compare the line created with the radiative transfer (RT) process that
 involves the rotation and the line with only outflows that is Doppler
 shifted (DS), we calculate three main characteristics for each spectrum. We
-measure the line's mean velocity, standard deviation and skewness for both
-RT's and DS's approaches. We plot the results for each value in Figures
-\ref{fig:mean_line}, \ref{fig:standard_deviation} and \ref{fig:skewness},
-respectively for $\tauh = 10^7$. We highlight that these 3 plots increase
-their fit tendency with a higher optical depth. The reasons why will be
-discussed in section \ref{sec:discussion}.
+measure the line's standard deviation (STD), skewness (SKW) and bimodality (BI) 
+for both RT's and DS's approaches. We use the definitions in Eqs. \ref{eq:std}, 
+\ref{eq:skw}, \ref{eq:bi} for each value \citep{kokoska1999}.
+
+\begin{equation}
+\label{eq:std}
+\mathrm{STD} = \sqrt{m_2},
+\end{equation}
+
+\begin{equation}
+\label{eq:skw}
+\mathrm{SKW} = \frac{m_3}{m_2^{3/2}},
+\end{equation}
+
+\begin{equation}
+\label{eq:bi}
+\mathrm{BI} = \mathrm{KURTOSIS} - \mathrm{SKW}^2 = \frac{m_4}{m_2^{2}} - \frac{m_3^2}{m_2^{3}},
+\end{equation}
+
+where each $m_i$ is the i-th moment about the mean. The STD has velocity units and 
+quantifies the dispersion of the line's velocity: the larger it is, the wider the line. 
+The SKW is adimensional and quantifies the peaks' asymmetry: if it is $>0$ the left peak is 
+taller and if it is $<0$ the right peak is taller. The BI has velocity$^{-1}$ units and
+quantifies if the line has 1 or 2 peaks: it is always $\geq 1$ and the closer it is to 1 the more
+bimodal is the line (i.e. has 2 peaks).
+
+We plot the results for each 
+value in Figures \ref{fig:standard_deviation}, \ref{fig:skewness} and \ref{fig:bimodality},
+respectively for $\tauh = 10^7$. We highlight that these 3 plots increase their fit 
+tendency with a higher optical depth. The reasons why will be discussed in section 
+\ref{sec:discussion}.
 
 
 \begin{figure*}
@@ -384,7 +409,7 @@ discussed in section \ref{sec:discussion}.
 \includegraphics[height=0.3\textwidth]{./figures/results/line_characterization_std_vout50_logtau7.pdf}
 \end{center}
 \caption{\textbf{Standard Deviation for RT and DS:} The triangles represent the Radiative
-  Transfer and the lines represent the Doppler Shift. We fixed $\tauh=10^7$.
+  Transfer and the lines represent the Doppler Shift.
   \label{fig:standard_deviation}}
 \end{figure*}
 
@@ -399,10 +424,27 @@ discussed in section \ref{sec:discussion}.
 \includegraphics[height=0.31\textwidth]{./figures/results/line_characterization_skw_vout5_logtau7}
 \includegraphics[height=0.31\textwidth]{./figures/results/line_characterization_skw_vout25_logtau7}
 \includegraphics[height=0.31\textwidth]{./figures/results/line_characterization_skw_vout50_logtau7}
-  \end{center}
-  \caption{\textbf{Skewness for RT and DS:} The triangles represent the Radiative
-    Transfer and the lines represent the Doppler Shift. We fixed $\tauh=10^7$.
+\end{center}
+\caption{\textbf{Skewness for RT and DS:} The triangles represent the Radiative
+    Transfer and the lines represent the Doppler Shift.
     \label{fig:skewness}}
+\end{figure*}
+
+\begin{figure*}
+\begin{center}
+\includegraphics[height=0.31\textwidth]{./figures/results/line_characterization_bi_vout5_logtau5}
+\includegraphics[height=0.31\textwidth]{./figures/results/line_characterization_bi_vout25_logtau5}
+\includegraphics[height=0.31\textwidth]{./figures/results/line_characterization_bi_vout50_logtau5}
+\includegraphics[height=0.31\textwidth]{./figures/results/line_characterization_bi_vout5_logtau6}
+\includegraphics[height=0.31\textwidth]{./figures/results/line_characterization_bi_vout25_logtau6}
+\includegraphics[height=0.31\textwidth]{./figures/results/line_characterization_bi_vout50_logtau6}
+\includegraphics[height=0.31\textwidth]{./figures/results/line_characterization_bi_vout5_logtau7}
+\includegraphics[height=0.31\textwidth]{./figures/results/line_characterization_bi_vout25_logtau7}
+\includegraphics[height=0.31\textwidth]{./figures/results/line_characterization_bi_vout50_logtau7}
+\end{center}
+\caption{\textbf{Bimodality for RT and DS:} The triangles represent the Radiative
+	Transfer and the lines represent the Doppler Shift.
+	\label{fig:bimodality}}
 \end{figure*}
 
 This shows that the DS model can reproduce the main characteristics of the
@@ -421,13 +463,20 @@ velocity of $\vout=5$\kms and rotation velocity of $\vrot=100$\kms.
 \begin{figure*}
 \begin{center}
 \includegraphics[height=0.29\textwidth]{./figures/results/line_characterization_vi_vout5_vrot100_logtau5}
+\includegraphics[height=0.29\textwidth]{./figures/results/line_characterization_vi_vout25_vrot100_logtau5}
+\includegraphics[height=0.29\textwidth]{./figures/results/line_characterization_vi_vout50_vrot100_logtau5}
 \includegraphics[height=0.29\textwidth]{./figures/results/line_characterization_vi_vout5_vrot100_logtau6}
+\includegraphics[height=0.29\textwidth]{./figures/results/line_characterization_vi_vout25_vrot100_logtau6}
+\includegraphics[height=0.29\textwidth]{./figures/results/line_characterization_vi_vout50_vrot100_logtau6}
 \includegraphics[height=0.29\textwidth]{./figures/results/line_characterization_vi_vout5_vrot100_logtau7}
+\includegraphics[height=0.29\textwidth]{./figures/results/line_characterization_vi_vout25_vrot100_logtau7}
+\includegraphics[height=0.29\textwidth]{./figures/results/line_characterization_vi_vout50_vrot100_logtau7}
 \end{center}
 \caption{\textbf{Valley Intensity:} We show for each \tauh the dependency that
 		the viewing angle $\theta$ has on the line's the valley intensity. The larger
 		$\cos{\theta}$ the lower is the valley intensity, so the higher $\theta$, the
-		higher the valley intensity. We fixed $\vout=5$\kms and $\vrot=100$\kms.
+		higher the valley intensity. Also, the higher \tauh, the better is the fit RT-DS.
+		We fixed $\vrot=100$\kms.
 		\label{fig:valley_intensity}}
 \end{figure*}
 
