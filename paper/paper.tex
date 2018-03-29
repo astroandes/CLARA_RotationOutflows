@@ -14,8 +14,8 @@
 \newcommand{\HI}{{\text{H\MakeUppercase{\romannumeral 1}}} }
 \newcommand{\lya}{\ifmmode{{\rm Ly}\alpha}\else Ly$\alpha$\ \fi}
 \newcommand{\kms}{\ifmmode\mathrm{km\ s}^{-1}\else km s$^{-1}$\fi}
-\newcommand{\vrot}{\ifmmode\mathrm V_{\mathrm{rot}}\else $V_{\mathrm{rot}}$~\fi}
-\newcommand{\vout}{\ifmmode\mathrm V_{\mathrm{out}}\else $V_{\mathrm{out}}$~\fi}
+\newcommand{\vrot}{\ifmmode\mathrm v_{\mathrm{rot}}\else $v_{\mathrm{rot}}$~\fi}
+\newcommand{\vout}{\ifmmode\mathrm v_{\mathrm{out}}\else $v_{\mathrm{out}}$~\fi}
 \newcommand{\tauh}{\ifmmode\mathrm \tau_{\mathrm{H}}\else $\tau_{\mathrm{H}}$~\fi}
 \newcommand{\vth}{\ifmmode\mathrm v_{\mathrm{th}}\else $v_{\mathrm{th}}$~\fi}
 
@@ -92,16 +92,16 @@ from pure rotation to high velocity dispersion without a clear
 rotation pattern.
 \citep{2015A&A...577A..21C,2017A&A...600A.125C}
 
-
-The case for outflows as traced in the \lya\ line is much bettwe
+The case for outflows as traced in the \lya\ line is much better
 stablished.
-There are abundance cases \lya line profiles with a single peak
-redwards from the line's center. 
-In other cases there is a double peak but the peak on the red side is
-stronger \citep[e.g.][]{2010ApJ...717..289S,Erb14,Trainor16}.  
-This has been readily explained as the consequence of multiple \lya photon
-scatterings through an homogeneous outflowing shell of neutral Hydrogen
-\citep{2006A&A...460..397V,Orsi12,2012ApJ...751...29Y,2015ApJ...812..123G}.
+In many cases the \lya line profiles has a single peak
+redwards from the line's center, in other cases there is a double peak
+but the peak on the red side is stronger
+\citep[e.g.][]{2010ApJ...717..289S,Erb14,Trainor16}.   
+These features been readily explained as the consequence of multiple
+\lya photon scatterings through an homogeneous outflowing shell of
+neutral Hydrogen
+\citep{2006A&A...460..397V,Orsi12,2012ApJ...751...29Y,2015ApJ...812..123G}.  
 
 
 Here we present for the first time a study of the joint effects of
@@ -250,7 +250,7 @@ rotation.
 Figure \ref{fig:doppler_shift} summarizes the most important trends of
 our simulations. 
 The six panels correspond to $\tau=10^6$ and a viewing angle of
-$\theta =90^{\deg}$, that is perpendicular to the rotation axis of the
+$\theta =90^{\circ}$, that is perpendicular to the rotation axis of the
 galaxy. 
 In every panel the thin black line corresponds to the pure outflow
 solution (i.e. without rotation). 
@@ -271,14 +271,13 @@ In all cases the Doppler boost does a good job at capturing the broad
 morphological features introduced by rotation: the angle dependence,
 the broadening and the intensity increase at the line's center.
 
-In Figure \ref{fig:angle_influence} we show the same results as in
-Figure \ref{fig:doppler_shift} but for a viewing angle of $\theta =
-90^{\deg}$, that is parallel to the rotation axis. 
-In this case we see that the effect of rotation is very hard to see. 
-As \ref{Garavito14} showed, pure rotation introduces a strong
-dependence with viewing angle, a trend that we find also holds for
-rotation mixed with ouflows.  
-
+In Figure \ref{fig:doppler_shift_theta_0} we show the same results as
+in Figure \ref{fig:doppler_shift} but for a viewing angle of $\theta =
+90^{\circ}$, that is parallel to the rotation axis. 
+In this case we confirme the result presented by \ref{Garavito14}
+showed, namely that pure rotation introduces a strong dependence with
+viewing angle, a trend that we find also holds for rotation mixed with
+ouflows.   
 
 \begin{figure}
   \begin{center}
@@ -320,57 +319,12 @@ rotation mixed with ouflows.
 \label{sec:quantitative}
 
 
-After finding the qualitative influence of the different parameters.
-
-
-We evaluate the effects of increasing outflows velocity at fixed
-values for the optical depth and rotational velocity.
-Figure \ref{fig:varying_outflow_small} summarizes its behavior
-(for a largest range see Figure \ref{fig:varying_outflow}).
-All plots correspond to the same rotation velocity of
-$\vrot=50$\kms, rows have constant optical depth and columns
-have constant outflows velocity.
-
-
-Figure \ref{fig:doppler_shift} displays this Doppler shift for six different
-configurations with a fixed optical depth \tauh. In each cell of the grid
-there is a \lya spectrum for a galaxy with only outflows and two \lya spectra
-for the galaxy with outflows and rotation: one obtained from the radiative
-transfer simulation and the other obtained from the Doppler shifting of the
-non-rotating galaxy.
-
-
-% Esta figura deberia tener 2 x 2 vinetas. vrot=50.
-% cada panel tiene una curva para theta=0, 45, 90.
-% | tau=1E5, vout=25, | tau=1E5, vout=75 |
-% | tau=1E6, vout=25, | tau=1E6, vout=75 |
-%\begin{figure*}
-%\begin{center}
-%\includegraphics[width=0.90\textwidth]{./figures/results/varying_outflow_small}
-%\end{center}
-%\caption{\textbf{Spectra for fixed rotational velocity:} We fixed $\vrot=50$\kms.  We vary \vout in%creasing from left to right, \tauh increasing from top to
-			 bottom, and $\theta$ according to the legend.
-%\label{fig:varying_outflow_small}}
-%\end{figure*}
-
-
-\subsection{Doppler Shifts to Include Rotational Effects}
-
-
-% Esta figura deberia tener 3 x 2 viñetas. tau=10E6.
-% cada panel tiene una curva para no rotation, rotation (radiative transfer)
-% y rotation (doppler)
-% |vrot=50, vout=5,  | vrot=100, vout=5,  |
-% |vrot=50, vout=25, | vrot=100, vout=25, |
-% |vrot=50, vout=50, | vrot=100, vout=50, |
-
-
-In order to compare the line created with the radiative transfer (RT) process that
-involves the rotation and the line with only outflows that is Doppler
-shifted (DS), we calculate three main characteristics for each spectrum. We
-measure the line's standard deviation (STD), skewness (SKW) and bimodality (BI) 
-for both RT's and DS's approaches. We use the definitions in Eqs. \ref{eq:std}, 
-\ref{eq:skw}, \ref{eq:bi} for each value \citep{kokoska1999}.
+After finding the quantitative influence of the different parameters we
+move onto a qualilitative study.
+To do this we summarize the line morphology by four different
+characteristics: standard deviation (STD), skewness (SKW), bimodality
+(BI) and valley/peak ration.
+These quantities are defined by the following equations \citep{kokoska1999}.:
 
 \begin{equation}
 \label{eq:std}
@@ -386,12 +340,14 @@ for both RT's and DS's approaches. We use the definitions in Eqs. \ref{eq:std},
 \label{eq:bi}
 \mathrm{BI} = \mathrm{KURTOSIS} - \mathrm{SKW}^2 = \frac{m_4}{m_2^{2}} - \frac{m_3^2}{m_2^{3}},
 \end{equation}
-
-where each $m_i$ is the i-th moment about the mean. The STD has velocity units and 
-quantifies the dispersion of the line's velocity: the larger it is, the wider the line. 
-The SKW is adimensional and quantifies the peaks' asymmetry: if it is $>0$ the left peak is 
-taller and if it is $<0$ the right peak is taller. The BI is adimensional and
-quantifies if the line has 1 or 2 peaks: it is  always $\geq 1$ \citep{Pearson1929} and the closer it is to 1, the more bimodal is the line (i.e. has 2 peaks).
+%
+where each $m_i$ is the i-th moment about the mean. 
+The STD has velocity units and quantifies the dispersion of the line's
+velocity: the larger it is, the wider the line.  
+The SKW is adimensional and quantifies the peaks' asymmetry. 
+In the case of a bimodal distributio 
+$SKW>0$ the blue peak is taller and for $SWK<0$ the right peak is
+taller. The BI is adimensional and quantifies if the line has 1 or 2 peaks: it is  always $\geq 1$ \citep{Pearson1929} and the closer it is to 1, the more bimodal is the line (i.e. has 2 peaks).
 
 We plot the results for each value in Figures \ref{fig:standard_deviation}, 
 \ref{fig:skewness} and \ref{fig:bimodality}, respectively for $\tauh = 10^7$. 
