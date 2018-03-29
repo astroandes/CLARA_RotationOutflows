@@ -16,3 +16,6 @@ __pycache__/
 
 muse/*.fits
 muse/data/
+
+*.DS_Store
+*~
