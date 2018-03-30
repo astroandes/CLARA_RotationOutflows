@@ -195,27 +195,9 @@ at its last scattering.
 
 In Table \ref{tab:values} we list the combination of \tauh,
 \vrot and \vrot values used in this paper.
-The range of values have some overlap with the expectations from a dwarf
-galaxy with a total neutral hydrogen mass of $10^8$-$10^9$ $M_{\odot}$.
-We run a total of $27$ different models.
-
-\begin{table}
-  \begin{center}
-    \begin{tabular}{|c|c|c|}
-      \hline
-      \tauh & \vrot (\kms) & \vout (\kms) \\
-      \hline
-      \{$10^5$, $10^6$, $10^7$\}  & \{0, 50, 100\} & \{5, 25, 50\} \\
-      \hline
-    \end{tabular}
-  \end{center}
-  \caption{\textbf{Parameters' Values.} List of values that were used
-    to construct the radiative transfer models. Values in braces
-    for a row indicate that all possible combinations in of
-    \tauh, \vrot and \vout are used.}
-  \label{tab:values}
-\end{table}
-
+The range of values have some overlap with the expectations from a
+galaxy with a total neutral hydrogen mass of $10^8$-$10^9$
+$M_{\odot}$. We run a total of $27$ different models. 
 
 
 \cite{Garavito14} presented an analytical model that
@@ -243,8 +225,46 @@ This allows us to produce new \lya spectra and compare them with the
 full radiative transfer solution including both outflows and
 rotation.
 
-
 \section{Results}
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.49\textwidth]{./figures/results/doppler_shift_logtau6_theta90}
+  \end{center}
+  \caption{\textbf{Qualitative trends of changing outflow and
+      rotational velocity viewed perpendicular to the rotation axis}. 
+    Here we fix $\tauh=10^6$ and $\theta=90^\circ$.
+    We vary \vrot increasing from left to right and \vout increasing
+    from top to bottom. 
+    The thin black line corresponds to the \lya line obtained with
+    CLARA without any rotation and the indicated outflow velocity.
+    The thick black line corresponds to the results including both
+    outflows and rotation.
+    The thick gray line shows the results of modifyin the pure outflow
+    solution by the Doppler shift presented in Equation \ref{eq:shift_x}
+    (in thin line), if there is a radiative transfer of rotation and outflows
+    (thick and clear line), and if there is a radiative transfer of
+    only outflows, but also a Doppler shift from the rotational
+    velocity (thick and dark line).  
+    \label{fig:doppler_shift}}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.49\textwidth]{./figures/results/doppler_shift_logtau6_theta0}
+  \end{center}
+  \caption{\textbf{Qualitative trends of changing outflow and
+      rotational velocity viewed parallel to the rotation axis}.     
+    Same layout as Figure \ref{fig:doppler_shift},
+    this time the viewing angle corresponds to $\theta=0^\circ$.
+    The effects of rotation on
+    the  \lya\ line morphology are not visible when viewed parallel to
+    the rotation axis.
+    \label{fig:doppler_shift_theta_0}}
+\end{figure}
+
+
+
 \label{sec:results}
 
 \subsection{Qualitative Trends}
@@ -289,42 +309,6 @@ evident that for $\tauh=10^5$ the results are not as good as they are
 for $\tauh=10^6$, and that for $\tauh=10^7$ the Doppler boos
 provides a remarkable good approximation.
 
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.49\textwidth]{./figures/results/doppler_shift_logtau6_theta90}
-  \end{center}
-  \caption{\textbf{Qualitative trends of changing outflow and
-      rotational velocity viewed perpendicular to the rotation axis}. 
-    Here we fix $\tauh=10^6$ and $\theta=90^\circ$.
-    We vary \vrot increasing from left to right and \vout increasing
-    from top to bottom. 
-    The thin black line corresponds to the \lya line obtained with
-    CLARA without any rotation and the indicated outflow velocity.
-    The thick black line corresponds to the results including both
-    outflows and rotation.
-    The thick gray line shows the results of modifyin the pure outflow
-    solution by the Doppler shift presented in Equation \ref{eq:shift_x}
-    (in thin line), if there is a radiative transfer of rotation and outflows
-    (thick and clear line), and if there is a radiative transfer of
-    only outflows, but also a Doppler shift from the rotational
-    velocity (thick and dark line).  
-    \label{fig:doppler_shift}}
-\end{figure}
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.49\textwidth]{./figures/results/doppler_shift_logtau6_theta0}
-  \end{center}
-  \caption{\textbf{Qualitative trends of changing outflow and
-      rotational velocity viewed parallel to the rotation axis}.     
-    Same layout as Figure \ref{fig:doppler_shift},
-    this time the viewing angle corresponds to $\theta=0^\circ$.
-    The effects of rotation on
-    the  \lya\ line morphology are not visible when viewed parallel to
-    the rotation axis.
-    \label{fig:doppler_shift_theta_0}}
-\end{figure}
-
 \subsection{Quantitative trends}
 \label{sec:quantitative}
 
@@ -366,7 +350,11 @@ single peak.
 
 Figure \ref{fig:standard_deviation} summarizes the standard deviation
 results for all our models.
-Each panel shows the STD as a function of \vrot. The black triangles
+Each panel shows the STD as a function of \vrot.
+All panels were computed using a viewing angle of $\theta =
+90^{\circ}$ (perpendicular to the rotation axis), which has the most
+extreme ifluence from rotation.
+ The black triangles
 correspond to the full RT solution and the line to the DS
 approximation.  
 The optical depth increases from top to bottom and the outflow
@@ -400,7 +388,12 @@ The DS reproduces the main trends, again with an underestimation that
 decreases at higher optical depths and increases with larger values of
 the rotational velocity and outflow velocity.
 In this case the differences between RT and DS have an upper bound of
-$85\%$, $35\%$ and $5\%$ for  $\tauh=10^5$, $10^6$ and $10^7$, respectively. 
+$85\%$, $35\%$ and $5\%$ for  $\tauh=10^5$, $10^6$ and $10^7$,
+respectively.  
+
+Figure \ref{fig:bimodality} shows the results for the bimodality using
+the same layout as in the two previous Figures.
+
 
 
 \begin{figure*}
