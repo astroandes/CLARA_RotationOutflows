@@ -47,14 +47,13 @@ We explore a range of Hydrogen optical depth of
 $10^5\leq\tauh\leq10^7$, rotational velocity $0\leq \vrot/\kms \leq 100$ and
 outflow velocity $0\leq \vout/\kms\leq 50$.  
 We find three important consequences of rotation.
-First, it increases the detected flux at the line's center in comparison with the
-non-rotational case, second it produces a line broadening and third it introduces
-a dependency with the  viewing angle.
+First, it introduces a dependency with viewing angle; second it
+produces a line broadening and third it increases the flux at the
+line's center.
 We also develp a semi-analytic model that modifies the spectra of
-pure outflow simulations that manages to reproduce the main features of the
-Monte Carlo simulations.
-As an application to observational data we constraint the rotation
-parameters of a set of observed LAE emission spectra.    
+pure outflow simulations that manages to reproduce the line broadening
+and flux change at the line's center within a $7\%$ and $30\%$
+precision, respectively.
 \end{abstract}
 
 \begin{keywords}
@@ -365,29 +364,26 @@ transition between two peaks (however imbalanced) and a dominang
 single peak.
 
 
-Figure \ref{fig:standard_deviation} summarizes the STD results for all
-our models.
+Figure \ref{fig:standard_deviation} summarizes the standard deviation
+results for all our models.
 Each panel shows the STD as a function of \vrot.
 The black triangles correspond to the full RT solution and the line to
-the Doppler Shift approximation. 
+the DS approximation. 
 The optical depth increases from top to bottom and the outflow
 velocity from left to right.
 This quantitative plot confirms that the line width increases with
 rotational velocity, all else being equal.
-The Doppler Shift sucessfuly reproduces this trend, albeit a consistent
-underestimation of the RT values; this underestimation has as an upper
-bound of $\sim 7\%$, $3\%$ and $\sim 2\%$ for $\tauh=10^5$, $10^6$ and
-$10^7$, respectively.
-Tee Doppler Shift approximation also improves as the outflow velocity
-decreases.
+The DS successfuly reproduces all trends with the optical depth,
+rotational velocity and outflow velocity.
+However, the DS consistently underestimates the STD. 
+The difference between the RT and DS increses with the outflow
+velocity and the rotational velocity, and decreases with increasing
+optical depth.
+In the range of parameter space explore, this difference has as an
+upper bound of $\sim 7\%$, $3\%$ and $\sim 2\%$ for $\tauh=10^5$,
+$10^6$ and $10^7$, respectively. 
 
 
-The mismatch between RT and DS decreases for higher 
-
-We plot the results for each value in Figures \ref{fig:standard_deviation}, 
-\ref{fig:skewness} and \ref{fig:bimodality}, respectively for $\tauh = 10^7$. 
-We highlight that these 3 plots increase their fit tendency with a higher optical 
-depth. The reasons why will be discussed in section \ref{sec:discussion}.
 
 
 \begin{figure*}
@@ -402,8 +398,9 @@ depth. The reasons why will be discussed in section \ref{sec:discussion}.
 \includegraphics[height=0.27\textwidth]{./figures/results/line_characterization_std_vout25_logtau7.pdf}
 \includegraphics[height=0.27\textwidth]{./figures/results/line_characterization_std_vout50_logtau7.pdf}
 \end{center}
-\caption{\textbf{Standard Deviation for RT and DS:} The triangles represent the Radiative
-  Transfer and the lines represent the Doppler Shift.
+\caption{\textbf{Standard Deviation trends.} Results for all the
+  Radiative Transfer simulations (in triangles) compares against the
+  Doppler Shift model (lines).
   \label{fig:standard_deviation}}
 \end{figure*}
 
