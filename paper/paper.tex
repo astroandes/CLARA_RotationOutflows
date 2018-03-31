@@ -4,8 +4,10 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{grffile}
+\usepackage{float}
 \usepackage[dvips]{epsfig}
 \usepackage{epsfig}
+\usepackage{dblfloatfix}
 \usepackage{color}
 \usepackage{caption}
 \usepackage{hyperref}
@@ -139,6 +141,8 @@ possible implications for observational analysis to finally present
 our conclusions in Section \ref{sec:conclusions}.
 
 
+
+
 \section{Theoretical Models}
 \label{sec:theory}
 
@@ -227,13 +231,17 @@ rotation.
 
 \section{Results}
 
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.49\textwidth]{./figures/results/doppler_shift_logtau6_theta90}
-  \end{center}
+
+\begin{figure*}
+\centering
+    \includegraphics[width=0.48\textwidth]{./figures/results/doppler_shift_logtau6_theta90}
+    \includegraphics[width=0.48\textwidth]{./figures/results/doppler_shift_logtau6_theta0}
   \caption{\textbf{Qualitative trends of changing outflow and
-      rotational velocity viewed perpendicular to the rotation axis}. 
-    Here we fix $\tauh=10^6$ and $\theta=90^\circ$.
+      rotational velocity viewed perpendicular/paralell to the
+      rotation axis}.  
+    Here we fix $\tauh=10^6$. 
+    The six panels on the left correspond to $\theta=90^\circ$ and the
+    panels on the right to $\theta=0^{\circ}$
     We vary \vrot increasing from left to right and \vout increasing
     from top to bottom. 
     The thin black line corresponds to the \lya line obtained with
@@ -247,23 +255,7 @@ rotation.
     only outflows, but also a Doppler shift from the rotational
     velocity (thick and dark line).  
     \label{fig:doppler_shift}}
-\end{figure}
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.49\textwidth]{./figures/results/doppler_shift_logtau6_theta0}
-  \end{center}
-  \caption{\textbf{Qualitative trends of changing outflow and
-      rotational velocity viewed parallel to the rotation axis}.     
-    Same layout as Figure \ref{fig:doppler_shift},
-    this time the viewing angle corresponds to $\theta=0^\circ$.
-    The effects of rotation on
-    the  \lya\ line morphology are not visible when viewed parallel to
-    the rotation axis.
-    \label{fig:doppler_shift_theta_0}}
-\end{figure}
-
-
+\end{figure*}
 
 
 \begin{figure*}
@@ -549,12 +541,56 @@ $1\%$ for  $\tauh=10^5$, $10^6$ and $10^7$, respectively.
 
 \subsection{Theoretical Insights}
 
-In Fig. \ref{fig:doppler} we present the spectrum of a LAE taken from to different
-sides of the galaxy. As the LAE is rotating, one side is being redshifted while
-the other is blueshifted. We see that the combined spectrum is a weighted line,
-in solid black, that combines these past two. This shows that there is in fact a
-Doppler Shift and then it justifies our choice to apply it after the outflows spectrum is
-obtained.
+
+\subsection{Links to observations}
+
+There are at least three inmmediate ways the work we have presented
+here can be useful to observational efforts.
+
+\subsubsection{Kinematic Maps}
+The first is related to the capability of spatially resolving the
+extent of a LAE.
+For instance \cite{Prescott14} presented observational results of a
+Doppler shift when taking spectra at two oposite sides of a LAE.
+
+In Figure \ref{fig:doppler} we present a toy model for the spectrum of
+a LAE taken from to different sides of the galaxy. 
+As the LAE is rotating, one side is being redshifted while the other
+is blueshifted. 
+We see that the full spectrum is a weighted line, in solid black,
+that is found between these two.
+In this toy model the rotational velocity is \vrot$=100\ \kms$. 
+We highlight that the distance between the maxima of the blue and red
+spectra is not twice the rotational velocity as it could be naively
+expected.
+Although the spectra can be modeled by Doppler shifts, the peak of the
+spectra is also weighted by the amount of mass that has a given
+velocity. 
+In this toy model
+
+
+New spectrographs like MUSE should help obtain kinematic information
+from LAEs to build velocity maps in \lya. 
+This could be a natural extension of the work reported by
+\cite{Herenz2016} on the velocity maps of several LARS (Lyman Alpha
+Reference Sample) galaxies.  
+
+
+Another application of this new model to the current interpretation of \lya
+spectra, is that the central ($V=0$) emission of the spectra seen in the
+\lya line, is a consequence of the viewing angle of the galaxy and can be
+controlled by it. Several authors have suggested that this central emission
+is caused by radiation that escapes the galaxy without scattering. So we
+present an alternative that solves this issue. In addition, the effect of
+outflows velocities \vrot in current models can modify the asymmetry of peaks
+present in the \lya line. However the intensity of the valley and the width
+of the line were not easily reproduced. In this work we provide a tool to
+provide these effects with values of \vout and \vrot that do not exceed the
+typical LAEs' values found in the literature.
+
+
+
+
 
 \begin{figure}
   \begin{center}
@@ -566,9 +602,9 @@ obtained.
 
 A first approach to an analytical expression that returns the \lya spectrum
 from a rotating galaxy is presented by \cite{Garavito14}. This derivation is
-based on the assumption that the distribution of photons' propagation directions
-at the edge of the galaxy is anisotropic and depends of \tauh only. So this
-approximation becomes more accurate with higher optical depth and it is also the
+based on the assumption that the distribution of photons' propagation
+directions at the edge of the galaxy is anisotropic and depends of
+\tauh only. So this approximation becomes more accurate with higher optical depth and it is also the
 reason why the Doppler Shift technique to induce rotational effects to an outflow
 \lya spectrum works.
 
@@ -585,33 +621,11 @@ where the only velocity factor affecting $v_z$ is the outflows one.
 \subsection{Application to observational data}
 
 We find three different approaches how this model can have observational
-implications. Firstly, as the resolution of astronomical instruments is
-increasing, new images from LAEs can be spatially resolved in a way that
-rotation velocities of the galaxy can be determined. New spectrographs like
-MUSE should help obtain kinematic information from LAEs by using our model.
-As for now, previous works in the literatures have already found useful data
-to support this idea. Fig 7 of Prescott et al. \cite{Prescott14} shows the
-presence of Doppler shift and \cite{Herenz2016} creates 2D line of sight
-velocity maps of several LARS (Lyman Alpha Reference Sample) galaxies.
+implications. Firstly, 
 
-Another application of this new model to the current interpretation of \lya
-spectra, is that the central ($V=0$) emission of the spectra seen in the
-\lya line, is a consequence of the viewing angle of the galaxy and can be
-controlled by it. Several authors have suggested that this central emission
-is caused by radiation that escapes the galaxy without scattering. So we
-present an alternative that solves this issue. In addition, the effect of
-outflows velocities \vrot in current models can modify the asymmetry of peaks
-present in the \lya line. However the intensity of the valley and the width
-of the line were not easily reproduced. In this work we provide a tool to
-provide these effects with values of \vout and \vrot that do not exceed the
-typical LAEs' values found in the literature.
 
-\color{red}
-Kulas...
-\color{black}
-Finally, we present a reconstruction of a selected \lya spectrum presented
-by \cite{Kulas12} and reproduced with the permission of the author. We create
-a fit of the \lya line and predict its kinematic properties.
+
+
 
 \section{Conclusions}
 \label{sec:conclusions}
