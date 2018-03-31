@@ -53,7 +53,7 @@ First, it introduces a dependency with viewing angle; second it
 produces a line broadening and third it increases the flux at the
 line's center.
 We also develp a semi-analytic model that modifies the spectra of
-pure outflow simulations that manages to reproduce the line widths
+pure outflow simulations and manages to reproduce the line widths
 and flux change at the line's center within a $7\%$ and $50\%$
 precision, respectively.
 \end{abstract}
@@ -72,33 +72,41 @@ galaxies: dwarf --- radiative transfer --- Methods: numerical
 \section{Introduction}
 \label{sec:intro}
 
-The interpretation of the Lyman-$\alpha$ emission in galaxies is
-key to understand their evolutionary processes, specially in
-star-forming, low-dust galaxies \citep{PartridgePeebles}.
 Recent improvements in instrumentation have revolutionized the kind of
-studies that can be performed on Lyman-$\alpha$ emitting galaxies
-(LAEs.)
-For instance, it is now possible to infer detailed kinematic maps for
-nearby galaxies.
-The study of these maps would allow us to build data-driven models to
-interpret the \lya spectra of unresolved galaxies, helping us to
-constrain the physical conditions of the interstellar medium (ISM)
-processing the \lya radiation.
-
-
-For instances, dwarf galaxies show signs of coherent rotation
-\citep{2009A&A...493..871S}.
-Some of them are expected to have high neutral gas contents and thus
-show \lya\ emission with rotation imprints
-\citep{2005A&A...433L...1B,2008ApJ...672..888T,2013MNRAS.434.2491G}
+kinematic studies that can be performed on galaxies with small angular
+sizes on the sky.
+For instance, spatially resolved spectra on dwarf galaxies show signs
+of coherent rotation \citep{2009A&A...493..871S}.
 Some Compact Dwarf Galaxies actually show gas kinematics that range
 from pure rotation to high velocity dispersion without a clear
 rotation pattern.
 \citep{2015A&A...577A..21C,2017A&A...600A.125C}
+These studies are now being extended to distant galaxies.
 
+Some of those galaxies are expected to have high neutral gas contents
+and thus show \lya\ emission with rotation imprints
+\citep{2005A&A...433L...1B,2008ApJ...672..888T,2013MNRAS.434.2491G}
+The computational modeling of systems showing rotation has only been
+studied until recently by \cite{Garavito14}.
+In that work the authors studied the influence of pure solid body
+rotation on the \lya line's morpholgy.
+They found that rotation indeed introduces changes, the most
+noticeable change is the dependence of the spectra with the viewing
+angle with respect to the rotation axis. 
+
+\cite{Garavito14} also presented a simple semi-analytical
+approximation that accounted for the main features of the \lya spectra
+from a rotation sphere.
+Recently, this semi-analytic solution was used to perform a Markov
+Chain Monte Carlo exploration to fit the observed spectra Compact
+Dwarf Galaxy \citep{tololo}, that presented atypical features that
+could be explained by pure rotation. 
+
+However, the gas dynamics in Lyman Alpha Emitter (LAE) galaxies is
+more complex than pure rotation.
 The case for outflows as traced in the \lya\ line is much better
 stablished.
-In many cases the \lya line profiles has a single peak
+In many observations the \lya line profiles has a single peak
 redwards from the line's center, in other cases there is a double peak
 but the peak on the red side is stronger
 \citep[e.g.][]{2010ApJ...717..289S,Erb14,Trainor16}.   
@@ -107,28 +115,17 @@ These features been readily explained as the consequence of multiple
 neutral Hydrogen
 \citep{2006A&A...460..397V,Orsi12,2012ApJ...751...29Y,2015ApJ...812..123G}.  
 
-
-Here we present for the first time a study of the joint effects of
-galaxy outflows and rotation, two of the three major kinematic
-components expected in LAEs.
+An study of the combined effects of outflows and rotation has not been
+presented in the literature.
+Here we present for the first time such as study. 
 We study a simplified geometrical configuration corresponding to a
-spherical gas cloud with symmetrical radial outflows and a rotation
-profile corresponding to a solid body.
-We base our modeling on a Monte-Carlo radiative transfer code called
-CLARA (Code for Lyman Alpha Radiation Analysis) presented for the
-first time by \cite{CLARA}.
-
+spherical gas cloud with symmetrical radial outflows and solid body
+rotation. 
+We base our modeling on a Monte-Carlo radiative transfer code.
 Besides modeling the impact of joint rotation and outflows, we also
 check to what extent the analytical model presented by
 \cite{Garavito14} to explain the effects of rotation can also be
 applied in our case.
-We show how solid body rotation effects can be modelled by
-postprocessing the results of outflow only simulation.
-
-in the results of other radiative transfer model in the case of large
-optical depths.
-In this case it is a good approximation to Doppler
-boost the results of the model without rotation.
 
 The structure of the paper is the following.
 We introduce first our theoretical tools and assumptions
