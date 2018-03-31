@@ -51,8 +51,8 @@ First, it introduces a dependency with viewing angle; second it
 produces a line broadening and third it increases the flux at the
 line's center.
 We also develp a semi-analytic model that modifies the spectra of
-pure outflow simulations that manages to reproduce the line broadening
-and flux change at the line's center within a $7\%$ and $30\%$
+pure outflow simulations that manages to reproduce the line widths
+and flux change at the line's center within a $7\%$ and $50\%$
 precision, respectively.
 \end{abstract}
 
@@ -281,6 +281,10 @@ rotation.
 \caption{\textbf{Standard Deviation trends.} Results for all the
   Radiative Transfer simulations (in triangles) compares against the
   Doppler Shift model (lines).
+  All panels correspond to a viewing angle of $\theta = 90^{\circ}$
+  (perpendicular to the rotation axis). 
+  The optical depth increases from top to bottom and the outflow
+  velocity from left to right.
   \label{fig:standard_deviation}}
 \end{figure*}
 
@@ -296,9 +300,11 @@ rotation.
 \includegraphics[height=0.27\textwidth]{./figures/results/line_characterization_skw_vout25_logtau7}
 \includegraphics[height=0.27\textwidth]{./figures/results/line_characterization_skw_vout50_logtau7}
 \end{center}
-\caption{\textbf{Skewness for RT and DS:} The triangles represent the Radiative
-    Transfer and the lines represent the Doppler Shift.
-    \label{fig:skewness}}
+\caption{\textbf{Skewness trends.} Results for all the
+  Radiative Transfer simulations (in triangles) compares against the
+  Doppler Shift model (lines).
+  Follows the same layout as Figure \ref{fig:standard_deviation}. 
+  \label{fig:skewness}}
 \end{figure*}
 
 \begin{figure*}
@@ -313,9 +319,11 @@ rotation.
 \includegraphics[height=0.28\textwidth]{./figures/results/line_characterization_bi_vout25_logtau7}
 \includegraphics[height=0.28\textwidth]{./figures/results/line_characterization_bi_vout50_logtau7}
 \end{center}
-\caption{\textbf{Bimodality for RT and DS:} The triangles represent the Radiative
-	Transfer and the lines represent the Doppler Shift.
-	\label{fig:bimodality}}
+\caption{\textbf{Bimodality trends.} Results for all the
+  Radiative Transfer simulations (in triangles) compares against the
+  Doppler Shift model (lines). 
+  Follows the same layout as Figure \ref{fig:standard_deviation}. 
+  \label{fig:bimodality}}
 \end{figure*}
 
 
@@ -436,7 +444,13 @@ approximation.
 The optical depth increases from top to bottom and the outflow
 velocity from left to right.
 This quantitative plot confirms that the line width increases with
-rotational velocity and  optical depth.
+rotational velocity and optical depth.
+These trends are expected; higher rotational velocities can be seen as
+an addition of different Doppler shifts that smear out the line, while
+a higher optical depth translates into a larger number of scatterings
+that increase the probability of a photon to diffuse in frequency
+resulting in a broader line.
+
 The DS successfuly reproduces all trends with the optical depth,
 rotational velocity and outflow velocity.
 However, the DS consistently underestimates the STD. 
@@ -462,6 +476,7 @@ there is a transition between double and single peak line; for low
 outflow velocities the skewness signals the balance between the two
 existing peaks while for high outflow velocities it quantifies the
 asymmetry of the already dominant read peak.
+
 The DS reproduces the main trends, again with an underestimation that
 decreases at higher optical depths and increases with larger values of
 the rotational velocity and outflow velocity.
@@ -487,15 +502,16 @@ increase.
 On other situations (\vout$=50\ \kms$ and \tauh$\geq 10^6$) higher
 rotational velocities the bimodality statistics decreases, which means
 that it manages to slightly enlarge the already dominant red peak.
-The DS continous to reproduce the main trends, still underestimating
-the bimodality statistics.
+
+The DS reproduces the main trends while underestimating the bimodality
+statistics. 
 As expected from the previous results the difference betwen RT and DS
 decreases at higher optical depths and increases with increasing
 values of the rotational and outflow velocities.
 In this case the differences have an upper bound of $4\%$, $2\%$ and
 $1\%$ for  $\tauh=10^5$, $10^6$ and $10^7$, respectively.  
 
-\subsection{Intensity at line's center}
+\subsubsection{Intensity at line's center}
 
 In Figure \ref{fig:valley_intensity} we quantify how the intensity at
 the line's center (i.e. the valley) changes with the viewing angle,
@@ -512,13 +528,16 @@ observer moves from a line  of sight perpendicular to the rotation
 axis onto a parallel line of sight. 
 This is a clear demonstration of the viewing angle dependency
 introduced by rotation.
+
 The valley/peak ratio at $\cos\theta=1$ matches results
 without rotation, this shows that for increasing rotational velocity
 the valley/peak ratio increases.
 In turn, for increasing optical depth or outflowing velocity this
 ratio decreases.
-Again, the DS results correctly follow the trends for the full RT
+Once again, the DS results correctly follow the trends for the full RT
 simulations.  
+This time the differences have an upper bound of $55\%$, $2\%$ and
+$1\%$ for  $\tauh=10^5$, $10^6$ and $10^7$, respectively.  
 
 
 
@@ -529,9 +548,7 @@ simulations.
 \label{sec:discussion}
 
 \subsection{Theoretical Insights}
-\color{red}
-Why Doppler Shift works. Talk about radiative transfer...
-\color{black}
+
 In Fig. \ref{fig:doppler} we present the spectrum of a LAE taken from to different
 sides of the galaxy. As the LAE is rotating, one side is being redshifted while
 the other is blueshifted. We see that the combined spectrum is a weighted line,
