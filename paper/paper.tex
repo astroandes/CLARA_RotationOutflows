@@ -72,21 +72,22 @@ galaxies: dwarf --- radiative transfer --- Methods: numerical
 \section{Introduction}
 \label{sec:intro}
 
-Recent improvements in instrumentation have revolutionized the kind of
+Recent advances in instrumentation have revolutionized the kind of
 kinematic studies that can be performed on galaxies with small angular
 sizes on the sky.
-For instance, spatially resolved spectra on dwarf galaxies show signs
-of coherent rotation \citep{2009A&A...493..871S}.
-Some Compact Dwarf Galaxies actually show gas kinematics that range
-from pure rotation to high velocity dispersion without a clear
-rotation pattern.
-\citep{2015A&A...577A..21C,2017A&A...600A.125C}
-Some of those star forming galaxies are expected to have high neutral
-gas contents and low dust contents and thus show \lya\ emission with
-rotation imprints
-\citep{2005A&A...433L...1B,2008ApJ...672..888T,2013MNRAS.434.2491G} 
+For instances, spatially resolved spectra on compact dwarf galaxies
+are now possible, and they confirm signs of gas kinematics showing
+pure rotation kinematics \citep{2015A&A...577A..21C,2017A&A...600A.125C}
+Recent mapping of high redshift circumgalactic regions are also able
+to resolve kinematic evicend of large scale rotation
+\citep{2018MNRAS.473.3907A} 
+These systems with star formation, some neutral gas and low dust
+contents are the kind of systems that are naturally expected to have
+\lya emission.
+What is the expected imprint of rotation on a resonant line such as
+the \lya line?
 
-The computational \lya modeling of systems showing rotation has only
+The computational \lya modeling of rotating systems has only
 been studied until recently by \cite{Garavito14}.
 In that work the authors studied the influence of pure solid body
 rotation on the \lya line's morpholgy.
@@ -605,7 +606,8 @@ angles need to be explored.
 Current observational facilities have the capability of spatially
 resolving the extent of a LAE.
 For instance \cite{Prescott14} presented observational results of a
-Doppler shift when taking spectra at two oposite sides of a LAE.
+Doppler shift when taking spectra at two oposite sides of a large
+($\approx 80$kpc) LAE.
 
 In Figure \ref{fig:doppler} we present a toy model (\vrot$=50\ \kms$,
 \vout$=25\ \kms$ and \tauh$=10^5$) for the spectrum of
@@ -637,27 +639,38 @@ Reference Sample) galaxies.
 The interpretation of such data should take into account the insights
 and trends we have presented in this paper.
 
-\subsubsection{Relationship to MUSE observations}
+\subsubsection{Comparison against the MUSE-Wide Survey}
 
 In order to give the reader a feeling of the ranges of observational
-data that can be explained by the models presented here we perform a
-comparison against observational data from MUSE-Wide survey (MWS)
-\citep{2017A&A...606A..12H}. 
+data that could be explained by the models presented here, 
+we perform a comparison against observational data from the MUSE-Wide
+Survey (MWS) \citep{2017A&A...606A..12H}.   
 
 MWS provides public access to 831 spectra out of which 237 contain a
-detected \lya line as dominante. 
+detected \lya line as dominant. 
 The public dataset reports as the redshift of the galaxy the position
 of the dominant peak.
-We use this redshift to convert the spectra to rest-frame and compute
+We use this redshift to convert the spectra to a rest-frame and compute
 the standard deviation and skewness statitstics. 
 Given the uncertainty on the galaxy redshift we do not compute the
 valley/peak ratio. 
-We do not try to perform a full fit to all the spectra but only to
-explore whether the region of parameter space explored in our RT
-simulations shows any crossing with the results from the MWS.
+We do not try to perform a full fit to all the spectra
+\citep[e.g.][]{2017A&A...608A.139G} and wish only to
+know whether the region of parameter space explored in our RT
+simulations shows any crossing with the results from the MWS or
+shows any sign of atypical features.
  
-
-
+Figure \ref{fig:muse} shows the results of this experiment. 
+The small white circles correspond to the 217 \lya emitters in the MWS
+observations; the large black circles to the results of the
+simulations presented in this paper. 
+This shows that the systems modeled in this paper actually present an
+overlap with statistics derived from observations. 
+The region with standard deviation $>200$\kms could also be explained
+by systems with larger optical depths than we have used here. 
+However, the systems with a positive skewness, that is a line
+unbalanced towards the blue could be the sign of inflowing
+kinematics. 
 
 \section{Conclusions}
 \label{sec:conclusions}
@@ -703,7 +716,9 @@ Our work confirms that rotation produces features in the \lya line
 strong enough that can be expected to be detected in observations and
 that should be taken into account into \lya modelling; the Doppler
 Boost offers an easy-to-implement approximation to explore such
-influence into already existing RT simulations. 
+influence into already existing RT simulations and provide stronger
+footing to the interpretation of \lya kinematics maps
+\citep[e.g][]{2018MNRAS.473.3907A}. 
 
 \bibliographystyle{mnras}
 \bibliography{references}
