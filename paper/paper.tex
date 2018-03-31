@@ -75,24 +75,25 @@ galaxies: dwarf --- radiative transfer --- Methods: numerical
 Recent advances in instrumentation have revolutionized the kind of
 kinematic studies that can be performed on galaxies with small angular
 sizes on the sky.
-For instances, spatially resolved spectra on compact dwarf galaxies
-are now possible, and they confirm signs of gas kinematics showing
-pure rotation kinematics \citep{2015A&A...577A..21C,2017A&A...600A.125C}
-Recent mapping of high redshift circumgalactic regions are also able
-to resolve kinematic evicend of large scale rotation
-\citep{2018MNRAS.473.3907A} 
+For instance, spatially resolved spectra on compact dwarf galaxies
+have measured clear signs of gas showing pure rotation kinematics
+\citep{2015A&A...577A..21C,2017A&A...600A.125C}; recent mapping of
+high redshift circumgalactic regions have also revealed kinematic
+evidence for large scale rotation \citep{2018MNRAS.473.3907A}.
 These systems with star formation, some neutral gas and low dust
-contents are the kind of systems that are naturally expected to have
-\lya emission.
-What is the expected imprint of rotation on a resonant line such as
-the \lya line?
+contents naturally show a \lya emission line \citep{PartridgePeebles},
+motivating the observational work to phenomenologically link
+kinematics traced by H$\alpha$ to \lya spectra \citep[e.g.][]{Herenz2016}. 
 
-The computational \lya modeling of rotating systems has only
-been studied until recently by \cite{Garavito14}.
+Theoretically speaking, what is then the expected imprint of rotation
+on a resonant emission line such as the \lya line? To what extent is
+possible to constrain rotational kinematics from the \lya emission line? 
+Detailed radiative transfer (RT) \lya modeling of rotating systems
+started until recently by \cite{Garavito14}.
 In that work the authors studied the influence of pure solid body
-rotation on the \lya line's morpholgy.
+rotation on the \lya line's morphology.
 They found that rotation indeed introduces changes, the most
-noticeable change is the dependence of the spectra with the viewing
+noticeable being the dependence of the spectra with the viewing
 angle with respect to the rotation axis. 
 
 \cite{Garavito14} also presented a simple semi-analytical
@@ -249,6 +250,31 @@ our conclusions in Section \ref{sec:conclusions}.
 		We fixed $\vrot=100$\kms.
 		\label{fig:valley_intensity}}
 \end{figure*}
+
+
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{./figures/discussion/doppler}
+  \end{center}
+  \caption{\textbf{Spectra from receeding/approaching sides of a toy
+      model LAE.}  These results correspond to the RT simulation with
+    $\vout=25$\kms, $\vrot=50$\kms, $\tauh=10^5$. 
+    The spectra were computed for a viewing angle of
+    $\theta=90^{\circ}$. This toy model illustrates to what extent spectra from
+    opposite sides of a galaxy have an imprint of the rotational
+    kinematics. 
+    \label{fig:doppler}}
+\end{figure}
+
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{./figures/results/muse_vs_simulations.pdf}
+  \end{center}
+  \caption{\textbf{Comparison between simulations and observations.}  
+    \label{fig:muse}}
+\end{figure}
 
 
 \section{Theoretical Models}
@@ -541,28 +567,6 @@ $1\%$ for  $\tauh=10^5$, $10^6$ and $10^7$, respectively.
 \label{sec:discussion}
 
 
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.48\textwidth]{./figures/discussion/doppler}
-  \end{center}
-  \caption{\textbf{Spectra from receeding/approaching sides of a toy
-      model LAE.}  These results correspond to the RT simulation with
-    $\vout=25$\kms, $\vrot=50$\kms, $\tauh=10^5$. 
-    The spectra were computed for a viewing angle of
-    $\theta=90^{\circ}$. 
-    \label{fig:doppler}}
-\end{figure}
-
-
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.48\textwidth]{./figures/results/muse_vs_simulations.pdf}
-  \end{center}
-  \caption{\textbf{Comparison between observations and simulations.}  
-    \label{fig:muse}}
-\end{figure}
-
 \subsection{Theoretical Insights}
 
 A first approach to an analytical expression that returns the \lya spectrum
@@ -682,7 +686,11 @@ radiative transfer simulation and confronted with a simple
 semi-analytic ansatz that adds the effects of rotation onto results of
 pure outflow kinematics. 
 
-We find that the main effects of rotation on the \lya\ line morphology are:
+To address the first questionswe posed in the introduction (What is then
+the expected imprint of rotation on a resonant emission line such as
+the \lya line?)
+
+We can saythat the main effects of rotation on the \lya\ line morphology are:
 
 \begin{itemize}
   \item Inducing a dependency on the viewing angle.
@@ -700,17 +708,26 @@ a good approximation to model solid body rotation, strenghten the
 semi-analytic model reported by \cite{Garavito14} when they modeled
 the effect of pure rotation on \lya\ spectra. 
 
-As an application to observational data our results suggest that
+
+Addressing the second question we posed in the introduction (To what
+extent is possible to constrain rotational kinematics from the \lya
+emission line?)  we can say that as an application to observational data our results suggest that
 rotation should also be considered as an explanation of the
 non-vanishing \lya intensity at the line's center.
-We also show how the \lya spectra from two different sides of a galaxy
-can detect approaching/receeding gas motions We show that the
-distances between the peaks of these two spectra is smaller than the
-expected value of $2\times\vrot$ due to the differente weights at the
-surface of the emitting regions.  
-Finally we also use data from MUSE to demonstrate to what extent the
+
+A more straightfoward approach is takes into account how the
+\lya spectra from two different sides of a galaxy can detect
+approaching/receeding gas motions.
+In that case one has to be careful and take into account that the
+peaks of these two spectra is smaller than the expected value of
+$2\times\vrot$ due to the differente weights at the surface of the
+emitting regions.   
+
+We also use data from MUSE to demonstrate to what extent the
 outputs of the RT results presented here can be expected to match
-hundreds of observed \lya spectra.
+hundreds of observed \lya spectra, but a full constraint of rotation
+properties certainly require a full Markov Chain Monte Carlo
+exploration of parameter space.
 
 Our work confirms that rotation produces features in the \lya line
 strong enough that can be expected to be detected in observations and
