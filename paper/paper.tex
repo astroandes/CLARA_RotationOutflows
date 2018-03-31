@@ -81,13 +81,13 @@ Some Compact Dwarf Galaxies actually show gas kinematics that range
 from pure rotation to high velocity dispersion without a clear
 rotation pattern.
 \citep{2015A&A...577A..21C,2017A&A...600A.125C}
-These studies are now being extended to distant galaxies.
+Some of those star forming galaxies are expected to have high neutral
+gas contents and low dust contents and thus show \lya\ emission with
+rotation imprints
+\citep{2005A&A...433L...1B,2008ApJ...672..888T,2013MNRAS.434.2491G} 
 
-Some of those galaxies are expected to have high neutral gas contents
-and thus show \lya\ emission with rotation imprints
-\citep{2005A&A...433L...1B,2008ApJ...672..888T,2013MNRAS.434.2491G}
-The computational modeling of systems showing rotation has only been
-studied until recently by \cite{Garavito14}.
+The computational \lya modeling of systems showing rotation has only
+been studied until recently by \cite{Garavito14}.
 In that work the authors studied the influence of pure solid body
 rotation on the \lya line's morpholgy.
 They found that rotation indeed introduces changes, the most
@@ -99,8 +99,8 @@ approximation that accounted for the main features of the \lya spectra
 from a rotation sphere.
 Recently, this semi-analytic solution was used to perform a Markov
 Chain Monte Carlo exploration to fit the observed spectra Compact
-Dwarf Galaxy \citep{tololo}, that presented atypical features that
-could be explained by pure rotation. 
+Dwarf Galaxy \citep{tololo} with atypical features that could be
+explained by pure rotation.  
 
 However, the gas dynamics in Lyman Alpha Emitter (LAE) galaxies is
 more complex than pure rotation.
@@ -304,11 +304,12 @@ through the volume and finally scape.
 We store the final frequency and propagation direction for each photon
 at its last scattering.
 
-In Table \ref{tab:values} we list the combination of \tauh,
-\vrot and \vrot values used in this paper.
+As input parameters we use \tauh$=\{10^5, 10^6, 10^7\}$,
+\vout$=\{5,25,50\}\kms$ and \vrot$=\{0,50,100\}\kms$, for a total of
+$27$ models with all the possible parameter combinations.
 The range of values have some overlap with the expectations from a
 galaxy with a total neutral hydrogen mass of $10^8$-$10^9$
-$M_{\odot}$. We run a total of $27$ different models. 
+$M_{\odot}$. 
 
 
 \cite{Garavito14} presented an analytical model that
@@ -636,11 +637,26 @@ Reference Sample) galaxies.
 The interpretation of such data should take into account the insights
 and trends we have presented in this paper.
 
-\subsubsection{Match to \lya observations by MUSE}
+\subsubsection{Relationship to MUSE observations}
 
 In order to give the reader a feeling of the ranges of observational
 data that can be explained by the models presented here we perform a
-comparison against observational data from MUSE.
+comparison against observational data from MUSE-Wide survey (MWS)
+\citep{2017A&A...606A..12H}. 
+
+MWS provides public access to 831 spectra out of which 237 contain a
+detected \lya line as dominante. 
+The public dataset reports as the redshift of the galaxy the position
+of the dominant peak.
+We use this redshift to convert the spectra to rest-frame and compute
+the standard deviation and skewness statitstics. 
+Given the uncertainty on the galaxy redshift we do not compute the
+valley/peak ratio. 
+We do not try to perform a full fit to all the spectra but only to
+explore whether the region of parameter space explored in our RT
+simulations shows any crossing with the results from the MWS.
+ 
+
 
 
 \section{Conclusions}
@@ -648,45 +664,52 @@ comparison against observational data from MUSE.
 
 In this paper we explore, for the first time in the literature,
 the results of a model for the emergent \lya\ line from rotating outflows.
-The main results for the model are computed from a Monte-Carlo radiative transfer
-simulation and confronted with a simple semi-analytic ansatz that adds the effects
-of rotation onto results of pure outflow kinematics.
+The main results for the model are computed from a Monte-Carlo
+radiative transfer simulation and confronted with a simple
+semi-analytic ansatz that adds the effects of rotation onto results of
+pure outflow kinematics. 
 
-The main effects of rotation on the \lya\ line morphology are:
-
+We find that the main effects of rotation on the \lya\ line morphology are:
 
 \begin{itemize}
+  \item Inducing a dependency on the viewing angle.
   \item Broadening the line.
-	\item Increasing the intensity at the line's center.
-	\item Inducing a dependency on the viewing angle,
-  The closer the observer is to the pole of the galaxy (defined by the rotation axis),
-  the smaller are the effects from rotation.
+  \item Increasing the intensity at the line's center.
 \end{itemize}
 
-We found that in the case of solid body rotation these effects can be quantitatively
-explained by a Doppler boost, where the Doppler factor can be computed as the
- producet of quantities at the surface of last scattering, namely $\vec{v}_{\rm rot}\cdot \hat{k}$,
- where $\vec{v}_{\rm rot}$ is the velocity due to rotation and $\hat{k}$ is the direction
-of the photon's propagation.
-These conclusions, specially the confirmation of the Doppler boost as
-a good proxy for solid body rotation, strenghten the evidence reported
-by \cite{Garavito14} when they modeled the effect of pure rotation on
-\lya\ spectra.  
+We find that these effects can be quantitatively explained by a
+Doppler shift computed as product of quantities at the surface of last
+scattering, namely  $\vec{v}_{\rm rot}\cdot \hat{k}$,  where
+$\vec{v}_{\rm rot}$ is the velocity due to rotation and $\hat{k}$ is
+the direction of the photon's propagation.  
+These conclusions, specially the confirmation of the Doppler Boost as
+a good approximation to model solid body rotation, strenghten the
+semi-analytic model reported by \cite{Garavito14} when they modeled
+the effect of pure rotation on \lya\ spectra. 
 
-As an application to observational data we find that recent results
-that take the spectra of two different sides of a galaxy can detect 
-the effect of approaching/receeding gas motions. 
-However, the distances between the peaks of these two spectra 
-correspond to $\approx v_{\rm rot} \cos\theta$ due to the weights of the
-emitting regions.
+As an application to observational data our results suggest that
+rotation should also be considered as an explanation of the
+non-vanishing \lya intensity at the line's center.
+We also show how the \lya spectra from two different sides of a galaxy
+can detect approaching/receeding gas motions We show that the
+distances between the peaks of these two spectra is smaller than the
+expected value of $2\times\vrot$ due to the differente weights at the
+surface of the emitting regions.  
+Finally we also use data from MUSE to demonstrate to what extent the
+outputs of the RT results presented here can be expected to match
+hundreds of observed \lya spectra.
 
-
-
+Our work confirms that rotation produces features in the \lya line
+strong enough that can be expected to be detected in observations and
+that should be taken into account into \lya modelling; the Doppler
+Boost offers an easy-to-implement approximation to explore such
+influence into already existing RT simulations. 
 
 \bibliographystyle{mnras}
 \bibliography{references}
 
 
+\newpage
 \appendix
 
 \section{Additional figures}
