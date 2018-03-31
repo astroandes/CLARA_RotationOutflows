@@ -541,7 +541,29 @@ $1\%$ for  $\tauh=10^5$, $10^6$ and $10^7$, respectively.
 \section{Discussion}
 \label{sec:discussion}
 
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{./figures/discussion/doppler}
+  \end{center}
+  \caption{\textbf{Spectra from receeding/approaching sides of a toy
+      model LAE.}  These results correspond to the RT simulation with
+    $\vout=25$\kms, $\vrot=50$\kms, $\tauh=10^5$. 
+    The spectra were computed for a viewing angle of
+    $\theta=90^{\circ}$. 
+    \label{fig:doppler}}
+\end{figure}
+
 \subsection{Theoretical Insights}
+
+A first approach to an analytical expression that returns the \lya spectrum
+from a rotating galaxy is presented by \cite{Garavito14}.
+This derivation is based on the assumption that the distribution of
+photons' propagation directions at the edge of the galaxy is
+anisotropic and depends of \tauh only. 
+So this approximation becomes more accurate with higher optical depth
+and it is also the reason why the Doppler Shift technique to induce
+rotational effects to an outflow \lya spectrum works. 
 
 
 \subsection{Links to observations}
@@ -549,7 +571,7 @@ $1\%$ for  $\tauh=10^5$, $10^6$ and $10^7$, respectively.
 There are at least three inmmediate ways the work we have presented
 here can be useful to observational efforts.
 
-\subsubsection{Kinematic Maps}
+\subsubsection{\lya Kinematic Maps}
 The first is related to the capability of spatially resolving the
 extent of a LAE.
 For instance \cite{Prescott14} presented observational results of a
@@ -565,12 +587,16 @@ that is found between these two.
 We notice that the distance between the maxima of the blue and red
 spectra is not twice the rotational velocity as it could be naively
 expected.
-Although is a good approximation to model the rotating spectra by a
+
+Although it is a good approximation to think the rotating spectra by a
 sum of Doppler shifts, the peak of the spectra is also weighted by the
 amount of mass with a given velocity. 
 In this toy model the distance between the peaks of the
 receeding/approaching spectra is close to $\sim 20\ \kms$, which is
-less than half of the naively expected value of $2\vrot=100\ \kms$
+less than half of the naively expected value of $2\vrot=100\ \kms$,
+due to the fact that only a small fraction of the photons are emitted
+at the extreme of the galaxy having the maximum rotational velocity of
+$50\ \kms$. 
 
 
 New spectrographs like MUSE should help obtain kinematic information
@@ -578,7 +604,11 @@ from LAEs to build velocity maps in \lya.
 This could be a natural extension of the work reported by
 \cite{Herenz2016} on the velocity maps of several LARS (Lyman Alpha
 Reference Sample) galaxies.  
+The interpretation of such data should take into account the insights
+and trends we have presented in this paper.
 
+
+\subsubsection{\lya continuum escape or rotation?}
 
 Another application of this new model to the current interpretation of \lya
 spectra, is that the central ($V=0$) emission of the spectra seen in the
@@ -596,35 +626,8 @@ typical LAEs' values found in the literature.
 
 
 
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.48\textwidth]{./figures/discussion/doppler}
-  \end{center}
-  \caption{\textbf{Spectra from receeding/approaching sides of a toy
-      model LAE.}  These results correspond to the RT simulation with
-    $\vout=25$\kms, $\vrot=50$\kms, $\tauh=10^5$. 
-    The spectra were computed for a viewing angle of
-    $\theta=90^{\circ}$. 
-    \label{fig:doppler}}
-\end{figure}
 
-A first approach to an analytical expression that returns the \lya spectrum
-from a rotating galaxy is presented by \cite{Garavito14}. This derivation is
-based on the assumption that the distribution of photons' propagation
-directions at the edge of the galaxy is anisotropic and depends of
-\tauh only. So this approximation becomes more accurate with higher optical depth and it is also the
-reason why the Doppler Shift technique to induce rotational effects to an outflow
-\lya spectrum works.
 
-On the other hand, regarding the parameters \vrot, \vout, and $\theta$ for
-which this model would work, we have the following. The effect of the outflows
-velocity is much more sensitive on the spectrum than the rotational one; meaning
-that for a high \vout, the \vrot value would have to be equal or greater in order
-to be able to glimpse the shift in frequency that rotation induces. Regarding $\theta$,
-the introduction of rotation in the model implies that it will only affect galaxies
-with its viewing angle $\theta \neq 90^\circ$. This can be observed in the cartesian
-components of the velocity of the atoms (Eq. \ref{eq:vx}, \ref{eq:vy}, \ref{eq:vz})
-where the only velocity factor affecting $v_z$ is the outflows one.
 
 
 
