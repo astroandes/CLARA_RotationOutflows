@@ -248,11 +248,9 @@ our conclusions in Section \ref{sec:conclusions}.
 \includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_vi_vout25_vrot100_logtau7}
 \includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_vi_vout50_vrot100_logtau7}
 \end{center}
-\caption{\textbf{Valley Intensity:} We show for each \tauh the dependency that
-		the viewing angle $\theta$ has on the line's the valley intensity. The larger
-		$\cos{\theta}$ the lower is the valley intensity, so the higher $\theta$, the
-		higher the valley intensity. Also, the higher \tauh, the better is the fit RT-DS.
-		We fixed $\vrot=100$\kms.
+\caption{\textbf{Valley Intensity. } We show for each \tauh the dependency that
+  the viewing angle $\theta$ has on the line's the
+  valley intensity. $\vrot=100$\kms is fixed for all panels.
 		\label{fig:valley_intensity}}
 \end{figure*}
 
@@ -277,6 +275,10 @@ our conclusions in Section \ref{sec:conclusions}.
 \includegraphics[width=0.48\textwidth]{./figures/results/muse_vs_simulations.pdf}
 
 \caption{\textbf{Comparison between simulations and observations.}  
+The observational results correspond to the MUSE-Wide Survey
+\citep{2017A&A...606A..12H}. The skewness and standard deviation from
+the simulations summarize the results presented in Figures
+\ref{fig:standard_deviation} and \ref{fig:skewness}.
   \label{fig:muse}}
 \end{figure}
 
@@ -285,7 +287,7 @@ our conclusions in Section \ref{sec:conclusions}.
 \label{sec:theory}
 
 
-The Monte Carlo code we use (CLARA)  follows the propagation of
+The Monte Carlo code we use (CLARA) \citep{CLARA} follows the propagation of
 individual photons through a neutral Hydrogen medium characterized by
 its temperature, velocity field and global optical depth.
 The code assumes an homogeneous density throughout the simulated
@@ -310,17 +312,17 @@ outflows.
 The cartesian components take the following form:
 
 \begin{equation}
-	v_{x}=\frac{x}{R}V_{\rm out}-\frac{y}{R}V_{\rm rot} ,
+	v_{x}=\frac{x}{R}v_{\rm out}-\frac{y}{R}v_{\rm rot} ,
 	\label{eq:vx}
 \end{equation}
 
 \begin{equation}
-	v_{y}=\frac{y}{R}V_{\rm out}+\frac{x}{R}V_{\rm rot} ,
+	v_{y}=\frac{y}{R}v_{\rm out}+\frac{x}{R}v_{\rm rot} ,
 	\label{eq:vy}
 \end{equation}
 
 \begin{equation}
-	v_{z}=\frac{z}{R}V_{\rm out},
+	v_{z}=\frac{z}{R}v_{\rm out},
 	\label{eq:vz}
 \end{equation}
 %
@@ -354,11 +356,11 @@ of the outflows simulations without rotation.
 The frequency of each photon is Doppler shifted as follows
 
 \begin{equation}
-x' = x + \frac{\vec{V}_{\rm rot}\cdot\hat{k}}{v_{\rm th}}
+x' = x + \frac{\vec{v}_{\rm rot}\cdot\hat{k}}{v_{\rm th}}
 \label{eq:shift_x}
 \end{equation}
 %
-where $x'$ is the photon's new frequency, $x$ is the photon's
+where $x'$ is the photon's new adimansional frequency, $x$ is the photon's
 frequency after being procesed by the outflow, $v_{\rm rot}$ is the 
 rotational velocity at the point of escape of the photon, $\hat{k}$ is
 the photon's direction of propagation and $v_{\rm th}$ is the thermal
@@ -570,24 +572,8 @@ $1\%$ for  $\tauh=10^5$, $10^6$ and $10^7$, respectively.
 \section{Discussion}
 \label{sec:discussion}
 
-
-\subsection{Theoretical Insights}
-
-A first approach to an analytical expression that returns the \lya spectrum
-from a rotating galaxy is presented by \cite{Garavito14}.
-This derivation is based on the assumption that the distribution of
-photons' propagation directions at the edge of the galaxy is
-anisotropic and depends of \tauh only. 
-So this approximation becomes more accurate with higher optical depth
-and it is also the reason why the Doppler Shift technique to induce
-rotational effects to an outflow \lya spectrum works. 
-
-
-\subsection{Links to observations}
-
-There are at least three inmmediate ways the work we have presented
-here can be useful to observational efforts.
-
+In this section we discuss how the results we have presented can be
+connected to the interpretation of observational data.
 
 \subsubsection{\lya continuum leakage or rotation?}
 
@@ -718,11 +704,10 @@ radiative transfer simulation and confronted with a simple
 semi-analytic ansatz that adds the effects of rotation onto results of
 pure outflow kinematics. 
 
-To address the first questionswe posed in the introduction (What is then
+To address the first question we posed in the introduction (\emph{ehat is then
 the expected imprint of rotation on a resonant emission line such as
-the \lya line?)
-
-We can saythat the main effects of rotation on the \lya\ line morphology are:
+the \lya line?}) we can say that the main effects of rotation on the
+\lya\ line morphology are: 
 
 \begin{itemize}
   \item Inducing a dependency on the viewing angle.
@@ -741,9 +726,9 @@ semi-analytic model reported by \cite{Garavito14} when they modeled
 the effect of pure rotation on \lya\ spectra. 
 
 
-Addressing the second question we posed in the introduction (To what
+Addressing the second question we posed in the introduction (\emph{to what
 extent is possible to constrain rotational kinematics from the \lya
-emission line?)  we can say that as an application to observational data our results suggest that
+emission line?})  we can say that as an application to observational data our results suggest that
 rotation should also be considered as an explanation of the
 non-vanishing \lya intensity at the line's center, which could change
 the interpretation of recent observational results
