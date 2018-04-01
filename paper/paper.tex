@@ -21,6 +21,10 @@
 \newcommand{\vout}{\ifmmode v_{\mathrm{out}}\else $v_{\mathrm{out}}$~\fi}
 \newcommand{\tauh}{\ifmmode \tau_{\mathrm{H}}\else $\tau_{\mathrm{H}}$~\fi}
 \newcommand{\vth}{\ifmmode v_{\mathrm{th}}\else $v_{\mathrm{th}}$~\fi}
+\newcommand{\hatk}{\ifmmode \hat{k}\else $\hat{k}$~\fi}
+\newcommand{\STD}{\ifmmode \mathrm{STD}\else $\mathrm{STD}$~\fi}
+\newcommand{\SKW}{\ifmmode \mathrm{SKW}\else $\mathrm{SKW}$~\fi}
+\newcommand{\BI}{\ifmmode \mathrm{BI}\else $\mathrm{BI}$~\fi}
 
 \begin{document}
 
@@ -94,7 +98,7 @@ H$\alpha$ kinematics to \lya spectra \citep[e.g.][]{Herenz2016}.
 
 
 What is then the expected imprint of rotation on a resonant emission
-line such as the \lya line? To what extent is possible to constrain
+line such as the \lya line? To what extent is it possible to constrain
 rotational kinematics from the \lya emission line? 
 Detailed radiative transfer (RT) \lya modeling of rotating systems
 started until recently by \cite{Garavito14}.
@@ -112,16 +116,16 @@ Chain Monte Carlo exploration to fit the observed spectra Compact
 Dwarf Galaxy \citep{tololo} with atypical features that could be
 explained by pure rotation.  
 
-However, the gas dynamics in Lyman Alpha Emitter (LAE) galaxies is
+However, the gas dynamics in Lyman Alpha Emitter (LAE) galaxies are
 more complex than pure rotation.
 The case for outflows as traced in the \lya line is much better
 established.
-In many observations the \lya line profiles has a single peak
+In many observations the \lya line profile has a single peak
 redwards from the line's center, in other cases there is a double peak
 but the peak on the red side is stronger
 \citep[e.g.][]{2010ApJ...717..289S,Erb14,Trainor16}.   
-These features been readily explained as the consequence of multiple
-\lya photon scatterings through an homogeneous outflowing shell of
+These features have been readily explained as the consequence of multiple
+\lya photon scatterings through a homogeneous outflowing shell of
 neutral Hydrogen
 \citep{2006A&A...460..397V,Orsi12,2012ApJ...751...29Y,2015ApJ...812..123G}.  
 
@@ -147,9 +151,6 @@ In Section \ref{sec:discussion} we discuss our results and their
 possible implications for observational analysis to finally present
 our conclusions in Section \ref{sec:conclusions}.
 
-
-
-
 \begin{figure*}
 \centering
     \includegraphics[width=0.48\textwidth]{doppler_shift_logtau6_theta90}
@@ -174,9 +175,6 @@ our conclusions in Section \ref{sec:conclusions}.
     velocity (thick and dark line).  
     \label{fig:doppler_shift}}
 \end{figure*}
-
-
-
 
 \begin{figure*}
 \begin{center}
@@ -238,7 +236,6 @@ our conclusions in Section \ref{sec:conclusions}.
   \label{fig:bimodality}}
 \end{figure*}
 
-
 \begin{figure*}
 \begin{center}
 \includegraphics[height=0.25\textwidth]{line_characterization_vi_vout5_vrot100_logtau5}
@@ -257,8 +254,6 @@ our conclusions in Section \ref{sec:conclusions}.
 		\label{fig:valley_intensity}}
 \end{figure*}
 
-
-
 \begin{figure}
 \centering
     \includegraphics[width=0.48\textwidth]{doppler}
@@ -272,10 +267,9 @@ our conclusions in Section \ref{sec:conclusions}.
     \label{fig:doppler}}
 \end{figure}
 
-
 \begin{figure}
 \centering
-\includegraphics[width=0.44\textwidth]{muse_vs_simulations.pdf}
+\includegraphics[width=0.45\textwidth]{muse_vs_simulations.pdf}
 
 \caption{\textbf{Comparison between simulations and observations.}  
 The observational results correspond to the MUSE-Wide Survey
@@ -293,7 +287,7 @@ the simulations summarize the results presented in Figures
 The Monte Carlo code we use (CLARA) \citep{CLARA} follows the propagation of
 individual photons through a neutral Hydrogen medium characterized by
 its temperature, velocity field and global optical depth.
-The code assumes an homogeneous density throughout the simulated
+The code assumes a homogeneous density throughout the simulated
 volume.
 In the current implementation we neglect the influence of dust.
 Our basic model is an spherical distribution of neutral hydrogen,
@@ -308,40 +302,39 @@ the velocity magnitude increasing linearly with the radial
 coordinate; the outflows model is fully characterized by $v_{\rm out}$, the
 velocity at the sphere's surface.
 Rotation follows a solid body rotation profile, which is fully
-characterized by $V_{\rm rot}$, the linear velocity at the sphere's surface.
+characterized by $v_{\rm rot}$, the linear velocity at the sphere's surface.
 
 The total velocity field corresponds to the superposition of rotation and
 outflows.
 The cartesian components take the following form:
 
 \begin{equation}
-	v_{x}=\frac{x}{R}v_{\rm out}-\frac{y}{R}v_{\rm rot} ,
+	v_{x}=\frac{x}{R}\vout - \frac{y}{R}\vrot ,
 	\label{eq:vx}
 \end{equation}
 
 \begin{equation}
-	v_{y}=\frac{y}{R}v_{\rm out}+\frac{x}{R}v_{\rm rot} ,
+	v_{y}=\frac{y}{R}\vout + \frac{x}{R}\vrot ,
 	\label{eq:vy}
 \end{equation}
 
 \begin{equation}
-	v_{z}=\frac{z}{R}v_{\rm out},
+	v_{z}=\frac{z}{R}\vout,
 	\label{eq:vz}
 \end{equation}
 %
 where $x$, $y$ and $z$ are the cartesian position coordinates with the
 origin at the sphere's center, $R$ is the radius of the sphere and the
-direction of the angular velocity vector corresponds to the $\hat{k}$
-unit vector.
+direction of the angular velocity vector corresponds to the \hatk unit vector.
 
 For each model setup we follow $10^5$ individual photons generated at
-the center of the sphere at the \lya\ line's center as they propagate
+the center of the sphere at the \lya line's center as they propagate
 through the volume and finally scape.
 We store the final frequency and propagation direction for each photon
 at its last scattering.
 
-As input parameters we use \tauh$=\{10^5, 10^6, 10^7\}$,
-\vout$=\{5,25,50\}\kms$ and \vrot$=\{0,50,100\}\kms$, for a total of
+As input parameters we use $\tauh=\{10^5, 10^6, 10^7\}$,
+$\vout=\{5,25,50\}\;\kms$ and $\vrot=\{0,50,100\}\;\kms$, for a total of
 $27$ models with all the possible parameter combinations.
 The range of values have some overlap with the expectations from a
 galaxy with a total neutral hydrogen mass of $10^8$-$10^9$
@@ -350,7 +343,7 @@ $M_{\odot}$.
 
 \cite{Garavito14} presented an analytical model that
 accounts for the effects of pure rotation on the
-\lya\ line morphology. 
+\lya line morphology. 
 The basic assumption of their analytical model is that each
 differential surface element on the sphere Doppler shifts the photons
 that it emits.
@@ -359,14 +352,14 @@ of the outflows simulations without rotation.
 The frequency of each photon is Doppler shifted as follows
 
 \begin{equation}
-x' = x + \frac{\vec{v}_{\rm rot}\cdot\hat{k}}{v_{\rm th}}
+x' = x + \frac{\vec{v}_{\rm rot}\cdot \hatk}{\vth}
 \label{eq:shift_x}
 \end{equation}
 %
 where $x'$ is the photon's new adimensional frequency, $x$ is the photon's
-frequency after being processed by the outflow, $v_{\rm rot}$ is the 
-rotational velocity at the point of escape of the photon, $\hat{k}$ is
-the photon's direction of propagation and $v_{\rm th}$ is the thermal
+frequency after being processed by the outflow, \vrot is the 
+rotational velocity at the point of escape of the photon, \hatk is
+the photon's direction of propagation and \vth is the thermal
 velocity of the sphere.
 
 This allows us to produce new \lya spectra and compare them with the
@@ -374,14 +367,13 @@ full radiative transfer solution including both outflows and
 rotation.
 
 \section{Results}
-
-
 \label{sec:results}
 
 \subsection{Qualitative Trends}
 \label{sec:qualitative}
+
 Figure \ref{fig:doppler_shift} summarizes the most important trends.
-The six panels correspond to $\tau=10^6$ and a viewing angle of
+In the left side, the six panels correspond to $\tau=10^6$ and a viewing angle of
 $\theta =90^{\circ}$, that is, perpendicular to the rotation axis of the
 galaxy. 
 In every panel the thin black line corresponds to the pure outflow
@@ -403,58 +395,54 @@ At $\tauh=10^6$ the Doppler boost does a good job at capturing the broad
 morphological features introduced by rotation: the angle dependence,
 the broadening and the intensity increase at the line's center.
 
-
-In Figure \ref{fig:doppler_shift_theta_0} we show the same results as
-in Figure \ref{fig:doppler_shift} but for a viewing angle of $\theta =
+In the right side of Figure \ref{fig:doppler_shift} we show the same results as in the left one, but for a viewing angle of $\theta =
 90^{\circ}$, that is parallel to the rotation axis. 
-In this case we confirmethe result presented by \cite{Garavito14},
+In this case we confirm the result presented by \cite{Garavito14},
 namely that pure rotation introduces a strong dependence with 
 viewing angle, a trend that we find also holds for rotation mixed with
-ouflows.   
+outflows.   
 
 The quality of the results from the Doppler boost improves for higher
 \tauh values. 
-In the Appendix we show the same plots as Figures
-\ref{fig:doppler_shift} and \ref{fig:doppler_shift}, there it is
+In the Appendix we show the same plots as Figure \ref{fig:doppler_shift}, there it is
 evident that for $\tauh=10^5$ the results are not as good as they are
-for $\tauh=10^6$, and that for $\tauh=10^7$ the Doppler boos
+for $\tauh=10^6$, and that for $\tauh=10^7$ the Doppler boost
 provides a remarkable good approximation.
 
 \subsection{Quantitative trends}
 \label{sec:quantitative}
 
-
-After finding the quantitative influence of the different parameters we
-move onto a qualitative study.
+After finding the qualitative influence of the different parameters we
+move onto a quantitative study.
 To do this we summarize the line morphology by four different
 characteristics: standard deviation (STD), skewness (SKW), bimodality
-(BI) and valley/peak ration.
-These quantities are defined by the following equations \citep{kokoska1999}.:
+(BI) and valley/peak ratio.
+These quantities are defined by the following equations \citep{kokoska1999}:
 
 \begin{equation}
 \label{eq:std}
-\mathrm{STD} = \sqrt{m_2},
+\STD = \sqrt{m_2},
 \end{equation}
 
 \begin{equation}
 \label{eq:skw}
-\mathrm{SKW} = \frac{m_3}{m_2^{3/2}},
+\SKW = \frac{m_3}{m_2^{3/2}},
 \end{equation}
 
 \begin{equation}
 \label{eq:bi}
-\mathrm{BI} = \mathrm{KURTOSIS} - \mathrm{SKW}^2 = \frac{m_4}{m_2^{2}} - \frac{m_3^2}{m_2^{3}},
+\BI = \mathrm{KURTOSIS} - \SKW^2 = \frac{m_4}{m_2^{2}} - \frac{m_3^2}{m_2^{3}},
 \end{equation}
 %
 where each $m_i$ is the i-th moment about the mean. 
 The STD has velocity units and quantifies the line's width.
 The SKW is adimensional and quantifies the peaks' asymmetry. 
-In the case of a bimodal distribution, $SKW>0$ means that the blue
-peak is taller and for $SWK<0$ the red peak is taller. 
+In the case of a bimodal distribution, $\SKW>0$ means that the blue
+peak is taller and for $\SKW<0$ the red peak is taller. 
 The BI is adimensional and quantifies whether the line has 1 or 2
-peaks: it is  always $\geq 1$ \citep{Pearson1929} and the 
+peaks: it is  always $\geq 1$ \citep{Pearson1929} and the closer 
 to 1, the more bimodal is the line (i.e. has 2 similar peaks). 
-We found by visual inspection of our spectra that BI$=2.5$ marks the
+We found by visual inspection of our spectra that $\BI=2.5$ marks the
 transition between two peaks (however imbalanced) and a dominant
 single peak.
 
@@ -523,11 +511,11 @@ increasing the outflow velocity increases the value of bimodality,
 that is, it transitions to a more pronounced single peak. 
 The trend as a function of the rotational velocity and the optical
 depth are not monotonous.
-When the outflow velocity is low (\vout$<50\ \kms$), an increasing
+When the outflow velocity is low ($\vout<50\ \kms$), an increasing
 rotational velocity smears the two asymmetrical peaks pushing the line
 morphology towards a single peaks, making the bimodality statistics
 increase. 
-On other situations (\vout$=50\ \kms$ and \tauh$\geq 10^6$) higher
+On other situations ($\vout=50\ \kms$ and $\tauh\geq 10^6$) higher
 rotational velocities the bimodality statistics decreases, which means
 that it manages to slightly enlarge the already dominant red peak.
 
@@ -545,19 +533,18 @@ In Figure \ref{fig:valley_intensity} we quantify how the intensity at
 the line's center (i.e. the valley) changes with the viewing angle,
 the outflow velocity and the optical depth.
 These results correspond to a fixed rotational velocity of
-\vrot$=100\ \kms$.
+$\vrot=100\ \kms$.
 The triangles correspond to the RT simulations and the line represents
 the DS results. 
 The valley intensity is expressed as a fraction of the maximum peak
-intensity in the line, as such the valley/peak ratio is always less
-than one. 
+intensity in the line, as such the valley/peak ratio is always $<1$. 
 In every panel we see that the valley/peak ratio decreases as the
 observer moves from a line  of sight perpendicular to the rotation
 axis onto a parallel line of sight. 
 This is a clear demonstration of the viewing angle dependency
 introduced by rotation.
 
-The valley/peak ratio at $\cos\theta=1$ matches results
+The valley/peak ratio at $\cos{\theta}=1$ matches results
 without rotation, this shows that for increasing rotational velocity
 the valley/peak ratio increases.
 In turn, for increasing optical depth or outflowing velocity this
@@ -574,9 +561,9 @@ $1\%$ for  $\tauh=10^5$, $10^6$ and $10^7$, respectively.
 In this section we discuss how the results we have presented can be
 connected to the interpretation of observational data.
 
-\subsubsection{\lya continuum leakage or rotation?}
+\subsection{\lya continuum leakage or rotation?}
 
-Another application of this new model to the current interpretation of \lya
+One application of this new model to the current interpretation of \lya
 spectra, is that the central ($V=0$) emission of the spectra seen in the
 \lya line, is a consequence of the viewing angle of the galaxy and can be
 controlled by it. 
@@ -592,7 +579,7 @@ This means that results that have already derive a typical outflowing
 velocity as to match the observational constraints do not have to be
 completely revised. 
 Only an additional exploration of rotational velocities and viewing
-angles need to be explored.
+angles needs to be explored.
 
 A recent observational example is provided by
 \cite{2017A&A...608L...4R}.
@@ -619,15 +606,15 @@ We speculate that this feature could help to constrain rotation in
 Green Pea galaxies. 
 
 
-\subsubsection{\lya Kinematic Maps}
+\subsection{\lya Kinematic Maps}
 
 Current observational facilities have the capability of spatially
 resolving the extent of a LAE.
 For instance \cite{Prescott14} presented observational results of a
-Doppler shift when taking spectra at two oposite sides of a large
+Doppler shift when taking spectra at two opposite sides of a large
 ($\approx 80$kpc) LAE.
 In more recent work \cite{2018MNRAS.473.3907A} mapped \lya emission
-around a quasar 
+around a quasar.
 
 In Figure \ref{fig:doppler} we present a toy model (\vrot$=50\ \kms$,
 \vout$=25\ \kms$ and \tauh$=10^5$) for the spectrum of
@@ -650,16 +637,15 @@ due to the fact that only a small fraction of the photons are emitted
 at the extreme of the galaxy having the maximum rotational velocity of
 $50\ \kms$. 
 
-
 New spectrographs like MUSE should help obtain kinematic information
-from LAEs to build velocity maps in \lya. 
+from LAEs to build velocity maps in Ly$\alpha$. 
 This could be a natural extension of the work reported by
 \cite{Herenz2016} on the velocity maps of several LARS (Lyman Alpha
 Reference Sample) galaxies.  
 The interpretation of such data should take into account the insights
 and trends we have presented in this paper.
 
-\subsubsection{Comparison against the MUSE-Wide Survey}
+\subsection{Comparison against the MUSE-Wide Survey}
 
 In order to give the reader a feeling of the ranges of observational
 data that could be explained by the models presented here, 
@@ -696,7 +682,7 @@ kinematics.
 \label{sec:conclusions}
 
 In this paper we explore, for the first time in the literature,
-the results of a model for the emergent \lya\ line from rotating outflows.
+the results of a model for the emergent \lya line from rotating outflows.
 The main results for the model are computed from a Monte-Carlo
 radiative transfer simulation and confronted with a simple
 semi-analytic ansatz that adds the effects of rotation onto results of
@@ -705,7 +691,7 @@ pure outflow kinematics.
 To address the first question we posed in the introduction (\emph{what is then
 the expected imprint of rotation on a resonant emission line such as
 the \lya line?}) we can say that the main effects of rotation on the
-\lya\ line morphology are: 
+\lya line morphology are: 
 
 \begin{itemize}
   \item Inducing a dependency on the viewing angle.
@@ -715,17 +701,16 @@ the \lya line?}) we can say that the main effects of rotation on the
 
 We find that these effects can be quantitatively explained by a
 Doppler shift computed as product of quantities at the surface of last
-scattering, namely  $\vec{v}_{\rm rot}\cdot \hat{k}$,  where
-$\vec{v}_{\rm rot}$ is the velocity due to rotation and $\hat{k}$ is
+scattering, namely  $\vec{v}_{\rm rot}\cdot \hatk$, where
+$\vec{v}_{\rm rot}$ is the velocity due to rotation and \hatk is
 the direction of the photon's propagation.  
 These conclusions, specially the confirmation of the Doppler Boost as
 a good approximation to model solid body rotation, strengthen the
-semi-analytic model reported by \cite{Garavito14} when they modeled
-the effect of pure rotation on \lya\ spectra. 
-
+semi-analytic model reported by \cite{Garavito14} where they modeled
+the effect of pure rotation on \lya spectra. 
 
 Addressing the second question we posed in the introduction (\emph{to what
-extent is possible to constrain rotational kinematics from the \lya
+extent is it possible to constrain rotational kinematics from the \lya
 emission line?})  we can say that as an application to observational data our results suggest that
 rotation should also be considered as an explanation of the
 non-vanishing \lya intensity at the line's center, which could change
@@ -737,7 +722,7 @@ radiation.
 A more straightforward approach takes into account how the
 \lya spectra from two different sides of a galaxy can detect
 approaching/receding gas motions.
-In that case one has to be careful and take into account that the
+In that case, one has to be careful and take into account that the
 peaks of these two spectra is smaller than the expected value of
 $2\times\vrot$ due to the different weights at the surface of the
 emitting regions.   
@@ -766,7 +751,6 @@ footing to the interpretation of \lya kinematics maps
 \section{Additional figures}
 \label{sec:appendix}
 
-
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.49\textwidth]{doppler_shift_logtau5_theta90}
@@ -777,7 +761,6 @@ footing to the interpretation of \lya kinematics maps
     this time  $\tauh=10^5$ and $\theta=90^\circ$.}
 \end{figure}
 
-
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.49\textwidth]{doppler_shift_logtau7_theta90}
@@ -787,7 +770,5 @@ footing to the interpretation of \lya kinematics maps
     Same layout as Figure \ref{fig:doppler_shift},
     this time  $\tauh=10^7$ and $\theta=90^\circ$.}
 \end{figure}
-
-
 
 \end{document}
