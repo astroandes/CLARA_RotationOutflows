@@ -26,7 +26,7 @@
 %=========================================================================
 %		FRONT MATTER
 %=========================================================================
-\title[Outflows and rotation in LAEs]{Lyman-$\alpha$ photons through rotating outflows}
+\title[Lyman-α photons through rotating outflows]{Lyman-$\alpha$ photons through rotating outflows}
 \author[M.C. Remolina-Gutierrez \& J.E. Forero-Romero]{
   Maria Camila Remolina-Guti\'errez$^{1}$
   \thanks{mc.remolina197@uniandes.edu.co} \&
@@ -45,7 +45,7 @@ kinematics of galaxies.
 Here we perform Monte Carlo radiative transfer simulations of outflowing
 gas with additional solid body rotation to understand how these kinematic
 features impact the morphology of the Lyman-$\alpha$ emission line.
-We explore a range of Hydrogen optical depth of
+We explore a range of neutral Hydrogen optical depth of
 $10^5\leq\tauh\leq10^7$, rotational velocity $0\leq \vrot/\kms \leq 100$ and
 outflow velocity $0\leq \vout/\kms\leq 50$.  
 We find three important consequences of rotation.
@@ -53,18 +53,20 @@ First, it introduces a dependency with viewing angle; second it
 produces a line broadening and third it increases the flux at the
 line's center.
 We also test a semi-analytic model that modifies the spectra of
-pure outflow simulations and manages to reproduce the line widths
-and flux change at the line's center within a $7\%$ and $50\%$
-precision, respectively.
+pure outflow simulations and manages to reproduce the radiative
+transfer results for the line widths and flux change at the line's
+center within a $7\%$ and $50\%$ precision, respectively, for an
+optical depth of $\tauh=10^5$ and within $2\%$ and $1\%$ for an
+optical depth of $\tauh=10^7$.   
 We argue that rotation is a required kinematic feature to take into
 account for a correct interpretation of \lya spectra in systems where
-rotation is evidences through kinematic maps but also in other
+rotation is already evident through kinematic maps but also in other
 systems, such as Green Pea galaxies, where a strong \lya emission at
-the line's center could be due to rotational kinematics. 
+the line's center could be explained by rotational kinematics. 
 \end{abstract}
 
 \begin{keywords}
-radiative transfer --- Methods: numerical
+galaxies:ISM --- line:profiles --- radiative transfer --- methods: numerical
 \end{keywords}
 
 
@@ -149,8 +151,8 @@ our conclusions in Section \ref{sec:conclusions}.
 
 \begin{figure*}
 \centering
-    \includegraphics[width=0.48\textwidth]{./figures/results/doppler_shift_logtau6_theta90}
-    \includegraphics[width=0.48\textwidth]{./figures/results/doppler_shift_logtau6_theta0}
+    \includegraphics[width=0.48\textwidth]{doppler_shift_logtau6_theta90}
+    \includegraphics[width=0.48\textwidth]{doppler_shift_logtau6_theta0}
   \caption{\textbf{Qualitative trends of changing outflow and
       rotational velocity viewed perpendicular/paralell to the
       rotation axis}.  
@@ -177,15 +179,15 @@ our conclusions in Section \ref{sec:conclusions}.
 
 \begin{figure*}
 \begin{center}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_std_vout5_logtau5.pdf}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_std_vout25_logtau5.pdf}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_std_vout50_logtau5.pdf}\\
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_std_vout5_logtau6.pdf}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_std_vout25_logtau6.pdf}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_std_vout50_logtau6.pdf}\\
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_std_vout5_logtau7.pdf}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_std_vout25_logtau7.pdf}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_std_vout50_logtau7.pdf}
+\includegraphics[height=0.25\textwidth]{line_characterization_std_vout5_logtau5.pdf}
+\includegraphics[height=0.25\textwidth]{line_characterization_std_vout25_logtau5.pdf}
+\includegraphics[height=0.25\textwidth]{line_characterization_std_vout50_logtau5.pdf}\\
+\includegraphics[height=0.25\textwidth]{line_characterization_std_vout5_logtau6.pdf}
+\includegraphics[height=0.25\textwidth]{line_characterization_std_vout25_logtau6.pdf}
+\includegraphics[height=0.25\textwidth]{line_characterization_std_vout50_logtau6.pdf}\\
+\includegraphics[height=0.25\textwidth]{line_characterization_std_vout5_logtau7.pdf}
+\includegraphics[height=0.25\textwidth]{line_characterization_std_vout25_logtau7.pdf}
+\includegraphics[height=0.25\textwidth]{line_characterization_std_vout50_logtau7.pdf}
 \end{center}
 \caption{\textbf{Standard Deviation trends.} Results for all the
   Radiative Transfer simulations (in triangles) compares against the
@@ -199,15 +201,15 @@ our conclusions in Section \ref{sec:conclusions}.
 
 \begin{figure*}
 \begin{center}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_skw_vout5_logtau5}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_skw_vout25_logtau5}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_skw_vout50_logtau5}\\
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_skw_vout5_logtau6}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_skw_vout25_logtau6}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_skw_vout50_logtau6}\\
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_skw_vout5_logtau7}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_skw_vout25_logtau7}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_skw_vout50_logtau7}
+\includegraphics[height=0.25\textwidth]{line_characterization_skw_vout5_logtau5}
+\includegraphics[height=0.25\textwidth]{line_characterization_skw_vout25_logtau5}
+\includegraphics[height=0.25\textwidth]{line_characterization_skw_vout50_logtau5}\\
+\includegraphics[height=0.25\textwidth]{line_characterization_skw_vout5_logtau6}
+\includegraphics[height=0.25\textwidth]{line_characterization_skw_vout25_logtau6}
+\includegraphics[height=0.25\textwidth]{line_characterization_skw_vout50_logtau6}\\
+\includegraphics[height=0.25\textwidth]{line_characterization_skw_vout5_logtau7}
+\includegraphics[height=0.25\textwidth]{line_characterization_skw_vout25_logtau7}
+\includegraphics[height=0.25\textwidth]{line_characterization_skw_vout50_logtau7}
 \end{center}
 \caption{\textbf{Skewness trends.} Results for all the
   Radiative Transfer simulations (in triangles) compares against the
@@ -218,15 +220,15 @@ our conclusions in Section \ref{sec:conclusions}.
 
 \begin{figure*}
 \begin{center}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_bi_vout5_logtau5}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_bi_vout25_logtau5}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_bi_vout50_logtau5}\\
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_bi_vout5_logtau6}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_bi_vout25_logtau6}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_bi_vout50_logtau6}\\
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_bi_vout5_logtau7}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_bi_vout25_logtau7}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_bi_vout50_logtau7}
+\includegraphics[height=0.25\textwidth]{line_characterization_bi_vout5_logtau5}
+\includegraphics[height=0.25\textwidth]{line_characterization_bi_vout25_logtau5}
+\includegraphics[height=0.25\textwidth]{line_characterization_bi_vout50_logtau5}\\
+\includegraphics[height=0.25\textwidth]{line_characterization_bi_vout5_logtau6}
+\includegraphics[height=0.25\textwidth]{line_characterization_bi_vout25_logtau6}
+\includegraphics[height=0.25\textwidth]{line_characterization_bi_vout50_logtau6}\\
+\includegraphics[height=0.25\textwidth]{line_characterization_bi_vout5_logtau7}
+\includegraphics[height=0.25\textwidth]{line_characterization_bi_vout25_logtau7}
+\includegraphics[height=0.25\textwidth]{line_characterization_bi_vout50_logtau7}
 \end{center}
 \caption{\textbf{Bimodality trends.} Results for all the
   Radiative Transfer simulations (in triangles) compares against the
@@ -238,15 +240,15 @@ our conclusions in Section \ref{sec:conclusions}.
 
 \begin{figure*}
 \begin{center}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_vi_vout5_vrot100_logtau5}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_vi_vout25_vrot100_logtau5}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_vi_vout50_vrot100_logtau5}\\
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_vi_vout5_vrot100_logtau6}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_vi_vout25_vrot100_logtau6}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_vi_vout50_vrot100_logtau6}\\
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_vi_vout5_vrot100_logtau7}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_vi_vout25_vrot100_logtau7}
-\includegraphics[height=0.25\textwidth]{./figures/results/line_characterization_vi_vout50_vrot100_logtau7}
+\includegraphics[height=0.25\textwidth]{line_characterization_vi_vout5_vrot100_logtau5}
+\includegraphics[height=0.25\textwidth]{line_characterization_vi_vout25_vrot100_logtau5}
+\includegraphics[height=0.25\textwidth]{line_characterization_vi_vout50_vrot100_logtau5}\\
+\includegraphics[height=0.25\textwidth]{line_characterization_vi_vout5_vrot100_logtau6}
+\includegraphics[height=0.25\textwidth]{line_characterization_vi_vout25_vrot100_logtau6}
+\includegraphics[height=0.25\textwidth]{line_characterization_vi_vout50_vrot100_logtau6}\\
+\includegraphics[height=0.25\textwidth]{line_characterization_vi_vout5_vrot100_logtau7}
+\includegraphics[height=0.25\textwidth]{line_characterization_vi_vout25_vrot100_logtau7}
+\includegraphics[height=0.25\textwidth]{line_characterization_vi_vout50_vrot100_logtau7}
 \end{center}
 \caption{\textbf{Valley Intensity. } We show for each \tauh the dependency that
   the viewing angle $\theta$ has on the line's the
@@ -258,7 +260,7 @@ our conclusions in Section \ref{sec:conclusions}.
 
 \begin{figure}
 \centering
-    \includegraphics[width=0.48\textwidth]{./figures/discussion/doppler}
+    \includegraphics[width=0.48\textwidth]{doppler}
   \caption{\textbf{Spectra from receeding/approaching sides of a toy
       model LAE.}  These results correspond to the RT simulation with
     $\vout=25$\kms, $\vrot=50$\kms, $\tauh=10^5$. 
@@ -272,7 +274,7 @@ our conclusions in Section \ref{sec:conclusions}.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.48\textwidth]{./figures/results/muse_vs_simulations.pdf}
+\includegraphics[width=0.44\textwidth]{muse_vs_simulations.pdf}
 
 \caption{\textbf{Comparison between simulations and observations.}  
 The observational results correspond to the MUSE-Wide Survey
@@ -607,18 +609,17 @@ galaxy without substantial interaction with neutral Hydrogen.
 We especulate that the central feature could also be due to a purely 
 rotating compont that can produce such a feature as shown by
 \cite{tololo}. The triple peak could be then produced by two main
-decopled components one rotating the other outflowing.
+decopled components: one rotating the other outflowing.
 
 Another interesting example are the \lya lines in Green Pea galaxies \citep{2016ApJ...820..130Y}.
 \cite{2017ApJ...844..171Y} showed in a study of 43 Green Pea galaxies
 that 2/3 were strong \lya emitters. 
-Because the \lya escape fraction is estimated from the ration of
-H$\alpha$ to \lya at the respective line's center, the authors infer
-large escape fractions for galaxies with substantial \lya emission at
-the lines'center.
-We especulate that these features could also be the product of
-rotation in those galaxies.
-
+There the \lya escape fraction is effectively estimated from the ratio
+of H$\alpha$ to \lya.
+Galaxies with large escape fractions also substantial \lya emission at
+the lines'center. 
+We especulate that this feature could help to constrain rotation in
+Green Pea galaxies. 
 
 
 \subsubsection{\lya Kinematic Maps}
@@ -771,7 +772,7 @@ footing to the interpretation of \lya kinematics maps
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.49\textwidth]{./figures/results/doppler_shift_logtau5_theta90}
+    \includegraphics[width=0.49\textwidth]{doppler_shift_logtau5_theta90}
   \end{center}
   \caption{\textbf{Qualitative trends of changing outflow and
       rotational velocity.}
@@ -782,7 +783,7 @@ footing to the interpretation of \lya kinematics maps
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.49\textwidth]{./figures/results/doppler_shift_logtau7_theta90}
+    \includegraphics[width=0.49\textwidth]{doppler_shift_logtau7_theta90}
   \end{center}
   \caption{\textbf{Qualitative trends of changing outflow and
       rotational velocity.}
