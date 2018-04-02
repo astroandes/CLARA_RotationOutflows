@@ -118,28 +118,27 @@ explained by pure rotation.
 
 However, the gas dynamics in Lyman Alpha Emitter (LAE) galaxies are
 more complex than pure rotation.
-The case for outflows as traced in the \lya line is much better
-established.
+The case for outflows as traced in the \lya line is solidly
+established.  
 In many observations the \lya line profile has a single peak
 redwards from the line's center, in other cases there is a double peak
 but the peak on the red side is stronger
 \citep[e.g.][]{2010ApJ...717..289S,Erb14,Trainor16}.   
-These features have been readily explained as the consequence of multiple
+These features have been explained as the consequence of multiple
 \lya photon scatterings through a homogeneous outflowing shell of
 neutral Hydrogen
 \citep{2006A&A...460..397V,Orsi12,2012ApJ...751...29Y,2015ApJ...812..123G}.  
 
-An study of the combined effects of outflows and rotation has not been
-presented in the literature.
-Here we present such a study. 
+Nevertheless, an study of the combined effects of outflows and
+rotation has not been presented in the literature.
+Here we report on such a study. 
 We investigate a simplified geometrical configuration corresponding to a
 spherical gas cloud with symmetrical radial outflows and solid body
 rotation. 
 We base our modeling on a Monte-Carlo radiative transfer code.
 Besides modeling the impact of joint rotation and outflows, we also
-check to what extent the analytical model presented by
-\cite{Garavito14} to explain the effects of rotation can also be
-applied in our case.
+check to what extent the semi-analytical model presented by
+\cite{Garavito14} an also be applied in our case.
 
 The structure of the paper is the following.
 We introduce first our theoretical tools and assumptions
@@ -300,7 +299,7 @@ The velocity field we use captures both outflows and rotation.
 Outflows are described by a Hubble-like radial velocity profile with
 the velocity magnitude increasing linearly with the radial
 coordinate; the outflows model is fully characterized by $v_{\rm out}$, the
-velocity at the sphere's surface.
+radial velocity at the sphere's surface.
 Rotation follows a solid body rotation profile, which is fully
 characterized by $v_{\rm rot}$, the linear velocity at the sphere's surface.
 
@@ -325,7 +324,7 @@ The cartesian components take the following form:
 %
 where $x$, $y$ and $z$ are the cartesian position coordinates with the
 origin at the sphere's center, $R$ is the radius of the sphere and the
-direction of the angular velocity vector corresponds to the \hatk unit vector.
+direction of the angular velocity vector is the $z$ axis.
 
 For each model setup we follow $10^5$ individual photons generated at
 the center of the sphere at the \lya line's center as they propagate
@@ -357,10 +356,13 @@ x' = x + \frac{\vec{v}_{\rm rot}\cdot \hatk}{\vth}
 \end{equation}
 %
 where $x'$ is the photon's new adimensional frequency, $x$ is the photon's
-frequency after being processed by the outflow, \vrot is the 
+frequency after being processed only by the outflow, \vrot is the 
 rotational velocity at the point of escape of the photon, \hatk is
 the photon's direction of propagation and \vth is the thermal
 velocity of the sphere.
+We also define the viewing angle, $\theta$, as the angle between the
+rotation axis and the line of sight of a potential observer.
+
 
 This allows us to produce new \lya spectra and compare them with the
 full radiative transfer solution including both outflows and
@@ -372,7 +374,8 @@ rotation.
 \subsection{Qualitative Trends}
 \label{sec:qualitative}
 
-Figure \ref{fig:doppler_shift} summarizes the most important trends.
+Figure \ref{fig:doppler_shift} summarizes the most important trends
+from rhw RT simulations.
 In the left side, the six panels correspond to $\tau=10^6$ and a viewing angle of
 $\theta =90^{\circ}$, that is, perpendicular to the rotation axis of the
 galaxy. 
@@ -390,23 +393,23 @@ First, the line broadens and second, the intensity at the line's
 center increases.
 
 The thick gray line corresponds to the pure outflow solution
-with the Doppler boost added to model rotation's influence.
-At $\tauh=10^6$ the Doppler boost does a good job at capturing the broad
+with the Doppler shift added to model rotation's influence.
+At $\tauh=10^6$ the Doppler shift does a good job at capturing the broad
 morphological features introduced by rotation: the angle dependence,
 the broadening and the intensity increase at the line's center.
 
 In the right side of Figure \ref{fig:doppler_shift} we show the same results as in the left one, but for a viewing angle of $\theta =
-90^{\circ}$, that is parallel to the rotation axis. 
+0^{\circ}$, that is parallel to the rotation axis. 
 In this case we confirm the result presented by \cite{Garavito14},
 namely that pure rotation introduces a strong dependence with 
 viewing angle, a trend that we find also holds for rotation mixed with
 outflows.   
 
-The quality of the results from the Doppler boost improves for higher
+The quality of the results from the Doppler shift improves for higher
 \tauh values. 
 In the Appendix we show the same plots as Figure \ref{fig:doppler_shift}, there it is
 evident that for $\tauh=10^5$ the results are not as good as they are
-for $\tauh=10^6$, and that for $\tauh=10^7$ the Doppler boost
+for $\tauh=10^6$, and that for $\tauh=10^7$ the Doppler shift
 provides a remarkable good approximation.
 
 \subsection{Quantitative trends}
@@ -415,7 +418,7 @@ provides a remarkable good approximation.
 After finding the qualitative influence of the different parameters we
 move onto a quantitative study.
 To do this we summarize the line morphology by four different
-characteristics: standard deviation (STD), skewness (SKW), bimodality
+scalars: standard deviation (STD), skewness (SKW), bimodality
 (BI) and valley/peak ratio.
 These quantities are defined by the following equations \citep{kokoska1999}:
 
@@ -593,7 +596,7 @@ galaxy without substantial interaction with neutral Hydrogen.
 We speculate that the central feature could also be due to a purely 
 rotating component that can produce such a feature as shown by
 \cite{tololo}. The triple peak could be then produced by two main
-decopled components: one rotating the other outflowing.
+decoupled components: one rotating the other outflowing.
 
 Another interesting example are the \lya lines in Green Pea galaxies \citep{2016ApJ...820..130Y}.
 \cite{2017ApJ...844..171Y} showed in a study of 43 Green Pea galaxies
@@ -603,7 +606,8 @@ of H$\alpha$ to \lya.
 Galaxies with large escape fractions also substantial \lya emission at
 the line's center. 
 We speculate that this feature could help to constrain rotation in
-Green Pea galaxies. 
+Green Pea galaxies and find new correlations between \lya escape
+fraction and galaxy rotation.
 
 
 \subsection{\lya Kinematic Maps}
@@ -629,7 +633,7 @@ expected.
 
 Although it is a good approximation to think the rotating spectra by a
 sum of Doppler shifts, the peak of the spectra is also weighted by the
-amount of mass with a given velocity. 
+amount of mass with a given line-of-sight velocity. 
 In this toy model the distance between the peaks of the
 receding/approaching spectra is close to $\sim 20\ \kms$, which is
 less than half of the naively expected value of $2\vrot=100\ \kms$,
@@ -637,8 +641,9 @@ due to the fact that only a small fraction of the photons are emitted
 at the extreme of the galaxy having the maximum rotational velocity of
 $50\ \kms$. 
 
-New spectrographs like MUSE should help obtain kinematic information
-from LAEs to build velocity maps in Ly$\alpha$. 
+Spectrographs like the Multi Unit Spectroscopic Explorer (MUSE) could
+obtain kinematic information from large samples of LAEs to build
+velocity maps in Ly$\alpha$.  
 This could be a natural extension of the work reported by
 \cite{Herenz2016} on the velocity maps of several LARS (Lyman Alpha
 Reference Sample) galaxies.  
@@ -704,7 +709,7 @@ Doppler shift computed as product of quantities at the surface of last
 scattering, namely  $\vec{v}_{\rm rot}\cdot \hatk$, where
 $\vec{v}_{\rm rot}$ is the velocity due to rotation and \hatk is
 the direction of the photon's propagation.  
-These conclusions, specially the confirmation of the Doppler Boost as
+These conclusions, specially the confirmation of the Doppler shift  as
 a good approximation to model solid body rotation, strengthen the
 semi-analytic model reported by \cite{Garavito14} where they modeled
 the effect of pure rotation on \lya spectra. 
@@ -715,31 +720,30 @@ emission line?})  we can say that as an application to observational data our re
 rotation should also be considered as an explanation of the
 non-vanishing \lya intensity at the line's center, which could change
 the interpretation of recent observational results
-\citep[e.g.][]{2017ApJ...844..171Y,2017A&A...608L...4R} that claim
-instead that this flux constrains the escape fraction of \lya
-radiation. 
+\citep[e.g.][]{2017ApJ...844..171Y,2017A&A...608L...4R} and provide a
+test for rotation in the observed systems.
 
 A more straightforward approach takes into account how the
 \lya spectra from two different sides of a galaxy can detect
-approaching/receding gas motions.
+approaching/receding gas motions \citep{Prescott14,2018MNRAS.473.3907A}.
 In that case, one has to be careful and take into account that the
 peaks of these two spectra is smaller than the expected value of
 $2\times\vrot$ due to the different weights at the surface of the
 emitting regions.   
 
-We also use data from MUSE to demonstrate to what extent the
-outputs of the RT results presented here can be expected to match
-hundreds of observed \lya spectra, but a full constraint of rotation
-properties certainly require a full Markov Chain Monte Carlo
-exploration of parameter space.
+We also use data from MUSE \citep{2017A&A...606A..12H} to show
+to what extent the outputs of the RT results presented here can be
+expected to match hundreds of observed \lya spectra, but a full
+constraint of rotational properties certainly requires a full Markov
+Chain Monte Carlo exploration of parameter space.
 
 Our work confirms that rotation produces features in the \lya line
 strong enough that can be expected to be detected in observations and
 that should be taken into account into \lya modeling; the Doppler
-Boost offers an easy-to-implement approximation to explore such
+Shift offers an easy-to-implement approximation to explore such
 influence into already existing RT simulations and provide stronger
-footing to the interpretation of \lya kinematics maps
-\citep[e.g][]{2018MNRAS.473.3907A}. 
+footing to the interpretation of present and future \lya kinematics
+maps \citep[e.g][]{2018MNRAS.473.3907A}.  
 
 \bibliographystyle{mnras}
 \bibliography{references}
