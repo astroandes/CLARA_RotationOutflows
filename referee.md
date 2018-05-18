@@ -1,6 +1,5 @@
 Major comments:
 
-
 1/ A strong divergence in the interpretation of the results:
 Since rotation has been observed in any kind of astrophysical object, studying
 the impact of rotation on Lya properties in the context of realistic galaxy
@@ -9,18 +8,25 @@ conditions is very worth!
 And the authors achieve nice new results, for the first time: their study
 nicely demonstrates that rotation does not have a strong impact on the global
 shaping of the lya emission from galaxies.
+
 Even in case of rapid rotation (Vrot = 100 km/s), the global shape of the
 profile is still set by the radial velocity field (double peaks if static,
 single red peak if outflow), while optical thickness is setting the scale of
 the alteration (i.e. the amount of shift and broadening of the peaks).
+
 Rotation has subtle effects, at least for the range of parameters investigated
 here (see major comments 3 and 4), on the depth of the valley and the width of
-the wings. To my knowledge, these are very interesting results which are
+the wings. 
+
+To my knowledge, these are very interesting results which are
 demonstrated here for the first time. They would have a strong impact on the
 community if they were presented this way.
+
 However, the authors are not clearly presenting them this way, still trying to
 find probes of the impact of rotation on observed spectra (but see comments
 below), which weakens the overall study.
+
+
 2/ characterisation of the Lya profiles
 I have a concern about the "quantitative results" shown in figs 2,3,4.
 The authors characterise the lya line shapes by calculating the mean, standard
