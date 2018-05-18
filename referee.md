@@ -26,6 +26,8 @@ However, the authors are not clearly presenting them this way, still trying to
 find probes of the impact of rotation on observed spectra (but see comments
 below), which weakens the overall study.
 
+[Jaime. Cambiar perspectiva.]
+
 2/ characterisation of the Lya profiles
 
 I have a concern about the "quantitative results" shown in figs 2,3,4.
