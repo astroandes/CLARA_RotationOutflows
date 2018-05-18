@@ -1,8 +1,11 @@
 Major comments:
+
+
 1/ A strong divergence in the interpretation of the results:
 Since rotation has been observed in any kind of astrophysical object, studying
 the impact of rotation on Lya properties in the context of realistic galaxy
 conditions is very worth!
+
 And the authors achieve nice new results, for the first time: their study
 nicely demonstrates that rotation does not have a strong impact on the global
 shaping of the lya emission from galaxies.
