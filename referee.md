@@ -102,7 +102,7 @@ you study, you could quantify which spectral sampling+resolution is necessary
 to make sure that the broadening that is observed is not due to a too low
 spectral resolution.
 
-[Jaime. Intentar correr un modelo simple para estimar esos valores]
+[MC. Intentar correr un modelo simple para estimar esos valores]
 
 
 6/ triple-peaked lya profiles as proof of rotation ?
