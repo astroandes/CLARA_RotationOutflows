@@ -35,8 +35,7 @@ below), which weakens the overall study.
 I have a concern about the "quantitative results" shown in figs 2,3,4.
 The authors characterise the lya line shapes by calculating the mean, standard
 deviation, skewness, and bimodality of the distribution of emergent
-frequencies. 
-It is surprising, given the complexity of the shape of these
+frequencies. It is surprising, given the complexity of the shape of these
 distributions. As well described in the text, it is then difficult to relate
 the values of these estimates to any characteristics of the profile shapes, or
 to any physical quantities. So is it really useful ?
@@ -237,7 +236,9 @@ effect.
 
 [Jaime]
 
-4.3 comparison with MUSE-Wide:
+```diff
++ 4.3 comparison with MUSE-Wide:
+```
 I am not sure to understand Fig7, why do you find that ~half of the sample has
 a positive skewness ?!
 
@@ -255,11 +256,6 @@ the observed spectra ?
 
 COLORS: 
 ```diff
-+ green: 
++ green: to reply to the referee
+- red: fixed in paper
 ```
-to reply to the referee
-
-```diff
-- red:
-```
-fixed in paper
