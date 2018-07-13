@@ -1,6 +1,6 @@
 Major comments:
 
-1/ A strong divergence in the interpretation of the results:
+**1/ A strong divergence in the interpretation of the results:**
 Since rotation has been observed in any kind of astrophysical object, studying
 the impact of rotation on Lya properties in the context of realistic galaxy
 conditions is very worth!
@@ -28,10 +28,7 @@ below), which weakens the overall study.
 
 [Jaime. Cambiar perspectiva.]
 
-```diff
-+ 2/ characterisation of the Lya profiles
-```
-
+**2/ characterisation of the Lya profiles:**
 I have a concern about the "quantitative results" shown in figs 2,3,4.
 The authors characterise the lya line shapes by calculating the mean, standard
 deviation, skewness, and bimodality of the distribution of emergent
@@ -46,8 +43,10 @@ double-peaked profile, whereas it would trace the width of the peak as soon as
 the distribution becomes single-peaked... So interpreting what a standard
 deviation of XXX km/s means is not straight-forward if we don't know Vout.
 
-[Lo useful era para comparar con el modelo semianalico y para comparar rapidamente 
+```diff
++ [Lo useful era para comparar con el modelo semianalico y para comparar rapidamente 
 con muchos datos.]
+```
 
 Plus, these collections of 9 small windows are difficult to read and compare.
 I suggest to try a single large plot instead of nine small ones, with
@@ -59,12 +58,13 @@ varies by one order of mag, whereas it varies by less than 10% when the
 rotation goes from 0 to 100 km/s, and idem for the impact of outflow
 velocities.
 
-[Ya intentamos mostrarlo de esta manera. Dado que las escalas son diferentes
-para cada valor de tau, es dificil seguir los trends en un plot unificado.
-Ademas se complica la comparacion con el modelo seminalitico.]
+```diff
++ [Ya intentamos mostrarlo de esta manera. Dado que las escalas son diferentes
++ para cada valor de tau, es dificil seguir los trends en un plot unificado.
++ Ademas se complica la comparacion con el modelo seminalitico.]
+```
 
-
-3/ Thermal Velocity
+**3/ Thermal Velocity:**
 There is an important parameter of your models that is not discussed: the
 effect of varying the thermal velocity vth. Which thermal velocity do you
 consider in this study ? From what I understand it is fixed to a single value,
@@ -85,8 +85,7 @@ hacer ajustes a observaciones deberia tener explicitamente este parametro.
 Nota para nosotros: elaborar este punto en texto y tal vez incluir al menos
 una grafica variando v_th en la comparacion con valores observacionales.]
 
-4/ low optical thickness regimes
-
+**4/ Low optical thickness regimes:**
 it may be interesting to investigate the regimes of low optical thickness,
 \tau_H~4 or below (corresponding to media transparent to LyC radiation),
 because that is where the agreement with the analytical solution is not good.
@@ -98,7 +97,7 @@ inside.
 [Maria Camila. preparar esos resultados y comentarlos.]
 
 
-5/ spectral resolution
+**5/ spectral resolution:**
 The rotation broadens the peaks and increases the flux at line center.
 Spectral resolution would have exactly the same effect on a lya profile. With
 you study, you could quantify which spectral sampling+resolution is necessary
@@ -108,7 +107,7 @@ spectral resolution.
 [Maria Camila. Intentar correr un modelo simple para estimar esos valores]
 
 
-6/ triple-peaked lya profiles as proof of rotation ?
+**6/ triple-peaked lya profiles as proof of rotation ?**
 The authors discuss that two lya triple-peaked spectra could be shaped by
 rotation: Tol1214-277 and the Sunburst. Both have new, complementary
 observations not easily compatible with rotation as the main driver for their
@@ -143,9 +142,9 @@ main driver of the weird Lya shape.
 
 minor comments:
 
-Abstract:
-What are the physical arguments for the range of the parameters that you chose
-? Which kind of galaxies are you thinking of ?
+**Abstract:**
+What are the physical arguments for the range of the parameters that you chose? 
+Which kind of galaxies are you thinking of?
 In particular, the rotational velocities seem on the high end of what is
 observed, or correspond to massive objects, which are usually not strong Lya
 emitters.
@@ -158,7 +157,7 @@ put them into context.
 [Jaime: Reescribir el calculo y justificacion de los estimados]
 
 
-Intro:
+**Intro:**
 In the introduction, the authors try to motivate why it is important to study
 Lya radiation transfer in rotating systems. I think it is very important, but
 I don't find the argumentation convincing so far.
@@ -206,7 +205,7 @@ not radiation transfer studies.
 
 [Jaime]
 
-Theoretical Models:
+**Theoretical Models:**
 Once again, the choice of the range of outflowing velocities is surprisingly
 low (Vout = 0,25,50 km/s) compared to the several 100s of km/s usually
 measured from absorption
@@ -219,7 +218,8 @@ measured typically in IFU/IFS observations (Cairos+15, Basu-Zych+09).
 
 Results:
 see the major comments below.
-Discussion:
+
+**Discussion:**
 4.2 spatial variation of the profile on Fig6:
 The authors make a nice prediction for a spatial variation of the lya profile
 emerging from a rotating cloud, which is a strong prediction of their model,
@@ -236,13 +236,13 @@ effect.
 
 [Jaime]
 
-```diff
-+ 4.3 comparison with MUSE-Wide:
-```
+4.3 comparison with MUSE-Wide:
 I am not sure to understand Fig7, why do you find that ~half of the sample has
 a positive skewness ?!
 
-[It's noisy and this is what we get]
+```diff
++ [It's noisy and this is what we get]
+```
 
 Once again, this is not straightforward to understand the meaning of these
 quantities for complicated and very inhomogeneous distributions as lya spectra
