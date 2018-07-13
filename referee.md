@@ -28,6 +28,7 @@ below), which weakens the overall study.
 
 [Jaime. Cambiar perspectiva.]
 
+<span style="color:blue">
 2/ characterisation of the Lya profiles
 
 I have a concern about the "quantitative results" shown in figs 2,3,4.
@@ -45,8 +46,8 @@ double-peaked profile, whereas it would trace the width of the peak as soon as
 the distribution becomes single-peaked... So interpreting what a standard
 deviation of XXX km/s means is not straight-forward if we don't know Vout.
 
-[Lo useful era para comparar con el modelo semianalico y para comparar rapidamente
-con muchos datos].
+[Lo useful era para comparar con el modelo semianalico y para comparar rapidamente 
+con muchos datos.]
 
 Plus, these collections of 9 small windows are difficult to read and compare.
 I suggest to try a single large plot instead of nine small ones, with
@@ -61,6 +62,7 @@ velocities.
 [Ya intentamos mostrarlo de esta manera. Dado que las escalas son diferentes
 para cada valor de tau, es dificil seguir los trends en un plot unificado.
 Ademas se complica la comparacion con el modelo seminalitico.]
+</span>
 
 3/ Thermal Velocity
 There is an important parameter of your models that is not discussed: the
@@ -102,7 +104,7 @@ you study, you could quantify which spectral sampling+resolution is necessary
 to make sure that the broadening that is observed is not due to a too low
 spectral resolution.
 
-[MC. Intentar correr un modelo simple para estimar esos valores]
+[Maria Camila. Intentar correr un modelo simple para estimar esos valores]
 
 
 6/ triple-peaked lya profiles as proof of rotation ?
@@ -230,6 +232,7 @@ particular, Patricio+16 show a lya kinematic map of the Lya halo of a lensed
 galaxy observed with MUSE, and find no spatial variation of the lya profiles,
 but the spectral resolution of MUSE may not be sufficient to see the predicted
 effect.
+
 [Jaime]
 
 4.3 comparison with MUSE-Wide:
@@ -246,3 +249,8 @@ spectra blue shifted. can you check/explain how you derived this quantity on
 the observed spectra ? 
 
 [Jaime]
+
+
+COLORS: 
+* <span style="color:blue">Blue: </span> to reply to the referee
+* <span style="color:red">Red: </span> fixed in paper
