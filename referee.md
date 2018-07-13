@@ -28,8 +28,9 @@ below), which weakens the overall study.
 
 [Jaime. Cambiar perspectiva.]
 
-<span style="color:blue">
-2/ characterisation of the Lya profiles
+```diff
++ 2/ characterisation of the Lya profiles
+```
 
 I have a concern about the "quantitative results" shown in figs 2,3,4.
 The authors characterise the lya line shapes by calculating the mean, standard
@@ -62,7 +63,7 @@ velocities.
 [Ya intentamos mostrarlo de esta manera. Dado que las escalas son diferentes
 para cada valor de tau, es dificil seguir los trends en un plot unificado.
 Ademas se complica la comparacion con el modelo seminalitico.]
-</span>
+
 
 3/ Thermal Velocity
 There is an important parameter of your models that is not discussed: the
@@ -70,7 +71,7 @@ effect of varying the thermal velocity vth. Which thermal velocity do you
 consider in this study ? From what I understand it is fixed to a single value,
 right ? 
 
-[YEs it is fixed to 10^4 K 12.86 km/s]
+[Maria Camila. Yes it is fixed to 10^4 K 12.86 km/s]
 
 However, since it appears explicitly in the "smoothing" term of
 equation (4), depending on the ratio between Vrot and Vth, the effect of
@@ -96,6 +97,7 @@ where rotation may have a strong effect, since photons are escaping from the
 inside.
 
 [Maria Camila. preparar esos resultados y comentarlos.]
+
 
 5/ spectral resolution
 The rotation broadens the peaks and increases the flux at line center.
@@ -252,5 +254,12 @@ the observed spectra ?
 
 
 COLORS: 
-* <span style="color:blue">Blue: </span> to reply to the referee
-* <span style="color:red">Red: </span> fixed in paper
+```diff
++ green: 
+```
+to reply to the referee
+
+```diff
+- red:
+```
+fixed in paper
