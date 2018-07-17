@@ -1,4 +1,4 @@
-Major comments:
+MAJOR COMMENTS:
 
 **1/ A strong divergence in the interpretation of the results:**
 Since rotation has been observed in any kind of astrophysical object, studying
@@ -28,7 +28,7 @@ below), which weakens the overall study.
 
 [Jaime. Cambiar perspectiva.]
 
-**2/ characterisation of the Lya profiles:**
+**2/ Characterisation of the Lya profiles:**
 I have a concern about the "quantitative results" shown in figs 2,3,4.
 The authors characterise the lya line shapes by calculating the mean, standard
 deviation, skewness, and bimodality of the distribution of emergent
@@ -45,7 +45,7 @@ deviation of XXX km/s means is not straight-forward if we don't know Vout.
 
 ```diff
 + [Lo useful era para comparar con el modelo semianalico y para comparar rapidamente 
-con muchos datos.]
++ con muchos datos.]
 ```
 
 Plus, these collections of 9 small windows are difficult to read and compare.
@@ -70,7 +70,9 @@ effect of varying the thermal velocity vth. Which thermal velocity do you
 consider in this study ? From what I understand it is fixed to a single value,
 right ? 
 
-[Maria Camila. Yes it is fixed to 10^4 K 12.86 km/s]
+```diff
+- [Maria Camila. Yes it is fixed to 10^4 K 12.86 km/s]
+```
 
 However, since it appears explicitly in the "smoothing" term of
 equation (4), depending on the ratio between Vrot and Vth, the effect of
@@ -79,14 +81,21 @@ value fo Vrot which is important, but the ratio Vrot/Vth. You should
 investigate the dependance of the emergent Lya spectra depending on vth, or
 varying the ratio Vrot/Vth. 
 
-[De nuevo, el objetivo principal es comparar simulacion con el modelo semianalitico.
-En ambos casos el ratio vrot/vth es el mismo, pero estamos de acuerdo con que 
-hacer ajustes a observaciones deberia tener explicitamente este parametro. 
-Nota para nosotros: elaborar este punto en texto y tal vez incluir al menos
-una grafica variando v_th en la comparacion con valores observacionales.]
+```diff
++ [De nuevo, el objetivo principal es comparar simulacion con el modelo semianalitico.
++ En ambos casos el ratio vrot/vth es el mismo, pero estamos de acuerdo con que 
++ hacer ajustes a observaciones deberia tener explicitamente este parametro. ]
+```
+
+```diff
+- [Nota para nosotros: elaborar este punto en texto]
+```
+
+[Nota para nosotros: Tal vez incluir al menos una grafica variando v_th en la 
+comparacion con valores observacionales.] 
 
 **4/ Low optical thickness regimes:**
-it may be interesting to investigate the regimes of low optical thickness,
+It may be interesting to investigate the regimes of low optical thickness,
 \tau_H~4 or below (corresponding to media transparent to LyC radiation),
 because that is where the agreement with the analytical solution is not good.
 In this regime, only numerical simulations can help predicting/understanding
@@ -94,7 +103,7 @@ the shape of the Lya profiles. And I would imagine that it is also the regime
 where rotation may have a strong effect, since photons are escaping from the
 inside.
 
-[Maria Camila. preparar esos resultados y comentarlos.]
+[Maria Camila. Preparar esos resultados y comentarlos.]
 
 
 **5/ spectral resolution:**
@@ -140,9 +149,9 @@ main driver of the weird Lya shape.
 
 [Jaime: Revisar esto.]
 
-minor comments:
+MINOR COMMENTS:
 
-**Abstract:**
+**7/ Abstract:**
 What are the physical arguments for the range of the parameters that you chose? 
 Which kind of galaxies are you thinking of?
 In particular, the rotational velocities seem on the high end of what is
@@ -156,8 +165,7 @@ put them into context.
 
 [Jaime: Reescribir el calculo y justificacion de los estimados]
 
-
-**Intro:**
+**8/ Intro:**
 In the introduction, the authors try to motivate why it is important to study
 Lya radiation transfer in rotating systems. I think it is very important, but
 I don't find the argumentation convincing so far.
@@ -191,21 +199,25 @@ the Lya lines... etc....
 
 [Jaime. Reescribir la argumentacion de la introdccion.]
 
-first paragraph, ligne 8:
+**9/ First paragraph, ligne 8:**
 these systems naturally show a Lya emission line -> say 'produce' instead of
 'show', since not all the star-forming galaxies with neutral gas and low dust
 content show Lya in emission, whereas they produce a lot (not IZwicky18 for
 example).
 
-[Jaime]
+```diff
+- [Maria Camila. Cambiar palabra.]
+```
 
-4th paragraph, last sentence:
-the citation of Yamada+12 is irrelevant here, since these are observations,
+**10/ 4th paragraph, last sentence:**
+The citation of Yamada+12 is irrelevant here, since these are observations,
 not radiation transfer studies.
 
-[Jaime]
+```diff
+- [Maria Camila. Quitar cita.]
+```
 
-**Theoretical Models:**
+**11/ Theoretical Models:**
 Once again, the choice of the range of outflowing velocities is surprisingly
 low (Vout = 0,25,50 km/s) compared to the several 100s of km/s usually
 measured from absorption
@@ -216,11 +228,7 @@ measured typically in IFU/IFS observations (Cairos+15, Basu-Zych+09).
 
 [Jaime]
 
-Results:
-see the major comments below.
-
-**Discussion:**
-4.2 spatial variation of the profile on Fig6:
+**12/ 4.2 spatial variation of the profile on Fig6:**
 The authors make a nice prediction for a spatial variation of the lya profile
 emerging from a rotating cloud, which is a strong prediction of their model,
 and may be observable with MUSE or other IFU in the near future, but which
@@ -236,7 +244,7 @@ effect.
 
 [Jaime]
 
-4.3 comparison with MUSE-Wide:
+**13/ 4.3 comparison with MUSE-Wide:**
 I am not sure to understand Fig7, why do you find that ~half of the sample has
 a positive skewness ?!
 
