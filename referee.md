@@ -1,4 +1,4 @@
-MAJOR COMMENTS:
+## MAJOR COMMENTS:
 
 **1/ A strong divergence in the interpretation of the results:**
 Since rotation has been observed in any kind of astrophysical object, studying
@@ -149,7 +149,7 @@ main driver of the weird Lya shape.
 
 [Jaime: Revisar esto.]
 
-MINOR COMMENTS:
+## MINOR COMMENTS:
 
 **7/ Abstract:**
 What are the physical arguments for the range of the parameters that you chose? 
