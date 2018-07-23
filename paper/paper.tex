@@ -360,12 +360,20 @@ where $x'$ is the photon's new adimensional frequency, $x$ is the photon's
 frequency after being processed only by the outflow, \vrot is the 
 rotational velocity at the point of escape of the photon, \hatk is
 the photon's direction of propagation and \vth is the thermal
-velocity of the sphere. In this study, the latter is set to a fixed value
-of \vth $= 12.86$ \kms, which corresponds to a temperature of $T=10^4$ K. The reason of setting it fixed is so that the comparison between the simulations and the semianalitical model is clearer, because there is one less parameter space to explore. So, we set \vth to a constant and consistent value throughout the analysis. However we are aware of the smoothing effect it has over the Doppler shift, as seen in Eq. \ref{eq:shift_x}, and it should be an explicitly free parameter if this model is used to fit observations. 
+velocity of the sphere. 
+In this study we use \vth $= 12.86$ \kms, which corresponds to a
+temperature of $T=10^4$ K.   
+We fix \vth throughout the paper, its influence is only
+of a multiplying constant that can be included without running new
+Monte-Carlo simulations, as the code works with the adimensional
+frequency $x$. 
+However, the thermal velocity is considered a free parameter 
+when comparing simulation results against observations. 
 
-This allows us to produce new \lya spectra and compare them with the
-full radiative transfer solution including both outflows and
-rotation.
+
+The approach presented above allows us to produce new \lya spectra and
+compare them with the full radiative transfer solution including both
+outflows and rotation.
 
 \section{Results}
 \label{sec:results}
