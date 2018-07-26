@@ -127,12 +127,6 @@ inside._
 + new version of the paper.
 ```
 
-```diff
-- [Maria Camila. Escribir insights al respecto de los resultados.] Poner las
-- gráficas en el repo y una figura en el reply para decidir si vale la pena dejarlo.
-- Por ahora ponerlo como apendice.
-```
-
 _**5/ Spectral resolution:**
 The rotation broadens the peaks and increases the flux at line center.
 Spectral resolution would have exactly the same effect on a lya profile. With
