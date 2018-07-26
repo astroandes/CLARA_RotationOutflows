@@ -690,6 +690,30 @@ However, the systems with a positive skewness, that is a line
 unbalanced towards the blue could be the sign of inflowing
 kinematics. 
 
+\subsection{Low optical thickness regimes}
+When located in the regimes of low optical thickness, \tauh $\lesssim 4$,  the agreement of the radiative transfer simulation with the semi-analytical solution is not as accurate. In this regime, only numerical simulations can help to predict the shape of the \lya profiles. We ran a simulation with low \tauh and compared it with the semi-analytical model. As seen in Figure \ref{fig:low_tau}, the model does not fit the simulation. This creates physical restrictions on the input of our model.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.48\textwidth]{low_tau_logtau4_theta90}
+	\caption{\textbf{Low optical thickness regimes}.  
+		Here we fix $\tauh=10^4$. 
+		The six panels correspond to $\theta=90^\circ$.
+		We vary \vrot increasing from left to right and \vout increasing
+		from top to bottom. 
+		The thin black line corresponds to the \lya line obtained with
+		CLARA without any rotation and the indicated outflow velocity.
+		The thick black line corresponds to the results including both
+		outflows and rotation.
+		The thick gray line shows the results of modifying the pure outflow
+		solution by the Doppler shift presented in Equation \ref{eq:shift_x}
+		(in thin line), if there is a radiative transfer of rotation and outflows
+		(thick and clear line), and if there is a radiative transfer of
+		only outflows, but also a Doppler shift from the rotational
+		velocity (thick and dark line).  
+		\label{fig:low_tau}}
+\end{figure}
+
 \section{Conclusions}
 \label{sec:conclusions}
 
