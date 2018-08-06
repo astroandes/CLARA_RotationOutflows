@@ -47,7 +47,7 @@
 
 \begin{abstract}
 Outflows and rotation are two ubiquitous kinematic features in the gas
-kinematics of galaxies.
+kinematics of galaxies. 
 Here we introduce a semi-analytic model to quantify how rotating
 outflows impact the morphology of the Lyman-$\alpha$ emission line.   
 The model is contrasted against Monte Carlo radiative transfer
@@ -59,16 +59,16 @@ We find three important consequences of rotation.
 First, it introduces a dependency with viewing angle; second it
 produces a line broadening and third it increases the flux at the
 line's center.
-The semi-analytic model reproduces the radiative transfer results for
-the line width and flux change at the line's center within a $7\%$
-and $50\%$ precision for an optical depth of
+For all viewing angles, the semi-analytic model reproduces the
+radiative transfer results for the line width and flux change at the
+line's center within a $7\%$ and $50\%$ precision for an optical depth of
 $\tauh=10^5$, respectively, and within $2\%$ and $1\%$ for an optical
 depth of $\tauh=10^7$.
 The semi-analytic model is a convenient tool to introduce rotational
 kinematics as a post-processing step of idealized Monte Carlo
-simulations, providing and easy way to include rotation in models that
-seek to interpret \lya spectra in systems where rotation is evident
-through kinematic maps. 
+simulations, providing a framework to interpret \lya spectra in
+systems where rotation is expected or directly measured through
+kinematic maps.  
 \end{abstract}
 
 \begin{keywords}
@@ -718,11 +718,16 @@ When located in the regimes of low optical thickness, \tauh $\lesssim 4$,  the a
 \label{sec:conclusions}
 
 In this paper we explore, for the first time in the literature,
-the results of a model for the emergent \lya line from rotating outflows.
-The main results for the model are computed from a Monte-Carlo
-radiative transfer simulation and confronted with a simple
-semi-analytic ansatz that adds the effects of rotation onto results of
-pure outflow kinematics. 
+the results of a model for the emergent \lya line from rotating
+outflows. 
+We use a semi-analytic model, first presented in \citep{Garavito14}, that
+to capture the main effects of rotation and confront it against
+results from Monte-Carlo radiative transfer simulations. 
+The semi-analytic model only takes into account the Doppler shift computed
+as product of quantities at the surface of last scattering, namely
+$\vec{v}_{\rm rot}\cdot \hatk$, where $\vec{v}_{\rm rot}$ is the
+velocity due to rotation and \hatk is the direction of the photon's
+propagation. 
 
 To address the first question we posed in the introduction (\emph{what is then
 the expected imprint of rotation on a resonant emission line such as
@@ -734,47 +739,44 @@ the \lya line?}) we can say that the main effects of rotation on the
   \item Broadening the line.
   \item Increasing the intensity at the line's center.
 \end{itemize}
+%
+All these effects can be quantitatively explained by the proposed
+semi-analytic model. 
 
-We find that these effects can be quantitatively explained by a
-Doppler shift computed as product of quantities at the surface of last
-scattering, namely  $\vec{v}_{\rm rot}\cdot \hatk$, where
-$\vec{v}_{\rm rot}$ is the velocity due to rotation and \hatk is
-the direction of the photon's propagation.  
-These conclusions, specially the confirmation of the Doppler shift  as
-a good approximation to model solid body rotation, strengthen the
-semi-analytic model reported by \cite{Garavito14} where they modeled
-the effect of pure rotation on \lya spectra. 
 
 Addressing the second question we posed in the introduction (\emph{to what
 extent is it possible to constrain rotational kinematics from the \lya
-emission line?})  we can say that as an application to observational data our results suggest that
-rotation should also be considered as an explanation of the
-non-vanishing \lya intensity at the line's center, which could change
-the interpretation of recent observational results
-\citep[e.g.][]{2017ApJ...844..171Y,2017A&A...608L...4R} and provide a
-test for rotation in the observed systems.
+emission line?})  we can say that  the most straightforward approach
+takes into account how the \lya spectra from two different sides of a
+galaxy can detect approaching/receding gas motions
+\citep{Prescott14,2018MNRAS.473.3907A}. 
+In that case, we also show that one has to be careful and take into
+account that the  peaks of these two spectra is smaller than a naively
+expected value of $2\times\vrot$ due to the different weights at the
+surface of the emitting regions.   
 
-A more straightforward approach takes into account how the
-\lya spectra from two different sides of a galaxy can detect
-approaching/receding gas motions \citep{Prescott14,2018MNRAS.473.3907A}.
-In that case, one has to be careful and take into account that the
-peaks of these two spectra is smaller than the expected value of
-$2\times\vrot$ due to the different weights at the surface of the
-emitting regions.   
 
-We also use data from MUSE \citep{2017A&A...606A..12H} to show
-to what extent the outputs of the RT results presented here can be
-expected to match hundreds of observed \lya spectra, but a full
-constraint of rotational properties certainly requires a full Markov
-Chain Monte Carlo exploration of parameter space.
+As an application to observational data we use data from MUSE
+\citep{2017A&A...606A..12H} to show to what extent the outputs of the
+RT results presented here can be expected to change the results of
+pure outflow simulations and thus bettwe match hundreds of
+observed \lya spectra.
+We find that the effect on general line morphology statistics
+(standard deviation and skewness) is small, although a full constraint
+of rotational properties certainly requires a full Markov Chain Monte
+Carlo exploration of parameter space. 
 
-Our work confirms that rotation produces features in the \lya line
-strong enough that can be expected to be detected in observations and
-that should be taken into account into \lya modeling; the Doppler
-Shift offers an easy-to-implement approximation to explore such
-influence into already existing RT simulations and provide stronger
-footing to the interpretation of present and future \lya kinematics
-maps \citep[e.g][]{2018MNRAS.473.3907A}.  
+Our results suggest that rotation should also be considered as an
+explanation of the non-vanishing \lya intensity at the line's center,
+and become a test for rotation in the observed systems, provided that
+the spectral resolution of the instrument is smaller than the expected
+rotational velocities. 
+
+To summarize, our work confirms that the semi-analytic model based on
+the Doppler Shift offers an easy-to-implement approximation to explore
+such influence into already existing RT simulations and provide
+stronger footing to the interpretation of present and future \lya
+kinematics maps \citep[e.g][]{2018MNRAS.473.3907A}. 
 
 \bibliographystyle{mnras}
 \bibliography{references}
