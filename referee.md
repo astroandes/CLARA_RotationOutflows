@@ -1,13 +1,12 @@
 # REPLY TO REFEREE
 
-Dear referee, first of all: I, Maria, apologize for my delay in replying this review.
-I was caught up graduating from college, moving to a different city, and preparing
-my registration requirements for grad school. But now I am ready to continue this
-work with my co-author Jaime. I appreciate a lot your patience.
+Dear referee, 
 
+First of all we apologize for our delay in replying to the report.
 We thank you for all your deep and thoughtful comments. We made an effort to
-approach them in a very detailed way. Here below we will make a copy of your
-comments (_in italic_) and a reply to each one of them.
+approach them in a very detailed way. 
+
+Below we will make a copy of your comments (_in italic_) and a reply to each one of them.
 
 
 ## MAJOR COMMENTS:
@@ -31,12 +30,9 @@ presenting them this way, still trying to find probes of the impact of rotation
 on observed spectra (but see comments below), which weakens the overall study._
 
 ```diff
-+ R: It is true. We are attaching a copy in which this perspective has been
-+ changed and reworded to express what you say.
-```
-
-```diff
-- [Jaime. Cambiar perspectiva.]
++ R: We have changed the perspective our paper. Instead of focusing on
+finding probes for rotation in current observational data we focus on
+the ability to include rotational effects using the semi-analytic approach.
 ```
 
 _**2/ Characterisation of the Lya profiles:**
