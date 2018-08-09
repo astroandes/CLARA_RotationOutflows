@@ -281,22 +281,20 @@ the simulations summarize the results presented in Figures
 \label{sec:theory}
 
 
-The Monte Carlo code we use (CLARA) \citep{CLARA} follows the propagation of
-individual photons through a neutral Hydrogen medium characterized by
-its temperature, velocity field and global optical depth.
-The code assumes a homogeneous density throughout the simulated
-volume.
+We use (CLARA) \citep{CLARA}, a Monte Carlo code that follows the
+propagation of individual photons through a neutral Hydrogen medium
+characterized by  its temperature, velocity field and global optical depth.
+The code assumes an homogeneous density throughout the simulated volume.
 In the current implementation we neglect the influence of dust.
 Our basic model is an spherical distribution of neutral hydrogen,
 an approximation commonly used in the literature, as it explains a
 wide variety of observational features
 \citep{Ahn03,Verhamme06,Dijkstra06}. 
 
-
 The velocity field we use captures both outflows and rotation.
 Outflows are described by a Hubble-like radial velocity profile with
 the velocity magnitude increasing linearly with the radial
-coordinate; the outflows model is fully characterized by $v_{\rm out}$, the
+coordinate; this model is fully characterized by $v_{\rm out}$, the
 radial velocity at the sphere's surface.
 Rotation follows a solid body rotation profile, which is fully
 characterized by $v_{\rm rot}$, the linear velocity at the sphere's surface.
@@ -324,18 +322,24 @@ where $x$, $y$ and $z$ are the cartesian position coordinates with the
 origin at the sphere's center, $R$ is the radius of the sphere and the
 direction of the angular velocity vector is the $z$ axis.
 
-For each model setup we follow $10^5$ individual photons generated at
+For each model setup we follow $10^5$ individual photons generated from
 the center of the sphere at the \lya line's center as they propagate
 through the volume and finally escape.
-We store the final frequency and propagation direction for each photon
+We store the frequency and propagation direction for each photon
 at its last scattering.
 
 As input parameters we use $\tauh=\{10^5, 10^6, 10^7\}$,
 $\vout=\{5,25,50\}\;\kms$ and $\vrot=\{0,50,100\}\;\kms$, for a total of
 $27$ models with all the possible parameter combinations.
-The range of values have some overlap with the expectations from a
-galaxy with a total neutral hydrogen mass of $10^8$-$10^9$
-$M_{\odot}$. We also define the viewing angle, $\theta$, as the angle
+The values for the outflow velocity are lower than other values used in the
+literature to allow for an interplay between the two kinematic features.
+Nevertheless, this range of parameters reproduces the main standard
+deviation and skewness  of high redshift LAES in recent observations
+(\label{subsec:kinematic}). 
+
+
+
+We also define the viewing angle, $\theta$, as the angle
 between the rotation axis and the line of sight of a potential observer.
 
 \cite{Garavito14} presented an analytical model that
@@ -615,7 +619,7 @@ fraction and galaxy rotation.
 
 
 \subsection{\lya Kinematic Maps}
-
+\label{subsec:kinematic}
 Current observational facilities have the capability of spatially
 resolving the extent of a LAE.
 For instance \cite{Prescott14} presented observational results of a
