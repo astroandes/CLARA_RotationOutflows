@@ -148,6 +148,10 @@ In Section \ref{sec:discussion} we discuss our results and their
 possible implications for observational analysis to finally present
 our conclusions in Section \ref{sec:conclusions}.
 
+Throughout the paper we use a thermal velocity for a neutral Hydrogen
+gas of \vth $= 12.86$ \kms, which corresponds to a temperature of
+$T=10^4$ K. 
+
 \begin{figure*}
 \centering
     \includegraphics[width=0.48\textwidth]{doppler_shift_logtau6_theta90}
@@ -281,25 +285,25 @@ the simulations summarize the results presented in Figures
 \label{sec:theory}
 
 
-We use (CLARA) \citep{CLARA}, a Monte Carlo code that follows the
+We use CLARA \citep{CLARA}, a Monte Carlo code that follows the
 propagation of individual photons through a neutral Hydrogen medium
-characterized by  its temperature, velocity field and global optical depth.
+characterized by its temperature, velocity field and global optical depth.
 The code assumes an homogeneous density throughout the simulated volume.
 In the current implementation we neglect the influence of dust.
 Our basic model is an spherical distribution of neutral hydrogen,
-an approximation commonly used in the literature, as it explains a
+an approximation commonly used in the literature that explains a
 wide variety of observational features
 \citep{Ahn03,Verhamme06,Dijkstra06}. 
 
-The velocity field we use captures both outflows and rotation.
+We use a velocity field that captures both outflows and rotation.
 Outflows are described by a Hubble-like radial velocity profile with
-the velocity magnitude increasing linearly with the radial
-coordinate; this model is fully characterized by $v_{\rm out}$, the
-radial velocity at the sphere's surface.
-Rotation follows a solid body rotation profile, which is fully
-characterized by $v_{\rm rot}$, the linear velocity at the sphere's surface.
+the speed increasing linearly with the radial coordinate; this model
+is fully characterized by $v_{\rm out}$, the radial velocity at the
+sphere's surface. 
+Rotation follows a solid body rotation profile fully characterized by
+$v_{\rm rot}$ the linear velocity at the sphere's surface.  
 
-The total velocity field corresponds to the superposition of rotation and
+The total velocity field is the superposition of rotation and
 outflows.
 The cartesian components take the following form:
 
@@ -322,8 +326,8 @@ where $x$, $y$ and $z$ are the cartesian position coordinates with the
 origin at the sphere's center, $R$ is the radius of the sphere and the
 direction of the angular velocity vector is the $z$ axis.
 
-For each model setup we follow $10^5$ individual photons generated from
-the center of the sphere at the \lya line's center as they propagate
+For each run we follow $10^5$ individual photons generated from the
+origin at the \lya line's center as they propagate
 through the volume and finally escape.
 We store the frequency and propagation direction for each photon
 at its last scattering.
@@ -331,23 +335,21 @@ at its last scattering.
 As input parameters we use $\tauh=\{10^5, 10^6, 10^7\}$,
 $\vout=\{5,25,50\}\;\kms$ and $\vrot=\{0,50,100\}\;\kms$, for a total of
 $27$ models with all the possible parameter combinations.
-The values for the outflow velocity are lower than other values used in the
+The values for the outflow velocity are lower than values commonly used in the
 literature to allow for an interplay between the two kinematic features.
 Nevertheless, this range of parameters reproduces the main standard
 deviation and skewness  of high redshift LAES in recent observations
 (\label{subsec:kinematic}). 
 
-
-
 We also define the viewing angle, $\theta$, as the angle
-between the rotation axis and the line of sight of a potential observer.
+between the rotation axis and the line of sight of a potential
+observer. 
 
 \cite{Garavito14} presented an analytical model that
 accounts for the effects of pure rotation on the
 \lya line morphology. 
-The basic assumption of their analytical model is that each
-differential surface element on the sphere Doppler shifts the photons
-that it emits.
+The basic assumption of the model is that each differential surface
+element on the sphere Doppler shifts the photons that it emits.
 In this paper we introduce this ansatz by post-processing the results
 of the outflows simulations without rotation.
 The frequency of each photon is Doppler shifted as follows
@@ -362,19 +364,13 @@ frequency after being processed only by the outflow, \vrot is the
 rotational velocity at the point of escape of the photon, \hatk is
 the photon's direction of propagation and \vth is the thermal
 velocity of the sphere. 
-In this study we use \vth $= 12.86$ \kms, which corresponds to a
-temperature of $T=10^4$ K.   
-We fix \vth throughout the paper, its influence is only
-of a multiplying constant that can be included without running new
-Monte-Carlo simulations, as the code works with the adimensional
-frequency $x$. 
-However, the thermal velocity is considered a free parameter 
-when comparing simulation results against observations. 
+We fix \vth throughout the paper. This factor is a multiplying
+constant that could be changed without running new Monte-Carlo
+simulations, as the code works with the adimensional frequency $x$. 
 
-
-The approach presented above allows us to produce new \lya spectra and
-compare them with the full radiative transfer solution including both
-outflows and rotation.
+This semi-analytic model allows us to produce new \lya spectra from
+the outflow-only results and compare them with the full radiative
+transfer solution including both outflows and rotation. 
 
 \section{Results}
 \label{sec:results}
