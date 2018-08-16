@@ -31,6 +31,14 @@ def doppler_shift(data, vrot=0.0, v_th=12.86):
 
     return new_data
 
+def gauss_shift(data, sigma=0.0):
+    '''Updates old_data adding doppler shifts. the result is stored in new_data.'''
+    new_data = data.copy()
+    new_data['x'], new_data['y'], new_data['z'] = get_unit_r_sphere(data)
+    n_points = len(new_data)
+    new_data['x_frec'] = data['x_frec'] + np.random.normal(loc=0, scale=sigma, size=n_points)
+    return new_data
+
 def read_data(vrot=0, vout=5, logtau=6, input_dir="../../data/"):
     '''Reads the data.'''
     tau_name = 'tau10E' + str(logtau)
