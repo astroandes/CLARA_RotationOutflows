@@ -55,7 +55,7 @@ simulations of outflowing gas with additional solid body rotation.
 We explore a range of neutral Hydrogen optical depth of
 $10^5\leq\tauh\leq10^7$, rotational velocity $0\leq \vrot/\kms \leq
 100$ and outflow velocity $0\leq \vout/\kms\leq 50$.  
-We find three important consequences of rotation.
+We find three consequences of rotation.
 First, it introduces a dependency with viewing angle; second it
 produces a line broadening and third it increases the flux at the
 line's center.
@@ -64,6 +64,10 @@ radiative transfer results for the line width and flux change at the
 line's center within a $7\%$ and $50\%$ precision for an optical depth of
 $\tauh=10^5$, respectively, and within $2\%$ and $1\%$ for an optical
 depth of $\tauh=10^7$.
+We also show that another, less precise, approximation is considering
+that rotation can be represented by a gaussian smoothing with standard
+deviation $\frac{1}{2} \vrot \sin \theta$, where $\theta$ is the angle between
+the line-of-sight and the rotation axis. 
 The semi-analytic model presented here is a convenient tool to
 introduce rotational kinematics as a post-processing step of idealized
 Monte Carlo simulations, providing a framework to interpret \lya
@@ -572,24 +576,39 @@ connected to the interpretation of observational data.
 \subsection{The semi-analytic model as gaussian smoothing}
 
 The effects of the semi-analytic model on the pure outflowing spectra
-are similar to the expected results from a gaussian smoothing.
-this smoothing can also be a natural consequence of the intruments
+are similar to the expected results from a gaussian smoothing, 
+such smoothing can also be a natural consequence of the intruments
 used to measure the LAE spectra.
-In other words, poor spectral resolution could be mistaken as an
-indication for rotation.
+As a consequence, natural experimental artifacts could be mistaken as
+an indication for rotation.
 
-We model the effects of gaussian smoothing with a similar ansatz as
-the semi-analytic model by changing the frequency of each photon by a
-Gaussian random variable centered on zero and width $\sigma_x$:
-\begin{equation}
-x^{\prime} = x + \mathcal{N}(0,\sigma_x).
+To understand to what extent the effects of rotation can be seen as a
+simple smoothing, we model the effects of gaussian smoothing with a
+similar ansatz as  the semi-analytic model by changing the frequency
+of each photon by a Gaussian random variable centered on zero and
+standard deviation $\sigma_x$: \begin{equation}
+x^{\prime} = x + \mathcal{N}(0,\sigma_x^2).
 \end{equation}
 
 We find that the results of the semi-analytic model on the total
 spectra at a given angle $\theta$ can be approximated using
-$\sigma_x = (1/2)\times(\vrot/\vth)\times \sin(\theta)$. 
-This approximation works well to reproduce the semi-analytic results
-for $\tau=10^6$ and $\tau=10^7$.
+$\sigma_x = (1/2)\times(\vrot/\vth)\times \sin\theta$. 
+This approximation reproduces within a few porcent all quantities
+measured in Section \ref{sec:quantitative} for the semi-analytic
+model, it only works well for $\tau=10^6$ and $\tau=10^7$. 
+
+This result can be used as an order of magnitude estimate of the mimum
+espectral resolution required to observe the effects of a rotational
+velocity of $\vrot$. 
+The Space Telescope Imaging Spectrograph (STIS) on the Hubble Space
+Telescope (HST) can provide resolutions around 20 \kms
+\citep{2015PASA...32...27H}, which could allow for the detection of
+rotation features in nearby galaxies with at least $40$ \kms and a
+rotation axis perpendicular to the line of sight.  
+Other instruments such as the Cosmic Origins Spectrograph (COS) have
+varying resolutions between $20$\kms and $200$\kms according to the
+angular size of the source \citep{2018A&A...616A..60O}.
+
 
 
 \subsection{\lya Kinematic Maps}
