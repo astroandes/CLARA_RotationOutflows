@@ -64,10 +64,9 @@ radiative transfer results for the line width and flux change at the
 line's center within a $7\%$ and $50\%$ precision for an optical depth of
 $\tauh=10^5$, respectively, and within $2\%$ and $1\%$ for an optical
 depth of $\tauh=10^7$.
-We also show that another, less precise, approximation is considering
-that rotation can be represented by a gaussian smoothing with standard
-deviation $\frac{1}{2} \vrot \sin \theta$, where $\theta$ is the angle between
-the line-of-sight and the rotation axis. 
+Using this toy model we also show that the peaks of integrated spectra
+taken from opposite sides of an edge-on rotating gas distribution
+should have a separation of $\frac{1}{2}\vrot$. 
 The semi-analytic model presented here is a convenient tool to
 introduce rotational kinematics as a post-processing step of idealized
 Monte Carlo simulations, providing a framework to interpret \lya
@@ -130,7 +129,7 @@ but the peak on the red side is stronger
 These features have been explained as the consequence of multiple
 \lya photon scatterings through a homogeneous outflowing shell of
 neutral Hydrogen
-\citep{2006A&A...460..397V,Orsi12,2015ApJ...812..123G}.  
+\citep{Verhamme06,Orsi12,2015ApJ...812..123G}.  
 
 Nevertheless, a study of the combined effects of outflows and
 rotation has not been presented in the literature.
@@ -272,18 +271,6 @@ $T=10^4$ K.
     \label{fig:doppler}}
 \end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[width=0.45\textwidth]{muse_vs_simulations.pdf}
-
-\caption{\textbf{Comparison between simulations and observations.}  
-The observational results correspond to the MUSE-Wide Survey
-\citep{2017A&A...606A..12H}. The skewness and standard deviation from
-the simulations summarize the results presented in Figures
-\ref{fig:standard_deviation} and \ref{fig:skewness}.
-  \label{fig:muse}}
-\end{figure}
-
 
 \section{Theoretical Models}
 \label{sec:theory}
@@ -415,10 +402,11 @@ outflows.
 
 The quality of the results from the Doppler shift improves for higher
 \tauh values. 
-In the Appendix we show the same plots as Figure \ref{fig:doppler_shift}, there it is
-evident that for $\tauh=10^5$ the results are not as good as they are
-for $\tauh=10^6$, and that for $\tauh=10^7$ the Doppler shift
-provides a remarkable good approximation.
+In the Appendix we show the same plots as Figure
+\ref{fig:doppler_shift}, there it is evident that for $\tauh=10^5$ the
+results are not as good as they are for $\tauh=10^6$, and that for
+$\tauh=10^7$ the Doppler shift provides a remarkable good
+approximation. 
 
 \subsection{Quantitative Trends}
 \label{sec:quantitative}
@@ -609,10 +597,9 @@ Other instruments such as the Cosmic Origins Spectrograph (COS) have
 varying resolutions between $20$\kms and $200$\kms according to the
 angular size of the source \citep{2018A&A...616A..60O}.
 
-
-
 \subsection{\lya Kinematic Maps}
 \label{subsec:kinematic}
+
 Current observational facilities have the capability of spatially
 resolving the extent of a LAE.
 For instance \cite{Prescott14} presented observational results of a
@@ -620,6 +607,12 @@ Doppler shift when taking spectra at two opposite sides of a large
 ($\approx 80$kpc) LAE.
 In more recent work \cite{2018MNRAS.473.3907A} mapped \lya emission
 around a quasar.
+In this case one could measure the displacement between the
+peaks in the two different spectra. 
+The interest of this test is that the location of the peaks only
+depends on the kinematic properties of the sources and does not
+change by convolution with a gaussian window function due to limited
+instrumental resolution, as discussed in the previous section.
 
 In Figure \ref{fig:doppler} we present a toy model (\vrot$=50\ \kms$,
 \vout$=25\ \kms$ and \tauh$=10^5$) for the spectrum of
@@ -632,15 +625,15 @@ We notice that the distance between the maxima of the blue and red
 spectra is not twice the rotational velocity as it could be naively
 expected.
 
-Although it is a good approximation to think the rotating spectra by a
-sum of Doppler shifts, the peak of the spectra is also weighted by the
-amount of mass with a given line-of-sight velocity. 
 In this toy model the distance between the peaks of the
 receding/approaching spectra is close to $\sim 25\ \kms$, which is
 a fourth of the naively expected value of $2\vrot=100\ \kms$,
 due to the fact that only a small fraction of the photons are emitted
 at the extreme of the galaxy having the maximum rotational velocity of
 $50\ \kms$. 
+Although it is a good approximation to think the rotating spectra by a
+sum of Doppler shifts, the peak of the spectra is also weighted by the
+amount of mass with a given line-of-sight velocity. 
 
 Spectrographs like the Multi Unit Spectroscopic Explorer (MUSE) could
 obtain kinematic information from large samples of LAEs to build
@@ -648,74 +641,9 @@ velocity maps in Ly$\alpha$.
 This could be a natural extension of the work reported by
 \cite{Herenz2016} on the velocity maps of several LARS (Lyman Alpha
 Reference Sample) galaxies.  
-The interpretation of such data should take into account the insights
+The interpretation of such data could take into account the insights
 and trends we have presented in this paper.
 
-\subsection{Comparison against the MUSE-Wide Survey}
-
-In order to give the reader a feeling of the ranges of observational
-data that could be explained by the models presented here, 
-we perform a comparison against observational data from the MUSE-Wide
-Survey (MWS) \citep{2017A&A...606A..12H}.   
-
-MWS provides public access to 831 spectra out of which 237 contain a
-detected \lya line as dominant. 
-The public dataset reports as the redshift of the galaxy the position
-of the dominant peak.
-We use this redshift to convert the spectra to a rest-frame and compute
-the standard deviation and skewness statistics. 
-Given the uncertainty on the galaxy redshift we do not compute the
-valley/peak ratio. 
-We do not try to perform a full fit to all the spectra
-\citep[e.g.][]{2017A&A...608A.139G} and wish only to
-know whether the region of parameter space explored in our RT
-simulations shows any crossing with the results from the MWS or
-shows any sign of atypical features.
- 
-Figure \ref{fig:muse} shows the results of this experiment. 
-The small white circles correspond to the 217 \lya emitters in the MWS
-observations; the large black circles to the results of the
-simulations presented in this paper. 
-This shows that the systems modeled in this paper actually present an
-overlap with statistics derived from observations. 
-The region with standard deviation $>200$\kms could also be explained
-by systems with larger optical depths than we have used here. 
-However, the systems with a positive skewness, that is a line
-unbalanced towards the blue could be the sign of inflowing
-kinematics. 
-
-
-
-%\subsection{Low optical thickness regimes}
-%When located in the regimes of low optical thickness, \tauh $\lesssim
-%4$,  the agreement of the radiative transfer simulation with the
-%semi-analytical solution is not as accurate. In this regime, only
-%numerical simulations can help to predict the shape of the \lya
-%profiles. We ran a simulation with low \tauh and compared it with the
-%semi-analytical model. As seen in Figure \ref{fig:low_tau}, the model
-%does not fit the simulation. This creates physical restrictions on the
-%input of our model. 
-
-%\begin{figure}
-%	\centering
-%	\includegraphics[width=0.48\textwidth]{low_tau_logtau4_theta90}
-%	\caption{\textbf{Low optical thickness regimes}.  
-%		Here we fix $\tauh=10^4$. 
-%		The six panels correspond to $\theta=90^\circ$.
-%		We vary \vrot increasing from left to right and \vout increasing
-%		from top to bottom. 
-%		The thin black line corresponds to the \lya line obtained with
-%		CLARA without any rotation and the indicated outflow velocity.
-%		The thick black line corresponds to the results including both
-%		outflows and rotation.
-%		The thick gray line shows the results of modifying the pure outflow
-%		solution by the Doppler shift presented in Equation \ref{eq:shift_x}
-%		(in thin line), if there is a radiative transfer of rotation and outflows
-%		(thick and clear line), and if there is a radiative transfer of
-%		only outflows, but also a Doppler shift from the rotational
-%		velocity (thick and dark line).  
-%		\label{fig:low_tau}}
-%\end{figure}
 
 \section{Conclusions}
 \label{sec:conclusions}
@@ -757,58 +685,35 @@ In that case, we also show that one has to be careful and take into
 account that the  peaks of these two spectra is smaller than a naively
 expected value of $2\times\vrot$ due to the different weights at the
 surface of the emitting regions.   
-
-
-As an application to observational data we use data from MUSE
-\citep{2017A&A...606A..12H} to show to what extent the outputs of the
-RT results presented here can be expected to change the results of
-pure outflow simulations and thus bettwe match hundreds of
-observed \lya spectra.
-We find that the effect on general line morphology statistics
-(standard deviation and skewness) is small, although a full constraint
-of rotational properties certainly requires a full Markov Chain Monte
-Carlo exploration of parameter space. 
-
-Our results suggest that rotation should also be considered as an
-explanation of the non-vanishing \lya intensity at the line's center,
-and become a test for rotation in the observed systems, provided that
-the spectral resolution of the instrument is smaller than the expected
-rotational velocities. 
+Here the semi-analytic model also provides the correct quantitative
+insight. 
 
 To summarize, our work confirms that the semi-analytic model based on
 the Doppler Shift offers an easy-to-implement approximation to explore
-such influence into already existing RT simulations and provide
-stronger footing to the interpretation of present and future \lya
-kinematics maps \citep[e.g][]{2018MNRAS.473.3907A}. 
+such influence into already existing radiative transfer simulation
+simulations and provide stronger footing to the interpretation of
+present and future \lya kinematics maps
+\citep[e.g][]{2018MNRAS.473.3907A}.  
 
 \bibliographystyle{mnras}
 \bibliography{references}
 
 
-\newpage
+
 \appendix
 
 \section{Additional figures}
 \label{sec:appendix}
 
-\begin{figure}
+\begin{figure*}
   \begin{center}
     \includegraphics[width=0.49\textwidth]{doppler_shift_logtau5_theta90}
-  \end{center}
-  \caption{\textbf{Qualitative trends of changing outflow and
-      rotational velocity.}
-    Same layout as Figure \ref{fig:doppler_shift},
-    this time  $\tauh=10^5$ and $\theta=90^\circ$.}
-\end{figure}
-
-\begin{figure}
-  \begin{center}
     \includegraphics[width=0.49\textwidth]{doppler_shift_logtau7_theta90}
   \end{center}
   \caption{\textbf{Qualitative trends of changing outflow and
       rotational velocity.}
-    Same layout as Figure \ref{fig:doppler_shift},
-    this time  $\tauh=10^7$ and $\theta=90^\circ$.}
-\end{figure}
+    Same layout as Figure \ref{fig:doppler_shift}. On the left:
+    $\tauh=10^5$ and $\theta=90^\circ$; on the right:     this time  $\tauh=10^7$ and $\theta=90^\circ$.}
+\end{figure*}
 
 \end{document}
