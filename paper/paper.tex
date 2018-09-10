@@ -57,20 +57,20 @@ $10^5\leq\tauh\leq10^7$, rotational velocity $0\leq \vrot/\kms \leq
 100$ and outflow velocity $0\leq \vout/\kms\leq 50$.  
 We find three consequences of rotation.
 First, it introduces a dependency with viewing angle; second it
-produces a line broadening and third it increases the flux at the
+broadens the line and third it increases the flux at the
 line's center.
 For all viewing angles, the semi-analytic model reproduces the
 radiative transfer results for the line width and flux change at the
 line's center within a $7\%$ and $50\%$ precision for an optical depth of
 $\tauh=10^5$, respectively, and within $2\%$ and $1\%$ for an optical
 depth of $\tauh=10^7$.
-Using this toy model we also show that the peaks of integrated spectra
+Using this model we also show that the peaks of integrated spectra
 taken from opposite sides of an edge-on rotating gas distribution
 should have a separation of $\frac{1}{2}\vrot$. 
 The semi-analytic model presented here is a convenient tool to
 introduce rotational kinematics as a post-processing step of idealized
-Monte Carlo simulations, providing a framework to interpret \lya
-spectra in systems where rotation is expected, or directly measured
+Monte Carlo simulations; it provides a framework to interpret \lya
+spectra in systems where rotation is expected or directly measured
 through kinematic maps.  
 \end{abstract}
 
@@ -651,7 +651,7 @@ and trends we have presented in this paper.
 In this paper we explore, for the first time in the literature,
 the results of a model for the emergent \lya line from rotating
 outflows. 
-We use a semi-analytic model, first presented in \citep{Garavito14}, 
+We the a semi-analytic model first presented by \cite{Garavito14}
 to capture the main effects of rotation and confront it against
 results from Monte-Carlo radiative transfer simulations. 
 The semi-analytic model only takes into account the Doppler shift computed
@@ -660,10 +660,10 @@ $\vec{v}_{\rm rot}\cdot \hatk$, where $\vec{v}_{\rm rot}$ is the
 velocity due to rotation and \hatk is the direction of the photon's
 propagation. 
 
-To address the first question we posed in the introduction (\emph{what is then
-the expected imprint of rotation on a resonant emission line such as
-the \lya line?}) we can say that the main effects of rotation on the
-\lya line morphology are: 
+To address the first question we posed in the introduction (\emph{What
+  is the expected imprint of rotation on a resonant emission line such
+  as the \lya line?}) we find from the full RT simulations that the
+effects of rotation on the \lya line morphology are:  
 
 \begin{itemize}
   \item Inducing a dependency on the viewing angle.
@@ -671,29 +671,33 @@ the \lya line?}) we can say that the main effects of rotation on the
   \item Increasing the intensity at the line's center.
 \end{itemize}
 %
-All these effects can be quantitatively explained by the proposed
+All these effects can be qualitatively explained by the proposed
 semi-analytic model. 
+Quantitatively speaking the semi-analytic model provides a
+satisfactory answer for a neutral Hydrogen optical depth equal or
+larger than $10^6$.  
 
 
-Addressing the second question we posed in the introduction (\emph{to what
+
+Addressing the second question we posed in the introduction (\emph{To what
 extent is it possible to constrain rotational kinematics from the \lya
-emission line?})  we can say that  the most straightforward approach
-takes into account how the \lya spectra from two different sides of a
-galaxy can detect approaching/receding gas motions
+emission line?})  we show that the most straightforward approach
+is measuring \lya spectra from two different regions of a
+galaxy to detect approaching/receeding gas motions
 \citep{Prescott14,2018MNRAS.473.3907A}. 
-In that case, we also show that one has to be careful and take into
-account that the  peaks of these two spectra is smaller than a naively
-expected value of $2\times\vrot$ due to the different weights at the
-surface of the emitting regions.   
+In that case, we also show that the distances between these two peaks 
+is four times shorter than the naively expected value of
+$2\times\vrot$.  
+This difference is produced by the different geometric weights at the
+emitting surface.    
 Here the semi-analytic model also provides the correct quantitative
 insight. 
 
-To summarize, our work confirms that the semi-analytic model based on
-the Doppler Shift offers an easy-to-implement approximation to explore
-such influence into already existing radiative transfer simulation
-simulations and provide stronger footing to the interpretation of
-present and future \lya kinematics maps
-\citep[e.g][]{2018MNRAS.473.3907A}.  
+To summarize, our works shows that the Doppler Shift offers an
+easy-to-implement approximation to explore such influence into already
+existing radiative transfer simulation simulations that include
+outflows, providing a versatile tool to interpret current and future \lya
+kinematics maps  \citep[e.g][]{2018MNRAS.473.3907A}.   
 
 \bibliographystyle{mnras}
 \bibliography{references}
