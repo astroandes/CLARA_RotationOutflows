@@ -6,7 +6,8 @@ First of all we apologize for our delay in replying to the report.
 We thank you for all your deep and thoughtful comments. We made an effort to
 approach them in a very detailed way. 
 
-Below we will make a copy of your comments (_in italic_) and a reply to each one of them.
+Below we will make a copy of your comments (_in italic_) and a reply
+to each one of them.    
 
 
 ## MAJOR COMMENTS:
@@ -33,6 +34,8 @@ on observed spectra (but see comments below), which weakens the overall study._
 + R: We have changed the perspective our paper. Instead of focusing on
 finding probes for rotation in current observational data we focus on
 the ability to include rotational effects using the semi-analytic approach.
+We keep as clear observational test the spectra taken from different
+locations in the emitting galaxy.
 ```
 
 _**2/ Characterisation of the Lya profiles:**
@@ -49,11 +52,13 @@ the distribution becomes single-peaked... So interpreting what a standard
 deviation of XXX km/s means is not straight-forward if we don't know Vout._
 
 ```diff
-+ R: So, we created these quantitative measurements to compare in an easy way
-+ the semi-analytical model with several sets of data (in particular, observations).
-+ This, because those are quantities that we can obtain from all spectra in order
-+ to locate observations in ranges that coincide with our models. This way we can
-+ filter and compare them more specifically.
++ R: We created these quantitative measurements to compare in an easy way
+the semi-analytical model with the radiative transfer simulation.
+Of course, the line cannot be constrained with a single scalar, that's
+why we use three different scalars to convey the changes on the line:
+standard deviation (changes in width), skewness (changes in
+symmetry) and bimodality.
+
 ```
 
 _Plus, these collections of 9 small windows are difficult to read and compare.
@@ -67,7 +72,7 @@ rotation goes from 0 to 100 km/s, and idem for the impact of outflow
 velocities._
 
 ```diff
-+ R: We chose this visualization because we already try the plot you mention.
++ R: We chose this visualization because we already tried the plot you mention.
 + However the scales are very different, and this way we are only able to visualize
 + the trend in the largest one. So, for each value of tau is hard (and gives no
 + information) to follow the trend in an unified plot. Besides, the comparison
