@@ -3,12 +3,14 @@
 Dear referee, 
 
 First of all we apologize for our delay in replying to the report.
-We thank you for all your deep and thoughtful comments. We made an effort to
-approach them in a very detailed way. 
+We thank you for all your deep and thoughtful comments. 
+We made our best effort to approach them in a very detailed way. 
 
 Below we will make a copy of your comments (_in italic_) and a reply
 to each one of them.    
 
+Best regards, 
+The authors
 
 ## MAJOR COMMENTS:
 
@@ -53,11 +55,11 @@ deviation of XXX km/s means is not straight-forward if we don't know Vout._
 
 ```diff
 + R: We created these quantitative measurements to compare in an easy way
-the semi-analytical model with the radiative transfer simulation.
-Of course, the line cannot be constrained with a single scalar, that's
-why we use three different scalars to convey the changes on the line:
-standard deviation (changes in width), skewness (changes in
-symmetry) and bimodality.
++ the semi-analytical model with the radiative transfer simulation.
++ Of course, the line cannot be constrained with a single scalar. 
++ One would have to simulateneously use all the three scalars to convey 
++ line morphology: standard deviation (changes in width), skewness (changes in
++ symmetry) and bimodality.
 
 ```
 
@@ -89,8 +91,7 @@ consider in this study ? From what I understand it is fixed to a single value,
 right ?_
 
 ```diff
-+ R: Yes, it is fixed to T=10^4 K, i.e. vth = 12.86 km/s. We didn’t write it
-+ explicitly in the paper, but now it is there.
++ R: Yes, it is fixed to T=10^4 K, i.e. vth = 12.86 km/s. Now it's written down in the text.
 ```
 
 _However, since it appears explicitly in the "smoothing" term of
@@ -107,12 +108,6 @@ varying the ratio Vrot/Vth._
 + model. And in both cases the vth is the same.
 ```
 
-```diff
-- [Nota para nosotros: Tal vez incluir al menos una gráfica variando v_th en la
-- comparación con valores observacionales.] Elegir alguna grafica con v_th diferente.
-- Y comparar con MUSE.
-```
-
 _**4/ Low optical thickness regimes:**
 It may be inte_resting to investigate the regimes of low optical thickness,
 \tau_H~4 or below (corresponding to media transparent to LyC radiation),
@@ -123,10 +118,9 @@ where rotation may have a strong effect, since photons are escaping from the
 inside._
 
 ```diff
-+ R: Indeed, with low \tau_H the semi-analytical model is not good, so we ran a
-+ simulation with this value as well as the model. We added those results to this
-+ new version of the paper.
++ R: Indeed, with low \tau_H the semi-analytical model is not good and we mention it in the paper.
 ```
+
 
 _**5/ Spectral resolution:**
 The rotation broadens the peaks and increases the flux at line center.
@@ -136,7 +130,8 @@ to make sure that the broadening that is observed is not due to a too low
 spectral resolution._
 
 ```diff
-- [Jaime. Estimar esos valores]
++ R: We have estimated these values by adding a gaussian smoothing to the frequencies. 
++ This is now explained in detail in the new Section 4.1. "The semi-analytic model as a gaussian smoothing"
 ```
 
 _**6/ triple-peaked lya profiles as proof of rotation ?**
@@ -161,8 +156,7 @@ although the broad wings are not well reproduced by expanding shell models,
 maybe better by clumpy outflows, as shown in the slides from Ostlin._
 
 ```diff
-+ R: We didn’t know about this. We rewrote it to clarify that it is not
-+ necessary anymore.
++ R: We have removed the observational especulation about  Tol1214-277.
 ```
 
 ```diff
@@ -178,7 +172,7 @@ will be published soon. So for this object either, rotation may not be the
 main driver of the weird Lya shape._
 
 ```diff
-- [Jaime: Revisar esto.]
+- We have removed the observational especulation about  The Sunburst Arc.
 ```
 
 ## MINOR COMMENTS:
@@ -196,12 +190,9 @@ expected to be maximal, but it would be useful to comment on these values, to
 put them into context._
 
 ```diff
-+ R: We rewrote the calculations and justifications for the estimates.
++ R: The limit on the outflowing velocities is the lowe bound that gives a single peaked line.
 ```
 
-```diff
-- [Jaime: Reescribir el cálculo y justificación de los estimados]
-```
 
 _**8/ Intro:**
 In the introduction, the authors try to motivate why it is important to study
