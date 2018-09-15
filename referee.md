@@ -190,7 +190,10 @@ expected to be maximal, but it would be useful to comment on these values, to
 put them into context._
 
 ```diff
-+ R: The limit on the outflowing velocities is the lowe bound that gives a single peaked line.
++ R: We explore a range of parameters convenient for model comparison (MC vs. semi-analytic) and 
++ that produce an standard deviation and skewness similar to observational MUSE values. 
++ The values for the outflow velocity are lower than values commonly used in the
++ literature to allow for an interplay between the two kinematic features.
 ```
 
 
@@ -227,12 +230,9 @@ there is a severe lack of studies of the effect of rotation on the shape of
 the Lya lines... etc...._
 
 ```diff
-+ R: We rewrote the introduction with new argumentation.
++ R: The introduction emphasizes the angle of model comparison.
 ```
 
-```diff
-- [Jaime. Reescribir la argumentación de la introducción.]
-```
 
 _**9/ First paragraph, ligne 8:**
 these systems naturally show a Lya emission line -> say 'produce' instead of
