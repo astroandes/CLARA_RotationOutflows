@@ -17,6 +17,15 @@ $(FILE_PDF) : $(FILE_TEX) references.bib
 	$(LATEX) $(FILE_TEX)
 	$(LATEX) $(FILE_TEX)
 
+diff:	$(FILE_NAME)_diff.pdf
+
+$(FILE_NAME)_diff.pdf: $(FILE_NAME).tex
+	latexdiff $(FILE_NAME)_old.tex $(FILE_NAME).tex > $(FILE_NAME)_diff.tex
+	$(LATEX) $(FILE_NAME)_diff.tex 
+	bibtex $(FILE_NAME)_diff
+	$(LATEX) $(FILE_NAME)_diff.tex 
+	$(LATEX) $(FILE_NAME)_diff.tex 
+
 clean:
 		rm -f $(FILE_NAME).aux
 		rm -f $(FILE_NAME).out

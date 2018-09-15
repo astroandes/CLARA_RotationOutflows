@@ -1,0 +1,1055 @@
+\documentclass[a4paper,fleqn,usenatbib]{mnras}
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL paper_old.tex   Sat Sep 15 12:39:51 2018
+%DIF ADD paper.tex       Sat Sep 15 12:35:04 2018
+%=========================================================================
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{float}
+\usepackage[dvips]{epsfig}
+\usepackage{epsfig}
+\usepackage{dblfloatfix}
+\usepackage{color}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{bm}
+\usepackage[british]{babel}
+%Non reposionated tables
+\newcommand{\HI}{{\text{H\MakeUppercase{\romannumeral 1}}} }
+\newcommand{\lya}{\ifmmode{{\rm Ly}\alpha}\else Ly$\alpha$\ \fi}
+\newcommand{\kms}{\ifmmode\mathrm{km\ s}^{-1}\else km s$^{-1}$\fi}
+\newcommand{\vrot}{\ifmmode v_{\mathrm{rot}}\else $v_{\mathrm{rot}}$~\fi}
+\newcommand{\vout}{\ifmmode v_{\mathrm{out}}\else $v_{\mathrm{out}}$~\fi}
+\newcommand{\tauh}{\ifmmode \tau_{\mathrm{H}}\else $\tau_{\mathrm{H}}$~\fi}
+\newcommand{\vth}{\ifmmode v_{\mathrm{th}}\else $v_{\mathrm{th}}$~\fi}
+\newcommand{\hatk}{\ifmmode \hat{k}\else $\hat{k}$~\fi}
+\newcommand{\STD}{\ifmmode \mathrm{STD}\else $\mathrm{STD}$~\fi}
+\newcommand{\SKW}{\ifmmode \mathrm{SKW}\else $\mathrm{SKW}$~\fi}
+\newcommand{\BI}{\ifmmode \mathrm{BI}\else $\mathrm{BI}$~\fi}
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFaddtex}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdeltex}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF HYPERREF PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{\texorpdfstring{\DIFaddtex{#1}}{#1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{\texorpdfstring{\DIFdeltex{#1}}{}} %DIF PREAMBLE
+\newcommand{\DIFscaledelfig}{0.5}
+%DIF HIGHLIGHTGRAPHICS PREAMBLE %DIF PREAMBLE
+\RequirePackage{settobox} %DIF PREAMBLE
+\RequirePackage{letltxmacro} %DIF PREAMBLE
+\newsavebox{\DIFdelgraphicsbox} %DIF PREAMBLE
+\newlength{\DIFdelgraphicswidth} %DIF PREAMBLE
+\newlength{\DIFdelgraphicsheight} %DIF PREAMBLE
+% store original definition of \includegraphics %DIF PREAMBLE
+\LetLtxMacro{\DIFOincludegraphics}{\includegraphics} %DIF PREAMBLE
+\newcommand{\DIFaddincludegraphics}[2][]{{\color{blue}\fbox{\DIFOincludegraphics[#1]{#2}}}} %DIF PREAMBLE
+\newcommand{\DIFdelincludegraphics}[2][]{% %DIF PREAMBLE
+\sbox{\DIFdelgraphicsbox}{\DIFOincludegraphics[#1]{#2}}% %DIF PREAMBLE
+\settoboxwidth{\DIFdelgraphicswidth}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\settoboxtotalheight{\DIFdelgraphicsheight}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\scalebox{\DIFscaledelfig}{% %DIF PREAMBLE
+\parbox[b]{\DIFdelgraphicswidth}{\usebox{\DIFdelgraphicsbox}\\[-\baselineskip] \rule{\DIFdelgraphicswidth}{0em}}\llap{\resizebox{\DIFdelgraphicswidth}{\DIFdelgraphicsheight}{% %DIF PREAMBLE
+\setlength{\unitlength}{\DIFdelgraphicswidth}% %DIF PREAMBLE
+\begin{picture}(1,1)% %DIF PREAMBLE
+\thicklines\linethickness{2pt} %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\framebox(1,1){}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\line( 1,1){1}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,1){\line(1,-1){1}}}% %DIF PREAMBLE
+\end{picture}% %DIF PREAMBLE
+}\hspace*{3pt}}} %DIF PREAMBLE
+} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbegin}{\DIFaddbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddend}{\DIFaddend} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbegin}{\DIFdelbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelend}{\DIFdelend} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbegin}{\DIFOaddbegin \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbegin}{\DIFOdelbegin \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbeginFL}{\DIFaddbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddendFL}{\DIFaddendFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbeginFL}{\DIFdelbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelendFL}{\DIFdelendFL} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbeginFL}{\DIFOaddbeginFL \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbeginFL}{\DIFOdelbeginFL \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+\begin{document}
+
+%=========================================================================
+%		FRONT MATTER
+%=========================================================================
+\DIFdelbegin %DIFDELCMD < \title[Lyman-α photons through rotating outflows]{%%%
+\DIFdelend \DIFaddbegin \title[Lyman-$\alpha$ photons through rotating
+  outflows]{\DIFaddend Lyman-$\alpha$ photons through rotating outflows}  
+\author[M.C. Remolina-Gutierrez \& J.E. Forero-Romero]{
+  Maria Camila Remolina-Guti\'errez$^{1}$
+  \thanks{mc.remolina197@uniandes.edu.co} \&
+  Jaime E. Forero-Romero $^{1}$
+  \thanks{je.forero@uniandes.edu.co}\\
+  %%
+  $^{1}$ Departamento de F\'isica, Universidad de los Andes, Cra. 1
+  No. 18A-10 Edificio Ip, CP 111711, Bogot\'a, Colombia \\
+}
+
+\maketitle
+
+\begin{abstract}
+Outflows and rotation are two ubiquitous kinematic features in the gas
+kinematics of galaxies. 
+Here we \DIFdelbegin \DIFdel{perform }\DIFdelend \DIFaddbegin \DIFadd{introduce a semi-analytic model to quantify how rotating
+outflows impact the morphology of the Lyman-$\alpha$ emission line.   
+The model is contrasted against }\DIFaddend Monte Carlo radiative transfer
+simulations of outflowing gas with additional solid body rotation\DIFdelbegin \DIFdel{to understand how these kinematic
+features impact the morphology of the Lyman-$\alpha$ emission line}\DIFdelend .
+We explore a range of neutral Hydrogen optical depth of
+$10^5\leq\tauh\leq10^7$, rotational velocity $0\leq \vrot/\kms \leq
+100$ and outflow velocity $0\leq \vout/\kms\leq 50$.  
+We find three \DIFdelbegin \DIFdel{important }\DIFdelend consequences of rotation.
+First, it introduces a dependency with viewing angle; second it
+\DIFdelbegin \DIFdel{produces a line broadening }\DIFdelend \DIFaddbegin \DIFadd{broadens the line }\DIFaddend and third it increases the flux at the
+line's center.
+\DIFdelbegin \DIFdel{We also test a }\DIFdelend \DIFaddbegin \DIFadd{For all viewing angles, the }\DIFaddend semi-analytic model \DIFdelbegin \DIFdel{that modifies the
+spectra of
+pure outflow simulations and manages to reproduce the }\DIFdelend \DIFaddbegin \DIFadd{reproduces the
+}\DIFaddend radiative transfer results for the line \DIFdelbegin \DIFdel{widths }\DIFdelend \DIFaddbegin \DIFadd{width }\DIFaddend and flux change at the
+line's center within a $7\%$ and $50\%$ precision \DIFdelbegin \DIFdel{, respectively, }\DIFdelend for an optical depth of
+$\tauh=10^5$\DIFaddbegin \DIFadd{, respectively, }\DIFaddend and within $2\%$ and $1\%$ for an optical
+depth of $\tauh=10^7$.
+\DIFdelbegin \DIFdel{We argue that rotation is a required kinematic feature to
+take into
+account for a correct interpretation of }\DIFdelend \DIFaddbegin \DIFadd{Using this model we also show that the peaks of integrated spectra
+taken from opposite sides of an edge-on rotating gas distribution
+should have a separation of $\frac{1}{2}\vrot$. 
+The semi-analytic model presented here is a convenient tool to
+introduce rotational kinematics as a post-processing step of idealized
+Monte Carlo simulations; it provides a framework to interpret }\DIFaddend \lya
+spectra in systems where rotation is \DIFdelbegin \DIFdel{already evident }\DIFdelend \DIFaddbegin \DIFadd{expected or directly measured
+}\DIFaddend through kinematic maps\DIFdelbegin \DIFdel{but also in other
+systems, such as Green Pea galaxies, where a strong }%DIFDELCMD < \lya %%%
+\DIFdel{emission at
+the line's center could be explained by rotational kinematics}\DIFdelend .  
+\end{abstract}
+
+\begin{keywords}
+galaxies:ISM --- line:profiles --- radiative transfer --- methods: numerical
+\end{keywords}
+
+
+%=========================================================================
+%		PAPER CONTENT
+%=========================================================================
+
+%*************************************************************************
+
+\section{Introduction}
+\label{sec:intro}
+
+Recent advances in instrumentation have revealed the presence of gas
+rotation on vastly different physical scales.
+For instance, spatially resolved spectra on compact dwarf galaxies
+have measured clear signs of gas showing pure rotation kinematics
+\citep{2015A&A...577A..21C,2017A&A...600A.125C} and the recent mapping of
+high redshift circumgalactic regions have also revealed kinematic
+evidence for large scale rotation \citep{2018MNRAS.473.3907A}.
+\DIFdelbegin \DIFdel{These systems }\DIFdelend \DIFaddbegin \DIFadd{Systems }\DIFaddend with star formation, neutral gas and low dust
+contents \DIFdelbegin \DIFdel{naturally show }\DIFdelend \DIFaddbegin \DIFadd{can produce }\DIFaddend a \lya emission line \citep{PartridgePeebles}
+motivating the observational work to phenomenologically link \DIFaddbegin \DIFadd{tracers
+of galaxy rotation such as }\DIFaddend H$\alpha$ \DIFdelbegin \DIFdel{kinematics }\DIFdelend to \lya spectra
+\citep[e.g.][]{Herenz2016}.  
+
+What is then the expected imprint of rotation on a resonant emission
+line such as the \lya line? To what extent is it possible to constrain
+rotational kinematics from the \lya emission line? 
+Detailed radiative transfer (RT) \lya modeling of rotating systems
+started until recently by \cite{Garavito14}.
+In that work the authors studied the influence of pure solid body
+rotation on the \lya line's morphology.
+They found that rotation indeed introduces changes, the most
+noticeable being the dependence of the spectra with the viewing
+angle with respect to the rotation axis. 
+
+\cite{Garavito14} also presented a simple semi-analytical
+approximation that accounted for the main features of the \lya spectra
+from a rotation sphere.
+Recently, this semi-analytic solution was used to perform a Markov
+Chain Monte Carlo exploration to fit the observed spectra Compact
+Dwarf Galaxy \citep{tololo} with atypical features that could be
+explained by pure rotation.  
+
+However, the gas dynamics in Lyman Alpha Emitter (LAE) galaxies are
+more complex than pure rotation.
+\DIFdelbegin \DIFdel{The case for outflows as traced in the }%DIFDELCMD < \lya %%%
+\DIFdel{line is much better
+established.
+}\DIFdelend In many observations the \lya line profile has a single peak
+redwards from the line's center, in other cases there is a double peak
+but the peak on the red side is stronger
+\citep[e.g.][]{2010ApJ...717..289S,Erb14,Trainor16}.   
+These features have been \DIFdelbegin \DIFdel{readily }\DIFdelend explained as the consequence of multiple
+\lya photon scatterings through a homogeneous outflowing shell of
+neutral Hydrogen
+\DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+\citep{2006A&A...460..397V,Orsi12,2012ApJ...751...29Y,2015ApJ...812..123G}}%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\citep{Verhamme06,Orsi12,2015ApJ...812..123G}}%DIFAUXCMD
+}\DIFaddend .  
+
+\DIFdelbegin \DIFdel{An }\DIFdelend \DIFaddbegin \DIFadd{Nevertheless, a }\DIFaddend study of the combined effects of outflows and
+rotation has not been presented in the literature.
+Here we \DIFdelbegin \DIFdel{present }\DIFdelend \DIFaddbegin \DIFadd{report on }\DIFaddend such a study \DIFaddbegin \DIFadd{with the main aim of quantifying the
+validity of the semi-analytic approximation presented by
+\mbox{%DIFAUXCMD
+\cite{Garavito14} }%DIFAUXCMD
+in the case where outflows are also present}\DIFaddend . 
+We investigate a simplified geometrical configuration corresponding to a
+spherical gas cloud with symmetrical radial outflows and solid body
+rotation \DIFdelbegin \DIFdel{. 
+We base our modeling on }\DIFdelend \DIFaddbegin \DIFadd{and contrast the semi-analytic model against the results of }\DIFaddend a
+Monte-Carlo radiative transfer code. 
+\DIFdelbegin \DIFdel{Besides modeling the impact of joint rotation and outflows, we also
+check to what extent the analytical model presented by
+\mbox{%DIFAUXCMD
+\cite{Garavito14} }%DIFAUXCMD
+to explain the effects of rotation can also be
+applied in our case.
+}\DIFdelend 
+
+The structure of the paper is the following.
+We introduce first our theoretical tools and assumptions
+in Section \ref{sec:theory}. We continue in Section \ref{sec:results}
+with the results from the Monte-Carlo simulation, the comparison
+against the semi-analytical approximation which we use to make a
+thorough exploration of the effect of rotation.
+In Section \ref{sec:discussion} we discuss our results and their
+possible implications for observational analysis to finally present
+our conclusions in Section \ref{sec:conclusions}.
+
+\DIFaddbegin \DIFadd{Throughout the paper we use a thermal velocity for a neutral Hydrogen
+gas of }\vth \DIFadd{$= 12.86$ }\kms\DIFadd{, which corresponds to a temperature of
+$T=10^4$ K. 
+}
+
+\DIFaddend \begin{figure*}
+\centering
+    \includegraphics[width=0.48\textwidth]{doppler_shift_logtau6_theta90}
+    \includegraphics[width=0.48\textwidth]{doppler_shift_logtau6_theta0}
+  \caption{\textbf{Qualitative trends of changing outflow and
+      rotational velocity viewed perpendicular/paralell to the
+      rotation axis}.  
+    Here we fix $\tauh=10^6$. 
+    The six panels on the left correspond to $\theta=90^\circ$ and the
+    panels on the right to $\theta=0^{\circ}$
+    We vary \vrot increasing from left to right and \vout increasing
+    from top to bottom. 
+    The thin black line corresponds to the \lya line obtained with
+    CLARA without any rotation and the indicated outflow velocity.
+    The thick black line corresponds to the results including both
+    outflows and rotation.
+    The thick gray line shows the results of modifying the pure outflow
+    solution by the Doppler shift presented in Equation \ref{eq:shift_x}
+    (in thin line), if there is a radiative transfer of rotation and outflows
+    (thick and clear line), and if there is a radiative transfer of
+    only outflows, but also a Doppler shift from the rotational
+    velocity (thick and dark line).  
+    \label{fig:doppler_shift}}
+\end{figure*}
+
+\begin{figure*}
+\begin{center}
+\includegraphics[height=0.25\textwidth]{line_characterization_std_vout5_logtau5.pdf}
+\includegraphics[height=0.25\textwidth]{line_characterization_std_vout25_logtau5.pdf}
+\includegraphics[height=0.25\textwidth]{line_characterization_std_vout50_logtau5.pdf}\\
+\includegraphics[height=0.25\textwidth]{line_characterization_std_vout5_logtau6.pdf}
+\includegraphics[height=0.25\textwidth]{line_characterization_std_vout25_logtau6.pdf}
+\includegraphics[height=0.25\textwidth]{line_characterization_std_vout50_logtau6.pdf}\\
+\includegraphics[height=0.25\textwidth]{line_characterization_std_vout5_logtau7.pdf}
+\includegraphics[height=0.25\textwidth]{line_characterization_std_vout25_logtau7.pdf}
+\includegraphics[height=0.25\textwidth]{line_characterization_std_vout50_logtau7.pdf}
+\end{center}
+\caption{\textbf{Standard Deviation trends.} Results for all the
+  Radiative Transfer simulations (in triangles) compares against the
+  Doppler Shift model (lines).
+  All panels correspond to a viewing angle of $\theta = 90^{\circ}$
+  (perpendicular to the rotation axis). 
+  The optical depth increases from top to bottom and the outflow
+  velocity from left to right.
+  \label{fig:standard_deviation}}
+\end{figure*}
+
+\begin{figure*}
+\begin{center}
+\includegraphics[height=0.25\textwidth]{line_characterization_skw_vout5_logtau5}
+\includegraphics[height=0.25\textwidth]{line_characterization_skw_vout25_logtau5}
+\includegraphics[height=0.25\textwidth]{line_characterization_skw_vout50_logtau5}\\
+\includegraphics[height=0.25\textwidth]{line_characterization_skw_vout5_logtau6}
+\includegraphics[height=0.25\textwidth]{line_characterization_skw_vout25_logtau6}
+\includegraphics[height=0.25\textwidth]{line_characterization_skw_vout50_logtau6}\\
+\includegraphics[height=0.25\textwidth]{line_characterization_skw_vout5_logtau7}
+\includegraphics[height=0.25\textwidth]{line_characterization_skw_vout25_logtau7}
+\includegraphics[height=0.25\textwidth]{line_characterization_skw_vout50_logtau7}
+\end{center}
+\caption{\textbf{Skewness trends.} Results for all the
+  Radiative Transfer simulations (in triangles) compares against the
+  Doppler Shift model (lines).
+  Follows the same layout as Figure \ref{fig:standard_deviation}. 
+  \label{fig:skewness}}
+\end{figure*}
+
+\begin{figure*}
+\begin{center}
+\includegraphics[height=0.25\textwidth]{line_characterization_bi_vout5_logtau5}
+\includegraphics[height=0.25\textwidth]{line_characterization_bi_vout25_logtau5}
+\includegraphics[height=0.25\textwidth]{line_characterization_bi_vout50_logtau5}\\
+\includegraphics[height=0.25\textwidth]{line_characterization_bi_vout5_logtau6}
+\includegraphics[height=0.25\textwidth]{line_characterization_bi_vout25_logtau6}
+\includegraphics[height=0.25\textwidth]{line_characterization_bi_vout50_logtau6}\\
+\includegraphics[height=0.25\textwidth]{line_characterization_bi_vout5_logtau7}
+\includegraphics[height=0.25\textwidth]{line_characterization_bi_vout25_logtau7}
+\includegraphics[height=0.25\textwidth]{line_characterization_bi_vout50_logtau7}
+\end{center}
+\caption{\textbf{Bimodality trends.} Results for all the
+  Radiative Transfer simulations (in triangles) compares against the
+  Doppler Shift model (lines). 
+  Follows the same layout as Figure \ref{fig:standard_deviation}. 
+  \label{fig:bimodality}}
+\end{figure*}
+
+\begin{figure*}
+\begin{center}
+\includegraphics[height=0.25\textwidth]{line_characterization_vi_vout5_vrot100_logtau5}
+\includegraphics[height=0.25\textwidth]{line_characterization_vi_vout25_vrot100_logtau5}
+\includegraphics[height=0.25\textwidth]{line_characterization_vi_vout50_vrot100_logtau5}\\
+\includegraphics[height=0.25\textwidth]{line_characterization_vi_vout5_vrot100_logtau6}
+\includegraphics[height=0.25\textwidth]{line_characterization_vi_vout25_vrot100_logtau6}
+\includegraphics[height=0.25\textwidth]{line_characterization_vi_vout50_vrot100_logtau6}\\
+\includegraphics[height=0.25\textwidth]{line_characterization_vi_vout5_vrot100_logtau7}
+\includegraphics[height=0.25\textwidth]{line_characterization_vi_vout25_vrot100_logtau7}
+\includegraphics[height=0.25\textwidth]{line_characterization_vi_vout50_vrot100_logtau7}
+\end{center}
+\caption{\textbf{Valley Intensity. } We show for each \tauh the dependency that
+  the viewing angle $\theta$ has on the line's the
+  valley intensity. $\vrot=100$\kms is fixed for all panels.
+		\label{fig:valley_intensity}}
+\end{figure*}
+
+\begin{figure}
+\centering
+    \includegraphics[width=0.48\textwidth]{doppler}
+  \caption{\textbf{Spectra from receding/approaching sides of a toy
+      model LAE.}  These results correspond to the RT simulation with
+    $\vout=25$\kms, $\vrot=50$\kms, $\tauh=10^5$. 
+    The spectra were computed for a viewing angle of
+    $\theta=90^{\circ}$. This toy model illustrates to what extent spectra from
+    opposite sides of a galaxy have an imprint of the rotational
+    kinematics. 
+    \label{fig:doppler}}
+\end{figure}
+
+
+\DIFdelbegin %DIFDELCMD < \begin{figure}
+%DIFDELCMD < \centering
+%DIFDELCMD < \includegraphics[width=0.45\textwidth]{muse_vs_simulations.pdf}
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\textbf{\DIFdelFL{Comparison between simulations and observations.}}  
+%DIFAUXCMD
+\DIFdelFL{The observational results correspond to the MUSE-Wide Survey
+\mbox{%DIFAUXCMD
+\citep{2017A&A...606A..12H}}%DIFAUXCMD
+. The skewness and standard deviation from
+the simulations summarize the results presented in Figures
+\ref{fig:standard_deviation} and \ref{fig:skewness}.
+  }%DIFDELCMD < \label{fig:muse}%%%
+}
+%DIFAUXCMD
+%DIFDELCMD < \end{figure}
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelend \section{Theoretical Models}
+\label{sec:theory}
+
+
+\DIFdelbegin \DIFdel{The Monte Carlo code we use (CLARA ) \mbox{%DIFAUXCMD
+\citep{CLARA}}%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{We use CLARA \mbox{%DIFAUXCMD
+\citep{CLARA}}%DIFAUXCMD
+, a Monte Carlo code that }\DIFaddend follows the
+propagation of individual photons through a neutral Hydrogen medium
+characterized by its temperature, velocity field and global optical depth.
+The code assumes \DIFdelbegin \DIFdel{a }\DIFdelend \DIFaddbegin \DIFadd{an }\DIFaddend homogeneous density throughout the simulated volume.
+In the current implementation we neglect the influence of dust.
+Our basic model is an spherical distribution of neutral hydrogen,
+an approximation commonly used in the literature \DIFdelbegin \DIFdel{, as it }\DIFdelend \DIFaddbegin \DIFadd{that }\DIFaddend explains a
+wide variety of observational features
+\citep{Ahn03,Verhamme06,Dijkstra06}. 
+
+\DIFdelbegin \DIFdel{The velocity field we use }\DIFdelend \DIFaddbegin \DIFadd{We use a velocity field that }\DIFaddend captures both outflows and rotation.
+Outflows are described by a Hubble-like radial velocity profile with
+the \DIFdelbegin \DIFdel{velocity magnitude }\DIFdelend \DIFaddbegin \DIFadd{speed }\DIFaddend increasing linearly with the radial coordinate; \DIFdelbegin \DIFdel{the outflows }\DIFdelend \DIFaddbegin \DIFadd{this }\DIFaddend model
+is fully characterized by $v_{\rm out}$, the \DIFaddbegin \DIFadd{radial }\DIFaddend velocity at the
+sphere's surface. 
+Rotation follows a solid body rotation profile \DIFdelbegin \DIFdel{, which is }\DIFdelend fully characterized by
+$v_{\rm rot}$ \DIFdelbegin \DIFdel{, }\DIFdelend the linear velocity at the sphere's surface.  
+
+The total velocity field \DIFdelbegin \DIFdel{corresponds to }\DIFdelend \DIFaddbegin \DIFadd{is }\DIFaddend the superposition of rotation and
+outflows.
+The cartesian components take the following form:
+
+\begin{equation}
+	v_{x}=\frac{x}{R}\vout - \frac{y}{R}\vrot ,
+	\label{eq:vx}
+\end{equation}
+
+\begin{equation}
+	v_{y}=\frac{y}{R}\vout + \frac{x}{R}\vrot ,
+	\label{eq:vy}
+\end{equation}
+
+\begin{equation}
+	v_{z}=\frac{z}{R}\vout,
+	\label{eq:vz}
+\end{equation}
+%
+where $x$, $y$ and $z$ are the cartesian position coordinates with the
+origin at the sphere's center, $R$ is the radius of the sphere and the
+direction of the angular velocity vector \DIFdelbegin \DIFdel{corresponds to the }%DIFDELCMD < \hatk %%%
+\DIFdel{unit vector}\DIFdelend \DIFaddbegin \DIFadd{is the $z$ axis}\DIFaddend .
+
+For each \DIFdelbegin \DIFdel{model setup }\DIFdelend \DIFaddbegin \DIFadd{run }\DIFaddend we follow $10^5$ individual photons generated \DIFdelbegin \DIFdel{at
+the
+center of the sphere }\DIFdelend \DIFaddbegin \DIFadd{from the
+origin }\DIFaddend at the \lya line's center as they propagate
+through the volume and finally \DIFdelbegin \DIFdel{scape}\DIFdelend \DIFaddbegin \DIFadd{escape}\DIFaddend .
+We store the \DIFdelbegin \DIFdel{final }\DIFdelend frequency and propagation direction for each photon
+at its last scattering.
+
+As input parameters we use $\tauh=\{10^5, 10^6, 10^7\}$,
+$\vout=\{5,25,50\}\;\kms$ and $\vrot=\{0,50,100\}\;\kms$, for a total of
+$27$ models with all the possible parameter combinations.
+The \DIFdelbegin \DIFdel{range of values have some overlap with the expectations from a
+galaxy with a total neutral hydrogen mass of $10^8$-$10^9$
+$M_{\odot}$}\DIFdelend \DIFaddbegin \DIFadd{values for the outflow velocity are lower than values commonly used in the
+literature to allow for an interplay between the two kinematic features.
+This range of parameters also produce emission lines with standard deviation and
+skewness in the same range to those of high redshift LAES in recent
+observations \mbox{%DIFAUXCMD
+\citep{2017A&A...606A..12H}}%DIFAUXCMD
+}\DIFaddend .
+
+
+\DIFaddbegin \DIFadd{We also define the viewing angle, $\theta$, as the angle
+between the rotation axis and the line of sight of a potential
+observer. 
+}
+
+\DIFaddend \cite{Garavito14} presented an analytical model that
+accounts for the effects of pure rotation on the
+\lya line morphology. 
+The basic assumption of \DIFdelbegin \DIFdel{their analytical }\DIFdelend \DIFaddbegin \DIFadd{the }\DIFaddend model is that each differential surface
+element on the sphere Doppler shifts the photons that it emits.
+In this paper we introduce this ansatz by post-processing the results
+of the outflows simulations without rotation.
+The frequency of each photon is Doppler shifted as follows
+
+\begin{equation}
+x' = x + \frac{\vec{v}_{\rm rot}\cdot \hatk}{\vth}
+\label{eq:shift_x}
+\end{equation}
+%
+where $x'$ is the photon's new adimensional frequency, $x$ is the photon's
+frequency after being processed \DIFaddbegin \DIFadd{only }\DIFaddend by the outflow, \vrot is the 
+rotational velocity at the point of escape of the photon, \hatk is
+the photon's direction of propagation and \vth is the thermal
+velocity of the sphere. 
+\DIFaddbegin \DIFadd{We fix }\vth \DIFadd{throughout the paper. This factor is a multiplying
+constant that could be changed without running new Monte-Carlo
+simulations, as the code works with the adimensional frequency $x$. 
+}\DIFaddend 
+
+This \DIFaddbegin \DIFadd{semi-analytic model }\DIFaddend allows us to produce new \lya spectra \DIFaddbegin \DIFadd{from
+the outflow-only results }\DIFaddend and compare them with the full radiative
+transfer solution including both outflows and rotation. 
+
+\section{Results}
+\label{sec:results}
+
+\subsection{Qualitative Trends}
+\label{sec:qualitative}
+
+Figure \ref{fig:doppler_shift} summarizes the most important trends
+\DIFaddbegin \DIFadd{from rhw RT simulations}\DIFaddend .
+In the left side, the six panels correspond to $\tau=10^6$ and a viewing angle of
+$\theta =90^{\circ}$, that is, perpendicular to the rotation axis of the
+galaxy. 
+In every panel the thin black line corresponds to the pure outflow
+solution, i.e. without rotation. 
+From top to bottom we see the effect of increasing the outflow
+velocity, which is the expected increasing asymmetry towards the red
+peak. 
+
+The thick black line corresponds to the solution that includes both
+outflows and rotation.
+Comparing the left and right columns (lower versus higher rotational
+velocity) we can see two immediate effects.
+First, the line broadens and second, the intensity at the line's
+center increases.
+
+The thick gray line corresponds to the pure outflow solution
+with the Doppler \DIFdelbegin \DIFdel{boost }\DIFdelend \DIFaddbegin \DIFadd{shift }\DIFaddend added to model rotation's influence.
+At $\tauh=10^6$ the Doppler \DIFdelbegin \DIFdel{boost }\DIFdelend \DIFaddbegin \DIFadd{shift }\DIFaddend does a good job at capturing the broad
+morphological features introduced by rotation: the angle dependence,
+the broadening and the intensity increase at the line's center.
+
+In the right side of Figure \ref{fig:doppler_shift} we show the same results as in the left one, but for a viewing angle of \DIFdelbegin \DIFdel{$\theta =
+90^{\circ}$}\DIFdelend \DIFaddbegin \DIFadd{$\theta =
+0^{\circ}$}\DIFaddend , that is parallel to the rotation axis. 
+In this case we confirm the result presented by \cite{Garavito14},
+namely that pure rotation introduces a strong dependence with 
+viewing angle, a trend that we find also holds for rotation mixed with
+outflows.   
+
+The quality of the results from the Doppler \DIFdelbegin \DIFdel{boost }\DIFdelend \DIFaddbegin \DIFadd{shift }\DIFaddend improves for higher
+\tauh values. 
+In the Appendix we show the same plots as Figure
+\ref{fig:doppler_shift}, there it is evident that for $\tauh=10^5$ the
+results are not as good as they are for $\tauh=10^6$, and that for
+$\tauh=10^7$ the Doppler \DIFdelbegin \DIFdel{boost
+}\DIFdelend \DIFaddbegin \DIFadd{shift }\DIFaddend provides a remarkable good
+approximation. 
+
+\subsection{Quantitative \DIFdelbegin \DIFdel{trends}\DIFdelend \DIFaddbegin \DIFadd{Trends}\DIFaddend }
+\label{sec:quantitative}
+
+After finding the qualitative influence of the different parameters we
+move onto a quantitative study.
+To do this we summarize the line morphology by four different
+\DIFdelbegin \DIFdel{characteristics}\DIFdelend \DIFaddbegin \DIFadd{scalars}\DIFaddend : standard deviation (STD), skewness (SKW), bimodality
+(BI) and valley/peak ratio.
+These quantities are defined by the following equations \citep{kokoska1999}:
+
+\begin{equation}
+\label{eq:std}
+\STD = \sqrt{m_2},
+\end{equation}
+
+\begin{equation}
+\label{eq:skw}
+\SKW = \frac{m_3}{m_2^{3/2}},
+\end{equation}
+
+\begin{equation}
+\label{eq:bi}
+\BI = \mathrm{KURTOSIS} - \SKW^2 = \frac{m_4}{m_2^{2}} - \frac{m_3^2}{m_2^{3}},
+\end{equation}
+%
+where each $m_i$ is the i-th moment about the mean. 
+The STD has velocity units and quantifies the line's width.
+The SKW is adimensional and quantifies the peaks' asymmetry. 
+In the case of a bimodal distribution, $\SKW>0$ means that the blue
+peak is taller and for $\SKW<0$ the red peak is taller. 
+The BI is adimensional and quantifies whether the line has 1 or 2
+peaks: it is  always $\geq 1$ \citep{Pearson1929} and the closer 
+to 1, the more bimodal is the line (i.e. has 2 similar peaks). 
+We found by visual inspection of our spectra that $\BI=2.5$ marks the
+transition between two peaks (however imbalanced) and a dominant
+single peak.
+
+
+\subsubsection{Standard Deviation}
+Figure \ref{fig:standard_deviation} summarizes the standard deviation
+results for all our models.
+Each panel shows the STD as a function of \vrot.
+All panels were computed using a viewing angle of $\theta =
+90^{\circ}$ (perpendicular to the rotation axis), which has the most
+extreme influence from rotation.
+ The black triangles
+correspond to the full RT solution and the line to the DS
+approximation.  
+The optical depth increases from top to bottom and the outflow
+velocity from left to right.
+This quantitative plot confirms that the line width increases with
+rotational velocity and optical depth.
+These trends are expected; higher rotational velocities can be seen as
+an addition of different Doppler shifts that smear out the line, while
+a higher optical depth translates into a larger number of scatterings
+that increase the probability of a photon to diffuse in frequency
+resulting in a broader line.
+
+The DS successfully reproduces all trends with the optical depth,
+rotational velocity and outflow velocity.
+However, the DS consistently underestimates the STD. 
+The difference between the RT and DS increases with the outflow
+velocity and the rotational velocity, and decreases with increasing
+optical depth.
+In the range of parameter space explore, this difference has as an
+upper bound of $\sim 7\%$, $3\%$ and $\sim 2\%$ for
+ $\tauh=10^5$, $10^6$ and $10^7$, respectively. 
+
+\subsubsection{Skewness}
+
+Figure \ref{fig:skewness} presents the skewness results for all the
+models together with the DS comparison following the same layout as
+Figure \ref{fig:standard_deviation}.
+In all cases the skewness is negative showing that all the lines
+are unbalanced towards the red side of the spectrum.
+Skewness increases with rotational velocity and decreases with
+optical depth; rotation tries to smooth the line diminishing the
+asymmetries while a higher optical depth reinforces the line asymmetries.
+The skewness does not have a monotonous trend with outflow velocity because
+there is a transition between double and single peak line; for low
+outflow velocities the skewness signals the balance between the two
+existing peaks while for high outflow velocities it quantifies the
+asymmetry of the already dominant read peak.
+
+The DS reproduces the main trends, again with an underestimation that
+decreases at higher optical depths and increases with larger values of
+the rotational velocity and outflow velocity.
+In this case the differences between RT and DS have an upper bound of
+$85\%$, $35\%$ and $5\%$ 
+for  $\tauh=10^5$, $10^6$ and $10^7$,
+respectively.  
+
+
+\subsubsection{Bimodality}
+
+Figure \ref{fig:bimodality} shows the results for the bimodality using
+the same layout as in the two previous Figures.
+Following the reasoning about the skewness, we observe that
+increasing the outflow velocity increases the value of bimodality,
+that is, it transitions to a more pronounced single peak. 
+The trend as a function of the rotational velocity and the optical
+depth are not monotonous.
+When the outflow velocity is low ($\vout<50\ \kms$), an increasing
+rotational velocity smears the two asymmetrical peaks pushing the line
+morphology towards a single peaks, making the bimodality statistics
+increase. 
+On other situations ($\vout=50\ \kms$ and $\tauh\geq 10^6$) higher
+rotational velocities the bimodality statistics decreases, which means
+that it manages to slightly enlarge the already dominant red peak.
+
+The DS reproduces the main trends while underestimating the bimodality
+statistics. 
+As expected from the previous results the difference between RT and DS
+decreases at higher optical depths and increases with increasing
+values of the rotational and outflow velocities.
+In this case the differences have an upper bound of $4\%$, $2\%$ and
+$1\%$ for  $\tauh=10^5$, $10^6$ and $10^7$, respectively.  
+
+\subsubsection{Intensity at line's center}
+
+In Figure \ref{fig:valley_intensity} we quantify how the intensity at
+the line's center (i.e. the valley) changes with the viewing angle,
+the outflow velocity and the optical depth.
+These results correspond to a fixed rotational velocity of
+$\vrot=100\ \kms$.
+The triangles correspond to the RT simulations and the line represents
+the DS results. 
+The valley intensity is expressed as a fraction of the maximum peak
+intensity in the line, as such the valley/peak ratio is always $<1$. 
+In every panel we see that the valley/peak ratio decreases as the
+observer moves from a line  of sight perpendicular to the rotation
+axis onto a parallel line of sight. 
+This is a clear demonstration of the viewing angle dependency
+introduced by rotation.
+
+The valley/peak ratio at $\cos{\theta}=1$ matches results
+without rotation, this shows that for increasing rotational velocity
+the valley/peak ratio increases.
+In turn, for increasing optical depth or outflowing velocity this
+ratio decreases.
+Once again, the DS results correctly follow the trends for the full RT
+simulations.  
+This time the differences have an upper bound of $55\%$, $2\%$ and
+$1\%$ for  $\tauh=10^5$, $10^6$ and $10^7$, respectively.  
+
+
+\section{Discussion}
+\label{sec:discussion}
+
+In this section we discuss how the results we have presented can be
+connected to the interpretation of observational data.
+
+
+\subsection{\DIFdelbegin %DIFDELCMD < \lya %%%
+\DIFdel{continuum leakage or rotation?}\DIFdelend \DIFaddbegin \DIFadd{The semi-analytic model as gaussian smoothing}\DIFaddend }
+
+\DIFdelbegin \DIFdel{One application of this new model to the current interpretation of }%DIFDELCMD < \lya
+%DIFDELCMD < %%%
+\DIFdel{spectra
+, is that the central ($V=0$) emission of the spectra seen in the
+}%DIFDELCMD < \lya %%%
+\DIFdel{line, 
+is a }\DIFdelend \DIFaddbegin \DIFadd{The effects of the semi-analytic model on the pure outflowing spectra
+are similar to the expected results from a gaussian smoothing, 
+such smoothing can also be a natural }\DIFaddend consequence of the \DIFdelbegin \DIFdel{viewing angle of the galaxy and can be
+controlled by it.
+Several authors have suggested that this central emission is caused by
+radiation that escapes the galaxy without scattering, mostly due to a clumpy interstellar medium \mbox{%DIFAUXCMD
+\citep{Hansen06, 2016ApJ...833L..26G}}%DIFAUXCMD
+.
+Rotation is an alternative that solves this issue}\DIFdelend \DIFaddbegin \DIFadd{intruments
+used to measure the LAE spectra.
+As a consequence, natural experimental artifacts could be mistaken as
+an indication for rotation}\DIFaddend .
+
+\DIFdelbegin \DIFdel{We note that the relative intensity of the two peaks in the outflowing
+spectra is not modified by rotation , that asymmetry is solely
+controlled by the outflow velocity.
+This means that results that have already derive a
+typical outflowing
+velocity as  to match the observational constraints do not have to be
+completely revised. 
+Only an additional exploration of rotational velocities and
+viewing
+angles needs to be explored.
+}\DIFdelend \DIFaddbegin \DIFadd{To understand to what extent the effects of rotation can be seen as a
+simple smoothing, we model the effects of gaussian smoothing with a
+similar ansatz as  the semi-analytic model by changing the frequency
+of each photon by a Gaussian random variable centered on zero and
+standard deviation $\sigma_x$: }\begin{equation}
+\DIFadd{x^{\prime} = x + \mathcal{N}(0,\sigma_x^2).
+}\end{equation}
+\DIFaddend 
+
+\DIFdelbegin \DIFdel{A recent observational example is provided by
+\mbox{%DIFAUXCMD
+\cite{2017A&A...608L...4R}}%DIFAUXCMD
+.
+They report optical spectroscopy of a bright lensed galaxy at a redshift of $z=2.4$. 
+The object presents a triple peaked }%DIFDELCMD < \lya %%%
+\DIFdel{profile that can be thought
+as the superposition of two components, a double asymmetric peak and a
+narrower symmetric peak around the line's center. 
+One possible option for the narrow component is that it escaped the
+galaxy without substantial interaction with neutral Hydrogen. 
+We speculate that the central feature could also be due to a purely 
+rotating component that can produce such a feature as shown by
+\mbox{%DIFAUXCMD
+\cite{tololo}}%DIFAUXCMD
+. 
+The triple peak could be then produced by two main
+decopled components: one rotating the other outflowing.
+}\DIFdelend \DIFaddbegin \DIFadd{We find that the results of the semi-analytic model on the total
+spectra at a given angle $\theta$ can be approximated using
+$\sigma_x = (1/2)\times(\vrot/\vth)\times \sin\theta$. 
+This approximation reproduces within a few porcent all quantities
+measured in Section \ref{sec:quantitative} for the semi-analytic
+model, it only works well for $\tau=10^6$ and $\tau=10^7$. 
+}\DIFaddend 
+
+\DIFdelbegin \DIFdel{Another interesting example are the }%DIFDELCMD < \lya %%%
+\DIFdel{lines in Green Pea galaxies \mbox{%DIFAUXCMD
+\citep{2016ApJ...820..130Y}}%DIFAUXCMD
+.
+\mbox{%DIFAUXCMD
+\cite{2017ApJ...844..171Y} }%DIFAUXCMD
+showed in a
+study of 43 Green Pea galaxies
+that 2/3 were strong }%DIFDELCMD < \lya %%%
+\DIFdel{emitters.  
+There the }%DIFDELCMD < \lya %%%
+\DIFdel{escape fraction is effectively estimated from the
+ratio
+of H$\alpha$ to }%DIFDELCMD < \lya%%%
+\DIFdel{.
+Galaxies with large escape fractions also substantial }%DIFDELCMD < \lya %%%
+\DIFdel{emission at
+the line's center.
+We speculate that this feature could help to constrain rotation in
+Green Pea galaxies. 
+}\DIFdelend \DIFaddbegin \DIFadd{This result can be used as an order of magnitude estimate of the mimum
+espectral resolution required to observe the effects of a rotational
+velocity of $\vrot$. 
+The Space Telescope Imaging Spectrograph (STIS) on the Hubble Space
+Telescope (HST) can provide resolutions around 20 }\kms
+\DIFadd{\mbox{%DIFAUXCMD
+\citep{2015PASA...32...27H}}%DIFAUXCMD
+, which could allow for the detection of
+rotation features in nearby galaxies with at least $40$ }\kms \DIFadd{and a
+rotation axis perpendicular to the line of sight.  
+Other instruments such as the Cosmic Origins Spectrograph (COS) have
+varying resolutions between $20$}\kms \DIFadd{and $200$}\kms \DIFadd{according to the
+angular size of the source \mbox{%DIFAUXCMD
+\citep{2018A&A...616A..60O}}%DIFAUXCMD
+.
+}\DIFaddend 
+
+\subsection{\lya Kinematic Maps}
+\DIFaddbegin \label{subsec:kinematic}
+\DIFaddend 
+
+Current observational facilities have the capability of spatially
+resolving the extent of a LAE.
+For instance \cite{Prescott14} presented observational results of a
+Doppler shift when taking spectra at two opposite sides of a large
+($\approx 80$kpc) LAE.
+In more recent work \cite{2018MNRAS.473.3907A} mapped \lya emission
+around a quasar.
+\DIFaddbegin \DIFadd{In this case one could measure the displacement between the
+peaks in the two different spectra. 
+The interest of this test is that the location of the peaks only
+depends on the kinematic properties of the sources and does not
+change by convolution with a gaussian window function due to limited
+instrumental resolution, as discussed in the previous section.
+}\DIFaddend 
+
+In Figure \ref{fig:doppler} we present a toy model (\vrot$=50\ \kms$,
+\vout$=25\ \kms$ and \tauh$=10^5$) for the spectrum of
+a LAE taken from to different sides of the galaxy. 
+As the LAE is rotating, one side is being redshifted while the other
+is blueshifted. 
+We see that the full spectrum is a weighted line, in solid black,
+that is found between these two.
+We notice that the distance between the maxima of the blue and red
+spectra is not twice the rotational velocity as it could be naively
+expected.
+
+\DIFdelbegin \DIFdel{Although it is a good approximation to think the rotating spectra by a
+sum of Doppler shifts, the peak of the spectra is also weighted by the
+amount of mass with a given velocity. 
+}\DIFdelend In this toy model the distance between the peaks of the
+receding/approaching spectra is close to \DIFdelbegin \DIFdel{$\sim 20\ \kms$}\DIFdelend \DIFaddbegin \DIFadd{$\sim 25\ \kms$}\DIFaddend , which is
+\DIFdelbegin \DIFdel{less than half }\DIFdelend \DIFaddbegin \DIFadd{a fourth }\DIFaddend of the naively expected value of $2\vrot=100\ \kms$,
+due to the fact that only a small fraction of the photons are emitted
+at the extreme of the galaxy having the maximum rotational velocity of
+$50\ \kms$. 
+\DIFaddbegin \DIFadd{Although it is a good approximation to think the rotating spectra by a
+sum of Doppler shifts, the peak of the spectra is also weighted by the
+amount of mass with a given line-of-sight velocity. 
+}\DIFaddend 
+
+\DIFdelbegin \DIFdel{New spectrographs like MUSE should help }\DIFdelend \DIFaddbegin \DIFadd{Spectrographs like the Multi Unit Spectroscopic Explorer (MUSE) could
+}\DIFaddend obtain kinematic information from \DIFaddbegin \DIFadd{large samples of }\DIFaddend LAEs to build
+velocity maps in Ly$\alpha$.  
+This could be a natural extension of the work reported by
+\cite{Herenz2016} on the velocity maps of several LARS (Lyman Alpha
+Reference Sample) galaxies.  
+The interpretation of such data \DIFdelbegin \DIFdel{should }\DIFdelend \DIFaddbegin \DIFadd{could }\DIFaddend take into account the insights
+and trends we have presented in this paper.
+
+
+\DIFdelbegin \subsection{\DIFdel{Comparison against the MUSE-Wide Survey}}
+%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{In order to give the reader a feeling of the ranges of observational
+data that could be explained by the models presented here, 
+we perform a comparison against observational data from the MUSE-Wide
+Survey (MWS) \mbox{%DIFAUXCMD
+\citep{2017A&A...606A..12H}}%DIFAUXCMD
+.   
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{MWS provides public access to 831 spectra out of which 237 contain a
+detected }%DIFDELCMD < \lya %%%
+\DIFdel{line as dominant. 
+The public dataset reports as the redshift of the galaxy the position
+of the dominant peak.
+We use this redshift to convert the spectra to a rest-frame and compute
+the standard deviation and skewness statistics. 
+Given the uncertainty on the galaxy redshift we do not compute the
+valley/peak ratio. 
+We do not try to perform a full fit to all the spectra
+\mbox{%DIFAUXCMD
+\citep[e.g.][]{2017A&A...608A.139G} }%DIFAUXCMD
+and wish only to
+know whether the region of parameter space explored in our RT
+simulations shows any crossing with the results from the MWS or
+shows any sign of atypical features.
+ }%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{Figure \ref{fig:muse} shows the results of this experiment. 
+The small white circles correspond to the 217 }%DIFDELCMD < \lya %%%
+\DIFdel{emitters in the MWS
+observations; the large black circles to the results of the
+simulations presented in this paper. 
+This shows that the systems modeled in this paper actually present an
+overlap with statistics derived from observations. 
+The region with standard deviation $>200$}%DIFDELCMD < \kms %%%
+\DIFdel{could also be explained
+by systems with larger optical depths than we have used here. 
+However, the systems with a positive skewness, that is a line
+unbalanced towards the blue could be the sign of inflowing
+kinematics. 
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelend \section{Conclusions}
+\label{sec:conclusions}
+
+In this paper we explore, for the first time in the literature,
+the results of a model for the emergent \lya line from rotating
+outflows. 
+\DIFdelbegin \DIFdel{The main results for the model are computed from }\DIFdelend \DIFaddbegin \DIFadd{We the }\DIFaddend a \DIFaddbegin \DIFadd{semi-analytic model first presented by \mbox{%DIFAUXCMD
+\cite{Garavito14}
+}%DIFAUXCMD
+to capture the main effects of rotation and confront it against
+results from }\DIFaddend Monte-Carlo radiative transfer \DIFdelbegin \DIFdel{simulation and confronted with a simple
+}\DIFdelend \DIFaddbegin \DIFadd{simulations. 
+The }\DIFaddend semi-analytic \DIFdelbegin \DIFdel{ansatz that adds the effects of rotation onto results of pure outflow kinematics}\DIFdelend \DIFaddbegin \DIFadd{model only takes into account the Doppler shift computed
+as product of quantities at the surface of last scattering, namely
+$\vec{v}_{\rm rot}\cdot \hatk$, where $\vec{v}_{\rm rot}$ is the
+velocity due to rotation and }\hatk \DIFadd{is the direction of the photon's
+propagation}\DIFaddend . 
+
+To address the first question we posed in the introduction (\emph{\DIFdelbegin \DIFdel{what }\DIFdelend \DIFaddbegin \DIFadd{What
+  }\DIFaddend is \DIFdelbegin \DIFdel{then
+}\DIFdelend the expected imprint of rotation on a resonant emission line such
+  as the \lya line?}) we \DIFdelbegin \DIFdel{can say that the
+main }\DIFdelend \DIFaddbegin \DIFadd{find from the full RT simulations that the
+}\DIFaddend effects of rotation on the \lya line morphology are:  
+
+\begin{itemize}
+  \item Inducing a dependency on the viewing angle.
+  \item Broadening the line.
+  \item Increasing the intensity at the line's center.
+\end{itemize}
+\DIFdelbegin %DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{We find that }\DIFdelend %DIF > 
+\DIFaddbegin \DIFadd{All }\DIFaddend these effects can be \DIFdelbegin \DIFdel{quantitatively explained by a
+Doppler shift computed as product of quantities at the surface of last
+scattering, namely  $\vec{v}_{\rm rot}\cdot \hatk$, where
+$\vec{v}_{\rm rot}$ is the velocity due to rotation and }%DIFDELCMD < \hatk %%%
+\DIFdel{is
+the direction of the photon's propagation. 
+These conclusions, specially the confirmation of the Doppler Boost as
+a good approximation to model solid body rotation, strengthen the
+}\DIFdelend \DIFaddbegin \DIFadd{qualitatively explained by the proposed
+}\DIFaddend semi-analytic \DIFaddbegin \DIFadd{model. 
+Quantitatively speaking the semi-analytic }\DIFaddend model \DIFdelbegin \DIFdel{reported by \mbox{%DIFAUXCMD
+\cite{Garavito14} }%DIFAUXCMD
+where they modeled
+the effect of pure rotation on }%DIFDELCMD < \lya %%%
+\DIFdel{spectra}\DIFdelend \DIFaddbegin \DIFadd{provides a
+satisfactory answer for a neutral Hydrogen optical depth equal or
+larger than $10^6$}\DIFaddend .  
+
+
+
+Addressing the second question we posed in the introduction (\emph{\DIFdelbegin \DIFdel{to }\DIFdelend \DIFaddbegin \DIFadd{To }\DIFaddend what
+extent is it possible to constrain rotational kinematics from the \lya
+emission line?})  we \DIFdelbegin \DIFdel{can say that as an application to observational data our results suggest that
+rotation should also be considered as an explanation of the non-vanishing }\DIFdelend \DIFaddbegin \DIFadd{show that the most straightforward approach
+is measuring }\DIFaddend \lya \DIFdelbegin \DIFdel{intensity at the line's center, which could change
+the interpretation of recent observational results
+\mbox{%DIFAUXCMD
+\citep[e.g.][]{2017ApJ...844..171Y,2017A&A...608L...4R} }%DIFAUXCMD
+that claim
+instead that this flux constrains the escape fraction of }%DIFDELCMD < \lya
+%DIFDELCMD < %%%
+\DIFdel{radiation. 
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{A more straightforward approach
+takes into account how the
+}%DIFDELCMD < \lya %%%
+\DIFdelend spectra from two different \DIFdelbegin \DIFdel{sides }\DIFdelend \DIFaddbegin \DIFadd{regions }\DIFaddend of a
+galaxy \DIFdelbegin \DIFdel{can }\DIFdelend \DIFaddbegin \DIFadd{to }\DIFaddend detect approaching/\DIFdelbegin \DIFdel{receding gas motions
+}\DIFdelend \DIFaddbegin \DIFadd{receeding gas motions
+\mbox{%DIFAUXCMD
+\citep{Prescott14,2018MNRAS.473.3907A}}%DIFAUXCMD
+}\DIFaddend . 
+In that case, \DIFdelbegin \DIFdel{one has to be careful and take into account that the peaks of these two spectra is smaller than the }\DIFdelend \DIFaddbegin \DIFadd{we also show that the distances between these two peaks 
+is four times shorter than the naively }\DIFaddend expected value of
+$2\times\vrot$\DIFdelbegin \DIFdel{due to the different }\DIFdelend \DIFaddbegin \DIFadd{.  
+This difference is produced by the different geometric }\DIFaddend weights at the
+\DIFdelbegin \DIFdel{surface of the
+emitting regions.    
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{We also use data from MUSE to demonstrate to what extent the outputs of the RT results presented here can be expected to match
+hundreds of observed }%DIFDELCMD < \lya %%%
+\DIFdel{spectra, but a full constraint of rotation
+properties certainly require a full Markov Chain Monte Carlo
+exploration of parameter space}\DIFdelend \DIFaddbegin \DIFadd{emitting surface.    
+Here the semi-analytic model also provides the correct quantitative
+insight}\DIFaddend . 
+
+\DIFdelbegin \DIFdel{Our work confirms that rotation produces features in the }%DIFDELCMD < \lya %%%
+\DIFdel{line
+strong enough that can be expected to be detected in observations and
+that should be taken into account into }%DIFDELCMD < \lya %%%
+\DIFdel{modeling; the Doppler Boost }\DIFdelend \DIFaddbegin \DIFadd{To summarize, our works shows that the Doppler Shift }\DIFaddend offers an
+easy-to-implement approximation to explore such influence into already
+existing \DIFdelbegin \DIFdel{RT simulations and provide stronger
+footing to the interpretation of }\DIFdelend \DIFaddbegin \DIFadd{radiative transfer simulation simulations that include
+outflows, providing a versatile tool to interpret current and future }\DIFaddend \lya
+kinematics maps  \citep[e.g][]{2018MNRAS.473.3907A}.   
+
+\bibliographystyle{mnras}
+\bibliography{references}
+
+
+
+\DIFdelbegin %DIFDELCMD < \newpage
+%DIFDELCMD < %%%
+\DIFdelend \appendix
+
+\section{Additional figures}
+\label{sec:appendix}
+
+\DIFdelbegin %DIFDELCMD < \begin{figure}
+%DIFDELCMD <   %%%
+\DIFdelendFL \DIFaddbeginFL \begin{figure*}
+  \DIFaddendFL \begin{center}
+    \includegraphics[width=0.49\textwidth]{doppler_shift_logtau5_theta90}
+    \DIFdelbeginFL %DIFDELCMD < \end{center}
+%DIFDELCMD <   %%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\textbf{\DIFdelFL{Qualitative trends of changing outflow and
+      rotational velocity.}}
+    %DIFAUXCMD
+\DIFdelFL{Same layout as Figure \ref{fig:doppler_shift},
+    this time  $\tauh=10^5$ and $\theta=90^\circ$.}}
+%DIFAUXCMD
+%DIFDELCMD < \end{figure}
+%DIFDELCMD < 
+
+%DIFDELCMD < \begin{figure}
+%DIFDELCMD <   \begin{center}
+%DIFDELCMD <     %%%
+\DIFdelendFL \includegraphics[width=0.49\textwidth]{doppler_shift_logtau7_theta90}
+  \end{center}
+  \caption{\textbf{Qualitative trends of changing outflow and
+      rotational velocity.}
+    Same layout as Figure \ref{fig:doppler_shift}\DIFdelbeginFL \DIFdelFL{,
+    }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{. On the left:
+    $\tauh=10^5$ and $\theta=90^\circ$; on the right:     }\DIFaddendFL this time  $\tauh=10^7$ and $\theta=90^\circ$.}
+\DIFdelbeginFL %DIFDELCMD < \end{figure}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \end{figure*}
+\DIFaddend 
+
+\end{document}
