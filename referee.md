@@ -32,10 +32,10 @@ on observed spectra (but see comments below), which weakens the overall study._
 
 ```diff
 + R: We have changed the perspective our paper. Instead of focusing on
-finding probes for rotation in current observational data we focus on
-the ability to include rotational effects using the semi-analytic approach.
-We keep as clear observational test the spectra taken from different
-locations in the emitting galaxy.
++ finding probes for rotation in current observational data we focus on
++ the ability to include rotational effects using the semi-analytic approach.
++ We keep as clear observational test the spectra taken from different
++ locations in the emitting galaxy.
 ```
 
 _**2/ Characterisation of the Lya profiles:**
