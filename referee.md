@@ -230,7 +230,7 @@ there is a severe lack of studies of the effect of rotation on the shape of
 the Lya lines... etc...._
 
 ```diff
-+ R: The introduction emphasizes the angle of model comparison.
++ R: The introduction has a new paragraph that emphasizes the model comparison (RT vs. semi-analytic.)
 ```
 
 
@@ -262,8 +262,8 @@ On the other hand, the rotation velocities are high compared to values
 measured typically in IFU/IFS observations (Cairos+15, Basu-Zych+09)._
 
 ```diff
-- [Jaime. Queremos probar el modelo en un rango alto y correr las simulaciones
-- para estos rangos. Igual el modelo va a seguir funcionando, no va a cambiar.]
++ The values for the outflow velocity are lower than values commonly used in the
++ literature to allow for an interplay between the two kinematic features.
 ```
 
 _**12/ 4.2 spatial variation of the profile on Fig6:**
@@ -281,7 +281,8 @@ but the spectral resolution of MUSE may not be sufficient to see the predicted
 effect._
 
 ```diff
-- [Jaime. El pico no debería depender de la resolución]
++ We comment on the effect of a gaussian smoothing and required spectral resolution.
++ We also highlight that the distance between peaks shouldn't depend on that kind of gaussian smootthin.
 ```
 
 _**13/ 4.3 comparison with MUSE-Wide:**
@@ -294,17 +295,9 @@ spectra blue shifted. can you check/explain how you derived this quantity on
 the observed spectra ?_
 
 ```diff
-+ R: It is very noisy. These are the results we obtained.
-```
-
-```diff
-- [Jaime. It is not a prominent blue peak, there is just one and it’s asymmetric.
-- We are not measuring from the center.]
-```
-
-
-## COLORS:
-```diff
-+ green: reply to the referee
-- red: to do/change
++ We have removed the comparison with MUSE-Wide. 
++ However, in this case the positive skewness
++ is not due to a prominent blue peak, it's due to a blue-assymmetry of the single emission peak.
++ The MUSE-wide spectra do not have information about the line center, so the skewness cannot measure
++ the asymmetry around the line center, only a global asymmetry.
 ```
