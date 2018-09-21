@@ -1,4 +1,4 @@
-# REPLY TO REFEREE
+﻿# REPLY TO REFEREE
 
 Dear referee, 
 
@@ -291,8 +291,8 @@ the observed spectra ?_
 
 ```diff
 + We have removed the comparison with MUSE-Wide. 
-+ However, in this case the positive skewness
-+ is not due to a prominent blue peak, it's due to a blue-assymmetry of the single emission peak.
-+ The MUSE-wide spectra do not have information about the line center, so the skewness cannot measure
-+ the asymmetry around the line center, only a global asymmetry.
++ However, in this case the positive skewness is not due to a prominent blue peak, 
++ it's due to a blue-assymmetry of the single emission peak.
++ The MUSE-wide spectra do not have information about the line center, so the skewness 
++ cannot measure the asymmetry around the line center, only a global asymmetry.
 ```
