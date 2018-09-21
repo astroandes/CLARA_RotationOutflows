@@ -138,8 +138,9 @@ _**6/ triple-peaked lya profiles as proof of rotation ?**
 The authors discuss that two lya triple-peaked spectra could be shaped by
 rotation: Tol1214-277 and the Sunburst. Both have new, complementary
 observations not easily compatible with rotation as the main driver for their
-Lya shape.
-** Tol1214-277
+Lya shape._
+
+_** Tol1214-277
 The very peculiar shape in the low resolution GHRS lyman-alpha spectrum of
 Tol1214-277 was modelled by the authors with a rotating model (Forrero+18).
 However, it has been recently re-observed with COS, and shows a normal
