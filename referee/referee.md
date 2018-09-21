@@ -139,7 +139,6 @@ The authors discuss that two lya triple-peaked spectra could be shaped by
 rotation: Tol1214-277 and the Sunburst. Both have new, complementary
 observations not easily compatible with rotation as the main driver for their
 Lya shape.
-
 ** Tol1214-277
 The very peculiar shape in the low resolution GHRS lyman-alpha spectrum of
 Tol1214-277 was modelled by the authors with a rotating model (Forrero+18).
@@ -147,7 +146,6 @@ However, it has been recently re-observed with COS, and shows a normal
 double-peaked spectrum finally, as was shown by Goran Ostlin in the conference
 in Tokyo last month:
 http://www.icrr.u-tokyo.ac.jp/~toshijun/SakuraCLAW/slides/ostlin_CLAW.pdf
-
 The weird triple-peak in the GHRS spectrum was probably due to low spectral
 resolution and poor S/N. The valley in the higher spectral resolution, higher
 signal to noise, spectrum goes to zero.
@@ -157,10 +155,6 @@ maybe better by clumpy outflows, as shown in the slides from Ostlin._
 
 ```diff
 + R: We have removed the observational especulation about  Tol1214-277.
-```
-
-```diff
-- [Jaime: Re-escribir para decir que no es necesario.]
 ```
 
 _** The Sunburst Arc
