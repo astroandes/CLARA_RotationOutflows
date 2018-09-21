@@ -155,7 +155,7 @@ although the broad wings are not well reproduced by expanding shell models,
 maybe better by clumpy outflows, as shown in the slides from Ostlin._
 
 ```diff
-+ R: We have removed the observational especulation about  Tol1214-277.
++ R: We have removed the observational especulation about Tol1214-277.
 ```
 
 _** The Sunburst Arc
@@ -167,7 +167,7 @@ will be published soon. So for this object either, rotation may not be the
 main driver of the weird Lya shape._
 
 ```diff
-- We have removed the observational especulation about  The Sunburst Arc.
++ R: We have removed the observational especulation about The Sunburst Arc.
 ```
 
 ## MINOR COMMENTS:
